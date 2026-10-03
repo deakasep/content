@@ -1,3 +1,9 @@
+---
+document_title: "AGENTS.md — Instruksi AI Agent"
+version: "0.1.1"
+status: "Draft"
+---
+
 # AGENTS.md
 
 Instruksi untuk AI agent (Claude, Codex, ChatGPT, Grok, dan sejenisnya) yang bekerja di repository ini.
@@ -76,9 +82,18 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 
 ## Kontribusi ke Repo
 
-- Branch + pull request. Tidak push langsung ke `main`.
+- Direct push ke `main` = **DIIZINKAN** untuk solo dev (GitHub Free). WAJIB: commit message format (`feat:`, `fix:`, `docs:`, `refactor:`, `chore:`), validator lokal lulus, backup rutin. Kalau tim 2+ orang, pakai branch + PR.
+
+  **Status:** **ASSUMPTION** — sesuai realita solo dev, GitHub Free tier. Akan di-review kalau: tim bertambah, upgrade GitHub Team, atau repo jadi public.
 - Jalankan `python scripts/validate.py` sebelum commit.
 - Rule baru ikut format 10 section (lihat [rule 01](./rules/01-CONTENT-INTEGRITY-STANDARD.md)).
 - Skill baru: `skills/<nama>/SKILL.md` (frontmatter hanya `name` + `description`) + `skills/<nama>/agents/openai.yaml`.
 - Prompt baru ikut [prompts/templates/prompt-template.md](./prompts/templates/prompt-template.md).
 - Update index di README bila menambah rule/skill/prompt.
+
+## Revision History
+
+| Version | Date | Summary |
+|---|---|---|
+| 0.1.0 | 2026-10-03 | Initial agent instructions |
+| 0.1.1 | 2026-10-03 | Sesuaikan enforcement dengan realita solo dev |

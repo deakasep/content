@@ -1,6 +1,6 @@
 ---
 document_title: "CLAU Content Repository Boundary"
-version: "0.1.1"
+version: "0.1.2"
 status: "Draft"
 classification: "Internal"
 ---
@@ -21,7 +21,7 @@ Repo ini **adalah**:
 
 - sumber utama rules, prompt, skill, knowledge reusable, template, dan QA gate;
 - tempat contoh konten yang **sudah dianonimkan** (fictional property, tanpa identitas client nyata);
-- review surface lewat pull request.
+- review surface lewat diff commit (dan pull request bila dipakai).
 
 Repo ini **bukan**:
 
@@ -37,10 +37,10 @@ Boleh masuk repo bila **semua** syarat terpenuhi:
 
 1. scope `Reusable` — berlaku lintas client;
 2. sensitivity `Public` atau `Internal`;
-3. lifecycle `Approved` (atau `Draft`/`For Review` lewat PR yang belum di-merge);
+3. lifecycle `Approved`, atau `Draft`/`For Review` dengan status tertulis jelas di frontmatter/header dokumen;
 4. tidak mengandung identitas client nyata, data tamu, harga kontrak, atau credential;
 5. contoh konten memakai properti fiktif (mis. "Villa Contoh Ubud", "Kafe Contoh Canggu");
-6. lolos `python scripts/validate.py` dan review PR.
+6. lolos `python scripts/validate.py` dan self-review diff sebelum push (atau review PR bila memakai PR).
 
 ## Konten yang Dilarang
 
@@ -79,10 +79,12 @@ Exception butuh persetujuan tertulis owner repo, berisi scope, alasan, data owne
 
 ## Enforcement
 
-- Semua perubahan lewat branch + pull request; tidak ada direct push ke `main`.
+- Branch + PR = **DISIPLIN MANUAL** (bukan enforcement otomatis). Direct push ke `main` = **DIIZINKAN** untuk solo dev di GitHub Free, TAPI WAJIB: commit message jelas, validator lokal lulus, backup rutin. Kalau tim 2+ orang, upgrade ke GitHub Team untuk branch protection.
 - CI menjalankan `scripts/validate.py` (termasuk pola secret sederhana) dan gagal bila ada pelanggaran yang terdeteksi.
-- Validator tidak menangkap semua pelanggaran; reviewer PR tetap wajib cek manual.
+- Validator tidak menangkap semua pelanggaran; self-review diff (atau reviewer PR) tetap wajib cek manual.
 - Bila data terlarang terlanjur ter-commit: hapus dari konten aktif, nilai apakah perlu pembersihan history (butuh otorisasi owner), rotasi credential bila relevan, dan catat insiden.
+
+**Status:** **ASSUMPTION** — sesuai realita solo dev, GitHub Free tier. Akan di-review kalau: tim bertambah, upgrade GitHub Team, atau repo jadi public.
 
 ## Branch Protection & Disiplin Manual
 
@@ -91,8 +93,8 @@ GitHub Free tier tidak support branch protection di private repo.
 ### Mitigasi:
 
 1. Commit message format — pakai `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`
-2. Branch per fitur — `feat/nama-fitur`, `fix/nama-bug`
-3. Pull Request — review sendiri sebelum merge
+2. Branch per fitur — `feat/nama-fitur`, `fix/nama-bug` (disarankan untuk perubahan besar; wajib bila tim 2+ orang)
+3. Pull Request — review sendiri sebelum merge (disarankan untuk perubahan besar; wajib bila tim 2+ orang)
 4. Validator lokal — test sebelum push
 5. Backup rutin — push tiap selesai file
 
@@ -108,3 +110,4 @@ Kalau tim udah 2+ orang, upgrade ke GitHub Team ($4/user/bulan) untuk branch pro
 |---|---|---|---|
 | 0.1.0 | 2026-10-03 | Draft | Initial repository boundary |
 | 0.1.1 | 2026-10-03 | Draft | Tambah mitigasi branch protection (disiplin manual) untuk GitHub Free |
+| 0.1.2 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |

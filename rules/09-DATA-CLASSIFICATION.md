@@ -103,7 +103,7 @@ AI tidak boleh mengubah lifecycle menjadi `Approved` atau `Published`.
 
 | RISK | Mitigation |
 |---|---|
-| Data client bocor lewat repo | Boundary + validator + review PR |
+| Data client bocor lewat repo | Boundary + validator + self-review diff / review PR |
 | Credential diinput ke AI | Larangan + placeholder |
 | Klaim Draft dianggap final | Label evidence wajib di tabel klaim |
 

@@ -1,7 +1,7 @@
 ---
 document_title: "CLAU AI Content Constitution"
 document_owner: "Pemilik repository CLAU-AI-CONTENT"
-version: "0.1.0"
+version: "0.1.1"
 status: "Draft"
 effective_date: "Berlaku setelah owner approval dan merge ke main"
 review_cycle: "Quarterly"
@@ -151,7 +151,7 @@ Screenshot tanpa konteks, "kata staf", atau konten lama tidak cukup untuk klaim 
 
 ## 11. Change Management
 
-- Ubah rule/prompt/skill lewat branch + pull request + review owner. Tidak ada direct push ke `main`.
+- Solo dev (GitHub Free): direct push ke `main` diizinkan dengan syarat di [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md) (commit message jelas, validator lokal lulus, backup rutin). Tim 2+ orang: branch + pull request + review owner.
 - Perubahan kecil, terarah, dan bisa di-review lewat diff.
 - Update version dan revision history pada dokumen controlled.
 - Konten yang sudah di-approve lalu diubah wajib di-approve ulang untuk bagian yang berubah.
@@ -226,7 +226,7 @@ Minimum handoff:
 
 - Semantic Versioning: MAJOR (prinsip/otoritas berubah), MINOR (rule/skill baru), PATCH (wording/typo).
 - Status dokumen: `Draft`, `For Review`, `Approved`, `Superseded`, `Archived`.
-- Status `Approved` di branch belum berlaku sampai owner approve dan merge ke `main`.
+- Status `Approved` baru berlaku setelah owner menyetujui secara tertulis dan perubahan ada di `main` (lewat direct push owner atau merge PR).
 - AI dan automation tidak boleh self-approve.
 - Review quarterly, atau lebih cepat bila ada perubahan regulasi, kebijakan platform, atau insiden.
 
@@ -235,6 +235,7 @@ Minimum handoff:
 | Version | Date | Status | Summary |
 |---|---|---|---|
 | 0.1.0 | 2026-10-03 | Draft | Initial constitution untuk AI content marketing hospitality Indonesia |
+| 0.1.1 | 2026-10-03 | Draft | Sesuaikan change management dengan realita solo dev |
 
 ## 17. Prinsip Akhir
 
