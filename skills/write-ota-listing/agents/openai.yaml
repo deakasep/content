@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write OTA Listing"
+  short_description: "Accurate OTA and website listings for Indonesian stays"
+  default_prompt: "Use $write-ota-listing to write the Booking.com description for this property."
