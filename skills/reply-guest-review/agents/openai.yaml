@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reply Guest Review"
+  short_description: "Privacy-safe, on-brand replies to hospitality guest reviews"
+  default_prompt: "Use $reply-guest-review to draft a reply to this guest review."
