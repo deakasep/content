@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "clau-ai-content/schemas/content-brief.schema.json",
+  "title": "CLAU Content Brief",
+  "description": "Machine-readable content brief for Indonesian hospitality content. Mirrors templates/content-brief.md. Filled briefs live in the client workspace, not in this repository.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "brief_id",
+    "client_code",
+    "vertical",
+    "location_area",
+    "objective",
+    "audience",
+    "channels",
+    "claims",
+    "classification",
+    "approval",
+    "deadlines"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "brief_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{2,12}-[0-9]{6}-[0-9]{2}$",
+      "description": "<CLIENTCODE>-<YYYYMM>-<NN>"
+    },
+    "client_code": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{2,12}$",
+      "description": "Opaque internal client code; never the legal name."
+    },
+    "vertical": {
+      "enum": ["accommodation", "food-beverage", "spa-wellness", "experience"]
+    },
+    "business_type": {
+      "enum": [
+        "hotel", "resort", "villa", "guesthouse", "homestay",
+        "restaurant", "cafe", "beach-club", "bar",
+        "spa", "wellness", "retreat",
+        "surf", "dive", "tour", "adventure", "cruise"
+      ]
+    },
+    "location_area": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Kabupaten/kota or area, e.g. 'Gianyar, Bali'."
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "key_message"],
+      "properties": {
+        "type": {
+          "enum": ["awareness", "engagement", "direct-booking", "reservation", "walk-in", "review"]
+        },
+        "key_message": { "type": "string", "minLength": 5 },
+        "success_metric": { "type": "string" },
+        "metric_source": { "type": "string" }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["segments", "language"],
+      "properties": {
+        "segments": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "origin": { "type": "array", "items": { "type": "string" } },
+        "language": { "enum": ["id", "en", "bilingual-id-en"] },
+        "english_variant": { "enum": ["en-US", "en-GB"] }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["channel", "format"],
+        "properties": {
+          "channel": {
+            "enum": [
+              "instagram", "tiktok", "facebook", "google-business-profile",
+              "traveloka", "tiket-com", "booking-com", "agoda", "airbnb",
+              "tripadvisor", "whatsapp", "website", "email", "print"
+            ]
+          },
+          "format": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 1 },
+          "paid": { "type": "boolean", "default": false }
+        }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "price", "currency", "unit", "tax_service", "valid_from", "valid_to", "terms", "evidence_label"],
+      "properties": {
+        "name": { "type": "string" },
+        "price": { "type": "number", "minimum": 0 },
+        "currency": { "const": "IDR" },
+        "unit": {
+          "enum": ["per-room-per-night", "per-villa-per-night", "per-person", "per-pax", "per-treatment", "per-package", "per-item"]
+        },
+        "tax_service": {
+          "enum": ["net", "plus-plus"],
+          "description": "net = sudah termasuk pajak & service; plus-plus = belum termasuk."
+        },
+        "valid_from": { "type": "string", "format": "date" },
+        "valid_to": { "type": "string", "format": "date" },
+        "terms": { "type": "string", "minLength": 3 },
+        "capacity": { "type": "string" },
+        "reference_price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Harga acuan yang benar-benar pernah berlaku, wajib bila ada klaim diskon."
+        },
+        "evidence_label": { "$ref": "#/$defs/evidence_label" }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "category", "evidence_label"],
+        "properties": {
+          "claim": { "type": "string", "minLength": 2 },
+          "category": {
+            "enum": ["facility", "location", "price", "rating", "certification", "halal-dietary", "food-beverage", "treatment", "experience", "other"]
+          },
+          "evidence_label": { "$ref": "#/$defs/evidence_label" },
+          "source": { "type": "string" },
+          "source_date": { "type": "string", "format": "date" }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "evidence_label": { "const": "DATA FINAL" } } },
+            "then": { "required": ["source"] }
+          }
+        ]
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["asset_ref", "visual_category", "people"],
+        "properties": {
+          "asset_ref": { "type": "string", "description": "Opaque reference to the client media library; no private URL." },
+          "visual_category": {
+            "enum": ["A-original", "B-light-edit", "C-material-edit", "D-ai-generated"]
+          },
+          "people": { "enum": ["none", "identifiable-with-consent", "identifiable-pending-consent"] },
+          "consent_ref": { "type": "string" }
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sensitivity", "lifecycle", "scope"],
+      "properties": {
+        "sensitivity": {
+          "enum": ["Public", "Internal", "Confidential"],
+          "description": "Restricted data must never appear in a brief."
+        },
+        "lifecycle": { "enum": ["Draft", "For Review", "Approved", "Published", "Superseded", "Archived", "Rejected"] },
+        "scope": { "enum": ["Client Specific", "Campaign Specific"] }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "approver_role"],
+      "properties": {
+        "level": { "enum": ["L1", "L2", "L3"] },
+        "approver_role": { "type": "string" }
+      }
+    },
+    "deadlines": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["draft", "publish"],
+      "properties": {
+        "draft": { "type": "string", "format": "date" },
+        "publish": { "type": "string", "format": "date" },
+        "timezone": { "enum": ["WIB", "WITA", "WIT"] }
+      }
+    },
+    "restrictions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required_terms": { "type": "array", "items": { "type": "string" } },
+        "forbidden_terms": { "type": "array", "items": { "type": "string" } },
+        "sensitive_topics": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "owner", "mitigation"],
+        "properties": {
+          "description": { "type": "string" },
+          "likelihood": { "enum": ["low", "medium", "high"] },
+          "impact": { "enum": ["low", "medium", "high"] },
+          "owner": { "type": "string" },
+          "mitigation": { "type": "string" }
+        }
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "owner"],
+        "properties": {
+          "action": { "type": "string" },
+          "owner": { "type": "string" },
+          "target": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "channels": { "contains": { "properties": { "paid": { "const": true } }, "required": ["paid"] } } },
+        "required": ["channels"]
+      },
+      "then": { "properties": { "approval": { "properties": { "level": { "const": "L3" } } } } }
+    },
+    {
+      "if": { "required": ["offer"] },
+      "then": { "properties": { "approval": { "properties": { "level": { "enum": ["L2", "L3"] } } } } }
+    }
+  ],
+  "$defs": {
+    "evidence_label": {
+      "enum": ["DATA FINAL", "ASSUMPTION", "CLIENT CONFIRMATION", "FIELD VERIFICATION", "RISK", "NEXT ACTION"]
+    }
+  }
+}
