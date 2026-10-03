@@ -1,0 +1,4 @@
+interface:
+  display_name: "Localize Content"
+  short_description: "Natural ID-EN hospitality localization with claim parity"
+  default_prompt: "Use $localize-content to create an English version of this Bahasa Indonesia caption."
