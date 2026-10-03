@@ -4,10 +4,21 @@
 
 Repository private berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
 
-> **Status:** Private — v0.1.0 (Foundation)
+> **Status:** Private — Foundation release (versi per dokumen: lihat [Versi Dokumen](#versi-dokumen))
 > **Dokumen induk:** [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md)
 > **Boundary:** [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md)
 > **Credit:** [ACKNOWLEDGMENT.md](./ACKNOWLEDGMENT.md)
+
+## Versi Dokumen
+
+| Dokumen | Versi | Status |
+|---|---|---|
+| [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md) | 1.0.0 | Approved |
+| [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md) | 0.1.4 | Draft |
+| [WORKFLOW.md](./WORKFLOW.md) | 0.1.1 | Draft |
+| [AGENTS.md](./AGENTS.md) | 0.1.2 | Draft |
+
+Setiap dokumen di-version terpisah (SemVer). Validator mengecek tabel ini cocok dengan frontmatter dan Revision History tiap dokumen.
 
 ## Kenapa repo ini ada
 

@@ -1,6 +1,7 @@
 ---
 document_title: "CLAU Content Repository Boundary"
-version: "0.1.3"
+document_owner: "Dea Karisna / AI Marketing"
+version: "0.1.4"
 status: "Draft"
 classification: "Internal"
 ---
@@ -120,3 +121,4 @@ Harga berubah sewaktu-waktu; verifikasi ulang ke halaman pricing sebelum upgrade
 | 0.1.1 | 2026-10-03 | Draft | Tambah mitigasi branch protection (disiplin manual) untuk GitHub Free |
 | 0.1.2 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |
 | 0.1.3 | 2026-10-03 | Draft | Verifikasi harga GitHub Team & batas fitur Free ke github.com/pricing |
+| 0.1.4 | 2026-10-03 | Draft | Seragamkan metadata (owner) |

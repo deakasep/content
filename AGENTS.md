@@ -1,7 +1,9 @@
 ---
 document_title: "AGENTS.md — Instruksi AI Agent"
-version: "0.1.1"
+document_owner: "Dea Karisna / AI Marketing"
+version: "0.1.2"
 status: "Draft"
+classification: "Internal"
 ---
 
 # AGENTS.md
@@ -93,7 +95,8 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 
 ## Revision History
 
-| Version | Date | Summary |
-|---|---|---|
-| 0.1.0 | 2026-10-03 | Initial agent instructions |
-| 0.1.1 | 2026-10-03 | Sesuaikan enforcement dengan realita solo dev |
+| Version | Date | Status | Summary |
+|---|---|---|---|
+| 0.1.0 | 2026-10-03 | Draft | Initial agent instructions |
+| 0.1.1 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |
+| 0.1.2 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |

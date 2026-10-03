@@ -8,6 +8,7 @@ Checks (stdlib only; jsonschema is used when installed):
   - skills have name/description-only frontmatter, required sections,
     existing context files, and a matching agents/openai.yaml
   - JSON files parse; JSON schemas are valid when jsonschema is available
+  - governance docs: frontmatter, Revision History, and README versions agree
   - relative Markdown links resolve
   - no obvious secrets are committed
 
@@ -228,6 +229,52 @@ def check_skills(report: Report) -> None:
             report.fail(yaml_path, f"default_prompt must reference ${name}")
 
 
+GOVERNANCE_DOCS = [
+    "CONTENT-CONSTITUTION.md",
+    "CONTENT-BOUNDARY.md",
+    "WORKFLOW.md",
+    "AGENTS.md",
+]
+GOVERNANCE_FIELDS = ["document_title", "document_owner", "version", "status"]
+DOC_STATUSES = {"Draft", "For Review", "Approved", "Superseded", "Archived"}
+SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+$")
+REVISION_ROW_RE = re.compile(r"^\|\s*(\d+\.\d+\.\d+)\s*\|\s*[^|]+\|\s*([^|]+?)\s*\|", re.MULTILINE)
+README_VERSION_ROW_RE = re.compile(r"^\|\s*\[([^\]]+)\]\([^)]+\)\s*\|\s*(\d+\.\d+\.\d+)\s*\|\s*([^|]+?)\s*\|", re.MULTILINE)
+
+
+def check_versions(report: Report) -> None:
+    """Frontmatter, Revision History, and the README version table must agree."""
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    listed = {name: (ver, status) for name, ver, status in README_VERSION_ROW_RE.findall(readme)}
+    for rel in GOVERNANCE_DOCS:
+        path = ROOT / rel
+        if not path.is_file():
+            continue
+        report.checked += 1
+        text = path.read_text(encoding="utf-8")
+        meta = parse_frontmatter(text) or {}
+        meta = {k: v.strip('"') for k, v in meta.items()}
+        missing = [f for f in GOVERNANCE_FIELDS if not meta.get(f)]
+        if missing:
+            report.fail(path, f"frontmatter missing: {', '.join(missing)}")
+            continue
+        version, status = meta["version"], meta["status"]
+        if not SEMVER_RE.match(version):
+            report.fail(path, f"version '{version}' is not SemVer")
+        if status not in DOC_STATUSES:
+            report.fail(path, f"status '{status}' not in {sorted(DOC_STATUSES)}")
+        if status == "Approved" and not meta.get("approval_reference"):
+            report.fail(path, "Approved document requires approval_reference")
+        history = text.split("## Revision History", 1)
+        rows = REVISION_ROW_RE.findall(history[1]) if len(history) == 2 else []
+        if not rows:
+            report.fail(path, "missing Revision History rows (| Version | Date | Status | Summary |)")
+        elif rows[-1] != (version, status):
+            report.fail(path, f"latest Revision History row {rows[-1]} does not match frontmatter ({version}, {status})")
+        if listed.get(rel) != (version, status):
+            report.fail("README.md", f"Versi Dokumen row for {rel} is {listed.get(rel)}, expected ({version}, {status})")
+
+
 def check_json(report: Report) -> None:
     try:
         import jsonschema  # type: ignore
@@ -298,6 +345,7 @@ def main() -> int:
     check_rules(report)
     check_prompts(report)
     check_skills(report)
+    check_versions(report)
     check_json(report)
     check_links(report)
     check_secrets(report)

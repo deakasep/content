@@ -1,7 +1,9 @@
 ---
 document_title: "CLAU Mandatory Content Workflow"
-version: "0.1.0"
+document_owner: "Dea Karisna / AI Marketing"
+version: "0.1.1"
 status: "Draft"
+classification: "Internal"
 ---
 
 # CLAU Mandatory Content Workflow
@@ -129,6 +131,7 @@ Konten **tidak boleh** publish bila salah satu ini terjadi:
 
 ## Revision History
 
-| Version | Date | Summary |
-|---|---|---|
-| 0.1.0 | 2026-10-03 | Initial mandatory workflow 9 langkah |
+| Version | Date | Status | Summary |
+|---|---|---|---|
+| 0.1.0 | 2026-10-03 | Draft | Initial mandatory workflow 9 langkah |
+| 0.1.1 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |
