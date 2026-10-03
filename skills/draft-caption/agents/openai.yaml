@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Caption"
+  short_description: "On-brand hospitality captions with verified claims and one CTA"
+  default_prompt: "Use $draft-caption to write 3 Instagram caption variants for this hospitality client."
