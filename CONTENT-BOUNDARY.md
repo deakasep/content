@@ -1,6 +1,6 @@
 ---
 document_title: "CLAU Content Repository Boundary"
-version: "0.1.2"
+version: "0.1.3"
 status: "Draft"
 classification: "Internal"
 ---
@@ -88,7 +88,9 @@ Exception butuh persetujuan tertulis owner repo, berisi scope, alasan, data owne
 
 ## Branch Protection & Disiplin Manual
 
-GitHub Free tier tidak support branch protection di private repo.
+GitHub Free tier tidak support branch protection di private repo. Di halaman pricing, "Repository rules" pada plan Free hanya untuk *public repositories*; untuk private repo fitur ini ada di Team dan Enterprise.
+
+**Status:** **DATA FINAL** — sumber: <https://github.com/pricing>, diakses 2026-10-03.
 
 ### Mitigasi:
 
@@ -100,9 +102,15 @@ GitHub Free tier tidak support branch protection di private repo.
 
 ### Upgrade Path:
 
-Kalau tim udah 2+ orang, upgrade ke GitHub Team ($4/user/bulan) untuk branch protection aktif.
+Kalau tim udah 2+ orang, upgrade ke GitHub Team untuk branch protection aktif.
 
-**Status:** **ASSUMPTION** — akan diverifikasi kalau ada tim.
+| Item | Nilai | Sumber | Status |
+|---|---|---|---|
+| Harga GitHub Team | USD 4 per user/bulan **untuk 12 bulan pertama** (harga promo, bertanda `*` di halaman) | <https://github.com/pricing>, diakses 2026-10-03 | **DATA FINAL** |
+| Harga GitHub Team setelah 12 bulan pertama | Tidak tercantum di halaman pricing | <https://github.com/pricing>, diakses 2026-10-03 | **ASSUMPTION** — cek ulang saat akan upgrade |
+| Billing bulanan vs tahunan | Tidak tercantum di halaman pricing | — | **ASSUMPTION** — cek ulang saat akan upgrade |
+
+Harga berubah sewaktu-waktu; verifikasi ulang ke halaman pricing sebelum upgrade.
 
 ## Revision History
 
@@ -111,3 +119,4 @@ Kalau tim udah 2+ orang, upgrade ke GitHub Team ($4/user/bulan) untuk branch pro
 | 0.1.0 | 2026-10-03 | Draft | Initial repository boundary |
 | 0.1.1 | 2026-10-03 | Draft | Tambah mitigasi branch protection (disiplin manual) untuk GitHub Free |
 | 0.1.2 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |
+| 0.1.3 | 2026-10-03 | Draft | Verifikasi harga GitHub Team & batas fitur Free ke github.com/pricing |
