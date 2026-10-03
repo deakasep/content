@@ -4,6 +4,8 @@
 
 Daftar momen nasional, keagamaan, regional, dan komersial yang relevan untuk perencanaan konten & promo hospitality di Indonesia.
 
+> **Tanggal tahun 2026 (SKB 3 Menteri):** lihat [national-holidays-2026.md](./national-holidays-2026.md) — jangan menyalin tanggal dari file pola ini.
+
 > **Penting — jangan menebak tanggal.**
 > - Tanggal libur nasional dan cuti bersama ditetapkan setiap tahun lewat **Surat Keputusan Bersama (SKB) Menteri** dan bisa direvisi di tengah tahun.
 > - Hari raya berbasis kalender Hijriah, Imlek, Saka (Bali), dan Pawukon berpindah setiap tahun.
@@ -81,6 +83,7 @@ Momen regional di luar Bali ditambahkan per client sesuai lokasi properti.
 
 ## References
 
+- [national-holidays-2026.md](./national-holidays-2026.md) — tanggal SKB, long weekend, kaldik 2026 (diakses 2026-10-04)
 - SKB Menteri tentang Hari Libur Nasional dan Cuti Bersama (tahun berjalan) — sumber tanggal wajib
 - Kalender pendidikan dinas pendidikan provinsi — sumber libur sekolah
 - BMKG — sumber prakiraan musim
