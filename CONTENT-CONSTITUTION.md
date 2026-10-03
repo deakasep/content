@@ -1,9 +1,10 @@
 ---
 document_title: "CLAU AI Content Constitution"
-document_owner: "Pemilik repository CLAU-AI-CONTENT"
-version: "0.1.1"
-status: "Draft"
-effective_date: "Berlaku setelah owner approval dan merge ke main"
+document_owner: "Dea Karisna / AI Marketing"
+version: "1.0.0"
+status: "Approved"
+effective_date: "2026-10-03"
+approval_reference: "Instruksi tertulis owner (Dea Karisna) via sesi Claude Code, 2026-10-03; perubahan ada di main"
 review_cycle: "Quarterly"
 classification: "Internal"
 ---
@@ -236,6 +237,7 @@ Minimum handoff:
 |---|---|---|---|
 | 0.1.0 | 2026-10-03 | Draft | Initial constitution untuk AI content marketing hospitality Indonesia |
 | 0.1.1 | 2026-10-03 | Draft | Sesuaikan change management dengan realita solo dev |
+| 1.0.0 | 2026-10-03 | Approved | Approved oleh owner (Dea Karisna); berlaku efektif 2026-10-03 |
 
 ## 17. Prinsip Akhir
 
