@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Seasonal Campaign"
+  short_description: "Indonesian seasonal hospitality promos with verified dates"
+  default_prompt: "Use $plan-seasonal-campaign to plan a Ramadan and Lebaran campaign for this client."
