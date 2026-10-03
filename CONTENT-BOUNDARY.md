@@ -1,6 +1,6 @@
 ---
 document_title: "CLAU Content Repository Boundary"
-version: "0.1.0"
+version: "0.1.1"
 status: "Draft"
 classification: "Internal"
 ---
@@ -84,8 +84,27 @@ Exception butuh persetujuan tertulis owner repo, berisi scope, alasan, data owne
 - Validator tidak menangkap semua pelanggaran; reviewer PR tetap wajib cek manual.
 - Bila data terlarang terlanjur ter-commit: hapus dari konten aktif, nilai apakah perlu pembersihan history (butuh otorisasi owner), rotasi credential bila relevan, dan catat insiden.
 
+## Branch Protection & Disiplin Manual
+
+GitHub Free tier tidak support branch protection di private repo.
+
+### Mitigasi:
+
+1. Commit message format — pakai `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`
+2. Branch per fitur — `feat/nama-fitur`, `fix/nama-bug`
+3. Pull Request — review sendiri sebelum merge
+4. Validator lokal — test sebelum push
+5. Backup rutin — push tiap selesai file
+
+### Upgrade Path:
+
+Kalau tim udah 2+ orang, upgrade ke GitHub Team ($4/user/bulan) untuk branch protection aktif.
+
+**Status:** **ASSUMPTION** — akan diverifikasi kalau ada tim.
+
 ## Revision History
 
 | Version | Date | Status | Summary |
 |---|---|---|---|
 | 0.1.0 | 2026-10-03 | Draft | Initial repository boundary |
+| 0.1.1 | 2026-10-03 | Draft | Tambah mitigasi branch protection (disiplin manual) untuk GitHub Free |
