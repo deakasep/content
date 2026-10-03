@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Content Calendar"
+  short_description: "Monthly hospitality content calendar with Indonesian moments"
+  default_prompt: "Use $build-content-calendar to plan next month's content for this hospitality client."
