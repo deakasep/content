@@ -43,6 +43,7 @@ description: Write or improve accommodation listing descriptions for OTAs (Trave
 4. Fasilitas berbayar disebut berbayar.
 5. "Good to know" jujur (akses, tangga, suara lingkungan).
 6. Panjang sesuai batas platform.
+7. Klaim tersirat ikut dicek: setiap kalimat yang menggambarkan apa yang *akan dialami* tamu (view, jarak/waktu tempuh, suasana sepi/ramai, kapasitas, kecepatan, kebersihan, "bisa lihat X dan Y sekaligus") dicatat sebagai klaim di tabel klaim dan harus **DATA FINAL**; kalau tidak, kalimatnya dihapus atau diubah.
 
 ## Safety Boundary
 

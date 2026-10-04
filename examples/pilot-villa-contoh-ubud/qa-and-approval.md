@@ -58,7 +58,7 @@ Superlatif / klise / halal / bintang / medis: **tidak ada** (dicek otomatis terh
 | Jadwal publish | 2026-10-20, WITA |
 | Level approval | L2 (ada promo & harga) |
 | Keputusan | **SIMULASI — tidak ada approval nyata** |
-| Catatan | Varian A siap diajukan. Varian C ditahan (klaim #7). OTA listing **belum bisa** diajukan: 3 placeholder `<KONFIRMASI>` (temuan F-02) |
+| Catatan | Varian A siap diajukan. Varian C ditahan (klaim #7). OTA listing v1 **belum bisa** diajukan: 3 placeholder `<KONFIRMASI>` (temuan F-02). _Update: setelah TASK-016, listing v2 di [drafts.md](./drafts.md) Step 3c tanpa placeholder._ |
 
 ## Step 8 — [Publication Checklist](../../qa/publication-checklist.md)
 

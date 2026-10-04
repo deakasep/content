@@ -27,7 +27,7 @@ Baca sebelum bekerja:
 5. Buat 3 varian (storytelling, informatif, conversational) sesuai Voice Card.
 6. Tambahkan 1 CTA dan 3–8 hashtag relevan.
 7. Tulis alt text.
-8. Isi tabel klaim; jalankan self-check.
+8. Isi tabel klaim, termasuk **klaim tersirat**: baca ulang setiap varian kalimat per kalimat dan catat semua gambaran pengalaman (view, jarak, suasana, kapasitas) sebagai klaim. Lalu jalankan self-check.
 
 ## Output
 
@@ -45,6 +45,7 @@ Baca sebelum bekerja:
 4. Hanya 1 CTA.
 5. Tidak ada nama/foto tamu tanpa consent.
 6. Konten berbayar → disclosure tercantum.
+7. Klaim tersirat ikut dicek: setiap kalimat yang menggambarkan apa yang *akan dialami* tamu (view, jarak/waktu tempuh, suasana sepi/ramai, kapasitas, kecepatan, kebersihan, "bisa lihat X dan Y sekaligus") dicatat sebagai klaim di tabel klaim dan harus **DATA FINAL**; kalau tidak, kalimatnya dihapus atau diubah. Contoh pilot: "view sawah dan kolam dua-duanya kelihatan" adalah klaim view yang butuh foto bukti.
 
 ## Safety Boundary
 

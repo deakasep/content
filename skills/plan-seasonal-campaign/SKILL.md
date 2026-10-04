@@ -44,6 +44,7 @@ description: Plan seasonal promotions for Indonesian hospitality businesses arou
 4. Tone hormat untuk momen keagamaan; tidak ada gimmick simbol sakral.
 5. Info operasional (tutup/jam berubah) dikomunikasikan.
 6. Disclosure untuk ads/kolaborasi.
+7. Klaim tersirat ikut dicek: setiap kalimat yang menggambarkan apa yang *akan dialami* tamu (view, jarak/waktu tempuh, suasana sepi/ramai, kapasitas, kecepatan, kebersihan, "bisa lihat X dan Y sekaligus") dicatat sebagai klaim di tabel klaim dan harus **DATA FINAL**; kalau tidak, kalimatnya dihapus atau diubah.
 
 ## Safety Boundary
 
