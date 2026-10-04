@@ -98,6 +98,19 @@ Klaim **DATA FINAL** wajib punya sumber **dan** tanggal sumber (`claims[].source
 - Kata/klaim terlarang:
 - Topik sensitif yang dihindari:
 
+## 9b. Brief Sanity Check ([WORKFLOW Step 1](../WORKFLOW.md#step-1--brief))
+
+| Cek | Hasil (OK / RISK) | Catatan |
+|---|---|---|
+| Kapasitas ↔ segmen | | |
+| Harga ↔ segmen | | |
+| Objective ↔ channel & format | | |
+| Positioning ↔ bukti | | |
+| Nama brand ↔ fakta | | |
+| Aset ↔ consent | | |
+
+Setiap RISK → isi di bagian 10.
+
 ## 10. Risk & Next Action
 
 | Item | Label | Owner | Target |

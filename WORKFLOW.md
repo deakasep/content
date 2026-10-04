@@ -1,7 +1,7 @@
 ---
 document_title: "CLAU Mandatory Content Workflow"
 document_owner: "Dea Karisna / AI Marketing"
-version: "0.1.2"
+version: "0.1.3"
 status: "Draft"
 classification: "Internal"
 ---
@@ -45,6 +45,19 @@ Wajib jelas:
 - offer/promo (bila ada) + periode + syarat;
 - sumber evidence yang tersedia;
 - approver dan deadline.
+
+**Brief sanity check (wajib):** cek kecocokan strategi sebelum drafting.
+
+| Cek | Pertanyaan | Contoh masalah |
+|---|---|---|
+| Kapasitas ↔ segmen | Apakah ukuran properti/outlet cocok dengan segmen target? | Villa 5 kamar ditarget ke 1 pasangan |
+| Harga ↔ segmen | Apakah harga/paket masuk akal untuk segmen & asal audiens? | Paket premium ditarget ke backpacker |
+| Objective ↔ channel & format | Apakah channel/format bisa mencapai objective? | Objective direct booking, tapi hanya Stories tanpa link |
+| Positioning ↔ bukti | Apakah positioning (mewah, eco, family) punya dasar di fact sheet? | "Villa mewah" tanpa standar tertulis |
+| Nama brand ↔ fakta | Apakah nama menyiratkan klaim yang belum terbukti? | "Sunset" tanpa field check sunset |
+| Aset ↔ consent | Apakah aset dengan orang punya consent? | Klip pasangan tanpa consent |
+
+Setiap ketidakcocokan dicatat sebagai **RISK** + **CLIENT CONFIRMATION** di brief (`risks`, `next_actions`). Drafting boleh lanjut dengan angle sementara yang ditulis eksplisit; publish menunggu keputusan owner.
 
 **Gate:** brief tanpa objective, channel, atau approver → kembali ke requester.
 
@@ -150,3 +163,4 @@ Konten **tidak boleh** publish bila salah satu ini terjadi:
 | 0.1.0 | 2026-10-03 | Draft | Initial mandatory workflow 9 langkah |
 | 0.1.1 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |
 | 0.1.2 | 2026-10-04 | Draft | Tambah Mode SIMULASI untuk pilot & contoh (TASK-017) |
+| 0.1.3 | 2026-10-04 | Draft | Tambah brief sanity check di Step 1 (TASK-023) |
