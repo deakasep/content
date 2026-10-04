@@ -4,7 +4,18 @@
 
 Repository private berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
 
-> **Status:** Private — Foundation release (versi per dokumen: lihat [Versi Dokumen](#versi-dokumen))
+> [!IMPORTANT]
+> **ARSIP sejak 2026-10-04.** Repo ini sudah di-split menjadi tiga repo. Kerjaan baru masuk ke sana, bukan ke sini:
+>
+> | Repo | Isi |
+> |---|---|
+> | [clau-ai-core](https://github.com/d34faiza-commits/clau-ai-core) | Fondasi: AI-CONSTITUTION, AI-BOUNDARY, orchestrator, shared contracts |
+> | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | Pilar 1: rules, prompts, skills, knowledge, templates, QA, examples |
+> | [clau-ai-agents](https://github.com/d34faiza-commits/clau-ai-agents) | Platform: registry agent, backend FastAPI, frontend Next.js |
+>
+> Yang tetap tinggal di sini: board `tasks/` dan `docs/` (dirujuk dari repo baru lewat URL), serta [`scripts/split_repo.py`](./scripts/split_repo.py) dan `split/` sebagai jejak proses split. Isi lain di bawah ini adalah snapshot terakhir sebelum split.
+
+> **Status:** Arsip (read-only secara disiplin) — snapshot Foundation release (versi per dokumen: lihat [Versi Dokumen](#versi-dokumen))
 > **Dokumen induk:** [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md)
 > **Boundary:** [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md)
 > **Credit:** [ACKNOWLEDGMENT.md](./ACKNOWLEDGMENT.md)
