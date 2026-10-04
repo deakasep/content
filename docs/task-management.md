@@ -69,6 +69,8 @@ GitHub Projects tersedia di akun personal GitHub Free dan bisa menampilkan issue
 
 **ASSUMPTION:** batas fitur per plan (misalnya jumlah workflow auto-add) bisa berubah. Cek di GitHub Docs saat setup.
 
+**Status setup (2026-10-03):** board **CLAU-AI-CONTENT Roadmap** sudah dibuat dan aktif di <https://github.com/users/d34faiza-commits/projects/1>. Board ini private, punya kolom Backlog → In Progress → Review → Done, sudah di-link ke repo, auto-add `is:issue is:open` aktif, dan item baru otomatis berstatus Backlog. Langkah 5.1–5.3 di bawah adalah referensi kalau board perlu dibuat ulang.
+
 ### 5.1 Buat project board
 
 1. Buka profil GitHub → tab **Projects** → **New project**.
