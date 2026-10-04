@@ -25,27 +25,16 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Description: Rule 08: konten L2 butuh claim review independen. Semua QA pilot 2 (v1, v2, v3) masih self-review agent. Sejak split, pilot ada di repo clau-ai-marketing.
 - Acceptance Criteria: Owner/content lead menghitung ulang tabel ekstraksi kalimat, kecocokan brief, dan publication checklist v3 dengan rubrik skor; mengisi status Independent score; mencatat selisih dengan self-score 92 (selisih > 5 poin = temuan).
 - Related: [v3](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3.md), [scoring-rubric](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/scoring-rubric.md), [claim-verification](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/claim-verification.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/28>
+- Note 2026-10-04: owner meng-approve semua item pending, tapi hitung ulang independen belum dilakukan. Self-score v3 (92) belum berstatus Independent score; task tetap terbuka sampai ada recount.
 
-## TASK-013: Review knowledge/platforms/google-business.md & destinations
-
-- ID: TASK-013
-- Status: Backlog
-- Priority: Normal
-- Assignee: Dea Karisna
-- Created: 2026-10-04
-- Due: —
-- Description: Dua file knowledge yang belum masuk daftar review TASK-002–009. Cek akurasi, relevansi untuk 3 vertical awal, dan selaraskan dengan research pack 2026.
-- Acceptance Criteria: Tidak ada klaim tanpa label; fakta volatile punya sumber + tanggal akses atau ditandai cek ulang; validator lulus.
-- Related: [google-business.md](../knowledge/platforms/google-business.md), [indonesia-overview.md](../knowledge/destinations/indonesia-overview.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/13>
-
-## TASK-014: Quarterly review CONTENT-CONSTITUTION
+## TASK-014: Quarterly review AI-CONSTITUTION
 
 - ID: TASK-014
 - Status: Backlog
 - Priority: Low
 - Assignee: Dea Karisna
 - Created: 2026-10-04
-- Due: 2027-01-03
-- Description: Review berkala sesuai `review_cycle: Quarterly` di Constitution v1.0.0 (efektif 2026-10-03). Cek perubahan regulasi, kebijakan platform, dan pelajaran dari pilot/project.
-- Acceptance Criteria: Revision History Constitution punya entry review (berubah atau "no change"), versi & README Versi Dokumen konsisten; validator lulus.
-- Related: [CONTENT-CONSTITUTION.md](../CONTENT-CONSTITUTION.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/14>
+- Due: 2027-01-04
+- Description: Review berkala sesuai `review_cycle: Quarterly` di AI-CONSTITUTION v2.0.0 (Approved & efektif 2026-10-04; menggantikan Content Constitution v1.0.0). Cek perubahan regulasi, kebijakan platform, dan pelajaran dari pilot/project. Perubahan hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
+- Acceptance Criteria: Revision History AI-CONSTITUTION punya entry review (berubah atau "no change"), versi & README Versi Dokumen konsisten; validator core lulus.
+- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/14>

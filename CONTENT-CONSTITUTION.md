@@ -2,12 +2,14 @@
 document_title: "CLAU AI Content Constitution"
 document_owner: "Dea Karisna / AI Marketing"
 version: "1.0.0"
-status: "Approved"
+status: "Superseded"
 effective_date: "2026-10-03"
 approval_reference: "Instruksi tertulis owner (Dea Karisna) via sesi Claude Code, 2026-10-03; perubahan ada di main"
 review_cycle: "Quarterly"
 classification: "Internal"
 ---
+
+> **SUPERSEDED (2026-10-04)** oleh [AI-CONSTITUTION v2.0.0](https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md) di clau-ai-core (Approved 2026-10-04). Dokumen ini disimpan sebagai arsip.
 
 # CLAU AI Content Constitution
 
@@ -238,6 +240,7 @@ Minimum handoff:
 | 0.1.0 | 2026-10-03 | Draft | Initial constitution untuk AI content marketing hospitality Indonesia |
 | 0.1.1 | 2026-10-03 | Draft | Sesuaikan change management dengan realita solo dev |
 | 1.0.0 | 2026-10-03 | Approved | Approved oleh owner (Dea Karisna); berlaku efektif 2026-10-03 |
+| 1.0.0 | 2026-10-04 | Superseded | Digantikan AI-CONSTITUTION v2.0.0 (clau-ai-core), Approved owner 2026-10-04 |
 
 ## 17. Prinsip Akhir
 

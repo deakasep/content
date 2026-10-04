@@ -253,3 +253,143 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [v3](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3.md), [v3 brief](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3/brief.json)
 - Completed: 2026-10-04
 - Commit: clau-ai-marketing e7e06e7
+
+## TASK-001: Riset statistik pariwisata Indonesia
+
+- ID: TASK-001
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Kumpulkan statistik pariwisata Indonesia (wisman, wisnus, okupansi, kontribusi ekonomi) sebagai context campaign. Draft sudah ada di research pack commit `0a43975`.
+- Acceptance Criteria: Setiap angka punya label evidence, sumber, dan tanggal akses; angka yang dikutip dari media dicek ulang ke publikasi primer (BPS/Kemenpar) sebelum dipakai di konten; validator lulus.
+- Related: [indonesia-tourism-stats-2025-2026.md](../knowledge/market/indonesia-tourism-stats-2025-2026.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/2>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-002: Bikin knowledge/segments/hotel.md
+
+- ID: TASK-002
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Segment knowledge hotel & resort: audience, content pillars, claim hotspots, shot list, KPI, kesalahan umum. Dibuat di commit `622037c`.
+- Acceptance Criteria: Owner setuju isi relevan untuk vertical Hotel/Resort; tidak ada klaim tanpa label; validator lulus.
+- Related: [hotel.md](../knowledge/segments/hotel.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/3>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-003: Bikin knowledge/segments/villa.md
+
+- ID: TASK-003
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Segment knowledge villa, guesthouse & homestay. Dibuat di commit `9d7b8f7`.
+- Acceptance Criteria: Owner setuju isi relevan untuk vertical Villa/Guesthouse/Homestay; good-to-know & claim hotspots sesuai pengalaman lapangan; validator lulus.
+- Related: [villa.md](../knowledge/segments/villa.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/4>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-004: Bikin knowledge/segments/restaurant.md
+
+- ID: TASK-004
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Segment knowledge restaurant, cafe & beach club. Dibuat di commit `3c7e17c`.
+- Acceptance Criteria: Owner setuju isi relevan; aturan halal/dietary & alkohol selaras dengan [regulasi 2026](../knowledge/regulasi/hospitality-content-2026.md); validator lulus.
+- Related: [restaurant.md](../knowledge/segments/restaurant.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/5>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-005: Bikin knowledge/segments/spa.md
+
+- ID: TASK-005
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Segment knowledge spa, wellness & retreat, termasuk daftar kata klaim medis yang dilarang. Dibuat di commit `3d6980f`.
+- Acceptance Criteria: Owner setuju daftar kata terlarang/pengganti; tidak ada klaim medis; validator lulus.
+- Related: [spa.md](../knowledge/segments/spa.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/6>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-006: Bikin knowledge/platforms/instagram.md
+
+- ID: TASK-006
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Referensi platform Instagram. Dibuat di commit `da4635d`. Nilai spec masih ASSUMPTION — verifikasi dilacak di TASK-011.
+- Acceptance Criteria: Owner setuju struktur & praktik konten; spec diverifikasi lewat TASK-011 atau tetap berlabel ASSUMPTION; validator lulus.
+- Related: [instagram.md](../knowledge/platforms/instagram.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/7>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-007: Bikin knowledge/platforms/tiktok.md
+
+- ID: TASK-007
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Referensi platform TikTok. Dibuat di commit `34aea21`. Spec durasi & panjang caption masih CLIENT CONFIRMATION — dilacak di TASK-011.
+- Acceptance Criteria: Owner setuju angle konten & aturan musik akun bisnis; validator lulus.
+- Related: [tiktok.md](../knowledge/platforms/tiktok.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/8>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-008: Bikin knowledge/calendar-id/national-holidays.md
+
+- ID: TASK-008
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Pola kalender momen Indonesia (commit `bc9ea06`) plus tanggal SKB 2026 dari research pack (commit `0a43975`).
+- Acceptance Criteria: Tanggal 2026 cocok dengan dokumen SKB resmi (nomor SKB + tanggal akses tercatat); pola umum tidak bertentangan dengan file 2026; validator lulus.
+- Related: [national-holidays.md](../knowledge/calendar-id/national-holidays.md), [national-holidays-2026.md](../knowledge/calendar-id/national-holidays-2026.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/9>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-009: Bikin knowledge/voice-guides/hospitality-voice.md
+
+- ID: TASK-009
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Default hospitality voice + 5 arketipe voice. Dibuat di commit `fa2c8f9`.
+- Acceptance Criteria: Owner setuju arketipe & daftar klise; dipakai di minimal satu Voice Card saat pilot (TASK-012); validator lulus.
+- Related: [hospitality-voice.md](../knowledge/voice-guides/hospitality-voice.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/10>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-013: Review knowledge/platforms/google-business.md & destinations
+
+- ID: TASK-013
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Dua file knowledge yang belum masuk daftar review TASK-002–009. Cek akurasi, relevansi untuk 3 vertical awal, dan selaraskan dengan research pack 2026.
+- Acceptance Criteria: Tidak ada klaim tanpa label; fakta volatile punya sumber + tanggal akses atau ditandai cek ulang; validator lulus.
+- Related: [google-business.md](../knowledge/platforms/google-business.md), [indonesia-overview.md](../knowledge/destinations/indonesia-overview.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/13>
+- Completed: 2026-10-04
+- Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)

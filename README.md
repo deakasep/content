@@ -24,7 +24,7 @@ Repository private berisi governance, rules, prompt library, AI agent skills, kn
 
 | Dokumen | Versi | Status |
 |---|---|---|
-| [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md) | 1.0.0 | Approved |
+| [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md) | 1.0.0 | Superseded |
 | [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md) | 0.1.4 | Draft |
 | [WORKFLOW.md](./WORKFLOW.md) | 0.1.3 | Draft |
 | [AGENTS.md](./AGENTS.md) | 0.1.3 | Draft |
