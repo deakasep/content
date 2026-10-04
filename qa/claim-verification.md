@@ -76,6 +76,8 @@ Gate wajib untuk memastikan setiap klaim di konten (teks, visual, voice-over, on
 
 ## Record
 
-| Verifier | Tanggal | Versi konten | Hasil | Catatan |
-|---|---|---|---|---|
-| | | | | |
+| Verifier | Independen? (Ya / Tidak — self-review) | Tanggal | Versi konten | Hasil | Catatan |
+|---|---|---|---|---|---|
+| | | | | | |
+
+Konten L2/L3 butuh minimal satu verifikasi **independen** ([rule 08](../rules/08-APPROVAL-PUBLICATION-STANDARD.md)). Self-review AI/creator hanya pre-check.

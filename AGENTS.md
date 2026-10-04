@@ -1,7 +1,7 @@
 ---
 document_title: "AGENTS.md — Instruksi AI Agent"
 document_owner: "Dea Karisna / AI Marketing"
-version: "0.1.2"
+version: "0.1.3"
 status: "Draft"
 classification: "Internal"
 ---
@@ -68,6 +68,11 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 - **CLIENT CONFIRMATION:** <pertanyaan spesifik ke owner>
 - **NEXT ACTION:** <tindakan> — owner: <siapa> — target: <kapan>
 
+## QA oleh Agent
+
+- QA yang dijalankan agent atas draft buatannya sendiri **wajib** ditandai **self-review** (rule 08). Jangan menulis hasil gate seolah review independen.
+- Untuk konten L2/L3, serahkan claim verification ke manusia (content lead/owner) sebelum approval.
+
 ## Balasan Review & DM
 
 - Balasan publik: sopan, singkat, tidak defensif, tidak membuka data booking.
@@ -100,3 +105,4 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 | 0.1.0 | 2026-10-03 | Draft | Initial agent instructions |
 | 0.1.1 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |
 | 0.1.2 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |
+| 0.1.3 | 2026-10-04 | Draft | Tambah aturan QA oleh agent = self-review (TASK-026) |
