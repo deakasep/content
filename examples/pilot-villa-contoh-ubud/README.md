@@ -12,6 +12,7 @@ Menjalankan [WORKFLOW.md](../../WORKFLOW.md) end-to-end dengan brief fiktif untu
 |---|---|
 | [brief.json](./brief.json) | 1. Brief — valid terhadap [content-brief.schema.json](../../schemas/content-brief.schema.json) (dicek validator) |
 | [drafts.md](./drafts.md) | 2. Classify, 3. Draft — skill `draft-caption` (3 varian IG) + `write-ota-listing` (Booking.com EN) |
+| [fact-sheet.md](./fact-sheet.md) | Input fakta properti (ditambahkan saat TASK-016) |
 | [qa-and-approval.md](./qa-and-approval.md) | 4–8. Claim check, content review, visual (N/A), privacy, approval **SIMULASI**, publication pre-check |
 
 ## Hasil Ringkas
@@ -34,7 +35,7 @@ Menjalankan [WORKFLOW.md](../../WORKFLOW.md) end-to-end dengan brief fiktif untu
 | ID | Temuan | Dampak | Tindak lanjut |
 |---|---|---|---|
 | F-01 | Schema/template brief tidak punya field Voice Card | Brand voice tidak bisa diverifikasi dari brief; skill jatuh ke default | TASK-015 — **selesai**: schema v1.1 punya field `voice`; brief pilot diperbarui |
-| F-02 | Tidak ada template/schema **fact sheet properti** (bed type, ukuran kamar, kebijakan, check-in) | Listing OTA tertahan `<KONFIRMASI>` | TASK-016 |
+| F-02 | Tidak ada template/schema **fact sheet properti** (bed type, ukuran kamar, kebijakan, check-in) | Listing OTA tertahan `<KONFIRMASI>` | TASK-016 — **selesai**: [template fact sheet](../../templates/property-fact-sheet.md); listing pilot di-run ulang tanpa placeholder ([fact-sheet.md](./fact-sheet.md), drafts Step 3c) |
 | F-03 | Belum ada lokasi resmi untuk contoh fiktif/pilot | Contoh bisa tercecer atau tercampur dengan data client | **Selesai di pilot ini** — folder `examples/` |
 | F-04 | Validator tidak memvalidasi contoh brief terhadap schema | Contoh bisa tidak valid tanpa ketahuan | **Selesai di pilot ini** — validator cek `examples/**/brief.json` |
 | F-05 | WORKFLOW & approval record tidak punya mode simulasi/pilot | Risiko record simulasi terbaca sebagai approval nyata | TASK-017 |

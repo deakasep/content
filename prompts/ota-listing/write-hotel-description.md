@@ -15,7 +15,7 @@ Menulis deskripsi properti dan tipe kamar untuk OTA (Traveloka, tiket.com, Booki
 
 | Input | Contoh fiktif | Status minimum |
 |---|---|---|
-| Fact sheet properti | Villa Contoh Ubud: 2 kamar, kolam privat 3×6 m | **DATA FINAL** |
+| Fact sheet properti ([template](../../templates/property-fact-sheet.md)) | Villa Contoh Ubud: 2 kamar, kolam privat 3×6 m | **DATA FINAL** |
 | Tipe kamar + kapasitas + bed type + ukuran | Deluxe Garden: 28 m², 1 king/2 twin, max 2 dewasa | **DATA FINAL** |
 | Fasilitas (gratis vs berbayar) | Wi-Fi gratis; airport transfer berbayar | **DATA FINAL** |
 | Lokasi & akses | ±15 menit berkendara ke pusat Ubud (lalu lintas normal) | **DATA FINAL** / **FIELD VERIFICATION** |

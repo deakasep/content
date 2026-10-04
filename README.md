@@ -104,7 +104,7 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 
 1. Baca [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md) dan [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md).
 2. Onboard client pakai [templates/client-onboarding.md](./templates/client-onboarding.md).
-3. Isi [templates/content-brief.md](./templates/content-brief.md) — valid terhadap [schemas/content-brief.schema.json](./schemas/content-brief.schema.json).
+3. Isi [templates/property-fact-sheet.md](./templates/property-fact-sheet.md) bersama owner (sumber fakta properti), lalu isi [templates/content-brief.md](./templates/content-brief.md) — valid terhadap [schemas/content-brief.schema.json](./schemas/content-brief.schema.json).
 4. Jalankan alur di [WORKFLOW.md](./WORKFLOW.md).
 5. Pakai skill atau prompt yang sesuai (lihat index di bawah).
 6. Review dengan gate di [qa/](./qa/content-review.md).

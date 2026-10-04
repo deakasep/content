@@ -114,3 +114,39 @@ Getting here: cars park at the end of a narrow lane, followed by an approximatel
 | ~80 m walk from parking | **DATA FINAL** | Fact sheet |
 | Bed type, ukuran kamar, kebijakan | **CLIENT CONFIRMATION** | Tidak ada di brief/fact sheet (temuan F-02) |
 | Jarak ke pusat Ubud | Sengaja tidak dicantumkan | **FIELD VERIFICATION** belum dilakukan |
+
+## Step 3c — Re-run `write-ota-listing` setelah TASK-016
+
+Input tambahan: [fact-sheet.md](./fact-sheet.md) (v1, fiktif). Semua placeholder `<KONFIRMASI>` di atas sekarang terisi dari baris **DATA FINAL**. Jarak ke Ubud dan kecepatan Wi-Fi tetap tidak dicantumkan.
+
+### Property description (v2)
+
+```text
+Villa Contoh Ubud sits among working rice fields in Gianyar. The east terrace looks straight onto the paddies and is where breakfast is served each morning.
+
+The villa has two air-conditioned bedrooms, each with an en-suite shower room: a 28 m² king room facing the rice fields and a 24 m² twin room facing the garden. Guests share a private 3 × 6 m pool and a pantry with fridge and kettle. Wi-Fi is free.
+
+Getting here: cars park at the end of a narrow lane, followed by a flat, paved walk of approximately 80 m. Staff can help carry luggage from the car. Airport transfer is available on request for an extra charge.
+```
+
+### Good to know (v2)
+
+```text
+- Check-in from 14:00, check-out until 11:00 (WITA).
+- Cars cannot reach the villa door; parking is about 80 m away on foot. Staff help with luggage.
+- The lane has no street lighting after about 19:00; torches are provided.
+- Three steps lead up to the terrace; the villa is not wheelchair accessible.
+- Children are welcome; the pool is unfenced, so children must be supervised.
+- No pets. No smoking indoors. Quiet hours 22:00–07:00.
+- You may hear neighbours' roosters in the early morning.
+```
+
+| Klaim baru | Label | Sumber |
+|---|---|---|
+| Ukuran & bed type kamar, AC, kamar mandi | **DATA FINAL** | Fact sheet v1 §2–3 |
+| Pantry, Wi-Fi gratis (tanpa klaim kecepatan) | **DATA FINAL** | Fact sheet v1 §3 |
+| Bantuan bawa koper, transfer berbayar | **DATA FINAL** | Fact sheet v1 §3 |
+| Kebijakan check-in/out, anak, hewan, merokok, jam tenang | **DATA FINAL** | Fact sheet v1 §4 |
+| Lampu gang, tangga, ayam pagi | **DATA FINAL** | Fact sheet v1 §3, §7 |
+
+**Hasil:** listing OTA tidak lagi berisi placeholder, jadi bisa diajukan ke approval (SIMULASI). Batas karakter Booking.com masih **CLIENT CONFIRMATION** (TASK-011).

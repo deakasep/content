@@ -15,10 +15,11 @@ description: Write or improve accommodation listing descriptions for OTAs (Trave
 - `../../knowledge/segments/hotel.md`
 - `../../knowledge/segments/villa.md`
 - `../../prompts/ota-listing/write-hotel-description.md`
+- `../../templates/property-fact-sheet.md`
 
 ## Workflow
 
-1. Kumpulkan fact sheet; tolak mulai bila tipe kamar, kapasitas, atau fasilitas utama belum ada.
+1. Kumpulkan fact sheet properti sesuai `../../templates/property-fact-sheet.md`; tolak mulai bila tipe kamar, kapasitas, atau fasilitas utama belum ada. Hanya baris berlabel **DATA FINAL** yang dipakai; baris lain jadi daftar **CLIENT CONFIRMATION** / **FIELD VERIFICATION**.
 2. Pisahkan fasilitas gratis vs berbayar; kebijakan check-in/out, anak, hewan, merokok.
 3. Konfirmasi platform target dan batas karakter (spec berubah → **CLIENT CONFIRMATION**).
 4. Verifikasi klaim lokasi/view/jarak; yang meragukan → **FIELD VERIFICATION**.
