@@ -211,3 +211,45 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [v2](../examples/pilot-2/v2.md), [REPORT](../examples/pilot-2/REPORT.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/27>
 - Completed: 2026-10-04
 - Commit: 1c377b9
+
+## TASK-029: Split repo jadi clau-ai-core, clau-ai-marketing, clau-ai-agents
+
+- ID: TASK-029
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Memisahkan fondasi, Pilar 1, dan platform ke tiga repo private; repo ini jadi arsip.
+- Acceptance Criteria: Tiga repo ter-push dan CI hijau; core sebagai submodule di marketing & agents; `scripts/split_repo.py` reproducible; README arsip menunjuk ke repo baru.
+- Related: [split_repo.py](../scripts/split_repo.py), <https://github.com/d34faiza-commits/clau-ai-core>, <https://github.com/d34faiza-commits/clau-ai-marketing>, <https://github.com/d34faiza-commits/clau-ai-agents>
+- Completed: 2026-10-04
+- Commit: c46c0b9, 4d1ae12 (arsip); core c23ec00, marketing f347e0a, agents e66a17a
+
+## TASK-030: Rekomendasi review adversarial 2–6: proses QA
+
+- ID: TASK-030
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Ekstraksi klaim per kalimat, re-check penuh per versi, cek field brief di QA, CTA check di check_caption.py, rubrik skor.
+- Acceptance Criteria: check_caption menangkap R-01 (2 CTA) dan R-06 (CTA beda dari brief) pada draft lama; QA docs dan rubrik ada; CI hijau.
+- Related: [scoring-rubric](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/scoring-rubric.md), [claim-verification](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/claim-verification.md), [check_caption.py](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/scripts/check_caption.py)
+- Completed: 2026-10-04
+- Commit: clau-ai-marketing f4bcdfd
+
+## TASK-031: Pilot 2 v3 dengan proses QA baru (rekomendasi 7)
+
+- ID: TASK-031
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Perbaiki R-01–R-08, jalankan QA baru penuh, skor dengan rubrik.
+- Acceptance Criteria: v3.md berisi tabel ekstraksi kalimat semua konten, kecocokan brief, output check_caption aktual, self-score berbasis rubrik; temuan baru dicatat.
+- Related: [v3](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3.md), [v3 brief](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3/brief.json)
+- Completed: 2026-10-04
+- Commit: clau-ai-marketing e7e06e7
