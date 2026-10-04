@@ -20,7 +20,7 @@ Baca sebelum bekerja:
 
 ## Workflow
 
-1. Pastikan input minimum: brand, vertical, lokasi umum, Voice Card, topik/visual, objective, CTA, bahasa. Yang kurang → tanya, atau tandai **CLIENT CONFIRMATION**.
+1. Pastikan input minimum: brand, vertical, lokasi umum, Voice Card, topik/visual, objective, CTA, bahasa. Voice Card diambil dari field `voice` di brief (arketipe, kata sifat, "bukan", sapaan, emoji) plus `restrictions` (kata wajib/terlarang). Bila `voice.evidence_label` = **CLIENT CONFIRMATION**, pakai arketipe di brief dan catat di output bahwa voice belum disetujui client. Input lain yang kurang → tanya, atau tandai **CLIENT CONFIRMATION**.
 2. Daftar fakta yang boleh dipakai; hanya **DATA FINAL**.
 3. Cek segment knowledge vertical (`../../knowledge/segments/`) untuk angle konten yang relevan.
 4. Tulis hook sensory dan spesifik di baris pertama.

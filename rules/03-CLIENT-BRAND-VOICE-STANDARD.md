@@ -14,6 +14,7 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 
 - Setiap client wajib punya **Voice Card** (diisi saat onboarding) sebelum produksi rutin. Tanpa Voice Card, voice berstatus **CLIENT CONFIRMATION** dan pakai default di [hospitality-voice.md](../knowledge/voice-guides/hospitality-voice.md).
 - Voice Card minimum: 3 kata sifat brand, 3 "kami bukan…", sapaan ke tamu, bahasa utama, aturan emoji, kata wajib/terlarang, contoh konten yang disukai.
+- Ringkasan Voice Card wajib dibawa ke setiap brief lewat field `voice` ([schema](../schemas/content-brief.schema.json) v1.1) supaya skill dan reviewer memakai voice yang sama.
 - Logo, warna, font, dan template visual client tidak boleh diubah, di-recolor, di-stretch, atau dibuat ulang oleh AI.
 - Nama properti/outlet ditulis persis sesuai brand guide (kapitalisasi, spasi, aksen).
 - Jangan meniru voice brand lain atau kompetitor.

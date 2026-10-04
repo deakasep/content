@@ -13,6 +13,7 @@
     "location_area",
     "objective",
     "audience",
+    "voice",
     "channels",
     "claims",
     "classification",
@@ -20,7 +21,7 @@
     "deadlines"
   ],
   "properties": {
-    "schema_version": { "const": "1.0" },
+    "schema_version": { "const": "1.1" },
     "brief_id": {
       "type": "string",
       "pattern": "^[A-Z0-9]{2,12}-[0-9]{6}-[0-9]{2}$",
@@ -189,6 +190,36 @@
         "publish": { "type": "string", "format": "date" },
         "timezone": { "enum": ["WIB", "WITA", "WIT"] }
       }
+    },
+    "voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Voice Card ringkas (rule 03). Kata wajib/terlarang tetap di restrictions.",
+      "required": ["evidence_label", "archetype"],
+      "properties": {
+        "evidence_label": {
+          "enum": ["DATA FINAL", "CLIENT CONFIRMATION"],
+          "description": "DATA FINAL = Voice Card disetujui client; CLIENT CONFIRMATION = pakai default sementara."
+        },
+        "voice_card_ref": {
+          "type": "string",
+          "description": "Referensi opaque ke Voice Card di workspace client; bukan URL privat."
+        },
+        "archetype": {
+          "enum": ["tenang-membumi", "hangat-kekeluargaan", "elegan-tertata", "santai-playful", "informatif-praktis"],
+          "description": "Arketipe dari knowledge/voice-guides/hospitality-voice.md"
+        },
+        "adjectives": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+        "not_like": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+        "address": { "enum": ["kamu", "Anda", "Kak", "you"] },
+        "emoji_rule": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "evidence_label": { "const": "DATA FINAL" } } },
+          "then": { "required": ["voice_card_ref", "adjectives", "not_like", "address", "emoji_rule"] }
+        }
+      ]
     },
     "restrictions": {
       "type": "object",

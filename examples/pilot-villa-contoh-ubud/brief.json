@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "brief_id": "VCU-202610-01",
   "client_code": "VCU",
   "vertical": "accommodation",
@@ -16,6 +16,12 @@
     "origin": ["Jakarta", "Surabaya", "Australia"],
     "language": "bilingual-id-en",
     "english_variant": "en-GB"
+  },
+  "voice": {
+    "evidence_label": "CLIENT CONFIRMATION",
+    "archetype": "tenang-membumi",
+    "address": "kamu",
+    "emoji_rule": "Maks 2 per caption, relevan (alam/kopi)"
   },
   "channels": [
     { "channel": "instagram", "format": "carousel", "quantity": 1, "paid": false },

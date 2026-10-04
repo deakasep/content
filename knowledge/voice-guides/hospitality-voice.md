@@ -19,13 +19,13 @@ Tulis seperti host yang menyambut tamu di depan pintu:
 
 ## Arketipe Voice (pilih 1 saat onboarding)
 
-| Arketipe | Cocok untuk | Ciri | Contoh kalimat (fiktif) |
-|---|---|---|---|
-| **Tenang & Membumi** | Villa sawah, wellness retreat, spa | Kalimat pendek, ritme pelan, alam | "Pagi di sini dimulai dengan suara air di parit sawah." |
-| **Hangat & Kekeluargaan** | Homestay, guesthouse, resto keluarga | Sapaan akrab, cerita host | "Bu Made sudah siapkan pisang goreng hangat buat kamu." |
-| **Elegan & Tertata** | Resort, fine dining, hotel premium | Diksi rapi, tidak berlebihan | "Makan malam lima hidangan, disajikan saat matahari turun di Selat Lombok." |
-| **Santai & Playful** | Cafe, beach club, surf camp | Energi, humor ringan, emoji relevan | "Ombak pagi oke, kopi kedua juga oke 🌊" |
-| **Informatif & Praktis** | Business hotel, transit, budget | Poin, jelas, efisien | "5 menit ke stasiun. Check-in mulai 14.00. Wi-Fi di semua area." |
+| Arketipe | Kode (`voice.archetype` di brief) | Cocok untuk | Ciri | Contoh kalimat (fiktif) |
+|---|---|---|---|---|
+| **Tenang & Membumi** | `tenang-membumi` | Villa sawah, wellness retreat, spa | Kalimat pendek, ritme pelan, alam | "Pagi di sini dimulai dengan suara air di parit sawah." |
+| **Hangat & Kekeluargaan** | `hangat-kekeluargaan` | Homestay, guesthouse, resto keluarga | Sapaan akrab, cerita host | "Bu Made sudah siapkan pisang goreng hangat buat kamu." |
+| **Elegan & Tertata** | `elegan-tertata` | Resort, fine dining, hotel premium | Diksi rapi, tidak berlebihan | "Makan malam lima hidangan, disajikan saat matahari turun di Selat Lombok." |
+| **Santai & Playful** | `santai-playful` | Cafe, beach club, surf camp | Energi, humor ringan, emoji relevan | "Ombak pagi oke, kopi kedua juga oke 🌊" |
+| **Informatif & Praktis** | `informatif-praktis` | Business hotel, transit, budget | Poin, jelas, efisien | "5 menit ke stasiun. Check-in mulai 14.00. Wi-Fi di semua area." |
 
 ## Sapaan
 

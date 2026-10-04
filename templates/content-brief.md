@@ -32,6 +32,20 @@
 | Asal (domestik/negara) | |
 | Bahasa konten | ID / EN / bilingual |
 
+## 3b. Voice (ringkasan Voice Card — [rule 03](../rules/03-CLIENT-BRAND-VOICE-STANDARD.md))
+
+| Field | Isi | Field schema |
+|---|---|---|
+| Status Voice Card | **DATA FINAL** (disetujui client) / **CLIENT CONFIRMATION** (pakai default sementara) | `voice.evidence_label` |
+| Referensi Voice Card (workspace client) | | `voice.voice_card_ref` |
+| Arketipe | tenang-membumi / hangat-kekeluargaan / elegan-tertata / santai-playful / informatif-praktis ([voice guide](../knowledge/voice-guides/hospitality-voice.md)) | `voice.archetype` |
+| 3 kata sifat brand | | `voice.adjectives` |
+| 3 "kami bukan…" | | `voice.not_like` |
+| Sapaan | kamu / Anda / Kak / you | `voice.address` |
+| Aturan emoji | | `voice.emoji_rule` |
+
+Bila status **DATA FINAL**, semua field wajib diisi. Kata wajib/terlarang diisi di bagian 9.
+
 ## 4. Channel & Format
 
 | Channel | Format | Jumlah | Catatan |

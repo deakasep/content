@@ -33,7 +33,7 @@ Menjalankan [WORKFLOW.md](../../WORKFLOW.md) end-to-end dengan brief fiktif untu
 
 | ID | Temuan | Dampak | Tindak lanjut |
 |---|---|---|---|
-| F-01 | Schema/template brief tidak punya field Voice Card | Brand voice tidak bisa diverifikasi dari brief; skill jatuh ke default | TASK-015 |
+| F-01 | Schema/template brief tidak punya field Voice Card | Brand voice tidak bisa diverifikasi dari brief; skill jatuh ke default | TASK-015 — **selesai**: schema v1.1 punya field `voice`; brief pilot diperbarui |
 | F-02 | Tidak ada template/schema **fact sheet properti** (bed type, ukuran kamar, kebijakan, check-in) | Listing OTA tertahan `<KONFIRMASI>` | TASK-016 |
 | F-03 | Belum ada lokasi resmi untuk contoh fiktif/pilot | Contoh bisa tercecer atau tercampur dengan data client | **Selesai di pilot ini** — folder `examples/` |
 | F-04 | Validator tidak memvalidasi contoh brief terhadap schema | Contoh bisa tidak valid tanpa ketahuan | **Selesai di pilot ini** — validator cek `examples/**/brief.json` |
