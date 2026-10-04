@@ -16,7 +16,6 @@
 | Deadline draft | |
 | Tanggal publish target | |
 | Jam publish + zona waktu | HH:MM WIB / WITA / WIT (wajib sebelum publication checklist) |
-| CTA utama + target | save / comment / link-in-bio / link-sticker / WhatsApp / DM / Book — target = referensi ke URL/nomor resmi di workspace client |
 
 ## 2. Objective
 
@@ -50,13 +49,15 @@ Bila status **DATA FINAL**, semua field wajib diisi. Kata wajib/terlarang diisi 
 
 ## 4. Channel & Format
 
-| Channel | Format | Jumlah | Catatan |
-|---|---|---|---|
-| Instagram | feed / carousel / Reels / Stories | | |
-| TikTok | video | | |
-| Google Business Profile | update / offer / event | | |
-| OTA | listing update | | |
-| WhatsApp | broadcast (opt-in saja) | | |
+| Channel | Format | Jumlah | CTA (1 per konten) + target | Catatan |
+|---|---|---|---|---|
+| Instagram | feed / carousel / Reels / Stories | | | |
+| TikTok | video | | | |
+| Google Business Profile | update / offer / event | | | |
+| OTA | listing update | | | |
+| WhatsApp | broadcast (opt-in saja) | | | |
+
+CTA: save / comment / share / link-in-bio / link-sticker / whatsapp / dm / book-button / call. Untuk CTA berupa link atau nomor, target diisi referensi ke URL/nomor resmi di workspace client (`channels[].cta.target_ref`).
 
 ## 5. Offer (bila ada)
 

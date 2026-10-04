@@ -88,6 +88,7 @@
             ]
           },
           "format": { "type": "string" },
+          "cta": { "$ref": "#/$defs/cta" },
           "quantity": { "type": "integer", "minimum": 1 },
           "paid": { "type": "boolean", "default": false }
         }
@@ -196,22 +197,6 @@
         "timezone": { "enum": ["WIB", "WITA", "WIT"] }
       }
     },
-    "cta": {
-      "type": "object",
-      "additionalProperties": false,
-      "description": "Satu CTA utama (rule 05).",
-      "required": ["type"],
-      "properties": {
-        "type": { "enum": ["save", "comment", "share", "link-in-bio", "link-sticker", "whatsapp", "dm", "book-button", "call"] },
-        "target_ref": { "type": "string", "description": "Referensi opaque ke URL/nomor resmi di workspace client; bukan URL privat atau nomor pribadi." }
-      },
-      "allOf": [
-        {
-          "if": { "properties": { "type": { "enum": ["link-in-bio", "link-sticker", "whatsapp", "book-button", "call"] } } },
-          "then": { "required": ["target_ref"] }
-        }
-      ]
-    },
     "voice": {
       "type": "object",
       "additionalProperties": false,
@@ -294,6 +279,22 @@
     }
   ],
   "$defs": {
+    "cta": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Satu CTA utama (rule 05).",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["save", "comment", "share", "link-in-bio", "link-sticker", "whatsapp", "dm", "book-button", "call"] },
+        "target_ref": { "type": "string", "description": "Referensi opaque ke URL/nomor resmi di workspace client; bukan URL privat atau nomor pribadi." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "enum": ["link-in-bio", "link-sticker", "whatsapp", "book-button", "call"] } } },
+          "then": { "required": ["target_ref"] }
+        }
+      ]
+    },
     "evidence_label": {
       "enum": ["DATA FINAL", "ASSUMPTION", "CLIENT CONFIRMATION", "FIELD VERIFICATION", "RISK", "NEXT ACTION"]
     }
