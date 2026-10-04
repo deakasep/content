@@ -53,4 +53,4 @@ description: Write or improve accommodation listing descriptions for OTAs (Trave
 
 ## Exit Criteria
 
-**Pass** bila self-check lulus dan semua klaim berlabel. Listing dengan klaim fisik belum terverifikasi = **Conditional** sampai field check.
+**Pass** bila self-check lulus dan semua klaim berlabel. Listing dengan klaim fisik belum terverifikasi = **Conditional** sampai field check. Klaim tersirat yang belum **DATA FINAL** tidak boleh hanya diberi tanda ⚠️: **ubah atau hapus kalimatnya sebelum diserahkan**. Kalau masih ada saat diserahkan = **Fail**.

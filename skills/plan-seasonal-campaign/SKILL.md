@@ -54,4 +54,4 @@ description: Plan seasonal promotions for Indonesian hospitality businesses arou
 
 ## Exit Criteria
 
-**Pass** bila tanggal, offer, dan kapasitas terkonfirmasi dan self-check lulus. Tanggal/harga belum terkonfirmasi = **Conditional**, tidak boleh masuk materi publish.
+**Pass** bila tanggal, offer, dan kapasitas terkonfirmasi dan self-check lulus. Tanggal/harga belum terkonfirmasi = **Conditional**, tidak boleh masuk materi publish. Klaim tersirat yang belum **DATA FINAL** tidak boleh hanya diberi tanda ⚠️: **ubah atau hapus kalimatnya sebelum diserahkan**. Kalau masih ada saat diserahkan = **Fail**.

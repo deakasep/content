@@ -26,13 +26,14 @@ Baca sebelum bekerja:
 4. Tulis hook sensory dan spesifik di baris pertama.
 5. Buat 3 varian (storytelling, informatif, conversational) sesuai Voice Card.
 6. Tambahkan 1 CTA dan 3–8 hashtag relevan.
-7. Tulis alt text.
+7. Tulis alt text **per gambar/slide** (carousel 5 slide = 5 alt text), deskriptif, tanpa hashtag.
 8. Isi tabel klaim, termasuk **klaim tersirat**: baca ulang setiap varian kalimat per kalimat dan catat semua gambaran pengalaman (view, jarak, suasana, kapasitas) sebagai klaim. Lalu jalankan self-check.
 
 ## Output
 
 - 3 varian caption, masing-masing dalam code block terpisah.
-- Alt text.
+- Alt text per gambar/slide.
+- Hasil `python scripts/check_caption.py --markdown <file> --brief <brief.json>` (bila dijalankan).
 - Tabel klaim: Klaim | Label | Sumber.
 - Data gap (**CLIENT CONFIRMATION** / **FIELD VERIFICATION**) + **NEXT ACTION**.
 - Level approval yang dibutuhkan (L1/L2/L3).
@@ -46,6 +47,8 @@ Baca sebelum bekerja:
 5. Tidak ada nama/foto tamu tanpa consent.
 6. Konten berbayar → disclosure tercantum.
 7. Klaim tersirat ikut dicek: setiap kalimat yang menggambarkan apa yang *akan dialami* tamu (view, jarak/waktu tempuh, suasana sepi/ramai, kapasitas, kecepatan, kebersihan, "bisa lihat X dan Y sekaligus") dicatat sebagai klaim di tabel klaim dan harus **DATA FINAL**; kalau tidak, kalimatnya dihapus atau diubah. Contoh pilot: "view sawah dan kolam dua-duanya kelihatan" adalah klaim view yang butuh foto bukti.
+8. Hook (baris pertama) ≤125 karakter; alt text ada untuk setiap gambar/slide.
+9. Tidak ada kata positioning tanpa dasar (mewah/luxury/premium/eksklusif/5-star) dan tidak ada kalimat yang memperkuat klaim tersirat dari nama brand (rule 02).
 
 ## Safety Boundary
 
@@ -56,4 +59,4 @@ Baca sebelum bekerja:
 
 ## Exit Criteria
 
-**Pass** bila self-check lulus semua dan open items tercatat. **Fail** bila ada klaim non-**DATA FINAL** di teks caption.
+**Pass** bila self-check lulus semua, `scripts/check_caption.py` lulus (hook ≤125 karakter, hashtag 3–8, tanpa kata positioning/terlarang), dan open items tercatat. **Fail** bila ada klaim non-**DATA FINAL** di teks caption, termasuk klaim tersirat. Klaim tersirat yang belum **DATA FINAL** tidak boleh hanya diberi tanda ⚠️: **ubah atau hapus kalimatnya sebelum diserahkan**. Kalau masih ada saat diserahkan = **Fail**.

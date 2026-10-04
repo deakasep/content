@@ -21,7 +21,7 @@
 | 2 | Cek komentar, DM, dan review baru di setiap channel client (24–72 jam setelah publish) | [WORKFLOW Step 9](../../WORKFLOW.md) | Daftar yang perlu dibalas / dieskalasi |
 | 3 | Draft balasan review dengan skill `reply-guest-review`; review negatif berat → eskalasi L3, bukan balasan final | [skill](../../skills/reply-guest-review/SKILL.md) | Draft balasan + level approval |
 | 4 | Draft konten yang jatuh tempo (caption/listing) dengan skill terkait | [index skills](../../README.md#index-skills) | Draft + tabel klaim |
-| 5 | Jalankan QA gate untuk draft hari ini | [qa/](../../qa/claim-verification.md) | Pass / Conditional / Fail |
+| 5 | Jalankan `python scripts/check_caption.py --markdown <draft> --brief <brief.json>`, lalu QA gate untuk draft hari ini | [qa/](../../qa/claim-verification.md) | Pass / Conditional / Fail |
 | 6 | Kirim paket approval ke approver client | [approval record](../../templates/approval-record.md) | Record terisi |
 | 7 | Publish/schedule konten yang **sudah approved**, oleh manusia, di tools platform | [publication checklist](../../qa/publication-checklist.md) | URL + log publikasi |
 
