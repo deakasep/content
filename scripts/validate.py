@@ -9,6 +9,7 @@ Checks (stdlib only; jsonschema is used when installed):
     existing context files, and a matching agents/openai.yaml
   - JSON files parse; JSON schemas are valid when jsonschema is available
   - governance docs: frontmatter, Revision History, and README versions agree
+  - task boards: unique IDs, required fields, status matches board
   - relative Markdown links resolve
   - no obvious secrets are committed
 
@@ -275,6 +276,55 @@ def check_versions(report: Report) -> None:
             report.fail("README.md", f"Versi Dokumen row for {rel} is {listed.get(rel)}, expected ({version}, {status})")
 
 
+TASK_BOARDS = {
+    "backlog.md": "Backlog",
+    "in-progress.md": "In Progress",
+    "review.md": "Review",
+    "done.md": "Done",
+}
+TASK_FIELDS = ["ID", "Status", "Priority", "Assignee", "Created", "Due", "Description", "Acceptance Criteria", "Related"]
+TASK_PRIORITIES = {"Low", "Normal", "High", "Urgent"}
+TASK_HEADING_RE = re.compile(r"^## (TASK-\d{3}): .+$", re.MULTILINE)
+DATE_OR_DASH_RE = re.compile(r"^(\d{4}-\d{2}-\d{2}|—)$")
+
+
+def check_tasks(report: Report) -> None:
+    """Each task lives in one board file, with all fields and a status matching its board."""
+    tasks_dir = ROOT / "tasks"
+    if not tasks_dir.is_dir():
+        return
+    seen: dict[str, str] = {}
+    for filename, column in TASK_BOARDS.items():
+        path = tasks_dir / filename
+        if not path.is_file():
+            report.fail(f"tasks/{filename}", "task board file is missing")
+            continue
+        report.checked += 1
+        text = path.read_text(encoding="utf-8")
+        headings = list(TASK_HEADING_RE.finditer(text))
+        for i, match in enumerate(headings):
+            task_id = match.group(1)
+            end = headings[i + 1].start() if i + 1 < len(headings) else len(text)
+            fields = dict(re.findall(r"^- ([A-Za-z ]+): (.+)$", text[match.end():end], re.MULTILINE))
+            where = f"tasks/{filename} {task_id}"
+            if task_id in seen:
+                report.fail(where, f"duplicate task ID (also in tasks/{seen[task_id]})")
+            seen[task_id] = filename
+            missing = [f for f in TASK_FIELDS if f not in fields]
+            if missing:
+                report.fail(where, f"missing fields: {', '.join(missing)}")
+                continue
+            if fields["ID"] != task_id:
+                report.fail(where, f"ID field '{fields['ID']}' does not match heading")
+            if fields["Status"] != column:
+                report.fail(where, f"Status '{fields['Status']}' does not match board '{column}'")
+            if fields["Priority"] not in TASK_PRIORITIES:
+                report.fail(where, f"Priority '{fields['Priority']}' not in {sorted(TASK_PRIORITIES)}")
+            for date_field in ("Created", "Due"):
+                if not DATE_OR_DASH_RE.match(fields[date_field]):
+                    report.fail(where, f"{date_field} must be YYYY-MM-DD or —")
+
+
 def check_json(report: Report) -> None:
     try:
         import jsonschema  # type: ignore
@@ -346,6 +396,7 @@ def main() -> int:
     check_prompts(report)
     check_skills(report)
     check_versions(report)
+    check_tasks(report)
     check_json(report)
     check_links(report)
     check_secrets(report)
