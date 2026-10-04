@@ -50,30 +50,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Revision History Constitution punya entry review (berubah atau "no change"), versi & README Versi Dokumen konsisten; validator lulus.
 - Related: [CONTENT-CONSTITUTION.md](../CONTENT-CONSTITUTION.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/14>
 
-## TASK-015: Tambah Voice Card ke schema & template brief
-
-- ID: TASK-015
-- Status: Backlog
-- Priority: High
-- Assignee: Dea Karisna
-- Created: 2026-10-04
-- Due: —
-- Description: Temuan F-01 pilot TASK-012: brief tidak membawa Voice Card, sehingga brand voice tidak bisa diverifikasi dan skill jatuh ke voice default.
-- Acceptance Criteria: Schema brief punya field voice (arketipe, 3 kata sifat, 3 "bukan", sapaan, emoji, kata wajib/terlarang) atau referensi Voice Card; `templates/content-brief.md` selaras; brief pilot diperbarui; validator lulus.
-- Related: [pilot F-01](../examples/pilot-villa-contoh-ubud/README.md), [rule 03](../rules/03-CLIENT-BRAND-VOICE-STANDARD.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/15>
-
-## TASK-016: Bikin template fact sheet properti
-
-- ID: TASK-016
-- Status: Backlog
-- Priority: High
-- Assignee: Dea Karisna
-- Created: 2026-10-04
-- Due: —
-- Description: Temuan F-02 pilot TASK-012: tidak ada template fact sheet properti (bed type, ukuran kamar, kamar mandi, kebijakan, check-in/out, aksesibilitas), sehingga listing OTA tertahan placeholder.
-- Acceptance Criteria: `templates/property-fact-sheet.md` ada (minimal vertical accommodation), setiap field punya kolom label evidence; skill `write-ota-listing` merujuk template ini; validator lulus.
-- Related: [pilot F-02](../examples/pilot-villa-contoh-ubud/README.md), [write-ota-listing](../skills/write-ota-listing/SKILL.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/16>
-
 ## TASK-017: Mode simulasi/pilot di WORKFLOW & approval record
 
 - ID: TASK-017
