@@ -14,3 +14,4 @@ Contoh dan pilot memakai **properti fiktif**, sesuai [CONTENT-BOUNDARY.md](../CO
 | Folder | Isi | Task |
 |---|---|---|
 | [pilot-villa-contoh-ubud/](./pilot-villa-contoh-ubud/README.md) | Pilot WORKFLOW end-to-end: villa, IG carousel + Booking.com | TASK-012 |
+| [pilot-2/](./pilot-2/REPORT.md) | Test end-to-end "otak": villa 5 kamar, IG post + reel + story, scoring | — |

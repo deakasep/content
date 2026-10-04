@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.2",
+  "brief_id": "VCSU-202610-01",
+  "client_code": "VCSU",
+  "vertical": "accommodation",
+  "business_type": "villa",
+  "location_area": "Ubud, Gianyar, Bali",
+  "objective": {
+    "type": "awareness",
+    "key_message": "Villa 5 kamar di tepi sawah Ubud dengan ruang privat untuk pasangan",
+    "success_metric": "Reach & saves post, plays reel, story replies",
+    "metric_source": "Instagram Insights (fiktif)"
+  },
+  "audience": {
+    "segments": ["pasangan (honeymoon & anniversary)", "rombongan beberapa pasangan"],
+    "origin": ["Jakarta", "Singapura", "Australia"],
+    "language": "bilingual-id-en",
+    "english_variant": "en-GB"
+  },
+  "voice": {
+    "evidence_label": "CLIENT CONFIRMATION",
+    "archetype": "elegan-tertata",
+    "address": "kamu",
+    "emoji_rule": "Maks 1 per caption; tidak di hook"
+  },
+  "channels": [
+    { "channel": "instagram", "format": "feed carousel", "quantity": 1, "paid": false },
+    { "channel": "instagram", "format": "reels", "quantity": 1, "paid": false },
+    { "channel": "instagram", "format": "stories", "quantity": 1, "paid": false }
+  ],
+  "claims": [
+    { "claim": "5 kamar, maksimal 10 dewasa", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1", "source_date": "2026-10-04" },
+    { "claim": "3 kamar menghadap sawah, bathtub di kamar sawah", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1 + foto A", "source_date": "2026-10-04" },
+    { "claim": "Kolam privat 4 x 12 m", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1 + foto A", "source_date": "2026-10-04" },
+    { "claim": "Bale di tepi sawah, sisi barat", "category": "facility", "evidence_label": "DATA FINAL", "source": "Foto A", "source_date": "2026-10-04" },
+    { "claim": "Sarapan disajikan di bale", "category": "food-beverage", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1", "source_date": "2026-10-04" },
+    { "claim": "Private chef makan malam (berbayar, pesan H-1)", "category": "food-beverage", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1", "source_date": "2026-10-04" },
+    { "claim": "Sunset terlihat dari bale barat", "category": "location", "evidence_label": "FIELD VERIFICATION" },
+    { "claim": "Villa mewah / luxury", "category": "other", "evidence_label": "ASSUMPTION" },
+    { "claim": "+-10 menit ke pusat Ubud", "category": "location", "evidence_label": "FIELD VERIFICATION" }
+  ],
+  "assets": [
+    { "asset_ref": "VCSU-MEDIA-001", "visual_category": "A-original", "people": "none" },
+    { "asset_ref": "VCSU-MEDIA-002", "visual_category": "A-original", "people": "none" },
+    { "asset_ref": "VCSU-MEDIA-003", "visual_category": "A-original", "people": "none" },
+    { "asset_ref": "VCSU-VIDEO-001", "visual_category": "B-light-edit", "people": "identifiable-pending-consent" }
+  ],
+  "classification": {
+    "sensitivity": "Internal",
+    "lifecycle": "For Review",
+    "scope": "Campaign Specific"
+  },
+  "approval": { "level": "L2", "approver_role": "Owner villa (fiktif)" },
+  "deadlines": { "draft": "2026-10-10", "publish": "2026-10-17", "timezone": "WITA" },
+  "restrictions": {
+    "required_terms": ["Villa Contoh Sunset Ubud"],
+    "forbidden_terms": ["mewah", "luxury", "terbaik", "best", "hidden gem", "surga tersembunyi", "sunset view"],
+    "sensitive_topics": ["upacara di pura subak sekitar"]
+  },
+  "risks": [
+    { "description": "Nama 'Sunset' memicu ekspektasi view sunset yang belum terverifikasi", "likelihood": "high", "impact": "medium", "owner": "Content lead", "mitigation": "Tidak ada klaim sunset sampai field check; konten fokus sawah & bale" },
+    { "description": "Villa 5 kamar dipromosikan ke pasangan; harga per malam bisa tidak cocok untuk 1 pasangan", "likelihood": "medium", "impact": "high", "owner": "Owner", "mitigation": "Konfirmasi target; angle rombongan beberapa pasangan" },
+    { "description": "Video reel memuat orang yang dapat dikenali tanpa consent", "likelihood": "medium", "impact": "high", "owner": "Content lead", "mitigation": "Pakai klip tanpa wajah atau minta consent sebelum publish" }
+  ],
+  "next_actions": [
+    { "action": "Field check sunset bale barat (foto + jam)", "owner": "Content lead", "target": "2026-10-09" },
+    { "action": "Konfirmasi positioning & target pasangan ke owner", "owner": "Content lead", "target": "2026-10-08" },
+    { "action": "Consent talent di VCSU-VIDEO-001 atau ganti klip", "owner": "Content lead", "target": "2026-10-09" }
+  ]
+}
