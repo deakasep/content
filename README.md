@@ -65,6 +65,7 @@ CLAU-AI-CONTENT/
 ├── schemas/                  # Machine-readable contract (content brief)
 ├── tasks/                    # Task board: Backlog → In Progress → Review → Done
 ├── examples/                 # Contoh & pilot dengan properti fiktif
+├── automations/              # Tingkat otomasi workflow (Level 1 manual aktif)
 ├── docs/                     # Panduan operasional (task management)
 ├── scripts/validate.py       # Validator struktur repo (dipakai CI)
 └── .github/workflows/        # CI validation
@@ -146,6 +147,10 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 | Destination story | [storytelling-destination](./prompts/destination-story/storytelling-destination.md) |
 | Seasonal promo | [seasonal-campaign](./prompts/promo-seasonal/seasonal-campaign.md) |
 | Template | [prompt-template](./prompts/templates/prompt-template.md) |
+
+## Automations
+
+Workflow saat ini berjalan di **Level 1 (manual/semi-manual)**: rutinitas harian, mingguan, dan bulanan dijalankan manusia, dengan skill dan prompt dipakai di AI chat. AI tidak publish atau approve sendiri. Detail: [automations/level-1-manual/README.md](./automations/level-1-manual/README.md) · [semua level](./automations/README.md).
 
 ## Task Management
 
