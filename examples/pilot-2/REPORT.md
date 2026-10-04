@@ -109,3 +109,5 @@ Satu temuan baru muncul saat perbaikan dan langsung ditutup: CTA di schema awaln
 
 Skor v2 tetap **self-graded** (lihat §6). Kenaikan skor mencerminkan perbaikan yang bisa dicek (file, schema, tool), bukan validasi kualitas oleh manusia.
 
+> **Update (adversarial review):** pembacaan ulang yang kritis menemukan 8 pelanggaran yang lolos QA v2 (mis. 2 CTA di C-B, klaim tersirat "open onto the rice fields"). Skor direvisi menjadi **80/100** dan kesiapan client nyata **60/100**. Detail: [ADVERSARIAL-REVIEW.md](./ADVERSARIAL-REVIEW.md). Review independen manusia (TASK-028) masih dibutuhkan.
+
