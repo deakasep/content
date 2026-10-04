@@ -14,6 +14,18 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Setiap baris spec punya sumber + tanggal akses dan status DATA FINAL, atau dicatat kenapa tidak bisa diverifikasi; validator lulus.
 - Related: [instagram.md](../knowledge/platforms/instagram.md), [tiktok.md](../knowledge/platforms/tiktok.md), [google-business.md](../knowledge/platforms/google-business.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/1>
 
+## TASK-028: Review independen (manusia) atas pilot 2 v2
+
+- ID: TASK-028
+- Status: Backlog
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Rule 08: konten L2 butuh claim review independen. Semua QA pilot 2 masih self-review agent.
+- Acceptance Criteria: Owner/content lead menjalankan claim verification atas v2, mengisi kolom Independen? = Ya, dan mencatat temuan yang berbeda dari self-review di REPORT.
+- Related: [v2](../examples/pilot-2/v2.md), [claim-verification](../qa/claim-verification.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/28>
+
 ## TASK-013: Review knowledge/platforms/google-business.md & destinations
 
 - ID: TASK-013

@@ -99,3 +99,115 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [automations level 1](../automations/level-1-manual/README.md), [WORKFLOW.md](../WORKFLOW.md), [rule 08](../rules/08-APPROVAL-PUBLICATION-STANDARD.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/11>
 - Completed: 2026-10-04
 - Commit: 99ed168
+
+## TASK-020: Atur kata positioning (luxury/mewah) & nama brand yang menyiratkan klaim
+
+- ID: TASK-020
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-05 pilot 2: "mewah/luxury" dan nama brand seperti "Sunset" tidak diatur di rules, hanya di file riset regulasi.
+- Acceptance Criteria: Rule 02 punya bagian kata positioning & nama brand (checklist, risk, eskalasi); voice guide punya daftar kata positioning + pengganti; validator lulus.
+- Related: [rule 02](../rules/02-HOSPITALITY-CLAIM-STANDARD.md), [pilot-2 G-05](../examples/pilot-2/REPORT.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/20>
+- Completed: 2026-10-04
+- Commit: ae3d6c4
+
+## TASK-021: Prompt & skill reel/video script
+
+- ID: TASK-021
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-02 pilot 2: tidak ada prompt/skill reel script; script dibuat improvisasi.
+- Acceptance Criteria: `prompts/video/reel-script.md` + skill `draft-reel-script` (SKILL.md + agents/openai.yaml) dengan shot list, klaim & consent per shot; README index; validator lulus.
+- Related: [reel-script](../prompts/video/reel-script.md), [skill](../skills/draft-reel-script/SKILL.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/21>
+- Completed: 2026-10-04
+- Commit: 03cf564
+
+## TASK-022: Prompt Stories + aturan Reels/Stories/alt text di rule 05
+
+- ID: TASK-022
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-03 & G-07 pilot 2: tidak ada prompt Stories; aturan emoji/hook/sticker/link dan alt text per slide belum ada.
+- Acceptance Criteria: `prompts/stories/stories-sequence.md`; rule 05 punya aturan Reels, Stories, alt text per gambar + checklist; validator lulus.
+- Related: [stories-sequence](../prompts/stories/stories-sequence.md), [rule 05](../rules/05-PLATFORM-STANDARD.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/22>
+- Completed: 2026-10-04
+- Commit: 090d678
+
+## TASK-023: Brief sanity check di WORKFLOW Step 1
+
+- ID: TASK-023
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-01 pilot 2: ketidakcocokan strategi (villa 5 kamar vs target pasangan) tidak dicek sistem.
+- Acceptance Criteria: WORKFLOW Step 1 punya tabel sanity check (kapasitas, harga, objective, positioning, nama brand, consent); template brief §9b; versi WORKFLOW naik; validator lulus.
+- Related: [WORKFLOW](../WORKFLOW.md), [content-brief](../templates/content-brief.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/23>
+- Completed: 2026-10-04
+- Commit: 8a6c1f9
+
+## TASK-024: check_caption tool + pengetatan self-check skill drafting
+
+- ID: TASK-024
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-04, G-06, G-07 pilot 2: hook >125 lolos, klaim tersirat hanya ditandai, alt text 1 per post.
+- Acceptance Criteria: `scripts/check_caption.py` (hook, panjang, hashtag, emoji, kata terlarang); exit criteria skill: klaim tersirat non-DATA FINAL = Fail; alt text per slide; validator lulus.
+- Related: [check_caption.py](../scripts/check_caption.py), [draft-caption](../skills/draft-caption/SKILL.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/24>
+- Completed: 2026-10-04
+- Commit: 80098d3
+
+## TASK-025: Schema v1.3: jam publish & CTA per channel
+
+- ID: TASK-025
+- Status: Done
+- Priority: Low
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-08 pilot 2: schema tidak punya jam publish dan target CTA.
+- Acceptance Criteria: Schema v1.3 punya `deadlines.publish_time` dan `channels[].cta` (target wajib untuk link/nomor); brief contoh valid; template & publication checklist selaras; validator lulus.
+- Related: [schema](../schemas/content-brief.schema.json), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/25>
+- Completed: 2026-10-04
+- Commit: 34ce0c4, 43ef8c2
+
+## TASK-026: Aturan review independen & self-review agent
+
+- ID: TASK-026
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan G-10 pilot 2: QA dijalankan oleh pembuat output yang sama.
+- Acceptance Criteria: Rule 08 mewajibkan claim review independen untuk L2/L3; record QA punya kolom Independen?; AGENTS.md mengatur QA agent = self-review; validator lulus.
+- Related: [rule 08](../rules/08-APPROVAL-PUBLICATION-STANDARD.md), [AGENTS.md](../AGENTS.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/26>
+- Completed: 2026-10-04
+- Commit: 2110c66
+
+## TASK-027: Re-run pilot 2 setelah perbaikan
+
+- ID: TASK-027
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Membuktikan perbaikan TASK-020–026 dengan menjalankan ulang pilot 2.
+- Acceptance Criteria: `examples/pilot-2/v2.md` dengan sanity check, drafts v2, check_caption PASS, QA v2, approval SIMULASI; REPORT diperbarui dengan status temuan & skor v2.
+- Related: [v2](../examples/pilot-2/v2.md), [REPORT](../examples/pilot-2/REPORT.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/27>
+- Completed: 2026-10-04
+- Commit: 1c377b9
