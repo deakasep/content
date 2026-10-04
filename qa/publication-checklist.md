@@ -10,7 +10,8 @@ Gate terakhir tepat sebelum publish/schedule. Rule: [08 Approval & Publication](
 - [ ] Tidak ada perubahan setelah approval (atau sudah di-approve ulang).
 - [ ] Gate QA lulus: content review, claim verification, visual AI review (bila ada visual), privacy & rights.
 - [ ] Akun & channel benar (cek handle — jangan salah akun client).
-- [ ] Tanggal, jam, dan zona waktu (WIB/WITA/WIT) benar.
+- [ ] Tanggal, jam, dan zona waktu (WIB/WITA/WIT) benar dan sama dengan `deadlines.publish` + `deadlines.publish_time` di brief.
+- [ ] Target CTA (`cta.target_ref`) sudah diisi URL/nomor resmi dan dicoba.
 - [ ] Teks final tanpa placeholder (`<KONFIRMASI: ...>`, `[...]`) atau komentar internal.
 - [ ] Link (bio, CTA, UTM) berfungsi dan mengarah ke halaman yang benar.
 - [ ] Harga/promo masih berlaku pada tanggal publish.

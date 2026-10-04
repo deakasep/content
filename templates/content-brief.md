@@ -15,6 +15,8 @@
 | Tanggal brief | |
 | Deadline draft | |
 | Tanggal publish target | |
+| Jam publish + zona waktu | HH:MM WIB / WITA / WIT (wajib sebelum publication checklist) |
+| CTA utama + target | save / comment / link-in-bio / link-sticker / WhatsApp / DM / Book — target = referensi ke URL/nomor resmi di workspace client |
 
 ## 2. Objective
 
