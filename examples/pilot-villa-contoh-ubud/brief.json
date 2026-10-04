@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "brief_id": "VCU-202610-01",
+  "client_code": "VCU",
+  "vertical": "accommodation",
+  "business_type": "villa",
+  "location_area": "Gianyar, Bali",
+  "objective": {
+    "type": "direct-booking",
+    "key_message": "Long stay tenang di tengah sawah, sarapan diantar ke teras",
+    "success_metric": "Jumlah inquiry WhatsApp yang menyebut kode promo LONGSTAY",
+    "metric_source": "Catatan inquiry WhatsApp client (fiktif)"
+  },
+  "audience": {
+    "segments": ["pasangan domestik", "remote worker long stay"],
+    "origin": ["Jakarta", "Surabaya", "Australia"],
+    "language": "bilingual-id-en",
+    "english_variant": "en-GB"
+  },
+  "channels": [
+    { "channel": "instagram", "format": "carousel", "quantity": 1, "paid": false },
+    { "channel": "booking-com", "format": "property description", "quantity": 1, "paid": false }
+  ],
+  "offer": {
+    "name": "Long Stay Sawah",
+    "price": 1500000,
+    "currency": "IDR",
+    "unit": "per-villa-per-night",
+    "tax_service": "plus-plus",
+    "valid_from": "2026-11-01",
+    "valid_to": "2026-12-15",
+    "terms": "Minimal 3 malam; termasuk sarapan untuk 2 orang; tidak bisa digabung promo lain",
+    "capacity": "1 villa (2 kamar tidur, maksimal 4 dewasa)",
+    "evidence_label": "DATA FINAL"
+  },
+  "claims": [
+    { "claim": "2 kamar tidur, maksimal 4 dewasa", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet fiktif VCU v1", "source_date": "2026-10-04" },
+    { "claim": "Kolam renang privat 3 x 6 m", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet fiktif VCU v1 + foto kategori A", "source_date": "2026-10-04" },
+    { "claim": "Teras timur menghadap sawah", "category": "location", "evidence_label": "DATA FINAL", "source": "Foto kategori A bertanggal (fiktif)", "source_date": "2026-10-04" },
+    { "claim": "Sarapan Indonesia diantar ke teras", "category": "food-beverage", "evidence_label": "DATA FINAL", "source": "Fact sheet fiktif VCU v1", "source_date": "2026-10-04" },
+    { "claim": "Parkir mobil di ujung gang, jalan kaki +-80 m ke villa", "category": "location", "evidence_label": "DATA FINAL", "source": "Fact sheet fiktif VCU v1", "source_date": "2026-10-04" },
+    { "claim": "+-15 menit berkendara ke pusat Ubud", "category": "location", "evidence_label": "FIELD VERIFICATION" },
+    { "claim": "Wi-Fi cepat untuk kerja remote", "category": "facility", "evidence_label": "ASSUMPTION" },
+    { "claim": "Persentase pajak daerah & service charge", "category": "price", "evidence_label": "CLIENT CONFIRMATION" }
+  ],
+  "assets": [
+    { "asset_ref": "VCU-MEDIA-001", "visual_category": "A-original", "people": "none" },
+    { "asset_ref": "VCU-MEDIA-002", "visual_category": "A-original", "people": "none" },
+    { "asset_ref": "VCU-MEDIA-003", "visual_category": "B-light-edit", "people": "none" }
+  ],
+  "classification": {
+    "sensitivity": "Internal",
+    "lifecycle": "For Review",
+    "scope": "Campaign Specific"
+  },
+  "approval": { "level": "L2", "approver_role": "Owner villa (fiktif)" },
+  "deadlines": { "draft": "2026-10-10", "publish": "2026-10-20", "timezone": "WITA" },
+  "restrictions": {
+    "required_terms": ["Villa Contoh Ubud"],
+    "forbidden_terms": ["hidden gem", "surga tersembunyi", "terbaik", "private beach"],
+    "sensitive_topics": ["upacara adat di subak sekitar"]
+  },
+  "risks": [
+    { "description": "Tamu kecewa karena mobil tidak bisa sampai depan villa", "likelihood": "medium", "impact": "medium", "owner": "Content lead", "mitigation": "Sebut akses gang di listing & caption" }
+  ],
+  "next_actions": [
+    { "action": "Konfirmasi persentase pajak & service charge ke owner", "owner": "Content lead", "target": "2026-10-08" },
+    { "action": "Ukur waktu tempuh ke pusat Ubud saat field visit", "owner": "Content lead", "target": "2026-10-09" }
+  ]
+}

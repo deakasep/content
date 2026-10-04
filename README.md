@@ -64,6 +64,7 @@ CLAU-AI-CONTENT/
 ├── qa/                       # Review gate sebelum publish
 ├── schemas/                  # Machine-readable contract (content brief)
 ├── tasks/                    # Task board: Backlog → In Progress → Review → Done
+├── examples/                 # Contoh & pilot dengan properti fiktif
 ├── docs/                     # Panduan operasional (task management)
 ├── scripts/validate.py       # Validator struktur repo (dipakai CI)
 └── .github/workflows/        # CI validation

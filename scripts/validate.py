@@ -8,6 +8,7 @@ Checks (stdlib only; jsonschema is used when installed):
   - skills have name/description-only frontmatter, required sections,
     existing context files, and a matching agents/openai.yaml
   - JSON files parse; JSON schemas are valid when jsonschema is available
+  - examples/**/brief.json files validate against the content brief schema
   - governance docs: frontmatter, Revision History, and README versions agree
   - task boards: unique IDs, required fields, status matches board
   - relative Markdown links resolve
@@ -351,6 +352,18 @@ def check_json(report: Report) -> None:
             missing = [label for label in EVIDENCE_LABELS if label not in labels]
             if path.name == "content-brief.schema.json" and missing:
                 report.fail(path, f"evidence_label enum missing: {', '.join(missing)}")
+    brief_schema_path = ROOT / "schemas" / "content-brief.schema.json"
+    if jsonschema is not None and brief_schema_path.is_file():
+        brief_schema = json.loads(brief_schema_path.read_text(encoding="utf-8"))
+        brief_validator = jsonschema.Draft202012Validator(
+            brief_schema, format_checker=jsonschema.FormatChecker()
+        )
+        for brief_path in sorted((ROOT / "examples").rglob("brief.json")):
+            report.checked += 1
+            brief = json.loads(brief_path.read_text(encoding="utf-8"))
+            for err in brief_validator.iter_errors(brief):
+                location = "/".join(str(p) for p in err.path) or "(root)"
+                report.fail(brief_path, f"schema violation at {location}: {err.message}")
     if jsonschema is None:
         print("note: jsonschema not installed; JSON Schema meta-validation skipped")
 
