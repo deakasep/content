@@ -6,6 +6,7 @@
 
 | Field | Isi |
 |---|---|
+| Mode | **NYATA** / **SIMULASI** (pilot/contoh — lihat [WORKFLOW Mode SIMULASI](../WORKFLOW.md#mode-simulasi-pilot--contoh)) |
 | Record ID | `<CLIENTCODE>-APR-<YYYYMMDD>-<NN>` |
 | Brief ID | |
 | Channel & format | |
@@ -35,7 +36,7 @@
 
 | Field | Isi |
 |---|---|
-| Keputusan | Approved / Approved with changes / Rejected |
+| Keputusan | Approved / Approved with changes / Rejected (Mode SIMULASI: selalu "SIMULASI — tidak ada approval nyata") |
 | Nama & peran approver | |
 | Tanggal & jam | |
 | Kanal approval (email/tool/chat yang diarsipkan) | |

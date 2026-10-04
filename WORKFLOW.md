@@ -1,7 +1,7 @@
 ---
 document_title: "CLAU Mandatory Content Workflow"
 document_owner: "Dea Karisna / AI Marketing"
-version: "0.1.1"
+version: "0.1.2"
 status: "Draft"
 classification: "Internal"
 ---
@@ -117,6 +117,19 @@ Gagal → stop, ganti asset, atau minta consent. Tidak ada exception tanpa appro
 - Koreksi cepat bila ada kesalahan: edit/unpublish sesuai otoritas, catat insiden.
 - Report bulanan: [templates/monthly-report.md](./templates/monthly-report.md). Metrik dilaporkan apa adanya dari platform insight — tidak dibulatkan ke atas, tidak dikarang.
 
+## Mode SIMULASI (pilot & contoh)
+
+Dipakai untuk menguji alur dengan properti fiktif (lihat [examples/](./examples/README.md)) atau melatih tim. Mode ini **tidak pernah** menghasilkan konten yang boleh dipublish.
+
+| Aturan | Isi |
+|---|---|
+| Penanda wajib | Kata **SIMULASI** di judul/catatan setiap dokumen (brief, draft, QA, approval record); nama properti mengandung "Contoh" |
+| Data | Hanya data fiktif. Dilarang memakai data, foto, atau nama client/tamu nyata |
+| Langkah wajib | 1–6 dijalankan penuh: brief, classify, draft, claim check, brand & localization, rights & consent |
+| Langkah 7 (Approval) | Diisi di [approval record](./templates/approval-record.md) dengan `Mode: SIMULASI`, dan keputusan selalu "SIMULASI — tidak ada approval nyata" |
+| Langkah 8–9 | **Tidak dijalankan.** Publication checklist boleh di-*pre-check* untuk menemukan blocker, tapi tidak boleh publish, schedule, atau boost |
+| Promosi ke nyata | Konten simulasi tidak bisa "dinaikkan" jadi konten client. Untuk client nyata, mulai ulang dari Step 1 dengan brief dan fact sheet nyata |
+
 ## Final QA Gate (hard stop)
 
 Konten **tidak boleh** publish bila salah satu ini terjadi:
@@ -128,6 +141,7 @@ Konten **tidak boleh** publish bila salah satu ini terjadi:
 - [ ] Ada klaim kesehatan/medis spa.
 - [ ] Ada konten berbayar tanpa disclosure.
 - [ ] Approval tertulis belum ada.
+- [ ] Dokumen berstatus **SIMULASI**.
 
 ## Revision History
 
@@ -135,3 +149,4 @@ Konten **tidak boleh** publish bila salah satu ini terjadi:
 |---|---|---|---|
 | 0.1.0 | 2026-10-03 | Draft | Initial mandatory workflow 9 langkah |
 | 0.1.1 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |
+| 0.1.2 | 2026-10-04 | Draft | Tambah Mode SIMULASI untuk pilot & contoh (TASK-017) |

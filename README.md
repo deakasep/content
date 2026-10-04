@@ -15,7 +15,7 @@ Repository private berisi governance, rules, prompt library, AI agent skills, kn
 |---|---|---|
 | [CONTENT-CONSTITUTION.md](./CONTENT-CONSTITUTION.md) | 1.0.0 | Approved |
 | [CONTENT-BOUNDARY.md](./CONTENT-BOUNDARY.md) | 0.1.4 | Draft |
-| [WORKFLOW.md](./WORKFLOW.md) | 0.1.1 | Draft |
+| [WORKFLOW.md](./WORKFLOW.md) | 0.1.2 | Draft |
 | [AGENTS.md](./AGENTS.md) | 0.1.2 | Draft |
 
 Setiap dokumen di-version terpisah (SemVer). Validator mengecek tabel ini cocok dengan frontmatter dan Revision History tiap dokumen.

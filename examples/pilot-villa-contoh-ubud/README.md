@@ -38,7 +38,7 @@ Menjalankan [WORKFLOW.md](../../WORKFLOW.md) end-to-end dengan brief fiktif untu
 | F-02 | Tidak ada template/schema **fact sheet properti** (bed type, ukuran kamar, kebijakan, check-in) | Listing OTA tertahan `<KONFIRMASI>` | TASK-016 — **selesai**: [template fact sheet](../../templates/property-fact-sheet.md); listing pilot di-run ulang tanpa placeholder ([fact-sheet.md](./fact-sheet.md), drafts Step 3c) |
 | F-03 | Belum ada lokasi resmi untuk contoh fiktif/pilot | Contoh bisa tercecer atau tercampur dengan data client | **Selesai di pilot ini** — folder `examples/` |
 | F-04 | Validator tidak memvalidasi contoh brief terhadap schema | Contoh bisa tidak valid tanpa ketahuan | **Selesai di pilot ini** — validator cek `examples/**/brief.json` |
-| F-05 | WORKFLOW & approval record tidak punya mode simulasi/pilot | Risiko record simulasi terbaca sebagai approval nyata | TASK-017 |
+| F-05 | WORKFLOW & approval record tidak punya mode simulasi/pilot | Risiko record simulasi terbaca sebagai approval nyata | TASK-017 — **selesai**: WORKFLOW §Mode SIMULASI + field `Mode` di approval record |
 | F-06 | Self-check skill `draft-caption` tidak memeriksa **klaim tersirat** (mis. "view X dan Y terlihat") | Klaim lolos sampai claim gate | TASK-018 |
 | F-07 | Schema tidak mewajibkan `source_date` untuk klaim **DATA FINAL**, padahal rule 01 meminta versi/tanggal sumber | Traceability lemah | TASK-019 |
 | F-08 | Spec platform (batas caption, dll.) masih **ASSUMPTION** | Cek panjang konten belum bisa jadi gate | TASK-011 (blocked: akses help center) |

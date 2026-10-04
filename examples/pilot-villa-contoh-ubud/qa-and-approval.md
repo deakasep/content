@@ -50,6 +50,7 @@ Superlatif / klise / halal / bintang / medis: **tidak ada** (dicek otomatis terh
 
 | Field | Isi |
 |---|---|
+| Mode | **SIMULASI** |
 | Record ID | `VCU-APR-20261004-01` |
 | Brief ID | `VCU-202610-01` |
 | Channel & format | Instagram carousel (Varian A) + Booking.com description (EN) |
