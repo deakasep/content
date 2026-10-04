@@ -24,9 +24,9 @@
     "emoji_rule": "Maks 1 per caption; tidak di hook"
   },
   "channels": [
-    { "channel": "instagram", "format": "feed carousel", "quantity": 1, "paid": false },
-    { "channel": "instagram", "format": "reels", "quantity": 1, "paid": false },
-    { "channel": "instagram", "format": "stories", "quantity": 1, "paid": false }
+    { "channel": "instagram", "format": "feed carousel", "quantity": 1, "paid": false, "cta": { "type": "save" } },
+    { "channel": "instagram", "format": "reels", "quantity": 1, "paid": false, "cta": { "type": "save" } },
+    { "channel": "instagram", "format": "stories", "quantity": 1, "paid": false, "cta": { "type": "link-sticker", "target_ref": "VCSU-LINK-BIO-01" } }
   ],
   "claims": [
     { "claim": "5 kamar, maksimal 10 dewasa", "category": "facility", "evidence_label": "DATA FINAL", "source": "Fact sheet VCSU v1", "source_date": "2026-10-04" },
@@ -51,10 +51,10 @@
     "scope": "Campaign Specific"
   },
   "approval": { "level": "L2", "approver_role": "Owner villa (fiktif)" },
-  "deadlines": { "draft": "2026-10-10", "publish": "2026-10-17", "timezone": "WITA" },
+  "deadlines": { "draft": "2026-10-10", "publish": "2026-10-17", "publish_time": "18:00", "timezone": "WITA" },
   "restrictions": {
     "required_terms": ["Villa Contoh Sunset Ubud"],
-    "forbidden_terms": ["mewah", "luxury", "terbaik", "best", "hidden gem", "surga tersembunyi", "sunset view"],
+    "forbidden_terms": ["mewah", "luxury", "premium", "eksklusif", "terbaik", "best", "hidden gem", "surga tersembunyi", "sunset view", "golden hour"],
     "sensitive_topics": ["upacara di pura subak sekitar"]
   },
   "risks": [

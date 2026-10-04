@@ -8,8 +8,8 @@
 |---|---|
 | Skenario | Klien baru fiktif **Villa Contoh Sunset Ubud**: villa 5 kamar, view sawah, target pasangan |
 | Deliverable diminta | 1 IG post (3 varian caption), 1 reel script, 1 story, fact sheet, brief, QA, approval record |
-| Deliverable dihasilkan | Semua: [fact-sheet.md](./fact-sheet.md), [brief.md](./brief.md) + [brief.json](./brief.json), [drafts.md](./drafts.md), [qa.md](./qa.md), [approval-record.md](./approval-record.md) |
-| Skor keseluruhan | **82/100** untuk sistem saat dipakai; **65/100** untuk kesiapan dipakai ke client nyata |
+| Deliverable dihasilkan | v1: [fact-sheet.md](./fact-sheet.md), [brief.md](./brief.md) + [brief.json](./brief.json), [drafts.md](./drafts.md), [qa.md](./qa.md), [approval-record.md](./approval-record.md). v2 (re-run): [v2.md](./v2.md) |
+| Skor keseluruhan | **v1: 82/100** (kesiapan client nyata 65) → **v2 setelah perbaikan: 88/100** (kesiapan client nyata **75**). Detail di §7 |
 | Verdict | Sistem berhasil mencegah klaim bermasalah ("mewah", sunset, foto tanpa consent). Yang belum siap: format video/story, aturan "luxury" di rules, dan beberapa pengecekan yang masih manual |
 
 ## 2. Yang Berjalan Baik (bukti)
@@ -72,3 +72,40 @@ Skala 0–100. Skor diberikan oleh AI yang sama yang menulis sistem dan output, 
 - **Tanpa data audiens:** kualitas "menarik/tidak" belum diuji ke audiens atau insight platform.
 - **Spec platform belum terverifikasi** (TASK-011).
 - Pengecekan otomatis yang dijalankan: validasi schema, panjang caption/hook, jumlah hashtag/emoji, dan kata terlarang (script Python ad-hoc, belum ada di `scripts/`).
+
+## 7. Re-run v2 Setelah Perbaikan (2026-10-04)
+
+Semua temuan yang bisa dikerjakan tanpa manusia dan tanpa akses web sudah diperbaiki (TASK-020 sampai TASK-026). Pilot dijalankan ulang di [v2.md](./v2.md).
+
+### Status temuan
+
+| ID | Status | Perbaikan |
+|---|---|---|
+| G-01 | ✅ Selesai | Brief sanity check di [WORKFLOW Step 1](../../WORKFLOW.md#step-1--brief) + template brief §9b (TASK-023) |
+| G-02 | ✅ Selesai | [prompts/video/reel-script.md](../../prompts/video/reel-script.md) + skill `draft-reel-script` (TASK-021) |
+| G-03 | ✅ Selesai | [prompts/stories/stories-sequence.md](../../prompts/stories/stories-sequence.md) + aturan Reels/Stories di rule 05 (TASK-022) |
+| G-04 | ✅ Selesai | `scripts/check_caption.py` + hook ≤125 di self-check (TASK-024) |
+| G-05 | ✅ Selesai | Rule 02 §Kata positioning & nama brand + voice guide (TASK-020) |
+| G-06 | ✅ Selesai | Exit criteria skill: klaim tersirat non-DATA FINAL = **Fail**, wajib diubah (TASK-024) |
+| G-07 | ✅ Selesai | Alt text per slide di skill & rule 05 (TASK-022, TASK-024) |
+| G-08 | ✅ Selesai | Schema v1.3: `deadlines.publish_time` + CTA **per channel** dengan `target_ref` wajib untuk link (TASK-025) |
+| G-09 | 🔴 Blocked | TASK-011: help center diblokir jaringan sesi agent |
+| G-10 | 🟡 Proses selesai, review belum | Rule 08 + AGENTS: QA agent = self-review; L2/L3 butuh review independen (TASK-026). Review manusia atas pilot ini → TASK-028 |
+| G-11 | Info | Tidak perlu perubahan |
+
+Satu temuan baru muncul saat perbaikan dan langsung ditutup: CTA di schema awalnya per brief, padahal satu brief bisa punya beberapa format dengan CTA berbeda. Sekarang CTA per channel.
+
+### Skor v2
+
+| Dimensi | v1 | v2 | Alasan perubahan |
+|---|---|---|---|
+| Kualitas output | 74 | **82** | Klaim tersirat diperbaiki, hook reel ≤125, alt text per slide, emoji hook story dihapus. Belum dinilai manusia/audiens |
+| Konsistensi dengan rules | 82 | **90** | "Luxury"/nama brand, Reels/Stories, dan alt text sekarang ada di rules; output v2 mematuhinya |
+| Kepatuhan Constitution | 88 | **90** | QA agent ditandai self-review; belum ada review independen |
+| Kepatuhan Boundary | 92 | **92** | Tidak berubah |
+| Kelengkapan deliverable | 75 | **88** | Reel & story memakai prompt/skill khusus; jam publish & target CTA terisi |
+| **Rata-rata** | 82 | **88** | |
+| **Kesiapan untuk client nyata** | 65 | **75** | Sisa: TASK-011 (spec platform), TASK-028 (review independen), review owner 9 file knowledge (TASK-001–009), dan uji dengan client nyata |
+
+Skor v2 tetap **self-graded** (lihat §6). Kenaikan skor mencerminkan perbaikan yang bisa dicek (file, schema, tool), bukan validasi kualitas oleh manusia.
+
