@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Reel Script"
+  short_description: "Hospitality reel scripts with shot list, claims, and consent"
+  default_prompt: "Use $draft-reel-script to write a 25-second Instagram Reel script for this villa."

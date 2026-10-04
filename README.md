@@ -135,6 +135,7 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 | [`write-ota-listing`](./skills/write-ota-listing/SKILL.md) | Tulis deskripsi properti untuk OTA & website |
 | [`localize-content`](./skills/localize-content/SKILL.md) | Lokalisasi ID ↔ EN tanpa kehilangan nuansa |
 | [`plan-seasonal-campaign`](./skills/plan-seasonal-campaign/SKILL.md) | Rencana campaign musiman (Ramadan, Nataru, libur sekolah) |
+| [`draft-reel-script`](./skills/draft-reel-script/SKILL.md) | Script Reels/TikTok: hook, shot list, on-screen text, klaim & consent per shot |
 
 ## Index Prompts
 
@@ -146,6 +147,7 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 | Review response | [reply-guest-review](./prompts/review-response/reply-guest-review.md) |
 | Destination story | [storytelling-destination](./prompts/destination-story/storytelling-destination.md) |
 | Seasonal promo | [seasonal-campaign](./prompts/promo-seasonal/seasonal-campaign.md) |
+| Reel / short video | [reel-script](./prompts/video/reel-script.md) |
 | Template | [prompt-template](./prompts/templates/prompt-template.md) |
 
 ## Automations
