@@ -43,3 +43,45 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [pilot F-02](../examples/pilot-villa-contoh-ubud/README.md), [write-ota-listing](../skills/write-ota-listing/SKILL.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/16>
 - Completed: 2026-10-04
 - Commit: ccb0145
+
+## TASK-017: Mode simulasi/pilot di WORKFLOW & approval record
+
+- ID: TASK-017
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan F-05 pilot TASK-012: WORKFLOW dan approval record tidak punya mode simulasi, sehingga record pilot berisiko terbaca sebagai approval nyata.
+- Acceptance Criteria: `WORKFLOW.md` dan `templates/approval-record.md` punya aturan eksplisit mode SIMULASI (penanda wajib, langkah yang boleh dilewati, larangan publish); versi & Revision History naik; validator lulus.
+- Related: [pilot F-05](../examples/pilot-villa-contoh-ubud/README.md), [WORKFLOW.md](../WORKFLOW.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/17>
+- Completed: 2026-10-04
+- Commit: 3dd6aee
+
+## TASK-018: Self-check klaim tersirat di skill draft-caption
+
+- ID: TASK-018
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan F-06 pilot TASK-012: klaim tersirat di Varian C lolos self-check skill dan baru tertangkap di claim gate.
+- Acceptance Criteria: Self-check `draft-caption` (dan skill drafting lain yang relevan) menambah langkah ekstrak klaim tersirat (view, jarak, suasana, kapasitas) lalu cocokkan ke tabel klaim; validator lulus.
+- Related: [pilot QA klaim #7](../examples/pilot-villa-contoh-ubud/qa-and-approval.md), [draft-caption](../skills/draft-caption/SKILL.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/18>
+- Completed: 2026-10-04
+- Commit: 32a6b47
+
+## TASK-019: Wajibkan source_date untuk klaim DATA FINAL di schema
+
+- ID: TASK-019
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Temuan F-07 pilot TASK-012: schema hanya mewajibkan `source` untuk klaim DATA FINAL, padahal rule 01 dan Constitution meminta versi/tanggal sumber.
+- Acceptance Criteria: Schema brief mewajibkan `source` + `source_date` untuk klaim DATA FINAL; brief contoh tetap valid; validator lulus.
+- Related: [pilot F-07](../examples/pilot-villa-contoh-ubud/README.md), [schema](../schemas/content-brief.schema.json), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/19>
+- Completed: 2026-10-04
+- Commit: 139718e
