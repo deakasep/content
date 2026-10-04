@@ -19,6 +19,12 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 - Sertifikasi (CHSE, eco-label, green building, sertifikat keamanan pangan, dsb.) hanya bila sertifikat ada, atas nama entitas yang benar, dan masih berlaku. Program pemerintah bisa berubah — cek status program saat ini (**ASSUMPTION** sampai diverifikasi).
 - Award hanya dengan nama penyelenggara, kategori, dan tahun yang benar.
 
+### Kata positioning & nama brand
+
+- Kata status/positioning **mewah, luxury, premium, eksklusif, exclusive, 5-star/7-star, world-class, kelas dunia, boutique luxury** adalah klaim. Boleh dipakai hanya bila ada dasar yang bisa ditunjukkan: sertifikat klasifikasi, award yang relevan, atau standar fasilitas yang disetujui owner secara tertulis. Tanpa dasar → **ASSUMPTION** dan diperlakukan sebagai **RISK**; ganti dengan fakta spesifik (ukuran kolam, jumlah kamar, layanan).
+- **Nama brand/properti yang menyiratkan klaim** (mis. mengandung *Sunset*, *Ocean View*, *Beachfront*, *Riverside*, *Infinity*, *Eco*) tetap ditulis persis sesuai nama resmi, tetapi **tidak menjadi bukti** klaim tersebut. Konten tidak boleh memperkuat klaim tersirat dari nama (contoh: memakai footage sunset untuk "Villa Sunset") tanpa **DATA FINAL** yang terpisah.
+- Bila nama brand menyiratkan klaim yang **tidak benar**, catat sebagai **RISK** di brief dan eskalasi ke owner. Konten memakai nama apa adanya; mengganti nama brand adalah keputusan owner.
+
 ### Halal & dietary
 
 - "Halal" / logo halal hanya bila ada sertifikat halal yang berlaku untuk outlet/produk tersebut.
@@ -85,6 +91,8 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 
 - [ ] Rating bintang/sertifikasi/award punya bukti berlaku.
 - [ ] Tidak ada klaim halal tanpa sertifikat.
+- [ ] Tidak ada kata positioning (mewah/luxury/premium/eksklusif/5-star) tanpa dasar tertulis.
+- [ ] Konten tidak memperkuat klaim yang tersirat dari nama brand tanpa **DATA FINAL** terpisah.
 - [ ] Harga lengkap: mata uang, unit, periode, syarat, net/++.
 - [ ] Tidak ada fake scarcity atau diskon dari harga acuan palsu.
 - [ ] Jarak menyebut moda & estimasi; "beachfront"/"private" sesuai fakta.
@@ -101,12 +109,15 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 | Harga "++" tidak dijelaskan → komplain tamu saat checkout | Tulis status pajak/service di setiap harga |
 | Klaim medis spa → pelanggaran iklan kesehatan | Daftar kata terlarang di QA |
 | "Private beach" di pantai publik → konflik warga/hukum | Gunakan "akses langsung ke pantai" bila faktual |
+| "Luxury" tanpa dasar → ekspektasi tamu tidak terpenuhi | Ganti dengan fakta spesifik; positioning butuh dasar tertulis |
+| Nama brand menyiratkan view/fasilitas yang tidak ada | Tidak memperkuat lewat visual/caption; eskalasi ke owner |
 
 ## Escalation Conditions
 
 - Client bersikeras memakai klaim bintang/halal/sertifikasi tanpa bukti.
 - Harga di brief berbeda dengan harga di OTA/website.
 - Client meminta klaim kesehatan untuk treatment.
+- Client meminta positioning "luxury/mewah/5-star" tanpa dasar, atau nama brand menyiratkan klaim yang tidak benar.
 - Klaim lokasi bertentangan dengan peta atau hasil field check.
 
 ## References

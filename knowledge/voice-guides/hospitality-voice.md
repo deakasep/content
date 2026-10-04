@@ -51,6 +51,20 @@ Satu sapaan per client, konsisten.
 
 Klise boleh hanya bila Voice Card client secara eksplisit mengizinkan.
 
+## Kata Positioning yang Butuh Dasar
+
+Kata di tabel ini **bukan sekadar gaya bahasa**; masing-masing adalah klaim ([rule 02](../../rules/02-HOSPITALITY-CLAIM-STANDARD.md#kata-positioning--nama-brand)). Tanpa dasar tertulis, ganti dengan fakta spesifik.
+
+| Hindari tanpa dasar | Ganti dengan (contoh) |
+|---|---|
+| mewah / luxury | "kolam privat 4 × 12 m", "bathtub di setiap kamar sawah" |
+| premium / eksklusif / exclusive | "hanya 5 kamar", "satu villa, satu rombongan" |
+| bintang 5 / 5-star / 7-star | (jangan; butuh sertifikat klasifikasi) |
+| world-class / kelas dunia | sebut nama chef, award, atau standar yang bisa dibuktikan |
+| best view / view terbaik | "kamar menghadap sawah di sisi timur" |
+
+Default kata terlarang di brief (`restrictions.forbidden_terms`) sebaiknya memuat kata-kata ini bila client tidak punya dasarnya.
+
 ## Emoji
 
 - Default: 0–3 per caption, relevan dengan isi (🌿 🌊 ☕ 🌅).
