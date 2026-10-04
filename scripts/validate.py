@@ -92,7 +92,7 @@ SECRET_PATTERNS = [
     (re.compile(r"\bEAA[A-Za-z0-9]{40,}\b"), "Meta access token"),
 ]
 
-SKIP_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", ".build"}
+SKIP_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", ".build", "split"}
 TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".py", ".txt", ".toml", ""}
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
