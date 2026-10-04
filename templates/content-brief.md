@@ -69,6 +69,8 @@ Bila status **DATA FINAL**, semua field wajib diisi. Kata wajib/terlarang diisi 
 
 ## 6. Fakta & Klaim yang Akan Dipakai
 
+Klaim **DATA FINAL** wajib punya sumber **dan** tanggal sumber (`claims[].source` + `claims[].source_date` di schema).
+
 | Klaim | Label | Sumber (dokumen/versi/tanggal) | Catatan |
 |---|---|---|---|
 | | **DATA FINAL** | | |
