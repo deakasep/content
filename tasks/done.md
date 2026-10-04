@@ -85,3 +85,17 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [pilot F-07](../examples/pilot-villa-contoh-ubud/README.md), [schema](../schemas/content-brief.schema.json), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/19>
 - Completed: 2026-10-04
 - Commit: 139718e
+
+## TASK-010: Bikin automations/level-1-manual/README.md
+
+- ID: TASK-010
+- Status: Done
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-04
+- Due: —
+- Description: Dokumentasikan automation level 1 (manual/semi-manual) untuk workflow konten: checklist harian, copy-paste skill/prompt ke AI tool, scheduling manual oleh manusia. Folder `automations/` belum ada.
+- Acceptance Criteria: Folder `automations/level-1-manual/` ada dengan README berisi scope, langkah, tools yang dipakai, dan batas (AI tidak publish/approve sendiri sesuai CONTENT-CONSTITUTION); validator lulus; README root mencantumkan folder baru.
+- Related: [automations level 1](../automations/level-1-manual/README.md), [WORKFLOW.md](../WORKFLOW.md), [rule 08](../rules/08-APPROVAL-PUBLICATION-STANDARD.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/11>
+- Completed: 2026-10-04
+- Commit: 99ed168
