@@ -38,9 +38,9 @@ flowchart LR
 
 | Kolom | Jumlah |
 |---|---|
-| Backlog | 5 |
+| Backlog | 9 |
 | In Progress | 0 |
 | Review | 9 |
-| Done | 0 |
+| Done | 1 |
 
-ID terakhir dipakai: **TASK-014**.
+ID terakhir dipakai: **TASK-019**.
