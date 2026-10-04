@@ -63,6 +63,8 @@ CLAU-AI-CONTENT/
 ├── templates/                # Brief, calendar, campaign, onboarding, approval, report
 ├── qa/                       # Review gate sebelum publish
 ├── schemas/                  # Machine-readable contract (content brief)
+├── tasks/                    # Task board: Backlog → In Progress → Review → Done
+├── docs/                     # Panduan operasional (task management)
 ├── scripts/validate.py       # Validator struktur repo (dipakai CI)
 └── .github/workflows/        # CI validation
 ```
@@ -144,13 +146,23 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 | Seasonal promo | [seasonal-campaign](./prompts/promo-seasonal/seasonal-campaign.md) |
 | Template | [prompt-template](./prompts/templates/prompt-template.md) |
 
+## Task Management
+
+Pekerjaan repo dilacak dengan board Markdown **Backlog → In Progress → Review → Done**, dengan ID `TASK-XXX`, priority, assignee, dan acceptance criteria. Board ini dicek otomatis oleh validator.
+
+| Link | Isi |
+|---|---|
+| [tasks/README.md](./tasks/README.md) | Overview board, ringkasan jumlah task, aturan |
+| [tasks/backlog.md](./tasks/backlog.md) · [in-progress](./tasks/in-progress.md) · [review](./tasks/review.md) · [done](./tasks/done.md) | Kolom board |
+| [docs/task-management.md](./docs/task-management.md) | Cara pakai, best practice, dan **setup GitHub Projects** (board visual + auto-add issues) |
+
 ## Validation
 
 ```text
 python scripts/validate.py
 ```
 
-Validator mengecek: file wajib, section wajib di rules/prompts/skills, frontmatter skill, `agents/openai.yaml`, JSON schema valid, relative link valid, dan pola secret sederhana. CI menjalankan validator yang sama di setiap push dan pull request.
+Validator mengecek: file wajib, section wajib di rules/prompts/skills, frontmatter skill, `agents/openai.yaml`, konsistensi versi dokumen governance, task board, JSON schema valid, relative link valid, dan pola secret sederhana. CI menjalankan validator yang sama di setiap push dan pull request.
 
 ## Batasan
 
