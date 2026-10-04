@@ -148,6 +148,7 @@ Plus **4 axis** data classification: **Sensitivity**, **Lifecycle**, **Scope**, 
 | Destination story | [storytelling-destination](./prompts/destination-story/storytelling-destination.md) |
 | Seasonal promo | [seasonal-campaign](./prompts/promo-seasonal/seasonal-campaign.md) |
 | Reel / short video | [reel-script](./prompts/video/reel-script.md) |
+| Instagram Stories | [stories-sequence](./prompts/stories/stories-sequence.md) |
 | Template | [prompt-template](./prompts/templates/prompt-template.md) |
 
 ## Automations

@@ -23,7 +23,7 @@ Feed post, carousel, Reels, Stories, Highlights, dan bio untuk akun bisnis hospi
 |---|---|---|
 | Carousel | Room tour, menu, paket, "good to know" | Slide 1 = hook visual + teks singkat |
 | Reels | Suasana, proses (masak, treatment), walkthrough | 3 detik pertama menentukan; subtitle untuk tonton tanpa suara |
-| Stories | Info harian, availability, Q&A, polling | Info harga/availability wajib akurat hari itu |
+| Stories | Info harian, availability, Q&A, polling | Info harga/availability wajib akurat hari itu; 3–5 frame, ≤8 kata/frame, ≤1 sticker/frame ([prompt](../../prompts/stories/stories-sequence.md)) |
 | Highlights | Rooms, Menu, Spa, Location, FAQ, Reviews | Review update berkala; jangan biarkan promo kedaluwarsa |
 | Bio | Positioning 1 kalimat + lokasi + CTA | Link ke booking/WhatsApp resmi |
 

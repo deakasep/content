@@ -21,6 +21,9 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 - WhatsApp broadcast hanya ke kontak yang opt-in; ikuti kebijakan WhatsApp Business.
 - Jangan membeli followers, likes, atau review; jangan engagement pod.
 - Musik di Reels/TikTok akun bisnis: gunakan library yang diizinkan untuk akun bisnis atau musik berlisensi.
+- **Reels/TikTok:** hook 0–3 detik dengan on-screen text; subtitle/on-screen text di setiap shot informatif; setiap shot faktual = klaim yang harus **DATA FINAL** (pakai [reel-script](../prompts/video/reel-script.md) / skill `draft-reel-script`).
+- **Stories:** 3–5 frame; teks ≤8 kata per frame; maksimal 1 sticker interaktif per frame; poll/quiz tidak boleh berisi klaim baru; link sticker hanya ke URL resmi client dan dicek saat publish; info harian (availability, menu, jam) hanya bila berlaku pada tanggal tayang (pakai [stories-sequence](../prompts/stories/stories-sequence.md)).
+- **Alt text:** setiap gambar/slide carousel punya alt text deskriptif sendiri, tanpa hashtag.
 
 ## Required Inputs
 
@@ -53,6 +56,9 @@ Klasifikasi wajib: **DATA FINAL**, **ASSUMPTION**, **CLIENT CONFIRMATION**, **FI
 - [ ] OTA listing tanpa kontak/link terlarang.
 - [ ] NAP konsisten di GBP & OTA.
 - [ ] Musik berlisensi/diizinkan untuk akun bisnis.
+- [ ] Reels: hook + on-screen text ada; shot faktual berlabel **DATA FINAL**.
+- [ ] Stories: ≤8 kata/frame, ≤1 sticker/frame, link sticker resmi & aktif.
+- [ ] Alt text per gambar/slide.
 
 ## Risks & Mitigation
 
