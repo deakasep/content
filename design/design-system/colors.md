@@ -188,4 +188,4 @@ Enam label canonical tampil sebagai badge. Teks label **tidak diterjemahkan**.
 :root[data-theme="dark"] { /* nilai sama dengan blok dark di atas */ }
 ```
 
-Token yang sama nanti diekspor ke `tokens.json` untuk Figma Variables dan untuk host lain saat integrasi.
+Nilai resmi ada di [`tokens/tokens.json`](../tokens/tokens.json); CSS di atas hanya ringkasan. Untuk kode, pakai file generated [`tokens/tokens.css`](../tokens/tokens.css).

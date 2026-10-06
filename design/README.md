@@ -6,7 +6,7 @@
 
 | Item | Nilai / Value |
 |---|---|
-| Status | **Draft v0.1** — spesifikasi desain, belum ada file Figma atau kode UI |
+| Status | **v0.2 — siap handoff ke Figma & development**: spec, design tokens, brand, rencana riset, panduan handoff. Belum ada file Figma, hasil user test, atau kode UI |
 | Nama produk (kerja) | *CLAU Content Studio* (**ASSUMPTION**, nama final menunggu owner) |
 | Bahasa UI | **Bahasa Indonesia (default)** + English, toggle `ID / EN` di header dan Profil |
 | Target | Klien hospitality di seluruh Indonesia (Bali, Jawa, Sumatra, Sulawesi, Nusa Tenggara, Papua) |
@@ -59,6 +59,22 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 | [user-research/persona.md](./user-research/persona.md) | 3 proto-persona |
 | [user-research/journey.md](./user-research/journey.md) | Journey klien & owner agency, pain point per tahap |
 | [prototype/prototype-guide.md](./prototype/prototype-guide.md) | Figma prototype, user testing (Maze), iterasi |
+| **v0.2 — siap handoff** | |
+| [ROADMAP.md](./ROADMAP.md) | 6 fase: Spec ✅ → Figma → Prototype → User test → Iterate → Handoff (± 4 minggu) |
+| [tokens/tokens.json](./tokens/tokens.json) | **Sumber tunggal** design tokens (W3C DTCG), light & dark |
+| [tokens/build_tokens.py](./tokens/build_tokens.py) | Generator `tokens.css` + `tailwind.config.js` + cek contrast WCAG (dijalankan di CI) |
+| [tokens/tokens.css](./tokens/tokens.css) · [tokens/tailwind.config.js](./tokens/tailwind.config.js) | Generated: CSS variables & theme Tailwind |
+| [tokens/tokens.md](./tokens/tokens.md) | Dokumentasi token, penamaan, dark mode, versioning |
+| [figma/figma-guide.md](./figma/figma-guide.md) | Step-by-step Figma: setup, import token, library, prototype, kolaborasi |
+| [figma/components-list.md](./figma/components-list.md) | 22 + 5 komponen: nama Figma, variant, size, state, ASCII |
+| [figma/prototype-link.md](./figma/prototype-link.md) | Registry link Figma/Maze (placeholder) |
+| [research/interview-guide.md](./research/interview-guide.md) | Wawancara 30–45 menit, 20 pertanyaan kunci, consent |
+| [research/survey.md](./research/survey.md) | Survey 15 pertanyaan, siap Google Form |
+| [research/recruitment.md](./research/recruitment.md) | Kuota 5 responden, channel, template pesan, insentif |
+| [brand/brand-guideline.md](./brand/brand-guideline.md) | Nama, warna & font final, voice & tone, do & don't |
+| [brand/logo-concept.md](./brand/logo-concept.md) | 3 konsep logo + filosofi + prompt AI (eksplorasi) |
+| [handoff/developer-guide.md](./handoff/developer-guide.md) | Token di kode, contoh komponen, i18n, aturan server, testing, naming |
+| [handoff/qa-checklist.md](./handoff/qa-checklist.md) | Visual, functional, accessibility, performance QA (blocker 🔴) |
 
 ## Alur Kerja Desain / Design Process
 
@@ -84,12 +100,14 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 
 | # | Deliverable | Status |
 |---|---|---|
-| 1 | Spesifikasi UI/UX (15 file di folder ini) | ✅ Draft v0.1 |
-| 2 | Design token (CSS variables, JSON) | ✅ Tertulis di colors/typography/spacing; file JSON belum dibuat |
-| 3 | Figma: wireframe lo-fi | ⬜ Next step |
-| 4 | Figma: mockup hi-fi + prototype | ⬜ Next step |
-| 5 | Hasil user test 5 orang | ⬜ Next step |
-| 6 | Implementasi kode (Next.js di `clau-ai-agents/frontend`) | ⬜ Setelah test |
+| 1 | Spesifikasi UI/UX (15 file v0.1) + 17 file v0.2 | ✅ |
+| 2 | Design token (JSON, CSS variables, Tailwind) + cek contrast otomatis | ✅ `tokens/` |
+| 2b | Brand guideline, konsep logo, rencana riset, panduan Figma & developer, QA checklist | ✅ |
+| 3 | Figma: library + layar | ⬜ Fase 2 ([ROADMAP](./ROADMAP.md)) |
+| 4 | Figma: prototype | ⬜ Fase 3 |
+| 5 | Hasil wawancara + user test 5 orang | ⬜ Fase 4 |
+| 6 | Logo final (vektor) | ⬜ Setelah konsep dipilih |
+| 7 | Implementasi kode (Next.js di `clau-ai-agents/frontend`) | ⬜ Setelah handoff |
 
 ## Prinsip Desain / Design Principles
 
