@@ -1,0 +1,137 @@
+# CLAU Content Studio — UI/UX Standalone
+
+> **ID:** Spesifikasi UI/UX untuk aplikasi CLAU sendiri: **Portal Klien** (untuk owner hotel, villa, resto, spa) dan **Studio** (dashboard internal agency). Aplikasi ini berdiri sendiri, tidak bergantung pada Rekan-AI atau platform lain, dan bisa diintegrasikan nanti lewat API.
+>
+> **EN:** UI/UX specification for CLAU's own app: a **Client Portal** (for hotel, villa, restaurant, and spa owners) and **Studio** (the agency's internal dashboard). It runs on its own, with no dependency on Rekan-AI or any other platform, and can be integrated later through an API.
+
+| Item | Nilai / Value |
+|---|---|
+| Status | **Draft v0.1** — spesifikasi desain, belum ada file Figma atau kode UI |
+| Nama produk (kerja) | *CLAU Content Studio* (**ASSUMPTION**, nama final menunggu owner) |
+| Bahasa UI | **Bahasa Indonesia (default)** + English, toggle `ID / EN` di header dan Profil |
+| Target | Klien hospitality di seluruh Indonesia (Bali, Jawa, Sumatra, Sulawesi, Nusa Tenggara, Papua) |
+| Device | **Mobile-first** (360 × 800 sebagai baseline), lalu tablet dan desktop |
+| Aksesibilitas | WCAG 2.2 AA (contrast ratio dihitung, lihat [colors.md](./design-system/colors.md)) |
+| Performa | Halaman utama siap dipakai < 2 detik di 4G (budget di [§ Prinsip](#prinsip-desain--design-principles)) |
+
+## Kenapa Standalone / Why Standalone
+
+| | Standalone (sekarang) | Integrasi (nanti) |
+|---|---|---|
+| Login & akun | Milik CLAU sendiri | Bisa SSO dengan platform lain |
+| Data | Database CLAU (`clau-ai-core/shared/database-schema.md`) | Sinkron lewat API (`clau-ai-core/shared/api-contracts.md`) |
+| Desain | Design system CLAU (folder ini) | Token diekspor sebagai CSS variables / JSON, jadi bisa dipakai host lain |
+| Rilis | Tidak menunggu roadmap pihak lain | Integrasi hanya bila ada kebutuhan nyata |
+
+Prinsip integrasi: **komponen tidak tahu siapa host-nya**. Semua warna, jarak, dan teks lewat token dan file i18n, bukan hardcode, jadi integrasi nanti cukup ganti token dan endpoint.
+
+## Dua Permukaan / Two Surfaces
+
+| Permukaan | Pengguna | Tujuan utama | Wireframe |
+|---|---|---|---|
+| **Portal Klien** / Client Portal | Owner/GM properti, approver client | Cek & approve konten, **konfirmasi fakta**, lihat kalender & laporan | [client-portal-wireframe.md](./wireframes/client-portal-wireframe.md) |
+| **Studio** / Internal Dashboard | Owner agency, content lead, tim | Kelola klien, pipeline konten, AI agent, QA, laporan | [dashboard-wireframe.md](./wireframes/dashboard-wireframe.md) |
+
+### Yang membuat produk ini beda / What makes it different
+
+UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
+
+1. **AI tidak pernah publish.** Tombol publish tidak ada. Yang ada: *"Tandai sudah tayang"* + URL post, diisi manusia (`AI-CONSTITUTION` §4).
+2. **Konfirmasi Fakta** di Portal Klien. Owner mengonfirmasi fakta (harga, fasilitas, promo) langsung di aplikasi. Fakta yang dikonfirmasi berubah dari **CLIENT CONFIRMATION** ke **DATA FINAL**. Ini menjawab masalah nyata di pilot client nyata pertama: konten tertahan karena fakta menunggu jawaban WA.
+3. **Label evidence terlihat.** Setiap klaim punya label (DATA FINAL, ASSUMPTION, CLIENT CONFIRMATION, FIELD VERIFICATION, RISK, NEXT ACTION) dengan warna dan ikon konsisten.
+4. **Level approval L1/L2/L3** dan status review independen tampil di setiap konten.
+
+## Isi Folder / Contents
+
+| File | Isi |
+|---|---|
+| [wireframes/client-portal-wireframe.md](./wireframes/client-portal-wireframe.md) | 7 halaman Portal Klien, ASCII mobile + desktop |
+| [wireframes/dashboard-wireframe.md](./wireframes/dashboard-wireframe.md) | 8 halaman Studio, ASCII mobile + desktop |
+| [mockups/client-portal-mockup.md](./mockups/client-portal-mockup.md) | Spek visual per halaman: warna, font, spacing, state, animasi |
+| [mockups/dashboard-mockup.md](./mockups/dashboard-mockup.md) | Spek visual Studio |
+| [user-flow/client-portal-flow.md](./user-flow/client-portal-flow.md) | 5 flow klien: approve, kalender, laporan, profil, reset password |
+| [user-flow/dashboard-flow.md](./user-flow/dashboard-flow.md) | 5 flow internal: klien, tandai tayang, monitor agent, export, settings |
+| [design-system/colors.md](./design-system/colors.md) | Palet, token, contrast ratio, light & dark |
+| [design-system/typography.md](./design-system/typography.md) | Font, skala, line height, aturan bilingual |
+| [design-system/spacing.md](./design-system/spacing.md) | Skala 4/8 px, grid, container, breakpoint |
+| [design-system/icons.md](./design-system/icons.md) | Lucide, ukuran, kategori, ikon label evidence |
+| [design-system/components.md](./design-system/components.md) | 22 komponen: anatomi, varian, state, do & don't |
+| [user-research/persona.md](./user-research/persona.md) | 3 proto-persona |
+| [user-research/journey.md](./user-research/journey.md) | Journey klien & owner agency, pain point per tahap |
+| [prototype/prototype-guide.md](./prototype/prototype-guide.md) | Figma prototype, user testing (Maze), iterasi |
+
+## Alur Kerja Desain / Design Process
+
+```text
+ Riset ringan        Wireframe          Mockup             Prototype          Test             Iterasi
+ (persona,     ──►  (ASCII → Figma ──► (Figma hi-fi, ──► (Figma, link   ──► (Maze, 5    ──► (prioritas
+  journey)           lo-fi)             design system)     antar frame)       orang)           & revisi)
+   1–2 jam           2–4 jam            4–8 jam            2–4 jam            1–2 jam          1–2 jam
+```
+
+**Total estimasi: 11–22 jam** kerja desainer untuk versi Figma pertama. Dokumen di folder ini adalah input untuk jam pertama sampai ke-4. Mockup hi-fi di Figma **belum dibuat**.
+
+### Tools
+
+| Tool | Dipakai untuk | Biaya |
+|---|---|---|
+| **Figma** | Wireframe, mockup hi-fi, prototype, design token (Variables) | Paket gratis cukup untuk 1 editor |
+| **Excalidraw** | Sketsa cepat, user flow saat diskusi | Gratis |
+| **Maze** | Unmoderated user testing dari prototype Figma | Paket gratis (jumlah test terbatas) |
+| **Markdown (repo ini)** | Sumber kebenaran spesifikasi; Figma mengikuti dokumen ini | — |
+
+## Deliverable
+
+| # | Deliverable | Status |
+|---|---|---|
+| 1 | Spesifikasi UI/UX (15 file di folder ini) | ✅ Draft v0.1 |
+| 2 | Design token (CSS variables, JSON) | ✅ Tertulis di colors/typography/spacing; file JSON belum dibuat |
+| 3 | Figma: wireframe lo-fi | ⬜ Next step |
+| 4 | Figma: mockup hi-fi + prototype | ⬜ Next step |
+| 5 | Hasil user test 5 orang | ⬜ Next step |
+| 6 | Implementasi kode (Next.js di `clau-ai-agents/frontend`) | ⬜ Setelah test |
+
+## Prinsip Desain / Design Principles
+
+| # | Prinsip | Artinya di layar | Ukuran |
+|---|---|---|---|
+| 1 | **Simple** | Satu tujuan utama per layar; maks 1 tombol primary | Task utama ≤ 3 tap dari Beranda |
+| 2 | **Modern** | Banyak ruang putih, sudut 12 px, bayangan halus, tanpa gradien norak | Review visual vs referensi |
+| 3 | **Hospitality** | Warna hangat (teal laut + terracotta), foto properti jadi pusat, bahasa ramah | Copy tanpa jargon teknis |
+| 4 | **Responsive** | Desain dari 360 px dulu; bottom navigation di mobile | Tidak ada horizontal scroll di 360 px |
+| 5 | **Accessible** | WCAG 2.2 AA, target sentuh ≥ 44 px, fokus terlihat | Contrast ≥ 4.5:1 teks, ≥ 3:1 komponen |
+| 6 | **Fast** | Skeleton, gambar `srcset` + lazy load, font subset | LCP < 2 dtk (4G), JS awal ≤ 170 KB gzip |
+| 7 | **Indonesia** | Format lokal: `Rp1.250.000`, `6 Okt 2026`, WIB/WITA/WIT, sapaan waktu | Semua string lewat i18n |
+| 8 | **Local touch** | Plus Jakarta Sans (karya foundry Indonesia), ilustrasi alam Nusantara, contoh copy lokal | — |
+| 9 | **Bilingual** | ID default, EN lengkap; tidak ada campuran setengah-setengah di satu layar | 100% string punya pasangan ID/EN |
+| 10 | **Enterprise** | Audit trail (siapa approve apa, kapan), peran & izin, export | Setiap aksi penting tercatat |
+
+## Referensi / References
+
+| Referensi | Yang diambil | Yang tidak diambil |
+|---|---|---|
+| **Airbnb** | Foto sebagai pusat, kartu hangat, tipografi ramah | Kepadatan marketplace |
+| **Stripe** | Dashboard bersih, tabel data rapi, dokumentasi status | Nuansa dingin fintech |
+| **Linear** | Pipeline cepat, shortcut keyboard, status jelas | Tema gelap sebagai default |
+| **Notion** | Empty state ramah, editor sederhana | Fleksibilitas tanpa batas yang membingungkan |
+| **Traveloka** | Pola yang familiar untuk user Indonesia: bottom nav, format harga & tanggal lokal | Banner promo padat |
+
+Referensi dipakai sebagai **arah**, bukan disalin. Tidak ada aset, logo, atau UI yang diambil dari produk tersebut.
+
+## Bahasa & Format Lokal / Language & Locale
+
+| Hal | Bahasa Indonesia | English |
+|---|---|---|
+| Uang | `Rp1.250.000` | `IDR 1,250,000` |
+| Tanggal | `Selasa, 6 Okt 2026` | `Tue, 6 Oct 2026` |
+| Jam | `18.00 WITA` | `6:00 PM WITA` |
+| Sapaan | Selamat pagi/siang/sore/malam, Kak/Bapak/Ibu (pilihan di Profil) | Good morning/afternoon/evening |
+| Label evidence | Tetap dalam bahasa aslinya: `DATA FINAL`, `CLIENT CONFIRMATION`, … | Sama |
+
+Label evidence **tidak diterjemahkan**, karena label itu bahasa kerja bersama tim dan dipakai di dokumen QA.
+
+## Hubungan dengan Repo Lain / Relation to Other Repos
+
+- Aturan konten: `clau-ai-core` (AI-CONSTITUTION, AI-BOUNDARY) dan `clau-ai-marketing` (rules, QA).
+- Kontrak data & API: `clau-ai-core/shared/`.
+- Implementasi kode UI nantinya di `clau-ai-agents/frontend` (Next.js), atau di repo frontend tersendiri bila owner memutuskan (**CLIENT CONFIRMATION**, lihat laporan).
