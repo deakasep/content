@@ -27,6 +27,18 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Related: [v3](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3.md), [scoring-rubric](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/scoring-rubric.md), [claim-verification](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/claim-verification.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/28>
 - Note 2026-10-04: owner meng-approve semua item pending, tapi hitung ulang independen belum dilakukan. Self-score v3 (92) belum berstatus Independent score; task tetap terbuka sampai ada recount.
 
+## TASK-032: Dynamic approval level di platform (clau-ai-agents)
+
+- ID: TASK-032
+- Status: Backlog
+- Priority: Normal
+- Assignee: Dea Karisna
+- Created: 2026-10-06
+- Due: —
+- Description: (Dikerjakan saat backend mulai menyimpan draft & approval.) `registry.json` hanya menyimpan approval **minimum** per intent (mis. `localize` L1, `review-reply` L1). Level sebenarnya harus naik otomatis dari isi konten: ada harga/promo → min L2; review negatif / isu agama-adat / konten berbayar → L3; `localize` mengikuti level konten asal (rule 08, router.md, decision-tree.md).
+- Acceptance Criteria: Fungsi server `effective_level(draft)` = max(level intent, level dari klaim/kategori konten, level konten asal); approval & "Kirim ke klien" memakai level ini; UI menampilkan level + alasannya; test untuk kasus harga/promo, review negatif, localize dari konten L2.
+- Related: <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/agents/registry.json>, <https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/router.md>, <https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/rules/08-APPROVAL-PUBLICATION-STANDARD.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/29>
+
 ## TASK-014: Quarterly review AI-CONSTITUTION
 
 - ID: TASK-014
