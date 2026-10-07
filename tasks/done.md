@@ -393,3 +393,17 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Related: [google-business.md](../knowledge/platforms/google-business.md), [indonesia-overview.md](../knowledge/destinations/indonesia-overview.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/13>
 - Completed: 2026-10-04
 - Approval: owner (Dea Karisna / d34faiza) 2026-10-04, "untuk saat ini semua approve dulu"; tanpa revisi. Perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza)
+
+## TASK-033: Kartu persona + contoh + eval per agent
+
+- ID: TASK-033
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-07
+- Due: —
+- Description: Agent harus menulis seperti staf ahli yang hangat sesuai keahliannya (bahasa, etika, gaya balasan), dengan suara brand client, tanpa mengaku manusia.
+- Acceptance Criteria: 12 kartu persona (termasuk 3 agent planned); kasus uji per agent dengan contoh bagus & buruk; runner yang membuktikan contoh buruk tertangkap; rubrik penilaian manusia; registry terhubung; test CI lulus; skill yang lemah soal voice terhubung ke voice guide & persona.
+- Related: <https://github.com/d34faiza-commits/clau-ai-agents/tree/main/agents/personas>, <https://github.com/d34faiza-commits/clau-ai-agents/tree/main/agents/evals>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/30>
+- Completed: 2026-10-07
+- Commit: clau-ai-agents 0eafa3a, clau-ai-marketing bddf9f4
