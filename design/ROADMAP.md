@@ -1,4 +1,4 @@
-# ROADMAP — UI/UX CLAU Content Studio
+# ROADMAP — UI/UX CLAU AI Content Studio
 
 > **ID:** Roadmap dari spesifikasi sampai handoff ke development. Total ± **4 minggu kalender** (± 18 hari kerja) bila satu desainer bekerja penuh. Tanggal di bawah adalah **usulan**, mulai Senin 12 Okt 2026; geser bila mulai lebih lambat.
 > **EN:** Roadmap from spec to developer handoff, ~4 calendar weeks for one full-time designer. Dates are proposals.

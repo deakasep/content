@@ -1,4 +1,4 @@
-# CLAU Content Studio — UI/UX Standalone
+# CLAU AI Content Studio — UI/UX Standalone
 
 > **ID:** Spesifikasi UI/UX untuk aplikasi CLAU sendiri: **Portal Klien** (untuk owner hotel, villa, resto, spa) dan **Studio** (dashboard internal agency). Aplikasi ini berdiri sendiri, tidak bergantung pada Rekan-AI atau platform lain, dan bisa diintegrasikan nanti lewat API.
 >
@@ -7,7 +7,7 @@
 | Item | Nilai / Value |
 |---|---|
 | Status | **v0.2 — siap handoff ke Figma & development**: spec, design tokens, brand, rencana riset, panduan handoff. Belum ada file Figma, hasil user test, atau kode UI |
-| Nama produk (kerja) | *CLAU Content Studio* (**ASSUMPTION**, nama final menunggu owner) |
+| Nama produk | **CLAU AI Content Studio** (**DATA FINAL**, 2026-10-07) |
 | Bahasa UI | **Bahasa Indonesia (default)** + English, toggle `ID / EN` di header dan Profil |
 | Target | Klien hospitality di seluruh Indonesia (Bali, Jawa, Sumatra, Sulawesi, Nusa Tenggara, Papua) |
 | Device | **Mobile-first** (360 × 800 sebagai baseline), lalu tablet dan desktop |

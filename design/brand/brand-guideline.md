@@ -1,4 +1,4 @@
-# Brand Guideline — CLAU Content Studio
+# Brand Guideline — CLAU AI Content Studio
 
 > **ID:** Identitas brand untuk produk CLAU (Portal Klien + Studio). Status: **v1.0 Draft**. Nama, warna, dan font siap dipakai untuk Figma dan kode. **Logo final belum ada**, baru konsep di [logo-concept.md](./logo-concept.md). Brand ini milik CLAU sendiri, terpisah dari brand mentor/klien mana pun.
 > **EN:** Brand identity for the CLAU product. v1.0 Draft: name, colors, and fonts are ready; the final logo is pending.
@@ -7,7 +7,7 @@
 
 | Item | Keputusan |
 |---|---|
-| Nama produk | **CLAU Content Studio** (**ASSUMPTION**, nama kerja; owner memutuskan final) |
+| Nama produk | **CLAU AI Content Studio** (**DATA FINAL**, diputuskan Dea Karisna 2026-10-07) |
 | Penulisan | `CLAU` selalu huruf besar semua; "Content Studio" title case. Singkatan di UI sempit: **CLAU** |
 | Permukaan produk | **CLAU Portal** (untuk klien) · **CLAU Studio** (untuk agency) |
 | Tagline (usulan) | ID: **"Konten jujur, tamu datang."** · EN: **"Honest content. Real guests."** |
@@ -39,6 +39,24 @@ Sumber: [`tokens.json`](../tokens/tokens.json). Semua kombinasi teks diuji WCAG 
 | Netral tengah | **Batu** (Stone 500) | `#78716C` | Teks meta, garis |
 
 **Filosofi:** teal = laut dan sawah, dua lanskap yang ada di hampir semua destinasi Indonesia. Terracotta = genteng, gerabah, dan senja: hangat dan buatan tangan. Stone = pasir dan batu alam. Palet ini sengaja **tidak** memakai merah-putih, supaya tidak terbaca sebagai brand pemerintah atau BUMN.
+
+## 3b. Palet UI Produk v2 / Product UI Palette (DATA FINAL, 2026-10-07)
+
+Diputuskan Dea Karisna (2026-10-07) untuk **antarmuka aplikasi** (dashboard, Portal, Studio), mengikuti `clau-ai-agents/docs/design/2026-10-07-enterprise-ui-brief.txt`. Palet §3 tetap dipakai untuk materi brand non-aplikasi (proposal, PDF, media sosial CLAU) sampai ada keputusan lain.
+
+| Peran | Nama | HEX | Proporsi |
+|---|---|---|---|
+| Aksi utama & aksen | Deep Teal | `#0F766E` (hover `#115E59`, latar muda `#CCFBF1`) | ± 5–10% |
+| Sidebar & teks utama | Deep Navy | `#0F172A` (sekunder `#1E3A5F`) | ± 15–20% |
+| Latar | Slate 50 | `#F8FAFC` | ± 70–80% bersama permukaan putih |
+| Permukaan / kartu | Putih | `#FFFFFF` | |
+| Teks sekunder / muted | Slate | `#475569` / `#94A3B8` | |
+| Garis | Slate 200 | `#E2E8F0` | |
+| Status saja | Success / Warning / Error / Info | `#16A34A` / `#D97706` / `#DC2626` / `#2563EB` | Hanya untuk status, selalu disertai label |
+
+Aturan: oranye/terracotta **tidak** dipakai sebagai warna brand di aplikasi (hanya warning). Font aplikasi: **Inter**. Agent ditampilkan dengan monogram, bukan karakter kartun. Implementasi: `clau-ai-agents/frontend/app/globals.css`.
+
+**NEXT ACTION:** sinkronkan `../tokens/tokens.json` dengan palet ini (tambah tema `app-v2`) lalu jalankan `build_tokens.py` agar cek kontras WCAG mencakup palet baru.
 
 ## 4. Font Final / Final Typefaces
 

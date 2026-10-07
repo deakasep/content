@@ -1,6 +1,6 @@
 # Logo Concept — 3 Konsep
 
-> **ID:** Tiga arah logo untuk CLAU Content Studio, masing-masing dengan filosofi, sketsa ASCII, spesifikasi konstruksi, dan prompt AI image untuk eksplorasi visual. **Hasil AI hanya untuk moodboard/eksplorasi.** Logo final harus digambar ulang sebagai vektor oleh desainer, lalu dicek keunikannya sebelum dipakai.
+> **ID:** Tiga arah logo untuk CLAU AI Content Studio, masing-masing dengan filosofi, sketsa ASCII, spesifikasi konstruksi, dan prompt AI image untuk eksplorasi visual. **Hasil AI hanya untuk moodboard/eksplorasi.** Logo final harus digambar ulang sebagai vektor oleh desainer, lalu dicek keunikannya sebelum dipakai.
 > **EN:** Three logo directions with rationale, ASCII sketches, construction notes, and AI image prompts for exploration only. The final logo must be redrawn as vector art and checked for uniqueness.
 
 ## Kriteria Logo / Requirements
