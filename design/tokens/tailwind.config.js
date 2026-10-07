@@ -81,6 +81,22 @@ module.exports = {
         "4": "var(--color-chart-4)",
         "5": "var(--color-chart-5)"
       },
+      "slate": {
+        "50": "var(--color-slate-50)",
+        "100": "var(--color-slate-100)",
+        "200": "var(--color-slate-200)",
+        "300": "var(--color-slate-300)",
+        "400": "var(--color-slate-400)",
+        "500": "var(--color-slate-500)",
+        "600": "var(--color-slate-600)",
+        "700": "var(--color-slate-700)",
+        "800": "var(--color-slate-800)",
+        "900": "var(--color-slate-900)"
+      },
+      "navy": {
+        "600": "var(--color-navy-600)",
+        "900": "var(--color-navy-900)"
+      },
       "ui": {
         "bg": "var(--color-bg)",
         "surface": "var(--color-surface)",
@@ -111,7 +127,12 @@ module.exports = {
         "info": "var(--color-info)",
         "info-subtle": "var(--color-info-subtle)",
         "on-info-subtle": "var(--color-on-info-subtle)",
-        "focus": "var(--color-focus)"
+        "focus": "var(--color-focus)",
+        "sidebar": "var(--color-sidebar)",
+        "sidebar-text": "var(--color-sidebar-text)",
+        "sidebar-text-muted": "var(--color-sidebar-text-muted)",
+        "sidebar-active": "var(--color-sidebar-active)",
+        "on-sidebar-active": "var(--color-on-sidebar-active)"
       },
       "transparent": "transparent",
       "current": "currentColor"

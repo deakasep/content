@@ -54,6 +54,18 @@
   --color-chart-3: #6366F1;
   --color-chart-4: #EAB308;
   --color-chart-5: #A8A29E;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+  --color-navy-600: #1E3A5F;
+  --color-navy-900: #0F172A;
   --font-family-heading: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-family-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -160,8 +172,47 @@
   --color-focus: #0F766E;
 }
 
+/* palette app-v2: <html data-palette="app-v2"> */
+:root[data-palette="app-v2"] {
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FFFFFF;
+  --color-text: #0F172A;
+  --color-text-body: #475569;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-border-input: #64748B;
+  --color-primary: #0F766E;
+  --color-primary-hover: #115E59;
+  --color-on-primary: #FFFFFF;
+  --color-primary-subtle: #CCFBF1;
+  --color-on-primary-subtle: #115E59;
+  --color-secondary: #1E3A5F;
+  --color-secondary-subtle: #F1F5F9;
+  --color-on-secondary-subtle: #1E3A5F;
+  --color-success: #15803D;
+  --color-success-subtle: #F0FDF4;
+  --color-on-success-subtle: #166534;
+  --color-warning: #B45309;
+  --color-warning-subtle: #FFFBEB;
+  --color-on-warning-subtle: #92400E;
+  --color-error: #B91C1C;
+  --color-error-fill: #DC2626;
+  --color-error-subtle: #FEF2F2;
+  --color-on-error-subtle: #991B1B;
+  --color-info: #1D4ED8;
+  --color-info-subtle: #EFF6FF;
+  --color-on-info-subtle: #1E40AF;
+  --color-focus: #0F766E;
+  --color-sidebar: #0F172A;
+  --color-sidebar-text: #CBD5E1;
+  --color-sidebar-text-muted: #94A3B8;
+  --color-sidebar-active: #0F766E;
+  --color-on-sidebar-active: #FFFFFF;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not([data-palette]) {
     --color-bg: #141210;
     --color-surface: #1F1C19;
     --color-surface-raised: #292524;

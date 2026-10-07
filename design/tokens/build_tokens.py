@@ -37,6 +37,12 @@ CONTRAST_PAIRS = [
     ("border-input", "surface", 3.0), ("focus", "surface", 3.0), ("focus", "bg", 3.0),
 ]
 WHITE_ON = [("error-fill", 4.5)]  # white text on these fills
+# Extra pairs for the app-v2 palette (navy sidebar).
+APP_PAIRS = [
+    ("sidebar-text", "sidebar", 4.5), ("sidebar-text-muted", "sidebar", 4.5),
+    ("on-sidebar-active", "sidebar-active", 4.5),
+]
+PALETTES = ("app-v2",)  # extra light palettes, switched with <html data-palette="...">
 
 
 def load() -> dict:
@@ -105,7 +111,11 @@ def build_css(tokens: dict) -> str:
         out.append(f"  --color-{'-'.join(path)}: {resolve(tokens, leaf['$value'])};")
     out.append("}")
     dark = [f"  --color-{'-'.join(p)}: {resolve(tokens, l['$value'])};" for p, l in leaves(tokens["semantic"]["dark"])]
-    out += ["", "@media (prefers-color-scheme: dark) {", '  :root:not([data-theme="light"]) {']
+    for name in PALETTES:
+        out += ["", f'/* palette {name}: <html data-palette="{name}"> */', f':root[data-palette="{name}"] {{']
+        out += [f"  --color-{'-'.join(p)}: {resolve(tokens, l['$value'])};" for p, l in leaves(tokens["semantic"][name])]
+        out.append("}")
+    out += ["", "@media (prefers-color-scheme: dark) {", '  :root:not([data-theme="light"]):not([data-palette]) {']
     out += ["  " + line for line in dark] + ["  }", "}", "", ':root[data-theme="dark"] {'] + dark + ["}", ""]
     out += [
         "@media (prefers-reduced-motion: reduce) {",
@@ -132,6 +142,8 @@ def build_tailwind(tokens: dict) -> str:
     #   bg-primary / text-success  -> role color (DEFAULT), bg-primary-600 -> raw palette step
     #   bg-ui-surface / text-ui-text-muted / border-ui-border-input -> other roles
     roles = {"-".join(p): f"var(--color-{'-'.join(p)})" for p, _ in leaves(tokens["semantic"]["light"])}
+    for name in PALETTES:
+        roles.update({"-".join(p): f"var(--color-{'-'.join(p)})" for p, _ in leaves(tokens["semantic"][name])})
     for name in ("primary", "secondary", "success", "warning", "error", "info"):
         colors[name] = {"DEFAULT": roles[name], **colors[name]}
     colors["ui"] = roles
@@ -169,9 +181,9 @@ def build_tailwind(tokens: dict) -> str:
 
 def check_contrast(tokens: dict) -> list[str]:
     problems = []
-    for mode in ("light", "dark"):
+    for mode in ("light", "dark", *PALETTES):
         sem = {"-".join(p): resolve(tokens, l["$value"]) for p, l in leaves(tokens["semantic"][mode])}
-        for fg, bg, minimum in CONTRAST_PAIRS:
+        for fg, bg, minimum in CONTRAST_PAIRS + (APP_PAIRS if mode in PALETTES else []):
             r = ratio(sem[fg], sem[bg])
             if r < minimum:
                 problems.append(f"{mode}: {fg} on {bg} = {r:.2f} < {minimum}")
@@ -199,7 +211,8 @@ def main() -> int:
         for p in problems:
             print(f"  - {p}")
         return 1
-    print(f"PASS — {len(CONTRAST_PAIRS) * 2 + len(WHITE_ON) * 2} contrast pairs meet WCAG AA (light + dark)")
+    n = (len(CONTRAST_PAIRS) + len(WHITE_ON)) * 2 + (len(CONTRAST_PAIRS) + len(APP_PAIRS) + len(WHITE_ON)) * len(PALETTES)
+    print(f"PASS — {n} contrast pairs meet WCAG AA (light + dark + {', '.join(PALETTES)})")
     return 0
 
 

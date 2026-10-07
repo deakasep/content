@@ -17,7 +17,7 @@ python design/tokens/build_tokens.py          # generate tokens.css + tailwind.c
 python design/tokens/build_tokens.py --check  # CI: gagal bila file generated basi atau contrast < AA
 ```
 
-Hasil saat ditulis: **PASS — 46 pasangan contrast memenuhi WCAG AA (light + dark).**
+Hasil saat ditulis: **PASS — 72 pasangan contrast memenuhi WCAG AA (light + dark + app-v2).**
 
 ## 2. Tiga Lapis Token / Three Tiers
 
@@ -103,6 +103,12 @@ Aturan: segmen camelCase di JSON menjadi kebab-case di CSS (`lineHeight` → `li
 - Paksa dari Profil: set `document.documentElement.dataset.theme = "light" | "dark"`; hapus atribut untuk "Ikuti sistem".
 - Karena Tailwind menunjuk ke CSS variables, **tidak perlu** prefix `dark:` untuk warna peran. Prefix `dark:` hanya untuk kasus khusus (mis. border foto).
 
+## 5b. Palet App v2 / App Palette v2
+
+Palet UI aplikasi (navy + deep teal + slate) disimpan sebagai `semantic.app-v2` dengan peran yang sama seperti `semantic.light`, ditambah `sidebar`, `sidebar-text`, `sidebar-text-muted`, `sidebar-active`, `on-sidebar-active`. Aktifkan dengan `<html data-palette="app-v2">`; dark mode sistem tidak menimpa palet ini.
+
+Catatan contrast: Slate 400 `#94A3B8` hanya **2,56:1** di atas putih, jadi **tidak** dipakai untuk teks di atas putih (hanya placeholder dekoratif/ikon nonaktif). Teks muted memakai Slate 500 `#64748B` (4,76:1). Warning `#D97706` dipakai untuk titik/indikator; teks warning memakai `warning.700`.
+
 ## 6. Mengubah Token / Changing Tokens
 
 1. Ubah `tokens.json` (bukan CSS/Tailwind).
@@ -112,4 +118,5 @@ Aturan: segmen camelCase di JSON menjadi kebab-case di CSS (`lineHeight` → `li
 
 | Versi | Tanggal | Perubahan |
 |---|---|---|
+| 1.1.0 | 2026-10-07 | Tambah `color.slate`, `color.navy`, dan palet `semantic.app-v2` (UI aplikasi v2, brand-guideline §3b) beserta peran sidebar; aktif lewat `<html data-palette="app-v2">`; cek contrast mencakup app-v2 |
 | 1.0.0 | 2026-10-06 | Rilis awal dari design-system v0.1 (colors, typography, spacing); tambah tint dark mode untuk badge, `neutral.550`, `chart`, `motion`, `size`, `zIndex` |

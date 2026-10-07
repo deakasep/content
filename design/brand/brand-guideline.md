@@ -50,13 +50,13 @@ Diputuskan Dea Karisna (2026-10-07) untuk **antarmuka aplikasi** (dashboard, Por
 | Sidebar & teks utama | Deep Navy | `#0F172A` (sekunder `#1E3A5F`) | ± 15–20% |
 | Latar | Slate 50 | `#F8FAFC` | ± 70–80% bersama permukaan putih |
 | Permukaan / kartu | Putih | `#FFFFFF` | |
-| Teks sekunder / muted | Slate | `#475569` / `#94A3B8` | |
+| Teks sekunder / muted | Slate | `#475569` / `#64748B` | `#94A3B8` hanya untuk elemen non-teks (kontras 2,56:1 di atas putih) |
 | Garis | Slate 200 | `#E2E8F0` | |
 | Status saja | Success / Warning / Error / Info | `#16A34A` / `#D97706` / `#DC2626` / `#2563EB` | Hanya untuk status, selalu disertai label |
 
 Aturan: oranye/terracotta **tidak** dipakai sebagai warna brand di aplikasi (hanya warning). Font aplikasi: **Inter**. Agent ditampilkan dengan monogram, bukan karakter kartun. Implementasi: `clau-ai-agents/frontend/app/globals.css`.
 
-**NEXT ACTION:** sinkronkan `../tokens/tokens.json` dengan palet ini (tambah tema `app-v2`) lalu jalankan `build_tokens.py` agar cek kontras WCAG mencakup palet baru.
+Token: `../tokens/tokens.json` v1.1.0, `semantic.app-v2` (cek kontras WCAG AA lulus).
 
 ## 4. Font Final / Final Typefaces
 
