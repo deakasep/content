@@ -17,7 +17,7 @@ python design/tokens/build_tokens.py          # generate tokens.css + tailwind.c
 python design/tokens/build_tokens.py --check  # CI: gagal bila file generated basi atau contrast < AA
 ```
 
-Hasil saat ditulis: **PASS — 72 pasangan contrast memenuhi WCAG AA (light + dark + app-v2).**
+Hasil saat ditulis: **PASS — 100 pasangan contrast memenuhi WCAG AA (light + dark + app-v2 + app-v3-dark).**
 
 ## 2. Tiga Lapis Token / Three Tiers
 
@@ -109,6 +109,21 @@ Palet UI aplikasi (navy + deep teal + slate) disimpan sebagai `semantic.app-v2` 
 
 Catatan contrast: Slate 400 `#94A3B8` hanya **2,56:1** di atas putih, jadi **tidak** dipakai untuk teks di atas putih (hanya placeholder dekoratif/ikon nonaktif). Teks muted memakai Slate 500 `#64748B` (4,76:1). Warning `#D97706` dipakai untuk titik/indikator; teks warning memakai `warning.700`.
 
+## 5c. Palet App v3 Dark / App Palette v3 Dark
+
+Dark mode UI v3 (brand-guideline §3c) disimpan sebagai `semantic.app-v3-dark` dengan peran yang sama seperti `app-v2`. Aktif dengan `<html data-palette="app-v2" data-theme="dark">`.
+
+| Peran | Nilai | Catatan |
+|---|---|---|
+| `bg` / `surface` / `surface-raised` | `#0B1120` / `#111827` / `#1E293B` | |
+| `text` / `text-body` / `text-muted` | `#F1F5F9` / `#CBD5E1` / `#94A3B8` | muted 6,92:1 di surface |
+| `primary` | `#5EEAD4` | **aksen teks/ikon & link**, bukan isi tombol |
+| `action` / `action-hover` / `on-action` | `#0F766E` / `#115E59` / putih | tombol utama; hover **lebih gelap** (putih di `#0D9488` hanya 3,74:1) |
+| `border-input` | `#64748B` | 3,73:1; `#334155` hanya 1,71:1 (gagal batas 3:1 untuk komponen) |
+| `sidebar` | `#070B14` | teks `#CBD5E1`, label `#94A3B8` |
+
+Pasangan tambahan yang dicek: `on-action` di `action` dan `action-hover` (≥ 4,5:1).
+
 ## 6. Mengubah Token / Changing Tokens
 
 1. Ubah `tokens.json` (bukan CSS/Tailwind).
@@ -118,5 +133,6 @@ Catatan contrast: Slate 400 `#94A3B8` hanya **2,56:1** di atas putih, jadi **tid
 
 | Versi | Tanggal | Perubahan |
 |---|---|---|
+| 1.2.0 | 2026-10-08 | Tambah palet `semantic.app-v3-dark` (dark mode UI v3, brand-guideline §3c) dengan peran baru `action`, `action-hover`, `on-action`; aktif lewat `<html data-palette="app-v2" data-theme="dark">`; cek contrast mencakup app-v3-dark (100 pasangan) |
 | 1.1.0 | 2026-10-07 | Tambah `color.slate`, `color.navy`, dan palet `semantic.app-v2` (UI aplikasi v2, brand-guideline §3b) beserta peran sidebar; aktif lewat `<html data-palette="app-v2">`; cek contrast mencakup app-v2 |
 | 1.0.0 | 2026-10-06 | Rilis awal dari design-system v0.1 (colors, typography, spacing); tambah tint dark mode untuk badge, `neutral.550`, `chart`, `motion`, `size`, `zIndex` |

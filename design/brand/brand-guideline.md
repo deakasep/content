@@ -70,7 +70,7 @@ Batas yang tetap berlaku: karakter fiktif (bukan wajah staf/orang nyata), UI tet
 
 Status gambar (2026-10-08): ke-12 agent dan 3 agent konsep (Nova, Aruna, Dara) sudah sesuai nama, jenis kelamin, dan peran (`clau-ai-agents` PR #2–#4). Agent baru wajib punya avatar; dijaga test CI `clau-ai-agents/backend/tests/test_avatars.py`.
 
-**NEXT ACTION:** tambahkan palet dark `app-v3-dark` ke `../tokens/tokens.json` agar kontras dark mode ikut dicek otomatis.
+Token dark mode: `../tokens/tokens.json` v1.2.0 `semantic.app-v3-dark` (cek kontras WCAG AA otomatis, lihat tokens.md §5c).
 
 ## 4. Font Final / Final Typefaces
 

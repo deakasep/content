@@ -132,7 +132,10 @@ module.exports = {
         "sidebar-text": "var(--color-sidebar-text)",
         "sidebar-text-muted": "var(--color-sidebar-text-muted)",
         "sidebar-active": "var(--color-sidebar-active)",
-        "on-sidebar-active": "var(--color-on-sidebar-active)"
+        "on-sidebar-active": "var(--color-on-sidebar-active)",
+        "action": "var(--color-action)",
+        "action-hover": "var(--color-action-hover)",
+        "on-action": "var(--color-on-action)"
       },
       "transparent": "transparent",
       "current": "currentColor"

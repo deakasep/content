@@ -43,6 +43,10 @@ APP_PAIRS = [
     ("on-sidebar-active", "sidebar-active", 4.5),
 ]
 PALETTES = ("app-v2",)  # extra light palettes, switched with <html data-palette="...">
+# Dark variant of an extra palette: <html data-palette="app-v2" data-theme="dark">.
+DARK_PALETTES = {"app-v3-dark": "app-v2"}
+# Buttons in app-v3-dark use "action" (deep teal + white); "primary" there is the light accent for text/icons.
+DARK_APP_PAIRS = [("on-action", "action", 4.5), ("on-action", "action-hover", 4.5)]
 
 
 def load() -> dict:
@@ -115,6 +119,11 @@ def build_css(tokens: dict) -> str:
         out += ["", f'/* palette {name}: <html data-palette="{name}"> */', f':root[data-palette="{name}"] {{']
         out += [f"  --color-{'-'.join(p)}: {resolve(tokens, l['$value'])};" for p, l in leaves(tokens["semantic"][name])]
         out.append("}")
+    for name, base in DARK_PALETTES.items():
+        out += ["", f'/* palette {name}: <html data-palette="{base}" data-theme="dark"> */',
+                f':root[data-palette="{base}"][data-theme="dark"] {{']
+        out += [f"  --color-{'-'.join(p)}: {resolve(tokens, l['$value'])};" for p, l in leaves(tokens["semantic"][name])]
+        out.append("}")
     out += ["", "@media (prefers-color-scheme: dark) {", '  :root:not([data-theme="light"]):not([data-palette]) {']
     out += ["  " + line for line in dark] + ["  }", "}", "", ':root[data-theme="dark"] {'] + dark + ["}", ""]
     out += [
@@ -142,7 +151,7 @@ def build_tailwind(tokens: dict) -> str:
     #   bg-primary / text-success  -> role color (DEFAULT), bg-primary-600 -> raw palette step
     #   bg-ui-surface / text-ui-text-muted / border-ui-border-input -> other roles
     roles = {"-".join(p): f"var(--color-{'-'.join(p)})" for p, _ in leaves(tokens["semantic"]["light"])}
-    for name in PALETTES:
+    for name in (*PALETTES, *DARK_PALETTES):
         roles.update({"-".join(p): f"var(--color-{'-'.join(p)})" for p, _ in leaves(tokens["semantic"][name])})
     for name in ("primary", "secondary", "success", "warning", "error", "info"):
         colors[name] = {"DEFAULT": roles[name], **colors[name]}
@@ -181,9 +190,10 @@ def build_tailwind(tokens: dict) -> str:
 
 def check_contrast(tokens: dict) -> list[str]:
     problems = []
-    for mode in ("light", "dark", *PALETTES):
+    for mode in ("light", "dark", *PALETTES, *DARK_PALETTES):
         sem = {"-".join(p): resolve(tokens, l["$value"]) for p, l in leaves(tokens["semantic"][mode])}
-        for fg, bg, minimum in CONTRAST_PAIRS + (APP_PAIRS if mode in PALETTES else []):
+        extra = APP_PAIRS if mode in PALETTES else APP_PAIRS + DARK_APP_PAIRS if mode in DARK_PALETTES else []
+        for fg, bg, minimum in CONTRAST_PAIRS + extra:
             r = ratio(sem[fg], sem[bg])
             if r < minimum:
                 problems.append(f"{mode}: {fg} on {bg} = {r:.2f} < {minimum}")
@@ -212,7 +222,8 @@ def main() -> int:
             print(f"  - {p}")
         return 1
     n = (len(CONTRAST_PAIRS) + len(WHITE_ON)) * 2 + (len(CONTRAST_PAIRS) + len(APP_PAIRS) + len(WHITE_ON)) * len(PALETTES)
-    print(f"PASS — {n} contrast pairs meet WCAG AA (light + dark + {', '.join(PALETTES)})")
+    n += (len(CONTRAST_PAIRS) + len(APP_PAIRS) + len(DARK_APP_PAIRS) + len(WHITE_ON)) * len(DARK_PALETTES)
+    print(f"PASS — {n} contrast pairs meet WCAG AA (light + dark + {', '.join((*PALETTES, *DARK_PALETTES))})")
     return 0
 
 
