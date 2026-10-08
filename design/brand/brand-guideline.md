@@ -68,7 +68,7 @@ Menggantikan aturan avatar di §3c: setiap agent di registry tampil sebagai **fi
 
 Batas yang tetap berlaku: karakter fiktif (bukan wajah staf/orang nyata), UI tetap menandai agent sebagai AI, batik hanya sebagai pakaian, tanpa simbol sakral (§6–7).
 
-**NEXT ACTION:** ganti 2 gambar (guest-messenger, sop-writer; alasan di README avatar). Nama report-builder dan sales-assistant sudah ditukar (Intan ↔ Galih, `clau-ai-agents` PR #2) agar sesuai figur.
+Status gambar (2026-10-08): ke-12 agent dan 3 agent konsep (Nova, Aruna, Dara) sudah sesuai nama, jenis kelamin, dan peran (`clau-ai-agents` PR #2–#4). Agent baru wajib punya avatar; dijaga test CI `clau-ai-agents/backend/tests/test_avatars.py`.
 
 **NEXT ACTION:** tambahkan palet dark `app-v3-dark` ke `../tokens/tokens.json` agar kontras dark mode ikut dicek otomatis.
 
