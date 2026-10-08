@@ -60,7 +60,15 @@ Token: `../tokens/tokens.json` v1.1.0, `semantic.app-v2` (cek kontras WCAG AA lu
 
 ### 3c. UI v3 "AI Workforce" (DATA FINAL, 2026-10-08)
 
-Dipasang Dea Karisna (2026-10-08) di atas palet §3b: bahasa UI **English default** dengan pilihan **EN / ID tanpa ikon bendera**, **dark mode** (Light / Dark / System), dan agent ditampilkan sebagai **avatar siluet geometris** dengan satu warna aksen per agent dari keluarga teal/biru/indigo/violet (bukan karakter kartun). Nilai warna dark mode dan aksen agent: `clau-ai-agents/frontend/README.md` (Snapshot v3). Snapshot kode: branch `ui-v3-workforce`.
+Dipasang Dea Karisna (2026-10-08) di atas palet §3b: bahasa UI **English default** dengan pilihan **EN / ID tanpa ikon bendera**, **dark mode** (Light / Dark / System), dan agent ditampilkan sebagai **avatar siluet geometris** dengan satu warna aksen per agent dari keluarga teal/biru/indigo/violet (bukan karakter kartun; **digantikan §3d** untuk avatar agent). Nilai warna dark mode dan aksen agent: `clau-ai-agents/frontend/README.md` (Snapshot v3). Snapshot kode: branch `ui-v3-workforce`.
+
+### 3d. Avatar agent 3D (2026-10-08)
+
+Menggantikan aturan avatar di §3c: setiap agent di registry tampil sebagai **figur 3D chibi** (latar mint `#DDF4EE`, satu karakter fiktif per agent). Diterapkan lewat `clau-ai-agents` PR #1 (di-merge 2026-10-08); perubahan guideline ini diizinkan di sesi yang sama. Agent konsep (belum di registry) tetap karakter SVG. Master dan status per gambar: `clau-ai-agents/agents/avatars/README.md`.
+
+Batas yang tetap berlaku: karakter fiktif (bukan wajah staf/orang nyata), UI tetap menandai agent sebagai AI, batik hanya sebagai pakaian, tanpa simbol sakral (§6–7).
+
+**NEXT ACTION:** ganti 4 gambar (report-builder, sales-assistant, guest-messenger, sop-writer; alasan di README avatar).
 
 **NEXT ACTION:** tambahkan palet dark `app-v3-dark` ke `../tokens/tokens.json` agar kontras dark mode ikut dicek otomatis.
 
