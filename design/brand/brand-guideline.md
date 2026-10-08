@@ -58,6 +58,12 @@ Aturan: oranye/terracotta **tidak** dipakai sebagai warna brand di aplikasi (han
 
 Token: `../tokens/tokens.json` v1.1.0, `semantic.app-v2` (cek kontras WCAG AA lulus).
 
+### 3c. UI v3 "AI Workforce" (DATA FINAL, 2026-10-08)
+
+Dipasang Dea Karisna (2026-10-08) di atas palet §3b: bahasa UI **English default** dengan pilihan **EN / ID tanpa ikon bendera**, **dark mode** (Light / Dark / System), dan agent ditampilkan sebagai **avatar siluet geometris** dengan satu warna aksen per agent dari keluarga teal/biru/indigo/violet (bukan karakter kartun). Nilai warna dark mode dan aksen agent: `clau-ai-agents/frontend/README.md` (Snapshot v3). Snapshot kode: branch `ui-v3-workforce`.
+
+**NEXT ACTION:** tambahkan palet dark `app-v3-dark` ke `../tokens/tokens.json` agar kontras dark mode ikut dicek otomatis.
+
 ## 4. Font Final / Final Typefaces
 
 | Peran | Font | Lisensi | Kenapa |
