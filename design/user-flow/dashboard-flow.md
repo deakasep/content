@@ -117,7 +117,7 @@
  < Ada agent "Menunggu manusia"? > ──ya──► klik ──► antrean tugas manusia (review, approval)
         │ tidak
         ▼
- < Ada eskalasi di agent "Belum aktif" (Pilar 2–4)? > ──ya──► kerjakan manual oleh manusia
+ < Ada eskalasi di agent "Belum aktif" (Pilar 2–3)? > ──ya──► kerjakan manual oleh manusia
         │ tidak                                              + catat kebutuhan di task pilar (TASK-035–037)
         ▼
  ==> Semua agent Siap/Bekerja; antrean wajar
