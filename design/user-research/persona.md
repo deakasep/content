@@ -5,11 +5,11 @@
 
 ---
 
-## Persona 1 — Ibu Sari · Owner Villa, Ubud
+## Persona 1 — Ibu Ratna · Owner Villa, Ubud
 
 ```text
 ┌──────────────────────────────────────────────────────────────┐
-│  IBU SARI, 45                                                │
+│  IBU RATNA, 45                                               │
 │  Owner Villa 5 kamar · Ubud, Bali                            │
 │  "Saya mau villa penuh terus, tapi saya nggak sempat         │
 │   ngurus Instagram."                                         │
@@ -33,7 +33,7 @@
 - Beranda menampilkan **satu hal paling penting**: "3 konten menunggu Ibu".
 - Tombol besar (52 px), teks 16 px, bahasa sehari-hari tanpa istilah seperti "pipeline" atau "asset".
 - **Konfirmasi Fakta** berupa pertanyaan Ya/Perbaiki, bukan form panjang.
-- Notifikasi lewat **WhatsApp/email** dengan link langsung ke konten. Ibu Sari tidak akan membuka aplikasi tanpa alasan.
+- Notifikasi lewat **WhatsApp/email** dengan link langsung ke konten. Ibu Ratna tidak akan membuka aplikasi tanpa alasan.
 - Login tanpa mengingat password: opsi **magic link email / OTP WhatsApp** (lihat catatan ambiguity di laporan).
 
 ---
@@ -101,7 +101,7 @@
 
 ## Ringkasan / Summary
 
-| | Ibu Sari | Mas Budi | Kak Dea |
+| | Ibu Ratna | Mas Budi | Kak Dea |
 |---|---|---|---|
 | Permukaan | Portal Klien | Portal Klien | Studio |
 | Device utama | Android | iPhone + Mac | Laptop |

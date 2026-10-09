@@ -88,7 +88,7 @@ Untuk dokumen Office (proposal, invoice) tanpa font tersebut: fallback **Arial**
 
 | Sifat | Artinya | Contoh |
 |---|---|---|
-| **Hangat** | Menyapa seperti tuan rumah, bukan mesin | "Selamat sore, Bu Sari" |
+| **Hangat** | Menyapa seperti tuan rumah, bukan mesin | "Selamat sore, Bu Ratna" |
 | **Jelas** | Kalimat pendek, kata sehari-hari, tanpa jargon | "Konten ini menunggu persetujuan Ibu" (bukan "Pending approval workflow") |
 | **Jujur** | Tidak melebih-lebihkan, termasuk tentang AI | "Disiapkan AI, diperiksa tim kami" |
 | **Hormat** | Sapaan sesuai pilihan user (Bapak/Ibu/Kak); tidak menggurui | "Mohon konfirmasi harga sebelum tayang" |

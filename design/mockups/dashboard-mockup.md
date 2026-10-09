@@ -24,6 +24,7 @@
 
 | Komponen | Spek |
 |---|---|
+| Kartu Agent | Menghitung agent **aktif** saja: "9 aktif" + "1 error" (error-tint). Agent belum aktif tidak dihitung sebagai "siap" |
 | Kartu statistik (4) | Grid 4 kolom desktop / 2 kolom mobile, tinggi 112 px, angka `h4` 24/700 `tabular-nums`. Progress bar 8 px radius full, track `#E7E5E4`, fill `#0F766E` + label persen di sebelah kanan |
 | **Menunggu manusia** | Kartu dengan border kiri 4 px `#B45309`; tiap baris 44 px: ikon `triangle-alert` 16 px, jenis tugas 14/500, nama klien 14 `#78716C`, count pill kanan. Baris bisa diklik → filter pipeline |
 | Pipeline mini | Bar horizontal per tahap, warna `#14B8A6`, label + angka kanan. Klik → halaman Konten dengan filter tahap |
@@ -67,10 +68,13 @@
 
 | Komponen | Spek |
 |---|---|
-| Kartu agent | Grid 3 kolom desktop / 1 kolom mobile; tinggi 160 px; nama agent `h6` + ikon `bot`; **Agent Status Pill** di kanan atas |
-| Status pill | `Siap` success · `Bekerja (n)` info + dot berdenyut 1.5 s (berhenti bila reduced motion) · `Menunggu manusia` warning · `Error` error |
+| Header grup pilar | `overline` 12/600 uppercase `#78716C` + garis 1 px `#E7E5E4`: "PILAR 1 · MARKETING & KONTEN" + status pilar (`Aktif` success / `Belum aktif` neutral). Nama pilar dari `registry.json` → `pillars[].name`, bukan hardcode |
+| Kartu agent | Grid 3 kolom desktop / 1 kolom mobile; tinggi 160 px; **avatar agent** 40 px (`avatar.crop` di registry) + `display_name` `h6` + peran 12/500; **Agent Status Pill** di kanan atas |
+| Status pill | `Siap` success · `Bekerja (n)` info + dot berdenyut 1.5 s (berhenti bila reduced motion) · `Menunggu manusia` warning · `Error` error · `Belum aktif` neutral (`text-muted`, dot kosong `○`, tanpa animasi) |
+| Kartu agent belum aktif | Bg `bg` (bukan `surface`), avatar grayscale 60%, tanpa tombol *Jalankan*; baris "Eskalasi: n" (permintaan yang di-route ke owner). Tooltip: "Mulai bekerja setelah pilarnya disetujui owner" |
 | Metrik | "7 hari: n tugas", "Terakhir aktif: …" 12/500 `#78716C` |
 | Detail agent | Halaman: antrean (tabel), riwayat, skill/prompt yang dipakai (link ke repo), error log (mono 13 px, bg `#1C1917` teks `#F5F5F4`, bisa disalin) |
+| Filter | `Semua pilar ▾` + `Status ▾`; pilihan filter disimpan per pengguna |
 | Banner aturan | Info tint di bawah grid: "Agent menyiapkan draft & cek. Approval, publish, dan kirim ke tamu tetap manusia." |
 | Error | Kartu agent error: border `#B91C1C`, tombol *Lihat log* + *Coba ulang tugas* |
 

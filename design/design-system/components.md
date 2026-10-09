@@ -134,7 +134,7 @@ Contoh: `✓ Konten disetujui. Tim akan menjadwalkan tayang. [Urungkan]`
 
 ## 11. Badge / Tag
 
-Tinggi 24 px, padding 4 × 8, radius 6, font 12/500, ikon 16 px. Varian: neutral, primary, accent, success, warning, error, info, **evidence** (6 label CLAU, lihat colors §5), **level** (`L1`/`L2`/`L3` outline). Tag (bisa dihapus) = badge + tombol `x` 16 px dengan area 44 px.
+Tinggi 24 px, padding 4 × 8, radius 6, font 12/500, ikon 16 px. Varian: neutral, primary, accent, success, warning, error, info, **evidence** (6 label CLAU, lihat colors §5), **level** (`L1`/`L2`/`L3` outline), **pillar** (`P1`–`P5` outline neutral; nama pilar lengkap di tooltip & `aria-label`, mis. "Pilar 2 · Sales & Reservasi"; tidak memakai warna per pilar supaya tidak bentrok dengan warna status/evidence). Tag (bisa dihapus) = badge + tombol `x` 16 px dengan area 44 px.
 
 ## 12. Avatar
 
@@ -211,4 +211,4 @@ Pesan error **tidak menyalahkan user** dan tidak menampilkan kode teknis (kode a
 | **Fact Confirm Row** | Baris fakta: teks klaim + label + tombol `[Benar]` `[Perbaiki]`. Dipakai di Portal Klien (Konfirmasi Fakta) |
 | **Content Preview** | Mockup tampilan IG (feed 4:5, story 9:16) dengan caption asli; slide carousel bisa digeser |
 | **Approval Bar** | Footer sticky: level (L1/L2/L3), status review independen, tombol *Setujui* / *Minta revisi* |
-| **Agent Status Pill** | Status agent: `Siap` / `Bekerja` / `Menunggu manusia` / `Error`, dengan waktu terakhir aktif |
+| **Agent Status Pill** | Status agent: `Siap` / `Bekerja` / `Menunggu manusia` / `Error` / `Belum aktif` (agent pilar yang belum disetujui owner), dengan waktu terakhir aktif |

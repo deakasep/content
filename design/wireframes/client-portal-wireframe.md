@@ -5,6 +5,8 @@
 
 **Navigasi:** mobile = bottom nav `Beranda · Konten · Kalender · Laporan · Profil`; Notifikasi lewat ikon lonceng di top bar. Desktop = sidebar kiri dengan item yang sama.
 
+**Pilar:** Portal memakai shell yang sama untuk 5 pilar CLAU AI. Sekarang klien hanya melihat item Pilar 1 (konten). Saat pilar lain aktif, item baru (mis. konfirmasi harga & paket Pilar 2, template pesan tamu Pilar 3, SOP Pilar 4) masuk ke daftar *Konten* dan *Konfirmasi Fakta* dengan Pillar Badge, tanpa menu baru; Laporan menambah bagian per pilar aktif. Detail: [pillars.md](../pillars.md).
+
 ---
 
 ## 1. Login / Masuk
@@ -86,7 +88,7 @@ Greeting mengikuti jam lokal user (zona dari profil): **pagi** 04.00–10.59 · 
 ┌──────────────────────────────────┐
 │ Villa Contoh Ubud ▾    (!)3  (S) │  ← switcher properti, notifikasi, avatar
 ├──────────────────────────────────┤
-│ Selamat sore, Bu Sari            │  ← h2
+│ Selamat sore, Bu Ratna           │  ← h2
 │ Oktober 2026                     │
 │                                  │
 │ ┌──────────────────────────────┐ │
@@ -131,7 +133,7 @@ Greeting mengikuti jam lokal user (zona dari profil): **pagi** 04.00–10.59 · 
 ┌──────────────┬───────────────────────────────────────────────────────────────────────┐
 │ ◯ CLAU       │ Villa Contoh Ubud ▾                               ID|EN   (!)3   (S)  │
 │              ├───────────────────────────────────────────────────────────────────────┤
-│ ⌂ Beranda    │ Selamat sore, Bu Sari                                                 │
+│ ⌂ Beranda    │ Selamat sore, Bu Ratna                                                │
 │ ▦ Konten   3 │ Oktober 2026 · 3 konten menunggu persetujuan Ibu                      │
 │ ▣ Kalender   │                                                                       │
 │ ▤ Laporan    │ ┌─ Menunggu Ibu (8 kolom) ───────────────────────┐ ┌─ Okt 2026 (4) ─┐ │
@@ -379,12 +381,12 @@ Desktop: ringkasan di kiri (8 kolom), daftar laporan bulanan sebelumnya di kanan
 ┌──────────────────────────────────┐
 │ ←  Profil                        │
 ├──────────────────────────────────┤
-│        (S)  Sari Wulandari       │
+│        (R)  Ratna Dewi           │
 │             Owner · Villa Contoh │
 │                                  │
 │ Akun                             │
-│  Nama           Sari Wulandari › │
-│  Email          sari@… ›         │
+│  Nama           Ratna Dewi     › │
+│  Email          ratna@… ›        │
 │  Kata sandi     Ubah ›           │
 │ Preferensi                       │
 │  Bahasa         [ID ● | EN ○]    │

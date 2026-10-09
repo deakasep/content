@@ -45,6 +45,8 @@
 | F14 | Izin peran (Owner/Content lead/Staff/Viewer, approver klien) sesuai tabel di wireframe Studio | ☐ |
 | F15 | 🔴 Klien hanya melihat data properti miliknya (uji akses lintas klien via URL/ID lain) | ☐ |
 | F16 | Audit log mencatat approve, tandai tayang, ubah fakta, ubah akses | ☐ |
+| F17 | 🔴 Agent pilar belum aktif tidak bisa dijalankan dari UI maupun API; tampil "Belum aktif" | ☐ |
+| F18 | Nama pilar & agent sama dengan `agents/registry.json` (ganti nama di registry → UI ikut tanpa ubah kode) | ☐ |
 
 ## 3. Accessibility QA (WCAG 2.2 AA)
 

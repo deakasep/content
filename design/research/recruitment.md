@@ -7,7 +7,7 @@
 
 | Slot | Profil | Wajib |
 |---|---|---|
-| 1–2 | Owner/GM **villa atau homestay**, memakai HP Android (mirip persona Ibu Sari) | ✅ |
+| 1–2 | Owner/GM **villa atau homestay**, memakai HP Android (mirip persona Ibu Ratna) | ✅ |
 | 3 | Owner/manajer **resto/cafe**, idealnya > 1 cabang (mirip Mas Budi) | ✅ |
 | 4 | Staf **marketing/front office hotel** yang sering menjadi approver sehari-hari | ✅ |
 | 5 | Owner properti **di luar Bali** (Labuan Bajo, Lombok, Yogyakarta, Danau Toba, Bromo, Raja Ampat, dll.) | ✅ |

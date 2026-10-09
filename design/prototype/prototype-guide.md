@@ -3,7 +3,7 @@
 > **ID:** Panduan praktis dari spesifikasi di folder ini ke prototype Figma yang bisa dites user. Fitur Figma dan Maze bisa berubah; nama menu di bawah sesuai versi saat ditulis (Okt 2026), jadi cek dokumentasi resmi bila ada yang berbeda.
 > **EN:** A practical guide from these specs to a testable Figma prototype. Tool menus may change; check the official docs if something differs.
 
-**Prioritas prototype pertama:** *Portal Klien mobile*, alur **Notifikasi → Detail Konten → Konfirmasi Fakta → Setujui**. Ini momen paling penting di [journey](../user-research/journey.md) dan paling berisiko gagal untuk persona Ibu Sari.
+**Prioritas prototype pertama:** *Portal Klien mobile*, alur **Notifikasi → Detail Konten → Konfirmasi Fakta → Setujui**. Ini momen paling penting di [journey](../user-research/journey.md) dan paling berisiko gagal untuk persona Ibu Ratna.
 
 ---
 
@@ -93,7 +93,7 @@ Lima orang cukup untuk menemukan sebagian besar masalah usability besar di satu 
 
 | Slot | Profil | Kenapa |
 |---|---|---|
-| 2 | Owner/GM villa atau homestay (mirip Ibu Sari), pakai Android | Persona paling berisiko |
+| 2 | Owner/GM villa atau homestay (mirip Ibu Ratna), pakai Android | Persona paling berisiko |
 | 1 | Owner cafe/resto (mirip Mas Budi) | Pengguna multi-cabang |
 | 1 | Staf front office / marketing hotel | Sering menjadi approver sehari-hari |
 | 1 | Owner properti di luar Bali (mis. Labuan Bajo, Danau Toba, Yogyakarta) | Cek asumsi bahwa desain tidak "Bali-sentris" |
@@ -106,7 +106,7 @@ Rekrut lewat jaringan klien dan komunitas owner. Beri insentif kecil (voucher/pu
 |---|---|
 | Success rate per task | < 80% → masalah serius |
 | Misclick rate / heatmap | Klik berulang di elemen yang bukan tombol (mis. badge fakta dikira tombol) |
-| Waktu per task | T1 > 2 menit → terlalu panjang untuk persona Ibu Sari |
+| Waktu per task | T1 > 2 menit → terlalu panjang untuk persona Ibu Ratna |
 | Drop-off | Layar tempat tester berhenti |
 | Jawaban Q1 | > 2 dari 5 salah paham → label evidence butuh penjelasan/ikon `info` |
 
