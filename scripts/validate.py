@@ -86,6 +86,7 @@ SECRET_PATTERNS = [
     (re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"), "private key"),
     (re.compile(r"\bAKIA[0-9A-Z]{16}\b"), "AWS access key"),
     (re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}\b"), "GitHub token"),
+    (re.compile(r"\bgithub_pat_[A-Za-z0-9_]{50,}\b"), "GitHub fine-grained token"),
     (re.compile(r"\bxox[abprs]-[A-Za-z0-9-]{10,}\b"), "Slack token"),
     (re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b"), "API secret key"),
     (re.compile(r"\bAIza[0-9A-Za-z_-]{35}\b"), "Google API key"),
@@ -93,7 +94,9 @@ SECRET_PATTERNS = [
 ]
 
 SKIP_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", ".build", "split"}
-TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".py", ".txt", ".toml", ""}
+# File teks yang dipindai secret. Biner (gambar, PDF) dilewati.
+TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".py", ".txt", ".toml", ".sh", ".cfg", ".ini", ".conf",
+                 ".js", ".mjs", ".cjs", ".ts", ".tsx", ".html", ".css", ".env", ".csv", ".xml", ".sql", ""}
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 CODE_FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
@@ -388,10 +391,13 @@ def check_links(report: Report) -> None:
 def check_secrets(report: Report) -> None:
     this_file = Path(__file__).resolve()
     for path in iter_files():
-        if path.resolve() == this_file or path.suffix not in TEXT_SUFFIXES:
+        if path.resolve() == this_file:
             continue
+        # Dicek sebelum filter ekstensi: .env.production / .env.local juga dilarang.
         if path.name.startswith(".env") and path.name != ".env.example":
             report.fail(path, ".env files must not be committed")
+            continue
+        if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         try:
             text = path.read_text(encoding="utf-8")
