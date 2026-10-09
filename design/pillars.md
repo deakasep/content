@@ -72,14 +72,14 @@ Disetujui owner (Dea Karisna / d34faiza) di AI-CONSTITUTION v3.0.0: **AI Marketi
 
 ## Nama Produk
 
-Nama **CLAU AI Content Studio** tetap (**DATA FINAL**, 2026-10-07). Persetujuan v3.0.0 belum memutuskan nama untuk 5 pilar; pilihan berikut menunggu owner di TASK-043 (**CLIENT CONFIRMATION**):
+**Diputuskan: opsi B** (**DATA FINAL, opsi B issue #46 — Dea Karisna (d34faiza), 2026-10-09**, atas rekomendasi agent; TASK-043).
 
-| Opsi | Struktur | Catatan |
+| Level | Nama | Contoh di UI |
 |---|---|---|
-| A (sekarang) | Satu nama "CLAU AI Content Studio" untuk semua pilar | Tidak ada perubahan; nama terasa sempit saat AI Sales/Admin aktif |
-| B (usulan) | Merek payung **CLAU AI**; "Content Studio" = modul AI Marketing; modul lain mengikuti nama pilar | Komponen tidak berubah; cukup ganti string i18n `app.name` |
+| Merek payung | **CLAU AI** | Logo, judul tab browser, email, Pengaturan → Nama |
+| Modul (per pilar) | **Content Studio** (AI Marketing, aktif) · AI Sales · AI Admin · AI Business Intelligence · AI Automation | Deskriptor di bawah logo dan judul halaman modul |
 
-Spec ini sudah **netral nama**: komponen memakai string i18n, jadi keputusan nama tidak memblok Figma maupun development.
+Riwayat: 2026-10-07 nama tunggal "CLAU AI Content Studio" (**DATA FINAL** saat itu) → 2026-10-09 digantikan opsi B. Komponen tidak berubah; nama lewat string i18n `app.name` + `module.name`.
 
 ## Checklist Aktivasi Pilar di UI
 

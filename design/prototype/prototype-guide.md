@@ -13,7 +13,7 @@
 
 | Langkah | Detail |
 |---|---|
-| 1 | Buat file `CLAU AI Content Studio` dengan halaman: `00 Cover`, `01 Design System`, `02 Portal — Mobile`, `03 Portal — Desktop`, `04 Studio — Desktop`, `05 Studio — Mobile`, `99 Arsip` |
+| 1 | Buat file `CLAU AI` dengan halaman: `00 Cover`, `01 Design System`, `02 Portal — Mobile`, `03 Portal — Desktop`, `04 Studio — Desktop`, `05 Studio — Mobile`, `99 Arsip` |
 | 2 | **Variables** (panel kanan → Local variables): buat koleksi `color` dengan mode **Light** dan **Dark** dari [colors.md](../design-system/colors.md); koleksi `space` & `radius` dari [spacing.md](../design-system/spacing.md) |
 | 3 | **Text styles** dari [typography.md](../design-system/typography.md): `Display/H1`, `H2`…`H6`, `Body`, `Small`, `Tiny`, masing-masing versi Mobile & Desktop |
 | 4 | Font: pasang **Plus Jakarta Sans**, **Inter**, **JetBrains Mono** (Google Fonts, tersedia di Figma) |

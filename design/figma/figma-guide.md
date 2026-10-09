@@ -1,6 +1,6 @@
 # Figma Guide — Step-by-step
 
-> **ID:** Langkah membuat file Figma CLAU AI Content Studio dari nol sampai prototype siap dites, dan cara kolaborasi dengan Pak Indra. Nama menu Figma bisa berubah antar versi; bila berbeda, cari fitur dengan nama yang sama di dokumentasi Figma. Panduan testing lanjutan ada di [prototype-guide](../prototype/prototype-guide.md).
+> **ID:** Langkah membuat file Figma CLAU AI dari nol sampai prototype siap dites, dan cara kolaborasi dengan Pak Indra. Nama menu Figma bisa berubah antar versi; bila berbeda, cari fitur dengan nama yang sama di dokumentasi Figma. Panduan testing lanjutan ada di [prototype-guide](../prototype/prototype-guide.md).
 > **EN:** Step-by-step for building the Figma file, from setup to a testable prototype, plus collaboration with Indra.
 
 **Estimasi:** 5 hari kerja (lihat [ROADMAP](../ROADMAP.md) Fase 2).
@@ -9,8 +9,8 @@
 
 ## Langkah 1 — Setup File (± 1 jam)
 
-1. Buat **Team** `CLAU` → **Project** `CLAU AI Content Studio`.
-2. Buat file **`CLAU AI Content Studio — Design`** dengan halaman berikut:
+1. Buat **Team** `CLAU` → **Project** `CLAU AI`.
+2. Buat file **`CLAU AI — Design`** dengan halaman berikut:
 
 | Halaman | Isi |
 |---|---|

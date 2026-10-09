@@ -316,7 +316,7 @@ Status laporan: **Data kurang** (ada konten tayang tanpa URL/metrik) → **Draft
 │ (sidebar)    │ Pengaturan                                                            │
 │              ├──────────────────┬────────────────────────────────────────────────────┤
 │              │ Brand agency     │ Brand agency                                       │
-│              │ Paket & harga    │ Nama        [CLAU AI Content Studio           ]       │
+│              │ Paket & harga    │ Nama        [CLAU AI                           ]       │
 │              │ Integrasi        │ Logo        [Unggah]  (SVG/PNG, maks 1 MB)         │
 │              │ API & webhook    │ Warna utama [#0F766E] (preview kontras: 5.47 AA)   │
 │              │ Notifikasi       │ Bahasa default portal  [Indonesia ▾]               │

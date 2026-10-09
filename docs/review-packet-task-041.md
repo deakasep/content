@@ -65,8 +65,8 @@ Agent sudah menemukan angka dari sumber sekunder (berita/operator). Konfirmasi k
 
 | Issue | Pilihan | Rekomendasi agent | Kalimat keputusan (salin & kirim ke agent) |
 |---|---|---|---|
-| [#46](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46) Nama produk | A: tetap "CLAU AI Content Studio" · B: payung "CLAU AI", "Content Studio" = modul AI Marketing | B (lebih cocok untuk 5 pilar; hanya ganti string i18n & brand guideline) | "Saya [nama], approve nama produk opsi [A/B]." |
-| [#47](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47) WORKFLOW.md | Ubah "1 Marketing & Content" → "1 AI Marketing" (PATCH) atau biarkan | Ubah (konsistensi dengan v3.0.0) | "Saya [nama], perintahkan WORKFLOW.md diselaraskan ke 5 pilar v2." |
+| [#46](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46) Nama produk | A: tetap "CLAU AI Content Studio" · B: payung "CLAU AI", "Content Studio" = modul AI Marketing | B (lebih cocok untuk 5 pilar; hanya ganti string i18n & brand guideline) | ✅ **Diputuskan: B** — Dea Karisna (d34faiza), 2026-10-09 |
+| [#47](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47) WORKFLOW.md | Ubah "1 Marketing & Content" → "1 AI Marketing" (PATCH) atau biarkan | Ubah (konsistensi dengan v3.0.0) | ✅ **Diputuskan: ubah** — Dea Karisna (d34faiza), 2026-10-09 (WORKFLOW.md v1.0.1) |
 
 > Catatan: dokumen Approved hanya diubah atas perintah **Pak Indra** atau **Dea Karisna (d34faiza)**. Kalau mengedit lewat GitHub web, tempel isi file `.md` mentah, bukan tampilan preview.
 
