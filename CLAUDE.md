@@ -19,7 +19,7 @@ Arsitektur **5 pilar** (Marketing aktif; Sales, Guest Experience, Operations, An
 | Path | Fungsi |
 |---|---|
 | `tasks/` | Board task (Backlog → In Progress → Review → Done); issue GitHub repo ini terhubung ke board |
-| `docs/` | Dokumen pendukung yang dirujuk repo baru lewat URL |
+| `docs/` | Dokumen pendukung yang dirujuk repo baru lewat URL; `docs/peta-otak.md` = peta semua pondasi otak AI (link ke repo sumber) |
 | `design/` | Spesifikasi UI/UX standalone + design tokens (pengecualian atas perintah owner, 2026-10-06); `design/pillars.md` = 5 pilar di UI |
 | `scripts/validate.py` · `design/tokens/build_tokens.py --check` | Dijalankan CI |
 
