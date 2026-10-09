@@ -24,17 +24,21 @@ Pilot ada di `clau-ai-marketing/examples/`. Untuk tiap pilot: buka `brief.json`,
 
 | Pilot | Reviewer (peran) | Tanggal | A | B | C | D | Total | Temuan (selisih dengan self-review agent) | Lulus? |
 |---|---|---|---|---|---|---|---|---|---|
-| Kafe Contoh Canggu (`pilot-kafe-contoh-canggu`) | | | | | | | | | ☐ |
-| Villa Contoh Uluwatu wedding (`pilot-wedding-contoh-uluwatu`) | | | | | | | | | ☐ |
-| Trip Contoh Labuan Bajo (`pilot-trip-contoh-labuan-bajo`) | | | | | | | | | ☐ |
+| Kafe Contoh Canggu (`pilot-kafe-contoh-canggu`) | Dea Karisna (owner) | 2026-10-09 | 60 | 89 | 100 | — | 83 | Klaim lokasi tersirat ("ombak pagi", "sebelum surf") dan "arabika" tanpa sumber lolos self-check (K-03, K-04) | ☒ Belum — v2 menunggu cek ulang |
+| Villa Contoh Uluwatu wedding (`pilot-wedding-contoh-uluwatu`) | Dea Karisna (owner) | 2026-10-09 | 67 | 86 | 100 | — | 84 | Klaim view laut & "meja panjang" tanpa fakta; "kapasitas yang sama" hanya benar untuk seated (W-04, W-05) | ☒ Belum — v2 menunggu cek ulang |
+| Trip Contoh Labuan Bajo (`pilot-trip-contoh-labuan-bajo`) | Dea Karisna (owner) | 2026-10-09 | 63 | 86 | 100 | — | 83 | Syarat berenang tidak ditulis; kesan pasti berangkat; spot ditulis pasti; TikTok "tanpa harga tersembunyi" (T-04, T-05) | ☒ Belum — v2 menunggu cek ulang; tertahan gate izin |
+
+Metode (dicatat apa adanya): AI agent menyusun pre-review kritis atas draft-nya sendiri; reviewer membaca dan menyatakan "setuju" di sesi Claude Code 2026-10-09. D tidak dihitung (publication checklist belum dijalankan di SIMULASI); Total = rata-rata A–C. Kesiapan ketiganya **0**. Detail per kalimat ada di `qa.md` § Review Independen masing-masing pilot, lewat [clau-ai-marketing#22](https://github.com/d34faiza-commits/clau-ai-marketing/pull/22).
+
+**Temuan lintas pilot:** ketiga self-check agent "lulus", padahal review menemukan klaim tersirat atau syarat yang hilang. Self-check `skills/draft-caption` #7 sudah diperluas. **NEXT ACTION:** reviewer cek ulang v2 ketiga pilot.
 
 Pertanyaan yang sengaja diuji pilot (cek reviewer setuju):
 
 | Pilot | Pertanyaan |
 |---|---|
-| Kafe | Apakah "menu tanpa daging" cukup jelas dan tidak terbaca sebagai "halal"? Apakah "++" tanpa persentase PB1 boleh tayang? |
-| Wedding | Apakah kalimat "Foto: acara nyata… dengan izin pasangan" perlu di caption, atau cukup di consent register? Apakah daftar "tidak termasuk" harus di caption IG? |
-| Travel | Apakah izin usaha & sertifikat kapten wajib jadi **syarat tayang** (bukan hanya syarat booking)? |
+| Kafe | Apakah "menu tanpa daging" cukup jelas dan tidak terbaca sebagai "halal"? Apakah "++" tanpa persentase PB1 boleh tayang? → Tidak terbaca halal (perjelas telur/seafood di menu); "++" boleh, lebih baik "(belum termasuk pajak & service)" |
+| Wedding | Apakah kalimat "Foto: acara nyata… dengan izin pasangan" perlu di caption, atau cukup di consent register? Apakah daftar "tidak termasuk" harus di caption IG? → Pertahankan kalimat izin (singkat); daftar "tidak termasuk" tidak wajib di IG bila ada di website/WA + "belum termasuk pajak & service" |
+| Travel | Apakah izin usaha & sertifikat kapten wajib jadi **syarat tayang** (bukan hanya syarat booking)? → **Ya**, syarat tayang (reviewer, 2026-10-09) |
 
 ## 2. Legal Review
 
