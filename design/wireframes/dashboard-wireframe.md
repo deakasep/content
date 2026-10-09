@@ -158,7 +158,7 @@ Status klien: **Onboard** (fakta belum lengkap) · **Aktif** · **Jeda** · **Se
 └──────────────┴───────────────────────────────────────────────────────────────────────┘
 ```
 
-Filter **Pilar** default ke pilar aktif (sekarang hanya Pilar 1). Saat pilar 2–5 aktif, setiap kartu menampilkan **Pillar Badge** (`P1`…`P5`) di samping level; kolom pipeline tetap sama untuk semua pilar (detail per pilar: [pillars.md](../pillars.md)).
+Filter **Pilar** default ke pilar aktif (sekarang hanya Pilar 1). Saat pilar 2–5 (AI Sales, AI Admin, AI BI, AI Automation) aktif, setiap kartu menampilkan **Pillar Badge** (`P1`…`P5`) di samping level; kolom pipeline tetap sama untuk semua pilar (detail per pilar: [pillars.md](../pillars.md)).
 
 Kolom pipeline: **Backlog → Dikerjakan → Review QA → Di klien → Disetujui → Tayang**. Kartu bisa di-drag, **kecuali** perpindahan yang butuh syarat:
 
@@ -238,29 +238,29 @@ Kolom pipeline: **Backlog → Dikerjakan → Review QA → Di klien → Disetuju
 │              │ │ 7 hari: 2 tugas    │ │ 7 hari: 12 tugas   │                         │
 │              │ └────────────────────┘ └────────────────────┘                         │
 │              │                                                                       │
-│              │ PILAR 2–4 · ○ Belum aktif — permintaan dieskalasi ke owner            │
-│              │ ┌─ Galih · P2 Sales ─┐ ┌─ Sari · P3 Tamu ───┐ ┌─ Teguh · P4 Ops ───┐  │
+│              │ PILAR 2 AI SALES · PILAR 3 AI ADMIN · ○ Belum aktif — eskalasi owner  │
+│              │ ┌─ Galih · P2 Sales ─┐ ┌─ Sari · P2 Sales ──┐ ┌─ Teguh · P3 Admin ─┐  │
 │              │ │ ○ Belum aktif      │ │ ○ Belum aktif      │ │ ○ Belum aktif      │  │
 │              │ │ Balas inquiry      │ │ Pesan pre-arrival  │ │ SOP & checklist    │  │
 │              │ │ harga & tanggal    │ │ & keluhan          │ │                    │  │
 │              │ │ Eskalasi: 2        │ │ Eskalasi: 0        │ │ Eskalasi: 1        │  │
 │              │ └────────────────────┘ └────────────────────┘ └────────────────────┘  │
 │              │                                                                       │
-│              │ PILAR 5 · ANALITIK & INSIGHT · ○ Belum aktif (agent aktif)            │
+│              │ PILAR 4 AI BUSINESS INTELLIGENCE · ○ Belum aktif (agent aktif)        │
 │              │ ┌─ Intan · Laporan ──┐                                                │
 │              │ │ ● Siap             │                                                │
 │              │ │ Template Pilar 1   │                                                │
 │              │ │ Tenggat: 5 Nov     │                                                │
 │              │ │ 7 hari: 3 tugas    │                                                │
 │              │ └────────────────────┘                                                │
-│              │ Aturan: agent menyiapkan draft & cek. Approval, publish, dan kirim ke │
-│              │ tamu tetap manusia (AI-CONSTITUTION §4).                              │
+│              │ PILAR 5 AI AUTOMATION · ○ Belum aktif — tanpa agent; lihat hlm. Alur  │
+│              │ Aturan: otonomi default B (draft); kirim otomatis hanya Level A §4a.  │
 └──────────────┴───────────────────────────────────────────────────────────────────────┘
 ```
 
-Kartu agent **dikelompokkan per pilar** dan diambil dari `agents/registry.json` (`pillars` + `agents`, juga `GET /pillars`): nama (`display_name`), avatar, peran, status. Tidak ada agent generik di luar registry. Urutan grup: Pilar 1 → Pilar 2–4 → Pilar 5.
+Kartu agent **dikelompokkan per pilar** dan diambil dari `agents/registry.json` (`pillars` + `agents`, juga `GET /pillars`): nama (`display_name`), avatar, peran, status. Tidak ada agent generik di luar registry. Urutan grup: Pilar 1 AI Marketing → Pilar 2 AI Sales + Pilar 3 AI Admin → Pilar 4 AI Business Intelligence → Pilar 5 AI Automation (tanpa agent; alur ditampilkan di halaman **Alur**, TASK-039).
 
-Status agent: `● Siap` (success) · `● Bekerja (n)` (info, berdenyut) · `● Menunggu manusia` (warning) · `x Error` (error) · `○ Belum aktif` (neutral, kartu abu-abu). Agent **Belum aktif** tidak punya tombol *Jalankan*; kartunya hanya menghitung permintaan yang dieskalasi ke owner (`next_step: escalate_to_owner` dari `POST /route`). Header grup memakai status pilar: Pilar 5 berstatus *Belum aktif* walau agent Intan aktif, karena laporan sementara memakai template Pilar 1.
+Status agent: `● Siap` (success) · `● Bekerja (n)` (info, berdenyut) · `● Menunggu manusia` (warning) · `x Error` (error) · `○ Belum aktif` (neutral, kartu abu-abu). Agent **Belum aktif** tidak punya tombol *Jalankan*; kartunya hanya menghitung permintaan yang dieskalasi ke owner (`next_step: escalate_to_owner` dari `POST /route`). Header grup memakai status pilar: Pilar 4 berstatus *Belum aktif* walau agent Intan aktif, karena laporan sementara memakai template Pilar 1. Setiap kartu juga menampilkan **level otonomi** (A/B/C, `autonomy_max` di registry); sekarang semua agent **B**.
 
 Detail agent: antrean, riwayat tugas, skill/prompt yang dipakai (dari `agents/registry.json`), kartu persona, jumlah kasus eval, error log.
 

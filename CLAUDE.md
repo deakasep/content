@@ -12,7 +12,7 @@ Repo ini **arsip** sejak 2026-10-04. Kerja baru masuk ke:
 | `clau-ai-marketing` | Pilar 1: rules, prompts, skills, knowledge, templates, QA |
 | `clau-ai-agents` | Platform: registry, backend, frontend |
 
-Arsitektur **5 pilar** (Marketing aktif; Sales, Guest Experience, Operations, Analytics planned): `clau-ai-core/docs/5-pillar-architecture.md`. Nama & status pilar sumbernya tabel di `clau-ai-core/README.md`, dicerminkan di `clau-ai-agents/agents/registry.json` → `pillars` (ada test).
+Arsitektur **5 pilar v2** (AI-CONSTITUTION v3.0.0: AI Marketing aktif; AI Sales, AI Admin, AI Business Intelligence, AI Automation planned; otonomi A/B/C default B; vertical fokus villa, restoran/cafe, wedding, travel): `clau-ai-core/docs/5-pillar-architecture.md`. Nama & status pilar sumbernya tabel di `clau-ai-core/README.md`, dicerminkan di `clau-ai-agents/agents/registry.json` → `pillars` (ada test).
 
 ## Yang Masih Aktif di Sini
 
@@ -23,7 +23,7 @@ Arsitektur **5 pilar** (Marketing aktif; Sales, Guest Experience, Operations, An
 | `design/` | Spesifikasi UI/UX standalone + design tokens (pengecualian atas perintah owner, 2026-10-06); `design/pillars.md` = 5 pilar di UI |
 | `scripts/validate.py` · `design/tokens/build_tokens.py --check` | Dijalankan CI |
 
-File lain (rules, prompts, skills, dst.) adalah **snapshot sebelum split**. Jangan diedit; edit di repo baru. `CONTENT-CONSTITUTION.md` berstatus **Superseded** oleh `clau-ai-core/AI-CONSTITUTION.md` v2.0.0. `scripts/split_repo.py` dan `split/` adalah jejak proses split dan tidak mencerminkan perubahan setelah 2026-10-04 (mis. submodule `agents/` di marketing).
+File lain (rules, prompts, skills, dst.) adalah **snapshot sebelum split**. Jangan diedit; edit di repo baru. `CONTENT-CONSTITUTION.md` berstatus **Superseded** oleh `clau-ai-core/AI-CONSTITUTION.md` (sekarang v3.0.0). `scripts/split_repo.py` dan `split/` adalah jejak proses split dan tidak mencerminkan perubahan setelah 2026-10-04 (mis. submodule `agents/` di marketing).
 
 ## Command
 

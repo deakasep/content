@@ -27,30 +27,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Related: [v3](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/examples/pilot-2/v3.md), [scoring-rubric](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/scoring-rubric.md), [claim-verification](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/qa/claim-verification.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/28>
 - Note 2026-10-04: owner meng-approve semua item pending, tapi hitung ulang independen belum dilakukan. Self-score v3 (92) belum berstatus Independent score; task tetap terbuka sampai ada recount.
 
-## TASK-034: Keputusan owner — scope, nama, urutan pilar 2–5 & nama produk
-
-- ID: TASK-034
-- Status: Backlog
-- Priority: High
-- Assignee: Pak Indra / Dea Karisna
-- Created: 2026-10-09
-- Due: —
-- Description: `5-pillar-architecture.md` di core masih Draft: pilar 2–5 berstatus ASSUMPTION menunggu CLIENT CONFIRMATION soal nama, urutan, scope, dan nama repo (`clau-ai-sales`, `clau-ai-guest`, `clau-ai-operations`, `clau-ai-analytics` = usulan). Sekalian putuskan nama produk: tetap "CLAU AI Content Studio" untuk semua pilar (opsi A) atau merek payung "CLAU AI" dengan "Content Studio" sebagai modul Pilar 1 (opsi B). Sertakan keputusan **konsep v2** (AI Marketing, AI Sales, AI Admin, AI Business Intelligence, AI Automation; cetak biru di `clau-ai-core/docs/blueprints/`): dipakai sebagai nama 5 pilar atau tidak. Langkah ini membuka TASK-035–042.
-- Acceptance Criteria: Keputusan tercatat di Revision History AI-CONSTITUTION; `5-pillar-architecture.md` tidak lagi bertanda ASSUMPTION untuk item yang diputuskan; tabel pilar di core README, `registry.json` → `pillars`, dan `design/pillars.md` § Nama Produk sudah sama; test registry clau-ai-agents dan validator core lulus.
-- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md>, [design/pillars.md](../design/pillars.md), <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/agents/registry.json>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/35>
-
-## TASK-040: Keputusan amandemen otonomi bertingkat & perluasan scope vertical
-
-- ID: TASK-040
-- Status: Backlog
-- Priority: Normal
-- Assignee: Pak Indra / Dea Karisna
-- Created: 2026-10-09
-- Due: —
-- Description: AI Sales (WhatsApp assistant) dan AI Automation butuh AI mengirim ke customer, sedangkan AI-CONSTITUTION §4.7 (Approved) melarangnya; §2 juga membatasi scope ke hospitality. Draf amandemen (Level A otomatis / B draft / C eskalasi + perluasan vertical) sudah disiapkan di `clau-ai-core/docs/proposals/autonomy-levels.md` dan **belum berlaku**.
-- Acceptance Criteria: Owner memutuskan terima/ubah/tolak; bila diterima: AI-CONSTITUTION naik versi dengan Revision History, kolom Otonomi di `router.md`, `autonomy_max` di `registry.json` + test, validator core & test agents lulus.
-- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/proposals/autonomy-levels.md>, <https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/42>
-
 ## TASK-032: Dynamic approval level di platform (clau-ai-agents)
 
 - ID: TASK-032
@@ -63,7 +39,7 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Fungsi server `effective_level(draft)` = max(level intent, level dari klaim/kategori konten, level konten asal); approval & "Kirim ke klien" memakai level ini; UI menampilkan level + alasannya; test untuk kasus harga/promo, review negatif, localize dari konten L2.
 - Related: <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/agents/registry.json>, <https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/router.md>, <https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/rules/08-APPROVAL-PUBLICATION-STANDARD.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/29>
 
-## TASK-035: Aktivasi Pilar 2 — Sales & Reservations
+## TASK-035: Aktivasi Pilar 2 — AI Sales
 
 - ID: TASK-035
 - Status: Backlog
@@ -75,7 +51,7 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Harga, tanggal, ketersediaan di draft hanya dari fakta DATA FINAL; server menolak draft dengan fakta CLIENT CONFIRMATION untuk ditandai siap. Status pilar **Aktif** di core README = `active` di `registry.json` (test registry lulus); eval agent Galih lulus (deterministik PASS + rubrik ≥ 4, dinilai manusia); pilot SIMULASI end-to-end tercatat; layar pilar di `design/pillars.md` masuk wireframe & mockup.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md>, [design/pillars.md](../design/pillars.md), <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/36>
 
-## TASK-036: Aktivasi Pilar 3 — Guest Experience & Reputation
+## TASK-036: Pilar 2 AI Sales — pesan tamu & eskalasi keluhan (bagian dari TASK-035)
 
 - ID: TASK-036
 - Status: Backlog
@@ -87,7 +63,7 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Keluhan serius otomatis RISK + L3; tidak ada identitas tamu lengkap yang disimpan di platform. Status pilar **Aktif** di core README = `active` di `registry.json` (test registry lulus); eval agent Sari lulus (deterministik PASS + rubrik ≥ 4, dinilai manusia); pilot SIMULASI end-to-end tercatat; layar pilar di `design/pillars.md` masuk wireframe & mockup.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md>, [design/pillars.md](../design/pillars.md), <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/37>
 
-## TASK-037: Aktivasi Pilar 4 — Operations
+## TASK-037: Aktivasi Pilar 3 — AI Admin
 
 - ID: TASK-037
 - Status: Backlog
@@ -99,7 +75,7 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Langkah keselamatan di SOP wajib FIELD VERIFICATION sebelum Approved. Status pilar **Aktif** di core README = `active` di `registry.json` (test registry lulus); eval agent Teguh lulus (deterministik PASS + rubrik ≥ 4, dinilai manusia); pilot SIMULASI end-to-end tercatat; layar pilar di `design/pillars.md` masuk wireframe & mockup.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md>, [design/pillars.md](../design/pillars.md), <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/38>
 
-## TASK-038: Pilar 5 Analytics — template laporan sendiri & data lintas pilar
+## TASK-038: Pilar 4 AI Business Intelligence — template laporan sendiri & data lintas pilar
 
 - ID: TASK-038
 - Status: Backlog
@@ -107,11 +83,11 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Assignee: Dea Karisna
 - Created: 2026-10-09
 - Due: —
-- Description: Intent `report` (agent Intan, Pilar 5) masih memakai template `monthly-report` Pilar 1 dan hanya metrik konten. Buat template laporan Pilar 5 dengan bagian per pilar aktif dan aturan "angka apa adanya, tanpa atribusi palsu", sesuai tab *Per pilar* di wireframe Laporan Studio. Data lintas pilar mengikuti `shared/data-flow.md` (P1→P5, P2→P5 tanpa data pribadi, P3→P5). Konsep v2: menjadi **AI Business Intelligence**; cetak biru `clau-ai-core/docs/blueprints/business-intelligence.md`.
-- Acceptance Criteria: Template Pilar 5 ada di repo pilarnya (atau di clau-ai-marketing sementara, dengan catatan); `registry.json` agent `report-builder` menunjuk ke template itu; pilar belum aktif tampil "Belum ada data", bukan 0; setiap angka contoh menyebut sumber + waktu tarik data; test registry lulus.
+- Description: Intent `report` (agent Intan, Pilar 4 AI BI sejak v3.0.0) masih memakai template `monthly-report` Pilar 1 dan hanya metrik konten. Buat template laporan Pilar 5 dengan bagian per pilar aktif dan aturan "angka apa adanya, tanpa atribusi palsu", sesuai tab *Per pilar* di wireframe Laporan Studio. Data lintas pilar mengikuti `shared/data-flow.md` (P1→P5, P2→P5 tanpa data pribadi, P3→P5). Konsep v2: menjadi **AI Business Intelligence**; cetak biru `clau-ai-core/docs/blueprints/business-intelligence.md`.
+- Acceptance Criteria: Template Pilar 4 ada di repo pilarnya (atau di clau-ai-marketing sementara, dengan catatan); `registry.json` agent `report-builder` menunjuk ke template itu; pilar belum aktif tampil "Belum ada data", bukan 0; setiap angka contoh menyebut sumber + waktu tarik data; test registry lulus.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/router.md>, <https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/data-flow.md>, [design/wireframes/dashboard-wireframe.md](../design/wireframes/dashboard-wireframe.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/39>
 
-## TASK-039: AI Automation — keputusan engine alur & konektor pertama
+## TASK-039: Pilar 5 AI Automation — keputusan engine alur & konektor pertama
 
 - ID: TASK-039
 - Status: Backlog
@@ -122,18 +98,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Description: Pilar baru konsep v2. Automation = lapisan penghubung antar pilar (WA/IG → AI → CRM → Sheets → invoice → email → follow-up), dijual sebagai langganan. Putuskan engine (bangun sendiri di clau-ai-agents atau n8n self-hosted di VPS) dan konektor pertama (usulan: WhatsApp Business Platform + Google Sheets). Cetak biru: `clau-ai-core/docs/blueprints/automation.md`. Bergantung pada TASK-040 dan Fase 0 platform.
 - Acceptance Criteria: Keputusan engine tercatat; alur pertama berjalan di SIMULASI dengan audit log, dry run, dan tombol berhenti; setiap langkah punya level otonomi; tidak ada credential di repo.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/blueprints/automation.md>, <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/41>
-
-## TASK-041: Perluasan vertical — wedding & travel (gelombang 1), lalu salon, retail, rental, kontraktor, jasa profesional
-
-- ID: TASK-041
-- Status: Backlog
-- Priority: Low
-- Assignee: Dea Karisna
-- Created: 2026-10-09
-- Due: —
-- Description: Fokus sekarang hospitality. Knowledge segment awal untuk 7 vertical sudah disiapkan sebagai **ASSUMPTION** (Planned, belum untuk client) di `clau-ai-marketing/knowledge/segments/`; urutan gelombang di `clau-ai-core/docs/verticals.md`. Vertical di luar hospitality menunggu amandemen scope (TASK-040).
-- Acceptance Criteria: Per vertical yang diaktifkan: checklist aktivasi di `verticals.md` selesai (baris ASSUMPTION diverifikasi atau jadi CLIENT CONFIRMATION, rule tambahan bila ada regulasi sektor, voice guide, ≥ 2 kasus eval, pilot SIMULASI), status di `verticals.md` → Aktif, validator marketing lulus.
-- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/verticals.md>, <https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge/segments>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/43>
 
 ## TASK-042: AI Marketing v2 — landing page, iklan, visual brief, brand voice
 
@@ -146,6 +110,30 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Description: Perluasan Pilar 1 yang sudah aktif: copy website/landing page, konsep & copy iklan berbayar, brief foto/video produk, voice guide & tagline. Intent usulan `landing-page`, `ad-brief`, `visual-brief`, `brand-voice` (belum di router). Cetak biru: `clau-ai-core/docs/blueprints/marketing.md`.
 - Acceptance Criteria: Skill + template + QA tiap layanan di clau-ai-marketing; standar iklan berbayar di rules; intent di `router.md` + agent di `registry.json` (nama disetujui owner, avatar, persona, eval); test registry & validator lulus; pilot SIMULASI per layanan.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/blueprints/marketing.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/44>
+
+## TASK-043: Keputusan nama produk untuk 5 pilar
+
+- ID: TASK-043
+- Status: Backlog
+- Priority: Low
+- Assignee: Pak Indra / Dea Karisna
+- Created: 2026-10-09
+- Due: —
+- Description: Dipisah dari TASK-034. AI-CONSTITUTION v3.0.0 menetapkan 5 pilar v2 tetapi tidak memutuskan nama produk. Opsi A: tetap "CLAU AI Content Studio" untuk semua pilar. Opsi B: merek payung "CLAU AI", "Content Studio" = modul AI Marketing. Detail: [design/pillars.md § Nama Produk](../design/pillars.md#nama-produk).
+- Acceptance Criteria: Keputusan tercatat; bila B: string i18n `app.name` + brand guideline diperbarui; validator lulus.
+- Related: [design/pillars.md](../design/pillars.md), [design/brand/brand-guideline.md](../design/brand/brand-guideline.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46>
+
+## TASK-044: Selaraskan WORKFLOW.md core dengan 5 pilar v2
+
+- ID: TASK-044
+- Status: Backlog
+- Priority: Low
+- Assignee: Dea Karisna
+- Created: 2026-10-09
+- Due: —
+- Description: `clau-ai-core/WORKFLOW.md` (Approved v1.0.0) masih menyebut "1 Marketing & Content" di tabel workflow pilar. Persetujuan v3.0.0 hanya mencakup AI-CONSTITUTION, jadi WORKFLOW.md tidak diubah tanpa perintah owner.
+- Acceptance Criteria: Owner memerintahkan perubahan; WORKFLOW.md naik versi PATCH dengan Revision History; README core Versi Dokumen sama; validator core lulus.
+- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/WORKFLOW.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47>
 
 ## TASK-014: Quarterly review AI-CONSTITUTION
 

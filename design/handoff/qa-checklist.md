@@ -47,6 +47,7 @@
 | F16 | Audit log mencatat approve, tandai tayang, ubah fakta, ubah akses | ☐ |
 | F17 | 🔴 Agent pilar belum aktif tidak bisa dijalankan dari UI maupun API; tampil "Belum aktif" | ☐ |
 | F18 | Nama pilar & agent sama dengan `agents/registry.json` (ganti nama di registry → UI ikut tanpa ubah kode) | ☐ |
+| F19 | 🔴 Tidak ada aksi kirim otomatis kecuali intent ber-otonomi **A** di router + template Level A disetujui client; badge otonomi tampil; tombol berhenti bekerja | ☐ |
 
 ## 3. Accessibility QA (WCAG 2.2 AA)
 

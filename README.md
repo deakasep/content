@@ -15,7 +15,7 @@ Repository private berisi governance, rules, prompt library, AI agent skills, kn
 >
 > **Peta otak AI:** semua pondasi (constitution, boundary, router, registry agent, rules pilar) ada di repo sumbernya; lihat dari satu halaman: [`docs/peta-otak.md`](./docs/peta-otak.md).
 >
-> **Konsep 5 pilar:** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. Pilar 1 Marketing & Content aktif di clau-ai-marketing; Pilar 2 Sales & Reservations, 3 Guest Experience & Reputation, 4 Operations, 5 Analytics & Insights masih Planned. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: TASK-034–042 (termasuk konsep v2 AI Marketing/Sales/Admin/BI/Automation dan perluasan jenis usaha) di [`tasks/backlog.md`](./tasks/backlog.md).
+> **Konsep 5 pilar (AI-CONSTITUTION v3.0.0):** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. **Pilar 1 AI Marketing** aktif di clau-ai-marketing; Pilar 2 AI Sales, 3 AI Admin, 4 AI Business Intelligence, 5 AI Automation masih Planned. Otonomi bertingkat A/B/C (default B). Vertical fokus: villa, restoran/cafe, wedding, travel. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: [`tasks/backlog.md`](./tasks/backlog.md).
 >
 > **Pengecualian 2026-10-06:** spesifikasi UI/UX standalone ([`design/`](./design/README.md)) dibuat di repo ini atas perintah owner.
 >

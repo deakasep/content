@@ -29,10 +29,10 @@ Aturan mengalir satu arah. Level bawah tidak boleh menurunkan kontrol level atas
 
 | # | Pilar | Repo | Isi |
 |---|---|---|---|
-| 1 | Marketing & Content | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | [rules 01–09](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/rules), [skills](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/skills), [prompts](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/prompts), [knowledge](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge), [qa](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/qa) |
-| 2–5 | Sales, Guest Experience, Operations, Analytics (konsep v2: Sales, Admin, BI, Automation) | Belum ada (Planned) | Rencana: [tasks/backlog.md](../tasks/backlog.md) TASK-034–042 |
+| 1 | AI Marketing | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | [rules 01–09](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/rules), [skills](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/skills), [prompts](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/prompts), [knowledge](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge), [qa](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/qa) |
+| 2–5 | AI Sales, AI Admin, AI Business Intelligence, AI Automation | Belum ada (Planned) | Rencana: [tasks/backlog.md](../tasks/backlog.md) TASK-034–042 |
 
-Knowledge 7 jenis usaha berikutnya (wedding, travel, salon, retail, rental, kontraktor, jasa profesional) sudah disiapkan di [clau-ai-marketing/knowledge/segments](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge/segments) dengan status **Planned** (belum untuk client).
+Vertical fokus (AI-CONSTITUTION v3.0.0): **villa, restoran/cafe, wedding, travel** — fact sheet, pilot SIMULASI, dan eval tersedia di clau-ai-marketing & clau-ai-agents. Salon, retail, rental, kontraktor, jasa profesional = **Planned** (belum untuk client) di [knowledge/segments](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge/segments).
 
 ## 3. Yang Menjalankan — clau-ai-agents
 
