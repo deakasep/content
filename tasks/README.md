@@ -38,9 +38,9 @@ flowchart LR
 
 | Kolom | Jumlah |
 |---|---|
-| Backlog | 9 |
+| Backlog | 13 |
 | In Progress | 0 |
 | Review | 0 |
 | Done | 29 |
 
-ID terakhir dipakai: **TASK-038**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
+ID terakhir dipakai: **TASK-042**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).

@@ -9,6 +9,10 @@
 | Sumber data pilar & agent | `clau-ai-agents/agents/registry.json` → `pillars` + `agents` (juga `GET /pillars`, `POST /route`) |
 | Status | Draft v0.1 (2026-10-09) |
 
+## Konsep v2 (masa depan)
+
+Owner menyiapkan konsep 5 pilar v2: **AI Marketing · AI Sales · AI Admin · AI Business Intelligence · AI Automation** (cetak biru `clau-ai-core/docs/blueprints/`). Shell UI di dokumen ini tetap berlaku: pilar hanya atribut, jadi mengganti nama/jumlah pilar cukup lewat registry. Tambahan UI saat v2 aktif: badge **level otonomi A/B/C** per aksi, pengaturan template Level A di Portal Klien, dan halaman **Alur (Automation)** di Studio dengan audit log & tombol berhenti (TASK-039, TASK-040).
+
 ## Prinsip
 
 | # | Prinsip | Artinya |
