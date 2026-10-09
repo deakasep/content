@@ -1,5 +1,7 @@
 # Peta Otak CLAU AI
 
+> Sesi AI baru: mulai dari [status.md](./status.md) (status, keputusan, pekerjaan terbuka).
+>
 > Satu halaman untuk melihat semua pondasi "otak" CLAU AI dari repo ini. **Isi aslinya tidak ada di sini**; halaman ini hanya peta + link. Edit selalu di repo sumbernya (keputusan owner 2026-10-09: struktur repo tetap, CLAU-AI-CONTENT = markas kerja).
 
 ## Alur Aturan
@@ -15,7 +17,7 @@ Aturan mengalir satu arah. Level bawah tidak boleh menurunkan kontrol level atas
 
 | Pondasi | File | Isi |
 |---|---|---|
-| Konstitusi | [AI-CONSTITUTION.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md) | Aturan induk semua pilar (v2.0.0 Approved): AI tidak publish, tidak kirim ke pihak luar, tidak self-approve; 6 label evidence |
+| Konstitusi | [AI-CONSTITUTION.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md) | Aturan induk semua pilar (v3.0.0 Approved: 5 pilar v2, otonomi A/B/C default B, 4 vertical fokus): AI tidak publish, tidak kirim ke pihak luar, tidak self-approve; 6 label evidence |
 | Batas | [AI-BOUNDARY.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-BOUNDARY.md) | Peran tiap repo, storage zones, data apa yang boleh masuk repo, aturan submodule & push |
 | Instruksi agent | [AGENTS.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/AGENTS.md) | Cara kerja & format output agent lintas repo |
 | Pipeline | [WORKFLOW.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/WORKFLOW.md) | 8 langkah dari permintaan sampai monitor |
