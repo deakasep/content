@@ -13,6 +13,8 @@ Repository private berisi governance, rules, prompt library, AI agent skills, kn
 > | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | Pilar 1: rules, prompts, skills, knowledge, templates, QA, examples |
 > | [clau-ai-agents](https://github.com/d34faiza-commits/clau-ai-agents) | Platform: registry agent, backend FastAPI, frontend Next.js |
 >
+> **Konsep 5 pilar:** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. Pilar 1 Marketing & Content aktif di clau-ai-marketing; Pilar 2 Sales & Reservations, 3 Guest Experience & Reputation, 4 Operations, 5 Analytics & Insights masih Planned. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: TASK-034–038 di [`tasks/backlog.md`](./tasks/backlog.md).
+>
 > **Pengecualian 2026-10-06:** spesifikasi UI/UX standalone ([`design/`](./design/README.md)) dibuat di repo ini atas perintah owner.
 >
 > Yang tetap tinggal di sini: board `tasks/` dan `docs/` (dirujuk dari repo baru lewat URL), serta [`scripts/split_repo.py`](./scripts/split_repo.py) dan `split/` sebagai jejak proses split. Isi lain di bawah ini adalah snapshot terakhir sebelum split.

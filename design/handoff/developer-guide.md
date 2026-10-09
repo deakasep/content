@@ -10,6 +10,7 @@
 3. **Aksesibel sejak awal.** Primitive dengan keyboard & ARIA yang benar (Radix UI), bukan ditambal belakangan.
 4. **Bilingual dari hari pertama.** Tidak ada string UI hardcode; semua di file pesan `id` & `en`.
 5. **Aturan CLAU di UI = aturan di server.** Tombol nonaktif (mis. *Setujui* saat fakta belum dikonfirmasi) **juga** ditolak oleh API. UI saja tidak cukup.
+6. **Pilar & agent dari registry.** Nama pilar, status, nama agent, dan avatar dibaca dari `agents/registry.json` (`pillars`, `agents`) atau `GET /pillars`; tidak ada daftar pilar/agent hardcode di komponen. Lihat [pillars.md](../pillars.md).
 
 ## 1. Memakai Design Tokens / Using Tokens
 
@@ -140,6 +141,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
 | Reviewer ≠ pembuat draft | Pembuat tidak muncul di pilihan reviewer | `403 self_review_not_allowed` |
 | Approval terikat versi | Banner "Ada versi baru" | Approval menyimpan `content_version_id`; versi beda → `409 version_mismatch` |
 | Tandai tayang butuh URL valid | Field wajib + validasi domain | Validasi ulang di server |
+| Agent pilar belum aktif tidak dijalankan | Tanpa tombol *Jalankan*; status "Belum aktif" | `POST /route` → `status: planned`, `next_step: escalate_to_owner` (**Implemented**) |
 
 Kontrak API mengikuti `clau-ai-core/shared/api-contracts.md`. Endpoint di atas belum ada di scaffold (**NEXT ACTION**).
 

@@ -212,7 +212,7 @@
         ▼
  [Perbaiki]  isi nilai yang benar ──► (label tetap CLIENT CONFIRMATION, tim meninjau koreksi)
         ▼
- ==> [Selesai] "Terima kasih, Bu Sari. 6 dari 8 fakta terkonfirmasi. 2 sedang ditinjau tim."
+ ==> [Selesai] "Terima kasih, Bu Ratna. 6 dari 8 fakta terkonfirmasi. 2 sedang ditinjau tim."
 ```
 
 Flow ini menggantikan pesan WA berisi 8 pertanyaan yang dipakai di pilot client nyata pertama.

@@ -19,7 +19,7 @@
 | 8 | `Table` (+ `Table/Header cell`, `Table/Row`) | Sort: None/Asc/Desc · Row state: Default/Hover/Selected | baris 52 (Studio 44) | — |
 | 9 | `Modal` | Type: Dialog/Form/Bottom sheet · Breakpoint: Mobile/Desktop | 440 / 560–640 / full | 3 × 2 |
 | 10 | `Toast` | Type: Success/Error/Warning/Info · Action (bool) | 360 | 4 × 2 |
-| 11 | `Badge` | Tone: Neutral/Primary/Secondary/Success/Warning/Error/Info · Removable (bool) | 24 | 7 × 2 |
+| 11 | `Badge` | Tone: Neutral/Primary/Secondary/Success/Warning/Error/Info · Removable (bool) · Pillar: P1–P5 (outline neutral, tooltip nama pilar) | 24 | 7 × 2 + 5 |
 | 12 | `Avatar` (+ `Avatar/Group`) | Type: Photo/Initials · Status dot (bool) | 24 · 32 · 40 · 56 | 2 × 2 × 4 |
 | 13 | `Tooltip` | Position: Top/Bottom/Left/Right | maks 240 | 4 |
 | 14 | `Breadcrumb` | Levels: 2/3/4 | — | 3 |
@@ -35,7 +35,7 @@
 | C2 | `CLAU/Fact Confirm Row` | Status: Pending/Confirmed/Corrected | — | 3 |
 | C3 | `CLAU/Content Preview` | Format: Feed 4:5/Feed 1:1/Story 9:16/Reel 9:16 · Slides 1–10 | lebar kartu | 4 |
 | C4 | `CLAU/Approval Bar` | Approve enabled (bool) · Level: L1/L2/L3 · Breakpoint | sticky | 2 × 3 × 2 |
-| C5 | `CLAU/Agent Status Pill` | Status: Ready/Working/Waiting human/Error | 24 | 4 |
+| C5 | `CLAU/Agent Status Pill` | Status: Ready/Working/Waiting human/Error/Not active | 24 | 5 |
 
 \*Jumlah varian untuk perencanaan. Gunakan *component properties* (boolean, instance swap, text) supaya tidak meledak menjadi ratusan varian.
 
@@ -171,7 +171,7 @@
 │ AC di semua kamar         [? CLIENT CONFIRMATION]    │  Pending   (bg warning-subtle)
 │                           [✓ Benar]  [✎ Perbaiki]    │
 ├──────────────────────────────────────────────────────┤
-│ 3 kamar tidur             [✓ DATA FINAL]  Bu Sari ✓  │  Confirmed
+│ 3 kamar tidur             [✓ DATA FINAL]  Bu Ratna ✓ │  Confirmed
 └──────────────────────────────────────────────────────┘
 
  C3 Content Preview (Feed 4:5)        C4 Approval Bar (mobile, sticky)
@@ -182,7 +182,7 @@
 │ └────────────────┘ │               └──────────────────────────────────┘
 │      ● ○ ○ ○       │
 │ caption…           │               C5 Agent Status Pill
-└────────────────────┘               [● Siap] [● Bekerja (3)] [● Menunggu manusia] [x Error]
+└────────────────────┘               [● Siap] [● Bekerja (3)] [● Menunggu manusia] [x Error] [○ Belum aktif]
 ```
 
 ## Urutan Build & Estimasi / Build Order

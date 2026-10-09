@@ -93,7 +93,7 @@ Zona waktu (WIB/WITA/WIT) **selalu ditulis** di jadwal publish, karena klien dan
 ## 7. Contoh Hierarki / Hierarchy Example
 
 ```text
-Selamat sore, Bu Sari 👋                      ← h2 / 28px mobile, 700, Plus Jakarta Sans
+Selamat sore, Bu Ratna 👋                      ← h2 / 28px mobile, 700, Plus Jakarta Sans
 Oktober 2026 · 3 konten menunggu Ibu         ← small / 14px, 400, neutral-500
 
 ┌─ Menunggu persetujuan ────────────────┐     ← h6 / 16px, 600

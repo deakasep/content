@@ -24,7 +24,7 @@
         │ Simpan                                  │                   ▼
         ▼                                         │          (Notifikasi ke Portal klien +
  < Email approver sudah punya akun? >             │           WA/email) ==> toast "Pengingat
-   │ ya ──► tautkan ke properti                   │           terkirim ke Bu Sari"
+   │ ya ──► tautkan ke properti                   │           terkirim ke Bu Ratna"
    │ tidak ──► kirim undangan Portal              │
         ▼                                         ├─ Tab Akses ──► tambah/hapus approver,
  ==> [Detail klien] status "Onboard"              │                atur level L1/L2/L3
@@ -54,7 +54,7 @@
 **Trigger:** brief baru, atau kolom Disetujui berisi konten yang jadwal tayangnya hari ini.
 
 ```text
- [Konten: Backlog] ──► Jalankan agent (Copywriter dll.) ──► (Draft v1 dibuat; agent & skill dicatat)
+ [Konten: Backlog] ──► Jalankan agent (Tara, Sekar, dll.; hanya agent aktif) ──► (Draft v1 dibuat; agent & skill dicatat)
         ▼
  [Review QA]  tab Klaim (per kalimat) · check_caption "PASS (mekanis)" · checklist QA
         ▼
@@ -105,7 +105,7 @@
 **Trigger:** kartu Agent di Ringkasan menunjukkan error, atau cek rutin pagi.
 
 ```text
- [Ringkasan] kartu "Agent 5/6 siap · 1 error" ──► [AI Agent]
+ [Ringkasan] kartu "Agent 9 aktif · 1 error" ──► [AI Agent] (grup per pilar)
         ▼
  < Ada agent Error? > ──ya──► [Detail agent] ──► Lihat log (mono, bisa disalin)
         │ tidak                     ▼
@@ -117,12 +117,16 @@
  < Ada agent "Menunggu manusia"? > ──ya──► klik ──► antrean tugas manusia (review, approval)
         │ tidak
         ▼
+ < Ada eskalasi di agent "Belum aktif" (Pilar 2–4)? > ──ya──► kerjakan manual oleh manusia
+        │ tidak                                              + catat kebutuhan di task pilar (TASK-035–037)
+        ▼
  ==> Semua agent Siap/Bekerja; antrean wajar
 ```
 
 | Error | Penanganan |
 |---|---|
 | Halaman status gagal dimuat | Banner "Status agent belum bisa dimuat" + waktu data terakhir; tidak menampilkan "Siap" palsu |
+| Permintaan untuk pilar belum aktif | Tidak ada tombol *Jalankan*; tampil "Dieskalasi ke owner" dengan link ke permintaan |
 | Realtime terputus | Indikator kecil "Terakhir diperbarui 2 menit lalu" + fallback polling |
 
 **Sukses:** owner tahu dalam < 30 detik apakah produksi berjalan, dan apa yang menunggu manusia.

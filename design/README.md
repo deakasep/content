@@ -41,6 +41,20 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 3. **Label evidence terlihat.** Setiap klaim punya label (DATA FINAL, ASSUMPTION, CLIENT CONFIRMATION, FIELD VERIFICATION, RISK, NEXT ACTION) dengan warna dan ikon konsisten.
 4. **Level approval L1/L2/L3** dan status review independen tampil di setiap konten.
 
+## 5 Pilar / Five Pillars
+
+Portal & Studio adalah **satu shell untuk 5 pilar** CLAU AI (`clau-ai-core/docs/5-pillar-architecture.md`). Sekarang hanya **Pilar 1 Marketing & Content** yang aktif dan dirancang penuh. Pilar 2–5 sudah punya tempat di spec: filter **Pilar** + **Pillar Badge** di Pipeline & Kalender, halaman AI Agent yang dikelompokkan per pilar (12 agent dari `clau-ai-agents/agents/registry.json`, agent pilar belum aktif tampil "Belum aktif"), dan tab **Per pilar** di Laporan. Rencana layar khusus pilar 2–5 dan checklist aktivasinya: [pillars.md](./pillars.md).
+
+| # | Pilar | Status | Di UI sekarang |
+|---|---|---|---|
+| 1 | Marketing & Content | **Aktif** | Semua halaman Portal & Studio |
+| 2 | Sales & Reservations | Planned | Agent Galih "Belum aktif"; rencana antrean Inquiry |
+| 3 | Guest Experience & Reputation | Planned | Agent Sari "Belum aktif"; rencana pesan tamu & eskalasi keluhan |
+| 4 | Operations | Planned | Agent Teguh "Belum aktif"; rencana Library SOP |
+| 5 | Analytics & Insights | Planned | Agent Intan aktif (template Pilar 1); Laporan tab Per pilar |
+
+Nama produk "CLAU AI Content Studio" tetap **DATA FINAL**; opsi merek payung untuk 5 pilar menunggu keputusan owner (TASK-034, lihat [pillars.md § Nama Produk](./pillars.md#nama-produk)).
+
 ## Isi Folder / Contents
 
 | File | Isi |
@@ -59,6 +73,7 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 | [user-research/persona.md](./user-research/persona.md) | 3 proto-persona |
 | [user-research/journey.md](./user-research/journey.md) | Journey klien & owner agency, pain point per tahap |
 | [prototype/prototype-guide.md](./prototype/prototype-guide.md) | Figma prototype, user testing (Maze), iterasi |
+| [pillars.md](./pillars.md) | **5 pilar di UI**: prinsip satu shell, peta pilar → layar Studio/Portal, rencana pilar 2–5, opsi nama produk, checklist aktivasi |
 | **v0.2 — siap handoff** | |
 | [ROADMAP.md](./ROADMAP.md) | 6 fase: Spec ✅ → Figma → Prototype → User test → Iterate → Handoff (± 4 minggu) |
 | [tokens/tokens.json](./tokens/tokens.json) | **Sumber tunggal** design tokens (W3C DTCG), light & dark |
@@ -100,7 +115,7 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 
 | # | Deliverable | Status |
 |---|---|---|
-| 1 | Spesifikasi UI/UX (15 file v0.1) + 17 file v0.2 | ✅ |
+| 1 | Spesifikasi UI/UX (15 file v0.1) + 17 file v0.2 + `pillars.md` (v0.2.1) | ✅ |
 | 2 | Design token (JSON, CSS variables, Tailwind) + cek contrast otomatis | ✅ `tokens/` |
 | 2b | Brand guideline, konsep logo, rencana riset, panduan Figma & developer, QA checklist | ✅ |
 | 3 | Figma: library + layar | ⬜ Fase 2 ([ROADMAP](./ROADMAP.md)) |
