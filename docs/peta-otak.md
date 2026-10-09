@@ -22,6 +22,7 @@ Aturan mengalir satu arah. Level bawah tidak boleh menurunkan kontrol level atas
 | Routing | [orchestrator/router.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/router.md) | 12 intent → pilar → skill → approval minimum |
 | Keputusan | [orchestrator/decision-tree.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/decision-tree.md) · [priority-engine.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/orchestrator/priority-engine.md) | Kapan eskalasi, urutan prioritas |
 | Kontrak data | [shared/](https://github.com/d34faiza-commits/clau-ai-core/tree/main/shared) | Skema database, kontrak API, alur data lintas pilar, integrasi |
+| Masa depan (Draft) | [docs/blueprints/](https://github.com/d34faiza-commits/clau-ai-core/tree/main/docs/blueprints) · [docs/verticals.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/verticals.md) · [docs/proposals/autonomy-levels.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/proposals/autonomy-levels.md) | Cetak biru konsep v2 (AI Marketing, Sales, Admin, BI, Automation), jenis usaha aktif & planned, draf amandemen otonomi bertingkat — siap aktif setelah di-approve |
 | 5 pilar | [docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md) · tabel di [README](https://github.com/d34faiza-commits/clau-ai-core/blob/main/README.md#5-pilar-clau-ai) | Nama, status, repo, ketergantungan antar pilar |
 
 ## 2. Aturan Domain — Repo Pilar
@@ -29,7 +30,9 @@ Aturan mengalir satu arah. Level bawah tidak boleh menurunkan kontrol level atas
 | # | Pilar | Repo | Isi |
 |---|---|---|---|
 | 1 | Marketing & Content | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | [rules 01–09](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/rules), [skills](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/skills), [prompts](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/prompts), [knowledge](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge), [qa](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/qa) |
-| 2–5 | Sales, Guest Experience, Operations, Analytics | Belum ada (Planned) | Rencana: [tasks/backlog.md](../tasks/backlog.md) TASK-034–038 |
+| 2–5 | Sales, Guest Experience, Operations, Analytics (konsep v2: Sales, Admin, BI, Automation) | Belum ada (Planned) | Rencana: [tasks/backlog.md](../tasks/backlog.md) TASK-034–042 |
+
+Knowledge 7 jenis usaha berikutnya (wedding, travel, salon, retail, rental, kontraktor, jasa profesional) sudah disiapkan di [clau-ai-marketing/knowledge/segments](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/knowledge/segments) dengan status **Planned** (belum untuk client).
 
 ## 3. Yang Menjalankan — clau-ai-agents
 
