@@ -49,7 +49,7 @@ Vertical fokus (AI-CONSTITUTION v3.0.0): **villa, restoran/cafe, wedding, travel
 |---|---|
 | [tasks/](../tasks/README.md) | Board task resmi semua repo CLAU |
 | [design/](../design/README.md) | Spesifikasi UI/UX Portal Klien & Studio; [pillars.md](../design/pillars.md) = 5 pilar di UI |
-| [docs/](./task-management.md) | Panduan kerja |
+| [docs/](./task-management.md) | Panduan kerja; [paket review TASK-041](./review-packet-task-041.md) untuk langkah manusia vertical fokus |
 
 File lain di repo ini (`CONTENT-CONSTITUTION.md`, `rules/`, `skills/`, `prompts/`, …) adalah **snapshot sebelum split 2026-10-04**. Jangan dibaca sebagai aturan berlaku dan jangan diedit.
 
