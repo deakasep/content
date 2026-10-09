@@ -1,4 +1,4 @@
-# CLAU AI Content Studio — UI/UX Standalone
+# CLAU AI — UI/UX Standalone
 
 > **ID:** Spesifikasi UI/UX untuk aplikasi CLAU sendiri: **Portal Klien** (untuk owner hotel, villa, resto, spa) dan **Studio** (dashboard internal agency). Aplikasi ini berdiri sendiri, tidak bergantung pada Rekan-AI atau platform lain, dan bisa diintegrasikan nanti lewat API.
 >
@@ -7,7 +7,7 @@
 | Item | Nilai / Value |
 |---|---|
 | Status | **v0.2 — siap handoff ke Figma & development**: spec, design tokens, brand, rencana riset, panduan handoff. Belum ada file Figma, hasil user test, atau kode UI |
-| Nama produk | **CLAU AI Content Studio** (**DATA FINAL**, 2026-10-07) |
+| Nama produk | **CLAU AI** — merek payung 5 pilar; modul aktif: **Content Studio** (AI Marketing) (**DATA FINAL, opsi B issue #46 — Dea Karisna (d34faiza), 2026-10-09**) |
 | Bahasa UI | **Bahasa Indonesia (default)** + English, toggle `ID / EN` di header dan Profil |
 | Target | Klien hospitality di seluruh Indonesia (Bali, Jawa, Sumatra, Sulawesi, Nusa Tenggara, Papua) |
 | Device | **Mobile-first** (360 × 800 sebagai baseline), lalu tablet dan desktop |
@@ -53,7 +53,7 @@ Portal & Studio adalah **satu shell untuk 5 pilar v2** CLAU AI (AI-CONSTITUTION 
 | 4 | AI Business Intelligence | Planned | Agent Intan aktif (template Pilar 1); Laporan tab Per pilar |
 | 5 | AI Automation | Planned | Rencana halaman Alur (run log, dry run, tombol berhenti) |
 
-Nama produk "CLAU AI Content Studio" tetap **DATA FINAL**; opsi merek payung untuk 5 pilar menunggu keputusan owner (TASK-043, lihat [pillars.md § Nama Produk](./pillars.md#nama-produk)).
+Nama produk: merek payung **CLAU AI**; "Content Studio" = modul AI Marketing (opsi B, TASK-043, lihat [pillars.md § Nama Produk](./pillars.md#nama-produk)).
 
 ## Isi Folder / Contents
 

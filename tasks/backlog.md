@@ -111,30 +111,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Skill + template + QA tiap layanan di clau-ai-marketing; standar iklan berbayar di rules; intent di `router.md` + agent di `registry.json` (nama disetujui owner, avatar, persona, eval); test registry & validator lulus; pilot SIMULASI per layanan.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/blueprints/marketing.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/44>
 
-## TASK-043: Keputusan nama produk untuk 5 pilar
-
-- ID: TASK-043
-- Status: Backlog
-- Priority: Low
-- Assignee: Pak Indra / Dea Karisna
-- Created: 2026-10-09
-- Due: —
-- Description: Dipisah dari TASK-034. AI-CONSTITUTION v3.0.0 menetapkan 5 pilar v2 tetapi tidak memutuskan nama produk. Opsi A: tetap "CLAU AI Content Studio" untuk semua pilar. Opsi B: merek payung "CLAU AI", "Content Studio" = modul AI Marketing. Detail: [design/pillars.md § Nama Produk](../design/pillars.md#nama-produk).
-- Acceptance Criteria: Keputusan tercatat; bila B: string i18n `app.name` + brand guideline diperbarui; validator lulus.
-- Related: [design/pillars.md](../design/pillars.md), [design/brand/brand-guideline.md](../design/brand/brand-guideline.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46>
-
-## TASK-044: Selaraskan WORKFLOW.md core dengan 5 pilar v2
-
-- ID: TASK-044
-- Status: Backlog
-- Priority: Low
-- Assignee: Dea Karisna
-- Created: 2026-10-09
-- Due: —
-- Description: `clau-ai-core/WORKFLOW.md` (Approved v1.0.0) masih menyebut "1 Marketing & Content" di tabel workflow pilar. Persetujuan v3.0.0 hanya mencakup AI-CONSTITUTION, jadi WORKFLOW.md tidak diubah tanpa perintah owner.
-- Acceptance Criteria: Owner memerintahkan perubahan; WORKFLOW.md naik versi PATCH dengan Revision History; README core Versi Dokumen sama; validator core lulus.
-- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/WORKFLOW.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47>
-
 ## TASK-014: Quarterly review AI-CONSTITUTION
 
 - ID: TASK-014

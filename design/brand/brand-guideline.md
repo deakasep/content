@@ -1,4 +1,4 @@
-# Brand Guideline — CLAU AI Content Studio
+# Brand Guideline — CLAU AI
 
 > **ID:** Identitas brand untuk produk CLAU (Portal Klien + Studio). Status: **v1.0 Draft**. Nama, warna, dan font siap dipakai untuk Figma dan kode. **Logo final belum ada**, baru konsep di [logo-concept.md](./logo-concept.md). Brand ini milik CLAU sendiri, terpisah dari brand mentor/klien mana pun.
 > **EN:** Brand identity for the CLAU product. v1.0 Draft: name, colors, and fonts are ready; the final logo is pending.
@@ -7,8 +7,8 @@
 
 | Item | Keputusan |
 |---|---|
-| Nama produk | **CLAU AI Content Studio** (**DATA FINAL**, diputuskan Dea Karisna 2026-10-07) |
-| Penulisan | `CLAU` selalu huruf besar semua; "Content Studio" title case. Singkatan di UI sempit: **CLAU** |
+| Nama produk | Merek payung **CLAU AI** (**DATA FINAL, opsi B issue #46 — Dea Karisna (d34faiza), 2026-10-09**). Modul mengikuti pilar: **Content Studio** = modul AI Marketing (aktif); modul lain memakai nama pilar (AI Sales, AI Admin, AI Business Intelligence, AI Automation). Riwayat: 2026-10-07 "CLAU AI Content Studio" sebagai nama tunggal (digantikan) |
+| Penulisan | `CLAU` selalu huruf besar semua; "CLAU AI" untuk merek; nama modul title case ("Content Studio"). Singkatan di UI sempit: **CLAU** |
 | Permukaan produk | **CLAU Portal** (untuk klien) · **CLAU Studio** (untuk agency) |
 | Tagline (usulan) | ID: **"Konten jujur, tamu datang."** · EN: **"Honest content. Real guests."** |
 | Deskriptor | ID: *Studio konten AI untuk hospitality Indonesia* · EN: *AI content studio for Indonesian hospitality* |
