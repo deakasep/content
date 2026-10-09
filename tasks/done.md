@@ -437,3 +437,33 @@ Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak tr
 - Note 2026-10-09: Usulan 1 (otonomi bertingkat) **Approved** di AI-CONSTITUTION v3.0.0 §4.7 + §4a; kolom Otonomi router + `autonomy_max` registry + test sudah dibuat, menunggu merge core#5 + agents#16 + marketing#15 (d34faiza-commits). Usulan 2 (scope di luar hospitality) **tidak** diputuskan; tetap usulan, dilacak di TASK-041.
 - Completed: 2026-10-09
 - Commit: clau-ai-core 25e59ea (merge #5), clau-ai-agents 9ca8d3d (merge #16)
+
+## TASK-043: Keputusan nama produk untuk 5 pilar
+
+- ID: TASK-043
+- Status: Done
+- Priority: Low
+- Assignee: Pak Indra / Dea Karisna
+- Created: 2026-10-09
+- Due: —
+- Description: Dipisah dari TASK-034. AI-CONSTITUTION v3.0.0 menetapkan 5 pilar v2 tetapi tidak memutuskan nama produk. Opsi A: tetap "CLAU AI Content Studio" untuk semua pilar. Opsi B: merek payung "CLAU AI", "Content Studio" = modul AI Marketing. Detail: [design/pillars.md § Nama Produk](../design/pillars.md#nama-produk).
+- Acceptance Criteria: Keputusan tercatat; bila B: string i18n `app.name` + brand guideline diperbarui; validator lulus.
+- Related: [design/pillars.md](../design/pillars.md), [design/brand/brand-guideline.md](../design/brand/brand-guideline.md), issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46>
+- Note 2026-10-09: **Diputuskan opsi B** oleh owner Dea Karisna (d34faiza) atas rekomendasi agent ("gas kak.. kasih aku yg terbaik. aku percaya kaka"): merek payung **CLAU AI**, "Content Studio" = modul AI Marketing. Diterapkan di design/ (brand guideline, README, pillars.md, Figma/prototype guide, wireframe, tokens) dan frontend clau-ai-agents (logo, judul, Pengaturan); menunggu merge PR.
+- Completed: 2026-10-09
+- Commit: CLAU-AI-CONTENT #51, clau-ai-agents #17 (merge 2026-10-09)
+
+## TASK-044: Selaraskan WORKFLOW.md core dengan 5 pilar v2
+
+- ID: TASK-044
+- Status: Done
+- Priority: Low
+- Assignee: Dea Karisna
+- Created: 2026-10-09
+- Due: —
+- Description: `clau-ai-core/WORKFLOW.md` (Approved v1.0.0) masih menyebut "1 Marketing & Content" di tabel workflow pilar. Persetujuan v3.0.0 hanya mencakup AI-CONSTITUTION, jadi WORKFLOW.md tidak diubah tanpa perintah owner.
+- Acceptance Criteria: Owner memerintahkan perubahan; WORKFLOW.md naik versi PATCH dengan Revision History; README core Versi Dokumen sama; validator core lulus.
+- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/WORKFLOW.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47>
+- Note 2026-10-09: Diperintahkan owner Dea Karisna (d34faiza) atas rekomendasi agent. WORKFLOW.md v1.0.1 (PATCH) di clau-ai-core#6; menunggu merge.
+- Completed: 2026-10-09
+- Commit: clau-ai-core #6 (merge 2026-10-09)
