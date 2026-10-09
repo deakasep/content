@@ -53,7 +53,7 @@ Agent sudah menemukan angka dari sumber sekunder (berita/operator). Konfirmasi k
 
 | # | Fakta | Nilai sekunder (2026-10-09) | Sumber primer yang dicek | Nilai primer + tanggal akses | Status |
 |---|---|---|---|---|---|
-| S1 | Kuota pengunjung TN Komodo | ± 1.000/hari sejak 1 Apr 2026 | Balai TN Komodo / Kemenhut | | ☐ DATA FINAL |
+| S1 | Kuota pengunjung TN Komodo | ± 1.000/hari sejak 1 Apr 2026 | Pernyataan Balai TN Komodo (Koordinator Kehumasan Maria Rosdalima Panggur) via [ANTARA 14 Apr 2026](https://www.antaranews.com/berita/5525623/btnk-tetapkan-kuota-1000-wisatawan-per-hari-di-tn-komodo); teks dikonfirmasi owner | **1.000 wisatawan/hari sejak 1 Apr 2026** — dicek 2026-10-09 | ✅ Terkonfirmasi (cek ulang sebelum musim ramai) |
 | S2 | Cara beli tiket TN Komodo | Aplikasi SiOra | Balai TN Komodo / SiOra | | ☐ |
 | S3 | Tarif masuk WNI | Rp50.000 hari kerja / Rp75.000 hari libur (PP 36/2024) | Teks PP 36/2024 / SiOra | | ☐ |
 | S4 | Tarif masuk WNA | Belum ditemukan | PP 36/2024 / SiOra | | ☐ |
