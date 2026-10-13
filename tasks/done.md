@@ -2,6 +2,21 @@
 
 Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak traceability. Tambahkan `- Completed: YYYY-MM-DD` dan `- Commit: <hash>` saat memindahkan task ke sini. Format: [task-template](./templates/task-template.md).
 
+## TASK-045: Pasang paket VPS 1 tahap 2 (user khusus, cek & backup rutin)
+
+- ID: TASK-045
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-13
+- Due: —
+- Description: Jalankan `sudo bash /srv/clau/clau-ai-agents/scripts/deploy/vps1-harden.sh` di VPS 1 (rollback otomatis bila gagal), lalu di admin Tailscale hapus entri `clau-vps1-aja` dan matikan key expiry `clau-vps1`.
+- Acceptance Criteria: `sudo clau-vps1-check` tanpa GAGAL (screenshot dikirim ke agent); status VPS 1 di `clau-ai-agents/docs/deploy/vps-1-setup.md` § 1 diperbarui ke DATA FINAL.
+- Related: <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/deploy/vps-1-setup.md>
+- Completed: 2026-10-13
+- Commit: clau-ai-agents `6b79fc8` (paket), dipasang di VPS 1 oleh owner
+- Note 2026-10-13: `sudo clau-vps1-check` = 0 gagal, 0 perlu dicek (UFW, SSH, fail2ban, Tailscale key expiry mati, frontend sebagai `clau-web`, exposure 1.3, backup config pertama 17 file).
+
 ## TASK-012: Pilot workflow dengan brief fiktif end-to-end
 
 - ID: TASK-012
