@@ -2,6 +2,42 @@
 
 Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. Format: [task-template](./templates/task-template.md).
 
+## TASK-045: Pasang paket VPS 1 tahap 2 (user khusus, cek & backup rutin)
+
+- ID: TASK-045
+- Status: Backlog
+- Priority: High
+- Assignee: Dea Karisna
+- Created: 2026-10-13
+- Due: —
+- Description: Jalankan `sudo bash /srv/clau/clau-ai-agents/scripts/deploy/vps1-harden.sh` di VPS 1 (rollback otomatis bila gagal), lalu di admin Tailscale hapus entri `clau-vps1-aja` dan matikan key expiry `clau-vps1`.
+- Acceptance Criteria: `sudo clau-vps1-check` tanpa GAGAL (screenshot dikirim ke agent); status VPS 1 di `clau-ai-agents/docs/deploy/vps-1-setup.md` § 1 diperbarui ke DATA FINAL.
+- Related: <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/deploy/vps-1-setup.md>
+
+## TASK-046: Tahap 1 PR 3 — workflow request → draft → QA → approval di API
+
+- ID: TASK-046
+- Status: Backlog
+- Priority: High
+- Assignee: AI (Claude Code), review owner
+- Created: 2026-10-13
+- Due: —
+- Description: Endpoint requests/drafts/qa-records/approvals sesuai kontrak core; aturan Rule 08 dicek di server (kode di `api-contracts.md` § Kode Aturan Approval, termasuk `facts_unconfirmed` lewat `claims.fact_key` + `drafts.fact_sheet_id`); isolasi data per klien di setiap query. Tidak butuh VPS 2.
+- Acceptance Criteria: Kontrak core di-merge dulu; test ke PostgreSQL sungguhan untuk setiap kode aturan; tidak ada endpoint publish; CI hijau.
+- Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/api-contracts.md>, TASK-032
+
+## TASK-047: Domain + HTTPS + CSP nonce (blocker deploy login)
+
+- ID: TASK-047
+- Status: Backlog
+- Priority: Normal
+- Assignee: Dea Karisna (domain) → AI
+- Created: 2026-10-13
+- Due: —
+- Description: Owner memilih/membeli domain. Lalu: Cloudflare + sertifikat, HSTS di Nginx, CSP berbasis nonce, rate limit login per IP, `vps-1-setup.md` Bagian 10–11. Kode login sudah siap (backend 0.6.0) tapi tidak boleh dipakai di server tanpa HTTPS.
+- Acceptance Criteria: Dashboard hanya via HTTPS (HTTP → redirect), header HSTS, CSP tanpa `'unsafe-inline'` untuk script; `clau-vps1-check` diperluas dengan cek sertifikat.
+- Related: <https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/security.md>
+
 ## TASK-011: Verifikasi spec platform (ASSUMPTION → DATA FINAL)
 
 - ID: TASK-011
@@ -119,6 +155,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Assignee: Dea Karisna
 - Created: 2026-10-04
 - Due: 2027-01-04
-- Description: Review berkala sesuai `review_cycle: Quarterly` di AI-CONSTITUTION v2.0.0 (Approved & efektif 2026-10-04; menggantikan Content Constitution v1.0.0). Cek perubahan regulasi, kebijakan platform, dan pelajaran dari pilot/project. Perubahan hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
+- Description: Review berkala sesuai `review_cycle: Quarterly` di AI-CONSTITUTION (sekarang v3.1.0 Approved; v2.0.0 efektif 2026-10-04 menggantikan Content Constitution v1.0.0). Cek perubahan regulasi, kebijakan platform, dan pelajaran dari pilot/project. Perubahan hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
 - Acceptance Criteria: Revision History AI-CONSTITUTION punya entry review (berubah atau "no change"), versi & README Versi Dokumen konsisten; validator core lulus.
 - Related: <https://github.com/d34faiza-commits/clau-ai-core/blob/main/AI-CONSTITUTION.md>, issue <https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/14>
