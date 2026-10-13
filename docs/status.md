@@ -18,7 +18,7 @@
 
 | Repo | Peran | Command validasi |
 |---|---|---|
-| `clau-ai-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.2.0, router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.6.0) | `python scripts/validate_core.py` |
+| `clau-ai-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.3.0, router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.6.0) | `python scripts/validate_core.py` |
 | `clau-ai-marketing` | Pilar 1 AI Marketing (aktif): rules, skills, knowledge, templates, QA, pilot | `git submodule update --init --recursive && python scripts/validate.py --require-submodules` |
 | `clau-ai-agents` | Platform: registry (pillars + `autonomy_max`), backend FastAPI + PostgreSQL, frontend, deploy VPS 1 | `cd backend && pytest` · `python agents/evals/run_evals.py --check` |
 | `CLAU-AI-CONTENT` | Arsip + markas kerja: board task, paket review, design, halaman ini | `python scripts/validate.py` |
@@ -36,6 +36,7 @@ Submodule: `core/` di agents & marketing, `agents/` di marketing. Alur otomatis:
 | 2026-10-12 | AI-CONSTITUTION 3.1.0 / AI-BOUNDARY 1.2.0: semua push ke `main` (core, marketing, agents) wajib lewat PR dengan CI hijau; ditegakkan `main-guard` karena tetap GitHub Free | `clau-ai-core/AI-BOUNDARY.md` § Disiplin Push |
 | 2026-10-12 | Database PostgreSQL 16 sesuai kontrak core; aturan approval ditegakkan di database (CHECK + trigger); role aplikasi tanpa DDL | `clau-ai-core/shared/database-schema.md` |
 | 2026-10-12 | Login: Argon2id, sesi di server (cookie aman + CSRF), 2FA wajib owner, tanpa pendaftaran publik; owner membuat akun | `clau-ai-agents/backend/README.md` |
+| 2026-10-13 | AI-BOUNDARY 1.3.0: CLAU-AI-CONTENT = arsip + markas kerja; job `docker` jadi check wajib clau-ai-agents; VPS 1 hanya menayangkan `release/vps1` (commit `main` yang CI-nya hijau) | `clau-ai-core/AI-BOUNDARY.md` |
 | 2026-10-13 | Belum beli domain: VPS 1 tetap pratinjau tanpa login; VPS 2 menunggu VPS 1 maksimal. PR 3 (workflow) boleh jalan tanpa VPS 2 | owner, sesi 2026-10-13 |
 | 2026-10-09 | Dependabot tidak membuka update versi mayor otomatis; versi mayor dikerjakan sebagai PR tersendiri setelah diuji | `clau-ai-agents/docs/security.md` § 5 |
 | 2026-10-09 | Review independen 3 pilot SIMULASI (kafe, wedding, travel): v1 belum lulus → **v2 lulus**, "dapat di-upgrade kapan saja" | [review-packet-task-041.md § 1](./review-packet-task-041.md) |
@@ -57,15 +58,16 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 
 | # | Item | Siapa | Lokasi |
 |---|---|---|---|
-| 1 | Legal review L1–L6 (WNA, izin acara, legalitas operator, asuransi, alkohol, "no pork no lard") | Konsultan hukum / notaris | [review-packet § 2](./review-packet-task-041.md) |
-| 2 | Sumber primer S2–S7 (tiket & tarif TN Komodo, drone, manta, spec platform) | Owner, atau AI setelah domain resmi dibuka di network policy | [review-packet § 3](./review-packet-task-041.md) |
-| 3 | Domain + HTTPS (blocker deploy login/backend; kode login sudah siap) + CSP nonce | Owner (beli domain) → AI | `clau-ai-agents/docs/security.md` § 2, § 6 |
-| 4 | Tahap 1 PR 3: request → draft → QA → approval di API (review independen L2/L3 dicek server; samakan kode error desain dengan `api-contracts.md`) | AI | `clau-ai-core/shared/api-contracts.md` |
-| 5 | Token CI: `SUBMODULE_READ_TOKEN` read-only sudah disimpan (owner, 2026-10-13). Sisa: pengingat kalender sebelum token `SUBMODULE_READ_TOKEN` & `SUBMODULE_TOKEN` kedaluwarsa | Owner | `SUBMODULE.md` § Setup GitHub Actions |
-| 6 | Setup VPS 2 + deploy backend; simpan `CLAU_BACKUP_PASSPHRASE` terpisah; backup ke Backblaze B2 | Owner + AI | `clau-ai-agents/docs/post-vps-checklist.md` |
-| 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-ai-marketing/templates/client-onboarding.md` |
-| 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
-| 9 | Backlog lain | — | [tasks/backlog.md](../tasks/backlog.md) |
+| 1 | Aktifkan gerbang deploy VPS 1: setelah PR gerbang (clau-ai-agents) di-merge dan job CI `release-vps1` hijau, jalankan ulang `sudo bash /srv/clau/clau-ai-agents/scripts/deploy/vps1-harden.sh`; cek baris "deploy hanya dari release/vps1" = OK | Owner (±3 menit) | `clau-ai-agents/docs/deploy/vps-1-setup.md` § 8 |
+| 2 | Legal review L1–L6 (WNA, izin acara, legalitas operator, asuransi, alkohol, "no pork no lard") | Konsultan hukum / notaris | [review-packet § 2](./review-packet-task-041.md) |
+| 3 | Sumber primer S2–S7 (tiket & tarif TN Komodo, drone, manta, spec platform) | Owner, atau AI setelah domain resmi dibuka di network policy | [review-packet § 3](./review-packet-task-041.md) |
+| 4 | Domain + HTTPS (blocker deploy login/backend; kode login sudah siap) + CSP nonce | Owner (beli domain) → AI | `clau-ai-agents/docs/security.md` § 2, § 6 |
+| 5 | Tahap 1 PR 3: request → draft → QA → approval di API (review independen L2/L3 dicek server; samakan kode error desain dengan `api-contracts.md`) | AI | `clau-ai-core/shared/api-contracts.md` |
+| 6 | Token CI: `SUBMODULE_READ_TOKEN` read-only sudah disimpan (owner, 2026-10-13). Sisa: pengingat kalender sebelum token `SUBMODULE_READ_TOKEN` & `SUBMODULE_TOKEN` kedaluwarsa | Owner | `SUBMODULE.md` § Setup GitHub Actions |
+| 7 | Setup VPS 2 + deploy backend; simpan `CLAU_BACKUP_PASSPHRASE` terpisah; backup ke Backblaze B2 | Owner + AI | `clau-ai-agents/docs/post-vps-checklist.md` |
+| 8 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-ai-marketing/templates/client-onboarding.md` |
+| 9 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
+| 10 | Backlog lain | — | [tasks/backlog.md](../tasks/backlog.md) |
 
 ## 6. Cara Kerja untuk AI (ringkas)
 
