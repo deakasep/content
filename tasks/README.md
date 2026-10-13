@@ -43,4 +43,4 @@ flowchart LR
 | Review | 0 |
 | Done | 33 |
 
-ID terakhir dipakai: **TASK-044**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
+ID terakhir dipakai: **TASK-047**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).

@@ -13,9 +13,11 @@ Repository private berisi governance, rules, prompt library, AI agent skills, kn
 > | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | Pilar 1: rules, prompts, skills, knowledge, templates, QA, examples |
 > | [clau-ai-agents](https://github.com/d34faiza-commits/clau-ai-agents) | Platform: registry agent, backend FastAPI, frontend Next.js |
 >
+> **Sesi baru / status terkini:** [`docs/status.md`](./docs/status.md) (otoritas, keputusan, status, pekerjaan terbuka).
+>
 > **Peta otak AI:** semua pondasi (constitution, boundary, router, registry agent, rules pilar) ada di repo sumbernya; lihat dari satu halaman: [`docs/peta-otak.md`](./docs/peta-otak.md).
 >
-> **Konsep 5 pilar (AI-CONSTITUTION v3.0.0):** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. **Pilar 1 AI Marketing** aktif di clau-ai-marketing; Pilar 2 AI Sales, 3 AI Admin, 4 AI Business Intelligence, 5 AI Automation masih Planned. Otonomi bertingkat A/B/C (default B). Vertical fokus: villa, restoran/cafe, wedding, travel. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: [`tasks/backlog.md`](./tasks/backlog.md).
+> **Konsep 5 pilar (AI-CONSTITUTION v3.0.0, sekarang v3.1.0):** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. **Pilar 1 AI Marketing** aktif di clau-ai-marketing; Pilar 2 AI Sales, 3 AI Admin, 4 AI Business Intelligence, 5 AI Automation masih Planned. Otonomi bertingkat A/B/C (default B). Vertical fokus: villa, restoran/cafe, wedding, travel. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: [`tasks/backlog.md`](./tasks/backlog.md).
 >
 > **Pengecualian 2026-10-06:** spesifikasi UI/UX standalone ([`design/`](./design/README.md)) dibuat di repo ini atas perintah owner.
 >

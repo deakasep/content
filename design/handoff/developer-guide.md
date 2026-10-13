@@ -136,14 +136,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
 | Aturan | UI | API |
 |---|---|---|
 | Tidak ada publish otomatis | Tidak ada tombol Publish | Tidak ada endpoint publish ke platform sosial |
-| *Setujui* butuh semua fakta dikonfirmasi | Tombol nonaktif + helper | `409 facts_unconfirmed` |
-| L2/L3 butuh review independen | Tombol *Kirim ke klien* nonaktif | `409 independent_review_required` |
-| Reviewer ≠ pembuat draft | Pembuat tidak muncul di pilihan reviewer | `403 self_review_not_allowed` |
-| Approval terikat versi | Banner "Ada versi baru" | Approval menyimpan `content_version_id`; versi beda → `409 version_mismatch` |
+| *Setujui* butuh semua fakta dikonfirmasi | Tombol nonaktif + helper | `409 facts_unconfirmed` (Planned) |
+| L2/L3 butuh review independen | Tombol *Kirim ke klien* nonaktif | `409 approval_needs_independent_review` |
+| Reviewer ≠ pembuat draft | Pembuat tidak muncul di pilihan reviewer | `409 qa_reviewer_is_author` |
+| Approval terikat versi | Banner "Ada versi baru" | Approval menyimpan versi draft; versi beda → `409 approval_version_mismatch` (Planned); isi versi lama tidak bisa diubah → `409 draft_version_immutable` |
+| Tandai tayang butuh approval | Tombol hanya muncul setelah Approved | `409 publication_without_approval` |
 | Tandai tayang butuh URL valid | Field wajib + validasi domain | Validasi ulang di server |
 | Agent pilar belum aktif tidak dijalankan | Tanpa tombol *Jalankan*; status "Belum aktif" | `POST /route` → `status: planned`, `next_step: escalate_to_owner` (**Implemented**) |
 
-Kontrak API mengikuti `clau-ai-core/shared/api-contracts.md`. Endpoint di atas belum ada di scaffold (**NEXT ACTION**).
+Kontrak API dan **daftar kode aturan** mengikuti `clau-ai-core/shared/api-contracts.md` § Kode Aturan Approval (sumber tunggal; bila beda, kontrak yang benar). Aturan berstatus Implemented sudah ditegakkan database (backend 0.4.0+); endpoint workflow-nya dibuat di Tahap 1 PR 3 (**NEXT ACTION**).
 
 ## 5. Testing
 
