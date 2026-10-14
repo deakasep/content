@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-13.
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-14.
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: [tasks/](../tasks/README.md).
 
@@ -18,7 +18,7 @@
 
 | Repo | Peran | Command validasi |
 |---|---|---|
-| `clau-ai-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.3.0, router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.6.0) | `python scripts/validate_core.py` |
+| `clau-ai-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.3.0, router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.7.0) | `python scripts/validate_core.py` |
 | `clau-ai-marketing` | Pilar 1 AI Marketing (aktif): rules, skills, knowledge, templates, QA, pilot | `git submodule update --init --recursive && python scripts/validate.py --require-submodules` |
 | `clau-ai-agents` | Platform: registry (pillars + `autonomy_max`), backend FastAPI + PostgreSQL, frontend, deploy VPS 1 | `cd backend && pytest` · `python agents/evals/run_evals.py --check` |
 | `CLAU-AI-CONTENT` | Arsip + markas kerja: board task, paket review, design, halaman ini | `python scripts/validate.py` |
@@ -49,7 +49,7 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 |---|---|
 | Pilar 1 AI Marketing | Aktif. 4 vertical fokus punya fact sheet, voice guide, pilot SIMULASI lulus |
 | Pilar 2–5 | Planned; blueprint di `clau-ai-core/docs/blueprints/`; aktivasi setelah VPS siap (`clau-ai-agents/docs/post-vps-checklist.md`) |
-| Platform (agents) | Backend **v0.6.0** (PR 2b merged 2026-10-13): PostgreSQL 16 (17 tabel, migrasi 0001–0003, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.6.0. Dites lokal & CI, **belum di-deploy** (VPS 2 belum ada). Belum: endpoint request/draft/QA/approval (PR 3), pemanggilan AI model |
+| Platform (agents) | Backend **v0.7.0** (PR 2b merged 2026-10-13, PR 3 merged 2026-10-14): PostgreSQL 16 (17 tabel, migrasi 0001–0004, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.7.0. Dites lokal & CI, **belum di-deploy** (VPS 2 belum ada). Workflow ([agents#46](https://github.com/d34faiza-commits/clau-ai-agents/pull/46)): request → draft → QA → approval, Rule 08 ditegakkan server + database (migrasi 0004), isolasi klien, 14 temuan audit adversarial diperbaiki. Belum: endpoint fact sheet/konfirmasi fakta + UI workflow (PR 3b; sampai itu approval draft berisi klaim fakta tetap ditolak), pemanggilan AI model |
 | Dashboard VPS 1 | Live, **tanpa domain** (HTTP via IP), pratinjau SIMULASI tanpa login, auto-deploy dari `main` tiap 5 menit. Tahap 2 **terpasang 2026-10-13** (user khusus `clau-web`/`clau-deploy`, jaringan web dikunci, backup config mingguan, reboot keamanan otomatis): `sudo clau-vps1-check` = 0 gagal, 0 perlu dicek. Tailscale: entri lama dihapus, key expiry dimatikan. Gerbang deploy aktif 2026-10-13: hanya `release/vps1` (commit `main` yang CI-nya hijau) yang tayang. Cek rutin: `sudo clau-vps1-check` (`clau-ai-agents/docs/deploy/vps-1-setup.md` § 8) |
 | Keamanan | Header + CSP, Nginx dikeraskan, sandbox systemd, audit dependency + scan secret di CI, Actions dipin SHA, Dependabot. 2026-10-13: audit login/database (22 temuan ditutup) dan audit CI lintas repo (urutan sync core→agents→marketing, pin core wajib sama, token tidak terbaca kode PR, `main-guard` hanya menghitung run GitHub Actions dan semua run harus hijau). Detail: `clau-ai-agents/docs/security.md` |
 | Client nyata | Belum ada. Konten SIMULASI tidak bisa dinaikkan jadi konten client; mulai dari Step 1 CONTENT-WORKFLOW dengan fact sheet nyata |
@@ -61,7 +61,7 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | 1 | Legal review L1–L6 (WNA, izin acara, legalitas operator, asuransi, alkohol, "no pork no lard") | Konsultan hukum / notaris | [review-packet § 2](./review-packet-task-041.md) |
 | 2 | Sumber primer S2–S7 (tiket & tarif TN Komodo, drone, manta, spec platform) | Owner, atau AI setelah domain resmi dibuka di network policy | [review-packet § 3](./review-packet-task-041.md) |
 | 3 | Domain + HTTPS (blocker deploy login/backend; kode login sudah siap) + CSP nonce | Owner (beli domain) → AI | `clau-ai-agents/docs/security.md` § 2, § 6 |
-| 4 | Tahap 1 PR 3: request → draft → QA → approval di API (review independen L2/L3 dicek server; samakan kode error desain dengan `api-contracts.md`) | AI | `clau-ai-core/shared/api-contracts.md` |
+| 4 | Tahap 1 PR 3b (TASK-048): fact sheet, konfirmasi fakta, UI workflow. PR 3 (workflow API) selesai 2026-10-14 | AI | `tasks/backlog.md` TASK-048 |
 | 5 | Token CI: `SUBMODULE_READ_TOKEN` read-only sudah disimpan (owner, 2026-10-13). Sisa: pengingat kalender sebelum token `SUBMODULE_READ_TOKEN` & `SUBMODULE_TOKEN` kedaluwarsa | Owner | `SUBMODULE.md` § Setup GitHub Actions |
 | 6 | Setup VPS 2 + deploy backend; simpan `CLAU_BACKUP_PASSPHRASE` terpisah; backup ke Backblaze B2 | Owner + AI | `clau-ai-agents/docs/post-vps-checklist.md` |
 | 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-ai-marketing/templates/client-onboarding.md` |
