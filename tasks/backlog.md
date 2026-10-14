@@ -2,18 +2,6 @@
 
 Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. Format: [task-template](./templates/task-template.md).
 
-## TASK-048: Tahap 1 PR 3b — fact sheet, konfirmasi fakta, dan UI workflow
-
-- ID: TASK-048
-- Status: Backlog
-- Priority: High
-- Assignee: AI (Claude Code), review owner
-- Created: 2026-10-14
-- Due: —
-- Description: Endpoint kelola klien, fact sheet (versi, approve oleh approver klien), dan konfirmasi fakta (`fact_confirmations`, append-only) sesuai kontrak core; lalu halaman workflow di frontend (daftar request, editor draft + klaim, QA, tombol keputusan dengan bukti tertulis). Sampai ini selesai, approval draft yang memuat klaim fakta tetap ditolak (`facts_unconfirmed`, fail closed).
-- Acceptance Criteria: Kontrak core diperbarui & di-merge dulu; konfirmasi fakta hanya oleh approver klien/owner dengan jejak; UI tidak menampilkan tombol publish; test PostgreSQL + E2E lewat frontend; CI hijau.
-- Related: TASK-046, <https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/api-contracts.md>
-
 ## TASK-047: Domain + HTTPS + CSP nonce (blocker deploy login)
 
 - ID: TASK-047
