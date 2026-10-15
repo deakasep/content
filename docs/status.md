@@ -78,10 +78,12 @@ Board: [tasks/](../tasks/README.md). Urutan kerja; tahap berikutnya dipicu beban
 | Tahap | Isi | Task |
 |---|---|---|
 | A. Segera | Backup 6 jam + B2 + pemulihan manual (agents#54), CI hemat menit, uji "VPS 2 hilang total" | TASK-049, 050, 051 |
-| B. Sebelum klien nyata pertama | Domain + HTTPS, **Tahap 2 AI menulis draft**, legal & UU PDP, keamanan tambahan, onboarding klien pertama | TASK-047, **052 (sedang dirancang)**, 053, 054, 055 |
+| B. Sebelum klien nyata pertama | Domain + HTTPS, **Tahap 2 AI menulis draft** → **AI Content Agent "Paket Konten Bulanan"** (produk pertama yang menghasilkan uang), legal & UU PDP, keamanan tambahan, onboarding klien pertama | TASK-047, **052 (sedang dirancang)**, **063**, 053, 054, 055 |
 | C. Menuju ±30 klien | Monitoring & alarm, staging, dashboard biaya & kualitas AI, SOP tim, penagihan | TASK-056–060 |
 | D. 200+ klien | Worker terpisah, database terkelola, 2+ server aplikasi, pentest | TASK-061 |
 | E. Non-teknis | Tim reviewer (batas kapasitas sebenarnya), bukti hasil, sumber primer S2–S7 | TASK-059, 062, 041 |
+
+Prinsip produk (owner 2026-10-15): tidak ada AI → langsung publish; alur = AI menghasilkan → AI fact-check ke data klien → owner review → approve (+ klien) → final. Urutan agent: Content → Sales → Customer Service → SEO → Advertising → Business (peta ke pilar: usulan Tahap 2 § 1a).
 
 Prinsip skala (owner 2026-10-15): 12 agent = satu aplikasi di VPS 2, bukan satu server per agent; server ditambah bertahap sesuai beban tanpa membangun ulang.
 

@@ -2,6 +2,18 @@
 
 Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. Format: [task-template](./templates/task-template.md).
 
+## TASK-063: AI Content Agent — "Paket Konten Bulanan" (produk pertama)
+
+- ID: TASK-063
+- Status: Backlog
+- Priority: High
+- Assignee: AI → Dea Karisna (review & approve)
+- Created: 2026-10-15
+- Due: —
+- Description: Arahan owner 2026-10-15: mulai dari satu agent yang menghasilkan uang. Alur berantai di atas Tahap 2 (TASK-052): strategi 30 hari (model sulit) → ✋ checkpoint owner → 30 ide → 30 caption + hashtag → 12 konsep visual → 8 naskah video pendek → CTA → AI fact-check ke fakta klien → ✋ review & approve owner → persetujuan tertulis klien (Rule 08) → publish oleh manusia. Butuh agent baru: strategi & riset, hashtag/keyword & repurposing, konsep visual (nama dipilih owner). Aset gambar/video menyusul (Rule 07).
+- Acceptance Criteria: Satu paket lengkap untuk klien SIMULASI dihasilkan dari satu permintaan; setiap klaim faktual punya fact_key yang dikonfirmasi (klaim tanpa dasar ditandai dan memblok approval); dua checkpoint owner tercatat di audit log; biaya paket tercatat; tidak ada jalur publish otomatis.
+- Related: TASK-052, TASK-042, [usulan Tahap 2 § 1a](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/proposals/tahap-2-ai-drafting.md)
+
 ## TASK-049: Backup VPS 2 tiap 6 jam + Backblaze B2 + pemulihan manual (pasang di server)
 
 - ID: TASK-049
