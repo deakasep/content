@@ -64,12 +64,26 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | 1 | Legal review L1–L6 (WNA, izin acara, legalitas operator, asuransi, alkohol, "no pork no lard") | Konsultan hukum / notaris | [review-packet § 2](./review-packet-task-041.md) |
 | 2 | Sumber primer S2–S7 (tiket & tarif TN Komodo, drone, manta, spec platform) | Owner, atau AI setelah domain resmi dibuka di network policy | [review-packet § 3](./review-packet-task-041.md) |
 | 3 | Domain + HTTPS publik (blocker login klien; tim internal sudah login lewat HTTPS Tailscale di VPS 2) + CSP nonce; lalu kembali ke keputusan VPS #1 (frontend di VPS 1) | Owner (beli domain) → AI | `clau-ai-agents/docs/security.md` § 2, § 6 |
-| 4 | Tahap 1 selesai (PR 3 + 3b merged 2026-10-14). Berikutnya Tahap 2: AI menulis draft (VPS 2 siap; API key provider AI hanya di `.env` VPS 2; klien butuh domain/HTTPS, item 3) | Owner → AI | `clau-ai-agents/docs/post-vps-checklist.md` |
+| 4 | Tahap 1 selesai (PR 3 + 3b merged 2026-10-14). **Tahap 2 (AI menulis draft) sedang dirancang** (TASK-052): usulan di `clau-ai-core/docs/proposals/tahap-2-ai-drafting.md`, menunggu keputusan owner | AI → Owner | TASK-052 |
 | 5 | Token CI: `SUBMODULE_READ_TOKEN` read-only sudah disimpan (owner, 2026-10-13). Sisa: pengingat kalender sebelum token `SUBMODULE_READ_TOKEN` & `SUBMODULE_TOKEN` kedaluwarsa | Owner | `SUBMODULE.md` § Setup GitHub Actions |
 | 6 | VPS 2 selesai 2026-10-15 (setup A–H). Sisa setelah agents#54 merge: jalankan ulang langkah E, simpan `CLAU_SECRET_KEY` (langkah H baru), akun Backblaze B2 (langkah I), uji coba "VPS 2 hilang total" di VPS sementara | Owner + AI | `clau-ai-agents/docs/deploy/vps-2-setup.md` § 3 H–I, § 5 |
 | 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-ai-marketing/templates/client-onboarding.md` |
 | 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
 | 9 | Backlog lain | — | [tasks/backlog.md](../tasks/backlog.md) |
+
+## 5a. Roadmap ke "maksimal" (urutan disepakati owner 2026-10-15)
+
+Board: [tasks/](../tasks/README.md). Urutan kerja; tahap berikutnya dipicu beban/jumlah klien, bukan tanggal.
+
+| Tahap | Isi | Task |
+|---|---|---|
+| A. Segera | Backup 6 jam + B2 + pemulihan manual (agents#54), CI hemat menit, uji "VPS 2 hilang total" | TASK-049, 050, 051 |
+| B. Sebelum klien nyata pertama | Domain + HTTPS, **Tahap 2 AI menulis draft**, legal & UU PDP, keamanan tambahan, onboarding klien pertama | TASK-047, **052 (sedang dirancang)**, 053, 054, 055 |
+| C. Menuju ±30 klien | Monitoring & alarm, staging, dashboard biaya & kualitas AI, SOP tim, penagihan | TASK-056–060 |
+| D. 200+ klien | Worker terpisah, database terkelola, 2+ server aplikasi, pentest | TASK-061 |
+| E. Non-teknis | Tim reviewer (batas kapasitas sebenarnya), bukti hasil, sumber primer S2–S7 | TASK-059, 062, 041 |
+
+Prinsip skala (owner 2026-10-15): 12 agent = satu aplikasi di VPS 2, bukan satu server per agent; server ditambah bertahap sesuai beban tanpa membangun ulang.
 
 ## 6. Cara Kerja untuk AI (ringkas)
 

@@ -2,6 +2,18 @@
 
 Task yang sedang dikerjakan. Batasi **maksimal 3 task** sekaligus supaya fokus dan cepat selesai. Format: [task-template](./templates/task-template.md).
 
+## TASK-052: Tahap 2 — AI menulis draft (antrean kerja, model per tugas, batas biaya)
+
+- ID: TASK-052
+- Status: In Progress
+- Priority: High
+- Assignee: AI (rancangan) → Dea Karisna (keputusan)
+- Created: 2026-10-15
+- Due: —
+- Description: Rancangan di clau-ai-core `docs/proposals/tahap-2-ai-drafting.md`: worker + antrean kerja di PostgreSQL, panggilan Claude API dengan output terstruktur (draft + klaim), aturan data ke provider (usulan AI-BOUNDARY, butuh persetujuan owner), batas biaya per klien & global, eval 33 kasus sebagai gerbang, tombol mati. Implementasi bertahap PR 4a–4d setelah keputusan owner.
+- Acceptance Criteria: Rancangan disetujui owner (termasuk teks AI-BOUNDARY); PR 4a–4d merged dengan CI hijau; 33 kasus eval lulus untuk agent yang diaktifkan; tidak ada data tamu mentah terkirim ke provider (dites).
+- Related: [post-vps-checklist](https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md), [integrations](https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/integrations.md)
+
 ## TASK-041: Vertical fokus siap enterprise — villa, restoran/cafe, wedding, travel (lalu non-hospitality)
 
 - ID: TASK-041

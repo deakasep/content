@@ -2,11 +2,167 @@
 
 Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. Format: [task-template](./templates/task-template.md).
 
+## TASK-049: Backup VPS 2 tiap 6 jam + Backblaze B2 + pemulihan manual (pasang di server)
+
+- ID: TASK-049
+- Status: Backlog
+- Priority: High
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Kode siap di agents#54 (backup tiap 6 jam, salinan B2 dengan Object Lock, `clau-vps2-restore`, mode server pengganti). Menunggu CI (kuota GitHub Actions habis s.d. awal bulan) lalu merge. Owner: simpan `CLAU_SECRET_KEY` di password manager (bisa sekarang), buat akun B2 (langkah I nomor 1–5).
+- Acceptance Criteria: agents#54 merged dengan CI hijau; langkah E diulang di VPS 2; `clau-vps2-offsite setup` menampilkan `OK Object Lock aktif`; `clau-vps2-check` menunjukkan salinan B2 ≤ 13 jam; `CLAU_SECRET_KEY` tersimpan di password manager.
+- Related: https://github.com/d34faiza-commits/clau-ai-agents/pull/54, [vps-2-setup § 3 H–I, § 5](https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/deploy/vps-2-setup.md)
+
+## TASK-050: CI hemat menit (GitHub Free 2.000 menit/bulan)
+
+- ID: TASK-050
+- Status: Backlog
+- Priority: High
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Kuota Actions habis pertengahan Oktober 2026 → PR tidak bisa di-merge dan VPS tidak menerima versi baru. Usulan: CI sekali per commit (bukan push + pull_request), batalkan run lama saat ada commit baru, job `docker` hanya bila file Docker/backend/frontend berubah, cek lintas repo harian → mingguan + saat berubah. Aturan `main` wajib CI hijau tetap.
+- Acceptance Criteria: Jumlah run per commit PR turun (1 run CI per commit); check wajib tetap melapor di setiap PR (tidak ada PR yang terkunci karena check tidak jalan); estimasi menit/bulan dicatat di PR.
+- Related: https://github.com/d34faiza-commits/clau-ai-agents/blob/main/.github/workflows/ci.yml
+
+## TASK-051: Uji coba "VPS 2 hilang total" di VPS sementara
+
+- ID: TASK-051
+- Status: Backlog
+- Priority: Normal
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Membuktikan panduan server pengganti benar-benar jalan sebelum ada data klien nyata: VPS kecil sementara → langkah A–E → `clau-vps2-offsite setup` → `clau-vps2-restore --server-pengganti` dari B2 → login akun lama dengan 2FA → hapus VPS uji.
+- Acceptance Criteria: Data tampil sama dengan VPS 2, login + 2FA akun lama berhasil di server uji, waktu pemulihan dicatat, temuan dimasukkan ke panduan; VPS uji dihapus.
+- Related: [vps-2-setup § 5](https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/deploy/vps-2-setup.md), TASK-049
+
+## TASK-053: Legal & data pribadi (UU PDP) sebelum klien nyata
+
+- ID: TASK-053
+- Status: Backlog
+- Priority: High
+- Assignee: Dea Karisna (+ konsultan hukum)
+- Created: 2026-10-15
+- Due: —
+- Description: Kebijakan privasi, perjanjian pengolahan data dengan klien (termasuk pengolah AI), masa simpan data, penanggung jawab data, plus review hukum L1–L6 yang masih terbuka. AI menyiapkan draft; keputusan & tanda tangan oleh manusia.
+- Acceptance Criteria: Kebijakan privasi + template perjanjian pengolahan data disetujui owner (dan dicek konsultan hukum); masa simpan per jenis data tercatat di core `shared/`; L1–L6 berstatus jelas.
+- Related: [review-packet § 2](../docs/review-packet-task-041.md), [data-flow](https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/data-flow.md)
+
+## TASK-054: Keamanan tambahan sebelum klien login
+
+- ID: TASK-054
+- Status: Backlog
+- Priority: Normal
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Di luar TASK-047 (domain/HTTPS/CSP/rate limit IP): 2FA wajib juga untuk `content_lead`, `purge-sessions` terjadwal di VPS 2, rotasi secret terdokumentasi, cek ulang `security.md` § 6.
+- Acceptance Criteria: Test backend untuk 2FA `content_lead`; timer purge-sessions dicek `clau-vps2-check`; prosedur rotasi secret di panduan.
+- Related: https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/security.md
+
+## TASK-055: Onboarding klien nyata pertama (1 klien, 1 vertical, 1 kanal)
+
+- ID: TASK-055
+- Status: Backlog
+- Priority: Normal
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Setelah TASK-047, TASK-052, TASK-053: fact sheet nyata lewat Konfirmasi Fakta, brief, draft AI, review independen, approval tertulis klien, publish manual. Data klien hanya di platform/Client Workspace, tidak di repo.
+- Acceptance Criteria: Satu konten klien nyata Approved lewat alur lengkap di platform; semua fakta DATA FINAL dari Konfirmasi Fakta; catatan pembelajaran masuk status.
+- Related: [client-onboarding](https://github.com/d34faiza-commits/clau-ai-marketing/blob/main/templates/client-onboarding.md)
+
+## TASK-056: Monitoring & alarm (server, backup, biaya AI)
+
+- ID: TASK-056
+- Status: Backlog
+- Priority: Normal
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Notifikasi ke owner (mis. email/Telegram) bila server/aplikasi mati, backup/salinan B2 gagal, disk penuh, atau biaya AI mendekati batas.
+- Acceptance Criteria: Alarm uji (matikan backend, gagalkan backup) sampai ke owner < 10 menit; tanpa data klien di isi notifikasi.
+- Related: https://github.com/d34faiza-commits/clau-ai-agents/blob/main/scripts/deploy/vps2-check.sh
+
+## TASK-057: Server staging (uji versi baru sebelum dipakai klien)
+
+- ID: TASK-057
+- Status: Backlog
+- Priority: Low
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Lingkungan terpisah dengan data SIMULASI untuk mencoba rilis & migrasi sebelum VPS 2. Diaktifkan menjelang ±30 klien atau saat Tahap 2 mulai dipakai klien.
+- Acceptance Criteria: Rilis melewati staging dulu (dicatat di panduan deploy); staging tidak pernah berisi data klien nyata.
+- Related: https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/deploy/vps-2-setup.md
+
+## TASK-058: Dashboard biaya & kualitas AI
+
+- ID: TASK-058
+- Status: Backlog
+- Priority: Normal
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Biaya AI per klien/intent/bulan, persentase draft lolos QA, jumlah revisi, waktu sampai approval. Sumber: tabel log panggilan AI Tahap 2.
+- Acceptance Criteria: Halaman owner menampilkan biaya bulan berjalan vs batas dan kualitas per agent; angka cocok dengan log.
+- Related: TASK-052
+
+## TASK-059: SOP tim: reviewer, eskalasi, insiden
+
+- ID: TASK-059
+- Status: Backlog
+- Priority: Normal
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Kapasitas review manusia = batas jumlah klien. SOP review independen (Rule 08), eskalasi Level C, dan respons insiden (server mati, data salah tayang, kebocoran).
+- Acceptance Criteria: SOP tertulis disetujui owner; satu simulasi insiden dijalankan dan dicatat.
+- Related: [rules/08](https://github.com/d34faiza-commits/clau-ai-marketing/tree/main/rules)
+
+## TASK-060: Paket langganan & penagihan
+
+- ID: TASK-060
+- Status: Backlog
+- Priority: Low
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Paket harga, invoice, dan pencatatan langganan klien; menyambung ke Pilar 3 AI Admin (TASK-037).
+- Acceptance Criteria: Paket & template invoice disetujui owner; data komersial klien tidak di repo.
+- Related: TASK-037
+
+## TASK-061: Rancangan skala 200+ klien
+
+- ID: TASK-061
+- Status: Backlog
+- Priority: Low
+- Assignee: AI
+- Created: 2026-10-15
+- Due: —
+- Description: Worker AI di server terpisah (diskalakan sesuai antrean), database terkelola dengan replika + point-in-time recovery, 2+ server aplikasi di belakang load balancer, penyimpanan media terpisah, pentest pihak luar. Dipicu metrik beban, bukan jadwal.
+- Acceptance Criteria: Rancangan + ambang pemicu (antrean, CPU, jumlah klien) tertulis di core `docs/`; tidak ada perubahan infrastruktur sebelum ambang tercapai.
+- Related: TASK-052
+
+## TASK-062: Bukti hasil untuk penjualan (case study pilot)
+
+- ID: TASK-062
+- Status: Backlog
+- Priority: Low
+- Assignee: Dea Karisna
+- Created: 2026-10-15
+- Due: —
+- Description: Kumpulkan data hasil klien pertama (engagement, inquiry, booking) dengan izin klien untuk bahan jualan.
+- Acceptance Criteria: Satu case study dengan angka bersumber dan izin tertulis klien.
+- Related: TASK-055
+
 ## TASK-047: Domain + HTTPS + CSP nonce (blocker deploy login)
 
 - ID: TASK-047
 - Status: Backlog
-- Priority: Normal
+- Priority: High
 - Assignee: Dea Karisna (domain) → AI
 - Created: 2026-10-13
 - Due: —
