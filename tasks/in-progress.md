@@ -13,6 +13,8 @@ Task yang sedang dikerjakan. Batasi **maksimal 3 task** sekaligus supaya fokus d
 - Description: Rancangan di clau-ai-core `docs/proposals/tahap-2-ai-drafting.md`: worker + antrean kerja di PostgreSQL, panggilan Claude API dengan output terstruktur (draft + klaim), aturan data ke provider (usulan AI-BOUNDARY, butuh persetujuan owner), batas biaya per klien & global, eval 33 kasus sebagai gerbang, tombol mati. Implementasi bertahap PR 4a–4d setelah keputusan owner.
 - Acceptance Criteria: Rancangan disetujui owner (termasuk teks AI-BOUNDARY); PR 4a–4d merged dengan CI hijau; 33 kasus eval lulus untuk agent yang diaktifkan; tidak ada data tamu mentah terkirim ke provider (dites).
 - Related: [post-vps-checklist](https://github.com/d34faiza-commits/clau-ai-agents/blob/main/docs/post-vps-checklist.md), [integrations](https://github.com/d34faiza-commits/clau-ai-core/blob/main/shared/integrations.md)
+- Progress 2026-10-15: rancangan di core#16; arahan owner: model per tingkat kesulitan (Fable 5.1 sulit, Opus 5.5 utama, Haiku 5.5 ringan setelah eval), tidak ada AI → langsung publish, AI Content Agent dulu (TASK-063).
+- Progress 2026-10-16: owner "setuju gas" → **AI-BOUNDARY v1.4.0** (§ Data ke Provider AI). PR 4a (kontrak core API 0.9.0, 3 tabel AI) di core#16; PR 4b (migrasi 0006, endpoint job, worker container terpisah, AI fact-check, batas biaya, provider tiruan, 28 test + smoke compose) di agents#54. Sisa: audit, PR 4c (provider Claude, menunggu akun & biaya owner), PR 4d (UI).
 
 ## TASK-041: Vertical fokus siap enterprise — villa, restoran/cafe, wedding, travel (lalu non-hospitality)
 
