@@ -19,7 +19,7 @@
 | | Standalone (sekarang) | Integrasi (nanti) |
 |---|---|---|
 | Login & akun | Milik CLAU sendiri | Bisa SSO dengan platform lain |
-| Data | Database CLAU (`clau-ai-core/shared/database-schema.md`) | Sinkron lewat API (`clau-ai-core/shared/api-contracts.md`) |
+| Data | Database CLAU (`clau-core/shared/database-schema.md`) | Sinkron lewat API (`clau-core/shared/api-contracts.md`) |
 | Desain | Design system CLAU (folder ini) | Token diekspor sebagai CSS variables / JSON, jadi bisa dipakai host lain |
 | Rilis | Tidak menunggu roadmap pihak lain | Integrasi hanya bila ada kebutuhan nyata |
 
@@ -43,7 +43,7 @@ UI ini **mengikuti aturan CLAU**, bukan sekadar CMS konten:
 
 ## 5 Pilar / Five Pillars
 
-Portal & Studio adalah **satu shell untuk 5 pilar v2** CLAU AI (AI-CONSTITUTION v3.0.0, `clau-ai-core/docs/5-pillar-architecture.md`). Sekarang hanya **Pilar 1 AI Marketing** yang aktif dan dirancang penuh. Pilar 2–5 sudah punya tempat di spec: filter **Pilar** + **Pillar Badge** di Pipeline & Kalender, halaman AI Agent yang dikelompokkan per pilar (12 agent dari `clau-ai-agents/agents/registry.json`, agent pilar belum aktif tampil "Belum aktif", badge **otonomi** A/B/C), dan tab **Per pilar** di Laporan. Rencana layar khusus pilar 2–5 dan checklist aktivasinya: [pillars.md](./pillars.md).
+Portal & Studio adalah **satu shell untuk 5 pilar v2** CLAU AI (AI-CONSTITUTION v3.0.0, `clau-core/docs/5-pillar-architecture.md`). Sekarang hanya **Pilar 1 AI Marketing** yang aktif dan dirancang penuh. Pilar 2–5 sudah punya tempat di spec: filter **Pilar** + **Pillar Badge** di Pipeline & Kalender, halaman AI Agent yang dikelompokkan per pilar (12 agent dari `clau-agent/agents/registry.json`, agent pilar belum aktif tampil "Belum aktif", badge **otonomi** A/B/C), dan tab **Per pilar** di Laporan. Rencana layar khusus pilar 2–5 dan checklist aktivasinya: [pillars.md](./pillars.md).
 
 | # | Pilar | Status | Di UI sekarang |
 |---|---|---|---|
@@ -122,7 +122,7 @@ Nama produk: merek payung **CLAU AI**; "Content Studio" = modul AI Marketing (op
 | 4 | Figma: prototype | ⬜ Fase 3 |
 | 5 | Hasil wawancara + user test 5 orang | ⬜ Fase 4 |
 | 6 | Logo final (vektor) | ⬜ Setelah konsep dipilih |
-| 7 | Implementasi kode (Next.js di `clau-ai-agents/frontend`) | ⬜ Setelah handoff |
+| 7 | Implementasi kode (Next.js di `clau-agent/frontend`) | ⬜ Setelah handoff |
 
 ## Prinsip Desain / Design Principles
 
@@ -165,6 +165,6 @@ Label evidence **tidak diterjemahkan**, karena label itu bahasa kerja bersama ti
 
 ## Hubungan dengan Repo Lain / Relation to Other Repos
 
-- Aturan konten: `clau-ai-core` (AI-CONSTITUTION, AI-BOUNDARY) dan `clau-ai-marketing` (rules, QA).
-- Kontrak data & API: `clau-ai-core/shared/`.
-- Implementasi kode UI nantinya di `clau-ai-agents/frontend` (Next.js), atau di repo frontend tersendiri bila owner memutuskan (**CLIENT CONFIRMATION**, lihat laporan).
+- Aturan konten: `clau-core` (AI-CONSTITUTION, AI-BOUNDARY) dan `clau-market` (rules, QA).
+- Kontrak data & API: `clau-core/shared/`.
+- Implementasi kode UI nantinya di `clau-agent/frontend` (Next.js), atau di repo frontend tersendiri bila owner memutuskan (**CLIENT CONFIRMATION**, lihat laporan).

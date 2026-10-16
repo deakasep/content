@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repository validator for CLAU-AI-CONTENT.
+"""Repository validator for clau-content.
 
 Checks (stdlib only; jsonschema is used when installed):
   - required repository files exist

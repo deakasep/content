@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Mechanical caption checks for CLAU-AI-CONTENT (stdlib only).
+"""Mechanical caption checks for clau-content (stdlib only).
 
 Checks each caption for:
   - hook (first line) length <= --max-hook characters (default 125)

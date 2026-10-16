@@ -42,7 +42,7 @@ Sumber: [`tokens.json`](../tokens/tokens.json). Semua kombinasi teks diuji WCAG 
 
 ## 3b. Palet UI Produk v2 / Product UI Palette (DATA FINAL, 2026-10-07)
 
-Diputuskan Dea Karisna (2026-10-07) untuk **antarmuka aplikasi** (dashboard, Portal, Studio), mengikuti `clau-ai-agents/docs/design/2026-10-07-enterprise-ui-brief.txt`. Palet §3 tetap dipakai untuk materi brand non-aplikasi (proposal, PDF, media sosial CLAU) sampai ada keputusan lain.
+Diputuskan Dea Karisna (2026-10-07) untuk **antarmuka aplikasi** (dashboard, Portal, Studio), mengikuti `clau-agent/docs/design/2026-10-07-enterprise-ui-brief.txt`. Palet §3 tetap dipakai untuk materi brand non-aplikasi (proposal, PDF, media sosial CLAU) sampai ada keputusan lain.
 
 | Peran | Nama | HEX | Proporsi |
 |---|---|---|---|
@@ -54,21 +54,21 @@ Diputuskan Dea Karisna (2026-10-07) untuk **antarmuka aplikasi** (dashboard, Por
 | Garis | Slate 200 | `#E2E8F0` | |
 | Status saja | Success / Warning / Error / Info | `#16A34A` / `#D97706` / `#DC2626` / `#2563EB` | Hanya untuk status, selalu disertai label |
 
-Aturan: oranye/terracotta **tidak** dipakai sebagai warna brand di aplikasi (hanya warning). Font aplikasi: **Inter**. Agent ditampilkan dengan monogram, bukan karakter kartun. Implementasi: `clau-ai-agents/frontend/app/globals.css`.
+Aturan: oranye/terracotta **tidak** dipakai sebagai warna brand di aplikasi (hanya warning). Font aplikasi: **Inter**. Agent ditampilkan dengan monogram, bukan karakter kartun. Implementasi: `clau-agent/frontend/app/globals.css`.
 
 Token: `../tokens/tokens.json` v1.1.0, `semantic.app-v2` (cek kontras WCAG AA lulus).
 
 ### 3c. UI v3 "AI Workforce" (DATA FINAL, 2026-10-08)
 
-Dipasang Dea Karisna (2026-10-08) di atas palet §3b: bahasa UI **English default** dengan pilihan **EN / ID tanpa ikon bendera**, **dark mode** (Light / Dark / System), dan agent ditampilkan sebagai **avatar siluet geometris** dengan satu warna aksen per agent dari keluarga teal/biru/indigo/violet (bukan karakter kartun; **digantikan §3d** untuk avatar agent). Nilai warna dark mode dan aksen agent: `clau-ai-agents/frontend/README.md` (Snapshot v3). Snapshot kode: branch `ui-v3-workforce`.
+Dipasang Dea Karisna (2026-10-08) di atas palet §3b: bahasa UI **English default** dengan pilihan **EN / ID tanpa ikon bendera**, **dark mode** (Light / Dark / System), dan agent ditampilkan sebagai **avatar siluet geometris** dengan satu warna aksen per agent dari keluarga teal/biru/indigo/violet (bukan karakter kartun; **digantikan §3d** untuk avatar agent). Nilai warna dark mode dan aksen agent: `clau-agent/frontend/README.md` (Snapshot v3). Snapshot kode: branch `ui-v3-workforce`.
 
 ### 3d. Avatar agent 3D (2026-10-08)
 
-Menggantikan aturan avatar di §3c: setiap agent di registry tampil sebagai **figur 3D chibi** (latar mint `#DDF4EE`, satu karakter fiktif per agent). Diterapkan lewat `clau-ai-agents` PR #1 (di-merge 2026-10-08); perubahan guideline ini diizinkan di sesi yang sama. Agent konsep (belum di registry) tetap karakter SVG. Master dan status per gambar: `clau-ai-agents/agents/avatars/README.md`.
+Menggantikan aturan avatar di §3c: setiap agent di registry tampil sebagai **figur 3D chibi** (latar mint `#DDF4EE`, satu karakter fiktif per agent). Diterapkan lewat `clau-agent` PR #1 (di-merge 2026-10-08); perubahan guideline ini diizinkan di sesi yang sama. Agent konsep (belum di registry) tetap karakter SVG. Master dan status per gambar: `clau-agent/agents/avatars/README.md`.
 
 Batas yang tetap berlaku: karakter fiktif (bukan wajah staf/orang nyata), UI tetap menandai agent sebagai AI, batik hanya sebagai pakaian, tanpa simbol sakral (§6–7).
 
-Status gambar (2026-10-08): ke-12 agent dan 3 agent konsep (Nova, Aruna, Dara) sudah sesuai nama, jenis kelamin, dan peran (`clau-ai-agents` PR #2–#4). Agent baru wajib punya avatar; dijaga test CI `clau-ai-agents/backend/tests/test_avatars.py`.
+Status gambar (2026-10-08): ke-12 agent dan 3 agent konsep (Nova, Aruna, Dara) sudah sesuai nama, jenis kelamin, dan peran (`clau-agent` PR #2–#4). Agent baru wajib punya avatar; dijaga test CI `clau-agent/backend/tests/test_avatars.py`.
 
 Token dark mode: `../tokens/tokens.json` v1.2.0 `semantic.app-v3-dark` (cek kontras WCAG AA otomatis, lihat tokens.md §5c).
 
@@ -141,7 +141,7 @@ Untuk dokumen Office (proposal, invoice) tanpa font tersebut: fallback **Arial**
 | Laporan PDF | Cover: logo CLAU + nama properti + periode; aman dicetak hitam-putih |
 | Email/WA notifikasi | Pengirim "CLAU Portal"; tanpa gambar berat; 1 tombol/link |
 | Favicon/app icon | Simbol logo saja (konsep di logo-concept.md), 32/180/512 px |
-| Media sosial CLAU | Ikuti aturan konten CLAU sendiri (clau-ai-marketing), termasuk label evidence |
+| Media sosial CLAU | Ikuti aturan konten CLAU sendiri (clau-market), termasuk label evidence |
 
 ## Revision History
 

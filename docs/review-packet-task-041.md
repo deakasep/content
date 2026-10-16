@@ -13,7 +13,7 @@
 
 ## 1. Review Independen Pilot (rule 08, qa/scoring-rubric)
 
-Pilot ada di `clau-ai-marketing/examples/`. Untuk tiap pilot: buka `brief.json`, `fact-sheet.md`, `drafts.md`, `qa.md`, lalu hitung ulang **sendiri**. Jangan hanya menyetujui tabel QA agent.
+Pilot ada di `clau-market/examples/`. Untuk tiap pilot: buka `brief.json`, `fact-sheet.md`, `drafts.md`, `qa.md`, lalu hitung ulang **sendiri**. Jangan hanya menyetujui tabel QA agent.
 
 | Langkah | Cara |
 |---|---|
@@ -28,9 +28,9 @@ Pilot ada di `clau-ai-marketing/examples/`. Untuk tiap pilot: buka `brief.json`,
 | Villa Contoh Uluwatu wedding (`pilot-wedding-contoh-uluwatu`) | Dea Karisna (owner) | 2026-10-09 | 67 | 86 | 100 | — | 84 | Klaim view laut & "meja panjang" tanpa fakta; "kapasitas yang sama" hanya benar untuk seated (W-04, W-05) | v1 ☒ → **v2 ✅ lulus** (2026-10-09) |
 | Trip Contoh Labuan Bajo (`pilot-trip-contoh-labuan-bajo`) | Dea Karisna (owner) | 2026-10-09 | 63 | 86 | 100 | — | 83 | Syarat berenang tidak ditulis; kesan pasti berangkat; spot ditulis pasti; TikTok "tanpa harga tersembunyi" (T-04, T-05) | v1 ☒ → **v2 ✅ lulus** (2026-10-09; tetap tertahan gate izin sebelum tayang) |
 
-Metode (dicatat apa adanya): AI agent menyusun pre-review kritis atas draft-nya sendiri; reviewer membaca dan menyatakan "setuju" di sesi Claude Code 2026-10-09. D tidak dihitung (publication checklist belum dijalankan di SIMULASI); Total = rata-rata A–C. Kesiapan ketiganya **0**. Detail per kalimat ada di `qa.md` § Review Independen masing-masing pilot, lewat [clau-ai-marketing#22](https://github.com/d34faiza-commits/clau-ai-marketing/pull/22).
+Metode (dicatat apa adanya): AI agent menyusun pre-review kritis atas draft-nya sendiri; reviewer membaca dan menyatakan "setuju" di sesi Claude Code 2026-10-09. D tidak dihitung (publication checklist belum dijalankan di SIMULASI); Total = rata-rata A–C. Kesiapan ketiganya **0**. Detail per kalimat ada di `qa.md` § Review Independen masing-masing pilot, lewat [clau-market#22](https://github.com/d34faiza-commits/clau-market/pull/22).
 
-**Temuan lintas pilot:** ketiga self-check agent "lulus", padahal review menemukan klaim tersirat atau syarat yang hilang. Self-check `skills/draft-caption` #7 sudah diperluas. Cek ulang v2 (2026-10-09): reviewer menyatakan **"lulus semua"** (v2 = 100/100/100; dapat di-upgrade kapan saja). Saat cek ulang, AI menemukan 2 sisa temuan di kanal yang tidak dinilai (GBP kafe "arabika", terjemahan nama area wedding EN) — diperbaiki di clau-ai-marketing#23.
+**Temuan lintas pilot:** ketiga self-check agent "lulus", padahal review menemukan klaim tersirat atau syarat yang hilang. Self-check `skills/draft-caption` #7 sudah diperluas. Cek ulang v2 (2026-10-09): reviewer menyatakan **"lulus semua"** (v2 = 100/100/100; dapat di-upgrade kapan saja). Saat cek ulang, AI menemukan 2 sisa temuan di kanal yang tidak dinilai (GBP kafe "arabika", terjemahan nama area wedding EN) — diperbaiki di clau-market#23.
 
 Pertanyaan yang sengaja diuji pilot (cek reviewer setuju):
 
@@ -69,8 +69,8 @@ Agent sudah menemukan angka dari sumber sekunder (berita/operator). Konfirmasi k
 
 | Issue | Pilihan | Rekomendasi agent | Kalimat keputusan (salin & kirim ke agent) |
 |---|---|---|---|
-| [#46](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/46) Nama produk | A: tetap "CLAU AI Content Studio" · B: payung "CLAU AI", "Content Studio" = modul AI Marketing | B (lebih cocok untuk 5 pilar; hanya ganti string i18n & brand guideline) | ✅ **Diputuskan: B** — Dea Karisna (d34faiza), 2026-10-09 |
-| [#47](https://github.com/d34faiza-commits/CLAU-AI-CONTENT/issues/47) WORKFLOW.md | Ubah "1 Marketing & Content" → "1 AI Marketing" (PATCH) atau biarkan | Ubah (konsistensi dengan v3.0.0) | ✅ **Diputuskan: ubah** — Dea Karisna (d34faiza), 2026-10-09 (WORKFLOW.md v1.0.1) |
+| [#46](https://github.com/d34faiza-commits/clau-content/issues/46) Nama produk | A: tetap "CLAU AI Content Studio" · B: payung "CLAU AI", "Content Studio" = modul AI Marketing | B (lebih cocok untuk 5 pilar; hanya ganti string i18n & brand guideline) | ✅ **Diputuskan: B** — Dea Karisna (d34faiza), 2026-10-09 |
+| [#47](https://github.com/d34faiza-commits/clau-content/issues/47) WORKFLOW.md | Ubah "1 Marketing & Content" → "1 AI Marketing" (PATCH) atau biarkan | Ubah (konsistensi dengan v3.0.0) | ✅ **Diputuskan: ubah** — Dea Karisna (d34faiza), 2026-10-09 (WORKFLOW.md v1.0.1) |
 
 > Catatan: dokumen Approved hanya diubah atas perintah **Pak Indra** atau **Dea Karisna (d34faiza)**. Kalau mengedit lewat GitHub web, tempel isi file `.md` mentah, bukan tampilan preview.
 
@@ -79,4 +79,4 @@ Agent sudah menemukan angka dari sumber sekunder (berita/operator). Konfirmasi k
 1. § 1 lulus → agent mengisi Record di `qa/scoring-rubric` per pilot + status Independent score.
 2. § 2 → agent memperbarui rules/knowledge sesuai jawaban legal (perubahan rules mengikuti otoritas owner).
 3. § 3 → baris jadi **DATA FINAL** dengan sumber + tanggal akses.
-4. Semua selesai → TASK-041 ke Done; status wedding & travel di `clau-ai-core/docs/verticals.md` → **Fokus — Aktif**.
+4. Semua selesai → TASK-041 ke Done; status wedding & travel di `clau-core/docs/verticals.md` → **Fokus — Aktif**.

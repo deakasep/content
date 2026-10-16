@@ -1,6 +1,6 @@
 # Task Management
 
-Board task CLAU-AI-CONTENT berbasis Markdown — adaptasi alur board (Backlog → In Progress → Review → Done) yang biasa dipakai di tools seperti ClickUp, tapi disimpan di repo supaya **trackable lewat git history** dan gratis di GitHub Free.
+Board task clau-content berbasis Markdown — adaptasi alur board (Backlog → In Progress → Review → Done) yang biasa dipakai di tools seperti ClickUp, tapi disimpan di repo supaya **trackable lewat git history** dan gratis di GitHub Free.
 
 Panduan lengkap (termasuk GitHub Projects): [docs/task-management.md](../docs/task-management.md).
 
