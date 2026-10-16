@@ -2,7 +2,7 @@
 
 **AI Content Marketing Studio untuk Hospitality & Tourism Indonesia.**
 
-Repository private berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
+Repository (public, hanya untuk dilihat; lihat [LICENSE](./LICENSE)) berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
 
 > [!IMPORTANT]
 > **ARSIP sejak 2026-10-04.** Repo ini sudah di-split menjadi tiga repo. Kerjaan baru masuk ke sana, bukan ke sini:
@@ -70,7 +70,7 @@ Villa dan Hotel diperlakukan sebagai satu vertical *Accommodation* dengan knowle
 clau-content/
 ├── README.md                 # Dokumen ini
 ├── ACKNOWLEDGMENT.md         # Credit dan sumber inspirasi pola
-├── LICENSE                   # Proprietary — private use only
+├── LICENSE                   # Source-available, hanya untuk dilihat
 ├── CONTENT-CONSTITUTION.md   # Aturan induk seluruh workflow konten AI
 ├── CONTENT-BOUNDARY.md       # Apa yang boleh/tidak boleh masuk repo
 ├── AGENTS.md                 # Instruksi gaya kerja & output untuk AI agent
@@ -205,4 +205,4 @@ Data client, foto asli, review mentah, dan credential akun social media **tidak*
 
 ## Lisensi
 
-Proprietary, private use. Lihat [LICENSE](./LICENSE).
+Proprietary, source-available (hanya untuk dilihat; tidak boleh disalin, dipakai, atau dipakai melatih AI tanpa izin tertulis). Lihat [LICENSE](./LICENSE).
