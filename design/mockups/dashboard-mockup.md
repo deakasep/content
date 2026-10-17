@@ -57,7 +57,7 @@
 | Keyboard | Pilih kartu → `Space` angkat → panah pindah kolom → `Space` taruh. `aria-live` mengumumkan perpindahan |
 | Tampilan tabel | Kolom: klien, judul, channel, level, tahap, jadwal, PJ, agent terakhir |
 | **Panel detail** | Slide-over kanan 720 px (desktop) / full screen (mobile); tabs `Caption · Klaim · QA · Versi · Komentar` |
-| Tab Klaim | Tabel per kalimat (sesuai `qa/claim-verification` di clau-ai-marketing): no, kalimat, klaim tersirat, label, hasil. Filter "Hanya yang bukan DATA FINAL" |
+| Tab Klaim | Tabel per kalimat (sesuai `qa/claim-verification` di clau-market): no, kalimat, klaim tersirat, label, hasil. Filter "Hanya yang bukan DATA FINAL" |
 | Tab QA | Hasil `check_caption` ditampilkan sebagai **"PASS (mekanis)"** + daftar item QA manual; kolom "Independen? Ya/Tidak" |
 | Review independen | Tombol *Tugaskan reviewer* (pilih anggota tim; pembuat draft tidak muncul di pilihan). Reviewer menandai: *Lulus* / *Perlu perbaikan* + catatan |
 | *Kirim ke klien* | Primary; nonaktif dengan tooltip alasan bila QA belum lulus atau review independen belum ada (L2/L3) |

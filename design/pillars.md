@@ -5,8 +5,8 @@
 
 | Item | Nilai |
 |---|---|
-| Arsitektur induk | `clau-ai-core/docs/5-pillar-architecture.md` (Approved, v3.0.0) |
-| Sumber data pilar & agent | `clau-ai-agents/agents/registry.json` → `pillars` + `agents` + `autonomy_max` (juga `GET /pillars`, `POST /route`) |
+| Arsitektur induk | `clau-core/docs/5-pillar-architecture.md` (Approved, v3.0.0) |
+| Sumber data pilar & agent | `clau-agent/agents/registry.json` → `pillars` + `agents` + `autonomy_max` (juga `GET /pillars`, `POST /route`) |
 | Status | Draft v0.2 (2026-10-09) |
 
 ## 5 Pilar v2

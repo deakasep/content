@@ -1,23 +1,23 @@
-# CLAU-AI-CONTENT
+# clau-content
 
 **AI Content Marketing Studio untuk Hospitality & Tourism Indonesia.**
 
-Repository private berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
+Repository (public, hanya untuk dilihat; lihat [LICENSE](./LICENSE)) berisi governance, rules, prompt library, AI agent skills, knowledge base, template, dan QA gate untuk memproduksi konten marketing hospitality yang **jujur, legal, on-brand, dan siap publish** — dengan AI sebagai content partner, bukan pengganti approval manusia.
 
 > [!IMPORTANT]
 > **ARSIP sejak 2026-10-04.** Repo ini sudah di-split menjadi tiga repo. Kerjaan baru masuk ke sana, bukan ke sini:
 >
 > | Repo | Isi |
 > |---|---|
-> | [clau-ai-core](https://github.com/d34faiza-commits/clau-ai-core) | Fondasi: AI-CONSTITUTION, AI-BOUNDARY, orchestrator, shared contracts |
-> | [clau-ai-marketing](https://github.com/d34faiza-commits/clau-ai-marketing) | Pilar 1: rules, prompts, skills, knowledge, templates, QA, examples |
-> | [clau-ai-agents](https://github.com/d34faiza-commits/clau-ai-agents) | Platform: registry agent, backend FastAPI, frontend Next.js |
+> | [clau-core](https://github.com/d34faiza-commits/clau-core) | Fondasi: AI-CONSTITUTION, AI-BOUNDARY, orchestrator, shared contracts |
+> | [clau-market](https://github.com/d34faiza-commits/clau-market) | Pilar 1: rules, prompts, skills, knowledge, templates, QA, examples |
+> | [clau-agent](https://github.com/d34faiza-commits/clau-agent) | Platform: registry agent, backend FastAPI, frontend Next.js |
 >
 > **Sesi baru / status terkini:** [`docs/status.md`](./docs/status.md) (otoritas, keputusan, status, pekerjaan terbuka).
 >
 > **Peta otak AI:** semua pondasi (constitution, boundary, router, registry agent, rules pilar) ada di repo sumbernya; lihat dari satu halaman: [`docs/peta-otak.md`](./docs/peta-otak.md).
 >
-> **Konsep 5 pilar (AI-CONSTITUTION v3.0.0, sekarang v3.1.0):** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. **Pilar 1 AI Marketing** aktif di clau-ai-marketing; Pilar 2 AI Sales, 3 AI Admin, 4 AI Business Intelligence, 5 AI Automation masih Planned. Otonomi bertingkat A/B/C (default B). Vertical fokus: villa, restoran/cafe, wedding, travel. Peta lengkap: [clau-ai-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-ai-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: [`tasks/backlog.md`](./tasks/backlog.md).
+> **Konsep 5 pilar (AI-CONSTITUTION v3.0.0, sekarang v3.1.0):** core (fondasi) → repo per pilar `clau-ai-<pilar>` → platform. **Pilar 1 AI Marketing** aktif di clau-market; Pilar 2 AI Sales, 3 AI Admin, 4 AI Business Intelligence, 5 AI Automation masih Planned. Otonomi bertingkat A/B/C (default B). Vertical fokus: villa, restoran/cafe, wedding, travel. Peta lengkap: [clau-core/docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-core/blob/main/docs/5-pillar-architecture.md); di UI: [`design/pillars.md`](./design/pillars.md); rencana aktivasi: [`tasks/backlog.md`](./tasks/backlog.md).
 >
 > **Pengecualian 2026-10-06:** spesifikasi UI/UX standalone ([`design/`](./design/README.md)) dibuat di repo ini atas perintah owner.
 >
@@ -67,10 +67,10 @@ Villa dan Hotel diperlakukan sebagai satu vertical *Accommodation* dengan knowle
 ## Struktur Repository
 
 ```text
-CLAU-AI-CONTENT/
+clau-content/
 ├── README.md                 # Dokumen ini
 ├── ACKNOWLEDGMENT.md         # Credit dan sumber inspirasi pola
-├── LICENSE                   # Proprietary — private use only
+├── LICENSE                   # Source-available, hanya untuk dilihat
 ├── CONTENT-CONSTITUTION.md   # Aturan induk seluruh workflow konten AI
 ├── CONTENT-BOUNDARY.md       # Apa yang boleh/tidak boleh masuk repo
 ├── AGENTS.md                 # Instruksi gaya kerja & output untuk AI agent
@@ -205,4 +205,4 @@ Data client, foto asli, review mentah, dan credential akun social media **tidak*
 
 ## Lisensi
 
-Proprietary, private use. Lihat [LICENSE](./LICENSE).
+Proprietary, source-available (hanya untuk dilihat; tidak boleh disalin, dipakai, atau dipakai melatih AI tanpa izin tertulis). Lihat [LICENSE](./LICENSE).

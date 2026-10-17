@@ -1,6 +1,6 @@
 # Developer Guide — Handoff
 
-> **ID:** Panduan developer untuk mengubah spesifikasi di `design/` menjadi kode: memakai token, membangun komponen, bilingual, menguji, dan aturan penamaan. Stack yang diasumsikan mengikuti scaffold yang sudah ada di `clau-ai-agents/frontend` (**Next.js App Router + TypeScript**). Bila stack berubah, prinsipnya tetap sama.
+> **ID:** Panduan developer untuk mengubah spesifikasi di `design/` menjadi kode: memakai token, membangun komponen, bilingual, menguji, dan aturan penamaan. Stack yang diasumsikan mengikuti scaffold yang sudah ada di `clau-agent/frontend` (**Next.js App Router + TypeScript**). Bila stack berubah, prinsipnya tetap sama.
 > **EN:** How developers turn the `design/` specs into code: tokens, components, i18n, testing, and naming. Assumes the existing Next.js + TypeScript scaffold.
 
 ## 0. Prinsip / Principles
@@ -144,7 +144,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
 | Tandai tayang butuh URL valid | Field wajib + validasi domain | Validasi ulang di server |
 | Agent pilar belum aktif tidak dijalankan | Tanpa tombol *Jalankan*; status "Belum aktif" | `POST /route` → `status: planned`, `next_step: escalate_to_owner` (**Implemented**) |
 
-Kontrak API dan **daftar kode aturan** mengikuti `clau-ai-core/shared/api-contracts.md` § Kode Aturan Approval (sumber tunggal; bila beda, kontrak yang benar). Aturan berstatus Implemented sudah ditegakkan database (backend 0.4.0+); endpoint workflow-nya dibuat di Tahap 1 PR 3 (**NEXT ACTION**).
+Kontrak API dan **daftar kode aturan** mengikuti `clau-core/shared/api-contracts.md` § Kode Aturan Approval (sumber tunggal; bila beda, kontrak yang benar). Aturan berstatus Implemented sudah ditegakkan database (backend 0.4.0+); endpoint workflow-nya dibuat di Tahap 1 PR 3 (**NEXT ACTION**).
 
 ## 5. Testing
 

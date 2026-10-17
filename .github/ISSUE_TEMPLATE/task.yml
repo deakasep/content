@@ -1,5 +1,5 @@
 name: Task
-description: Task CLAU-AI-CONTENT (format sama dengan tasks/templates/task-template.md)
+description: Task clau-content (format sama dengan tasks/templates/task-template.md)
 title: "TASK-XXX: "
 body:
   - type: markdown

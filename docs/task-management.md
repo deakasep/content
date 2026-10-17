@@ -1,6 +1,6 @@
 # Task Management Guide
 
-Panduan memakai task management CLAU-AI-CONTENT: board Markdown di repo dan (opsional) GitHub Projects sebagai tampilan visual.
+Panduan memakai task management clau-content: board Markdown di repo dan (opsional) GitHub Projects sebagai tampilan visual.
 
 ## 1. Prinsip
 
@@ -69,12 +69,12 @@ GitHub Projects tersedia di akun personal GitHub Free dan bisa menampilkan issue
 
 **ASSUMPTION:** batas fitur per plan (misalnya jumlah workflow auto-add) bisa berubah. Cek di GitHub Docs saat setup.
 
-**Status setup (2026-10-03):** board **CLAU-AI-CONTENT Roadmap** sudah dibuat dan aktif di <https://github.com/users/d34faiza-commits/projects/1>. Board ini private, punya kolom Backlog → In Progress → Review → Done, sudah di-link ke repo, auto-add `is:issue is:open` aktif, dan item baru otomatis berstatus Backlog. Langkah 5.1–5.3 di bawah adalah referensi kalau board perlu dibuat ulang.
+**Status setup (2026-10-03):** board **clau-content Roadmap** sudah dibuat dan aktif di <https://github.com/users/d34faiza-commits/projects/1>. Board ini private, punya kolom Backlog → In Progress → Review → Done, sudah di-link ke repo, auto-add `is:issue is:open` aktif, dan item baru otomatis berstatus Backlog. Langkah 5.1–5.3 di bawah adalah referensi kalau board perlu dibuat ulang.
 
 ### 5.1 Buat project board
 
 1. Buka profil GitHub → tab **Projects** → **New project**.
-2. Pilih template **Board**, beri nama **CLAU-AI-CONTENT Roadmap**, lalu **Create project**.
+2. Pilih template **Board**, beri nama **clau-content Roadmap**, lalu **Create project**.
 3. Di field **Status**, ubah/tambah opsi menjadi: `Backlog`, `In Progress`, `Review`, `Done` (hapus `Todo` bila ada).
 4. Tambahkan field (⚙ → **New field**):
    - **Priority** — single select: `Low`, `Normal`, `High`, `Urgent`
@@ -83,13 +83,13 @@ GitHub Projects tersedia di akun personal GitHub Free dan bisa menampilkan issue
 
 ### 5.2 Hubungkan ke repo
 
-1. Buka repo **CLAU-AI-CONTENT** → tab **Projects** → **Link a project** → pilih **CLAU-AI-CONTENT Roadmap**.
+1. Buka repo **clau-content** → tab **Projects** → **Link a project** → pilih **clau-content Roadmap**.
 
 ### 5.3 Auto-add issues ke board
 
 1. Di project, buka menu **⋯** → **Workflows**.
 2. Pilih **Auto-add to project** → **Edit**.
-3. Repository: `CLAU-AI-CONTENT`; filter: `is:issue is:open`.
+3. Repository: `clau-content`; filter: `is:issue is:open`.
 4. Aktifkan workflow **Item added to project** → set Status = `Backlog`.
 5. Aktifkan **Item closed** dan **Pull request merged** → set Status = `Done`.
 6. **Save and turn on workflow**.
