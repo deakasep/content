@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-15.
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-19.
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: [tasks/](../tasks/README.md).
 
@@ -53,7 +53,7 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 |---|---|
 | Pilar 1 AI Marketing | Aktif. 4 vertical fokus punya fact sheet, voice guide, pilot SIMULASI lulus |
 | Pilar 2–5 | Planned; blueprint di `clau-core/docs/blueprints/`; aktivasi setelah VPS siap (`clau-agent/docs/post-vps-checklist.md`) |
-| Platform (agents) | Backend **v0.8.0** (PR 2b merged 2026-10-13, PR 3 & 3b merged 2026-10-14): PostgreSQL 16 (18 tabel, migrasi 0001–0005, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.8.0. Dites lokal & CI; **live di VPS 2 sejak 2026-10-15** (lihat baris VPS 2). Workflow ([agents#46](https://github.com/d34faiza-commits/clau-agent/pull/46)): request → draft → QA → approval, Rule 08 ditegakkan server + database (migrasi 0004), isolasi klien, 14 temuan audit adversarial diperbaiki. Fact sheet ([agents#48](https://github.com/d34faiza-commits/clau-agent/pull/48)): klien, fact sheet & Konfirmasi Fakta oleh klien (migrasi 0005, 18 tabel), UI `/requests` & `/fact-sheets`, 10 temuan audit adversarial diperbaiki. Belum: pemanggilan AI model |
+| Platform (agents) | Backend **v0.9.0** (PR 2b merged 2026-10-13, PR 3 & 3b merged 2026-10-14, antrean AI agents#54 + UI PR 4d): PostgreSQL 16 (21 tabel, migrasi 0001–0006, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.8.0. Dites lokal & CI; **live di VPS 2 sejak 2026-10-15** (lihat baris VPS 2). Workflow ([agents#46](https://github.com/d34faiza-commits/clau-agent/pull/46)): request → draft → QA → approval, Rule 08 ditegakkan server + database (migrasi 0004), isolasi klien, 14 temuan audit adversarial diperbaiki. Fact sheet ([agents#48](https://github.com/d34faiza-commits/clau-agent/pull/48)): klien, fact sheet & Konfirmasi Fakta oleh klien (migrasi 0005, 18 tabel), UI `/requests` & `/fact-sheets`, 10 temuan audit adversarial diperbaiki. Antrean AI (migrasi 0006): job, worker terpisah, AI fact-check, batas biaya, provider tiruan. Belum: provider AI nyata (PR 4c) |
 | Backend VPS 2 | Live **tanpa domain** di `https://clau-vps2.<tailnet>.ts.net` (hanya perangkat di tailnet, bukan klien). Versi 0.9.0 (antrean AI + worker, provider tiruan, AI mati). SSH hanya lewat Tailscale, auto-deploy `release/vps1` + rollback skema, backup terenkripsi **tiap 6 jam** + salinan **Backblaze B2** (Object Lock 30 hari), pemulihan manual `clau-vps2-restore` (termasuk server pengganti). Owner + 2FA; passphrase backup & `CLAU_SECRET_KEY` & key B2 di password manager owner. `sudo clau-vps2-check` = **0 gagal, 0 perlu dicek** (2026-10-19). Panduan: `clau-agent/docs/deploy/vps-2-setup.md` |
 | Dashboard VPS 1 | Live, **tanpa domain** (HTTP via IP), pratinjau SIMULASI tanpa login, auto-deploy dari `main` tiap 5 menit. Tahap 2 **terpasang 2026-10-13** (user khusus `clau-web`/`clau-deploy`, jaringan web dikunci, backup config mingguan, reboot keamanan otomatis): `sudo clau-vps1-check` = 0 gagal, 0 perlu dicek. Tailscale: entri lama dihapus, key expiry dimatikan. Gerbang deploy aktif 2026-10-13: hanya `release/vps1` (commit `main` yang CI-nya hijau) yang tayang. Cek rutin: `sudo clau-vps1-check` (`clau-agent/docs/deploy/vps-1-setup.md` § 8) |
 | Keamanan | Header + CSP, Nginx dikeraskan, sandbox systemd, audit dependency + scan secret di CI, Actions dipin SHA, Dependabot. 2026-10-13: audit login/database (22 temuan ditutup) dan audit CI lintas repo (urutan sync core→agents→marketing, pin core wajib sama, token tidak terbaca kode PR, `main-guard` hanya menghitung run GitHub Actions dan semua run harus hijau). Detail: `clau-agent/docs/security.md` |
@@ -94,6 +94,16 @@ Prinsip skala (owner 2026-10-15): 12 agent = satu aplikasi di VPS 2, bukan satu 
 1. Baca halaman ini → `CLAUDE.md` repo yang dikerjakan → `core/AGENTS.md`.
 2. `git fetch`; bila PR branch sebelumnya sudah merge, mulai ulang branch dari `origin/main`.
 3. Kerja di feature branch → validator lulus → commit (`feat:`/`fix:`/`docs:`/`refactor:`/`chore:`/`test:`) → PR → CI hijau. Owner yang merge. Perubahan `core/shared` (kontrak) di-merge dulu, lalu pin `core/` di agents dipindah ke commit merge.
-6. Status platform cukup ditulis di sini dan di `clau-agent/CLAUDE.md`; dokumen lain me-link ke sini.
 4. Label evidence persis: `DATA FINAL`, `ASSUMPTION`, `CLIENT CONFIRMATION`, `FIELD VERIFICATION`, `RISK`, `NEXT ACTION`.
 5. Setelah perubahan status material, perbarui halaman ini dan board task.
+6. Status platform cukup ditulis di sini dan di `clau-agent/CLAUDE.md`; dokumen lain me-link ke sini.
+
+## 7. Pindah Akun Claude
+
+Semua kerja tersimpan di GitHub, bukan di akun claude.ai. Akun Claude lain tetap bisa melanjutkan kerja selama:
+
+1. Akun Claude baru disambungkan ke akun GitHub yang sama (`d34faiza-commits`) lewat claude.ai/connect-github. Kalau akun GitHub-nya berbeda, akun itu harus ditambahkan sebagai collaborator di repo CLAU (dan oleh Pak Indra untuk repo Jerco).
+2. Semua kerja penting sudah di-commit, di-push, dan masuk `main` lewat PR. Yang hanya ada di chat tidak ikut pindah.
+3. Halaman ini sudah mencerminkan status terakhir.
+
+Tidak ikut pindah: riwayat chat/sesi, memory & Projects claude.ai, pengaturan environment Claude Code (network policy, secret, setup script), scheduled task, dan connector (mis. Google Drive). Siapkan ulang di akun baru; secret diambil dari password manager owner, tidak pernah dari repo.
