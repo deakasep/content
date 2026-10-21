@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-21.
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-22.
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -18,7 +18,7 @@
 
 | Repo | Peran | Command validasi |
 |---|---|---|
-| `clau-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.3.0, router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.8.0) | `python scripts/validate_core.py` |
+| `clau-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.5.0 (1.6.0 diusulkan di [core#17](https://github.com/d34faiza-commits/clau-core/pull/17)), router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.9.0) | `python scripts/validate_core.py` |
 | `clau-market` | Pilar 1 AI Marketing (aktif): rules, skills, knowledge, templates, QA, pilot | `git submodule update --init --recursive && python scripts/validate.py --require-submodules` |
 | `clau-agent` | Platform: registry (pillars + `autonomy_max`), backend FastAPI + PostgreSQL, frontend, deploy VPS 1 | `cd backend && pytest` · `python agents/evals/run_evals.py --check` |
 | `clau-content` | Arsip + markas kerja: board task, paket review, design, halaman ini | `python scripts/validate.py` |
@@ -72,6 +72,8 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | 6 | VPS 2 selesai: setup A–I, backup 6 jam + B2 aktif (2026-10-19; TASK-049 Done). VPS 1 pengganti satu perintah: `vps1-setup.sh` (agents#57). Sisa: uji coba "VPS 2 hilang total" di VPS sementara (±30 menit, sekali) | Owner + AI | `clau-agent/docs/deploy/vps-2-setup.md` § 5, `vps-1-setup.md` § 0 |
 | 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-market/templates/client-onboarding.md` |
 | 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
+| 8a | AI-BOUNDARY 1.6.0 ([core#17](https://github.com/d34faiza-commits/clau-core/pull/17), TASK-064): kapan PR boleh disebut selesai + versi live hanya maju (pola Jerco rule 23 & 20, ditulis ulang). Sisa: owner merge, lalu bot sync membawa core ke agents & marketing | Owner | clau-core `AI-BOUNDARY.md` § Disiplin Push |
+| 8b | TASK-050 CI hemat menit: run CI repo public tercatat 0 menit berbayar (2026-10-22), jadi workflow tidak diubah. Kartu di **review**: owner putuskan tutup. Bila repo kembali private, task dibuka ulang | Owner | Kartu ClickUp TASK-050 |
 | 9 | Backlog lain | — | ClickUp Space **Clau AI** (riwayat: [tasks/backlog.md](../tasks/backlog.md)) |
 
 ## 5a. Roadmap ke "maksimal" (urutan disepakati owner 2026-10-15)
@@ -80,7 +82,7 @@ Board: ClickUp Space **Clau AI** (riwayat: [tasks/](../tasks/README.md)). Urutan
 
 | Tahap | Isi | Task |
 |---|---|---|
-| A. Segera | Backup 6 jam + B2 + pemulihan manual (agents#54), CI hemat menit, uji "VPS 2 hilang total" | TASK-049, 050, 051 |
+| A. Segera | Backup 6 jam + B2 + pemulihan manual (agents#54, selesai), CI hemat menit (tidak diperlukan selama repo public: GitHub Actions gratis, dicek 2026-10-22), uji "VPS 2 hilang total" | TASK-049, 050, 051 |
 | B. Sebelum klien nyata pertama | Domain + HTTPS, **Tahap 2 AI menulis draft** → **AI Content Agent "Paket Konten Bulanan"** (produk pertama yang menghasilkan uang), legal & UU PDP, keamanan tambahan, onboarding klien pertama | TASK-047, **052 (sedang dirancang)**, **063**, 053, 054, 055 |
 | C. Menuju ±30 klien | Monitoring & alarm, staging, dashboard biaya & kualitas AI, SOP tim, penagihan | TASK-056–060 |
 | D. 200+ klien | Worker terpisah, database terkelola, 2+ server aplikasi, pentest | TASK-061 |
