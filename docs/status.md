@@ -1,8 +1,8 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-19.
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-21.
 >
-> Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: [tasks/](../tasks/README.md).
+> Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
 ## 1. Siapa & Otoritas
 
@@ -42,6 +42,7 @@ Submodule: `core/` di agents & marketing, `agents/` di marketing. Alur otomatis:
 | 2026-10-16 | Repo di-rename: clau-core, clau-agent, clau-market, clau-content (isi tetap) dan dijadikan **public, hanya untuk dilihat**: LICENSE source-available di keempat repo, AI-BOUNDARY v1.5.0 (semua yang di-commit termasuk riwayat dianggap publik, tanpa IP/host server). Download/clone/screenshot tidak bisa dicegah secara teknis; perlindungannya hukum (owner: "Gass B kak") | `LICENSE`, `clau-core/AI-BOUNDARY.md` |
 | 2026-10-15 | Pemulihan database selalu **manual** (satu perintah `clau-vps2-restore` yang dijalankan manusia); server yang mati boleh hidup lagi otomatis, isi database tidak pernah diganti otomatis. Backup tiap 6 jam + salinan Backblaze B2 | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2, § 5 |
 | 2026-10-15 | VPS 2 jalan **tanpa domain** dulu: backend + database + frontend login di VPS 2, dibuka hanya lewat HTTPS Tailscale (tim internal). Setelah domain ada, frontend kembali ke VPS 1 (keputusan VPS #1) | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2 |
+| 2026-10-21 | Board kerja CLAU pindah ke **ClickUp** (Space **Clau AI**, terpisah dari Jerco; alur Open → in progress → review → Closed seperti board Rekan AI). Satu list per pilar + Platform + Release & Deploy; judul kartu memuat `TASK-xxx`. Board Markdown `tasks/` dibekukan sebagai riwayat; task baru mulai TASK-064 di ClickUp (arahan Pak Indra lewat telepon dengan owner) | [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup) |
 | 2026-10-09 | Dependabot tidak membuka update versi mayor otomatis; versi mayor dikerjakan sebagai PR tersendiri setelah diuji | `clau-agent/docs/security.md` § 5 |
 | 2026-10-09 | Review independen 3 pilot SIMULASI (kafe, wedding, travel): v1 belum lulus → **v2 lulus**, "dapat di-upgrade kapan saja" | [review-packet-task-041.md § 1](./review-packet-task-041.md) |
 
@@ -68,14 +69,14 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | 3 | Domain + HTTPS publik (blocker login klien; tim internal sudah login lewat HTTPS Tailscale di VPS 2) + CSP nonce; lalu kembali ke keputusan VPS #1 (frontend di VPS 1) | Owner (beli domain) → AI | `clau-agent/docs/security.md` § 2, § 6 |
 | 4 | Tahap 2 (AI menulis draft, TASK-052): AI-BOUNDARY v1.4.0 disetujui owner 2026-10-16; kontrak 0.9.0 (core#16) + antrean, worker, AI fact-check, batas biaya, provider tiruan (agents#54) dibangun. UI PR 4d selesai (`/requests/[id]` *Buat draft dengan AI*, `/ai-usage`). Sisa: provider Claude PR 4c (butuh akun API, batas biaya, retensi data dari owner) | AI → Owner | TASK-052 |
 | 5 | Token CI: `SUBMODULE_READ_TOKEN` read-only sudah disimpan (owner, 2026-10-13). Sisa: pengingat kalender sebelum token `SUBMODULE_READ_TOKEN` & `SUBMODULE_TOKEN` kedaluwarsa | Owner | `SUBMODULE.md` § Setup GitHub Actions |
-| 6 | VPS 2 selesai: setup A–I, backup 6 jam + B2 aktif (2026-10-19). VPS 1 pengganti satu perintah: `vps1-setup.sh` (agents#57). Sisa: uji coba "VPS 2 hilang total" di VPS sementara (±30 menit, sekali) | Owner + AI | `clau-agent/docs/deploy/vps-2-setup.md` § 5, `vps-1-setup.md` § 0 |
+| 6 | VPS 2 selesai: setup A–I, backup 6 jam + B2 aktif (2026-10-19; TASK-049 Done). VPS 1 pengganti satu perintah: `vps1-setup.sh` (agents#57). Sisa: uji coba "VPS 2 hilang total" di VPS sementara (±30 menit, sekali) | Owner + AI | `clau-agent/docs/deploy/vps-2-setup.md` § 5, `vps-1-setup.md` § 0 |
 | 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-market/templates/client-onboarding.md` |
 | 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
-| 9 | Backlog lain | — | [tasks/backlog.md](../tasks/backlog.md) |
+| 9 | Backlog lain | — | ClickUp Space **Clau AI** (riwayat: [tasks/backlog.md](../tasks/backlog.md)) |
 
 ## 5a. Roadmap ke "maksimal" (urutan disepakati owner 2026-10-15)
 
-Board: [tasks/](../tasks/README.md). Urutan kerja; tahap berikutnya dipicu beban/jumlah klien, bukan tanggal.
+Board: ClickUp Space **Clau AI** (riwayat: [tasks/](../tasks/README.md)). Urutan kerja; tahap berikutnya dipicu beban/jumlah klien, bukan tanggal.
 
 | Tahap | Isi | Task |
 |---|---|---|
@@ -95,7 +96,7 @@ Prinsip skala (owner 2026-10-15): 12 agent = satu aplikasi di VPS 2, bukan satu 
 2. `git fetch`; bila PR branch sebelumnya sudah merge, mulai ulang branch dari `origin/main`.
 3. Kerja di feature branch → validator lulus → commit (`feat:`/`fix:`/`docs:`/`refactor:`/`chore:`/`test:`) → PR → CI hijau. Owner yang merge. Perubahan `core/shared` (kontrak) di-merge dulu, lalu pin `core/` di agents dipindah ke commit merge.
 4. Label evidence persis: `DATA FINAL`, `ASSUMPTION`, `CLIENT CONFIRMATION`, `FIELD VERIFICATION`, `RISK`, `NEXT ACTION`.
-5. Setelah perubahan status material, perbarui halaman ini dan board task.
+5. Setelah perubahan status material, perbarui halaman ini dan **kartu ClickUp** yang terkait (lewat konektor ClickUp bila ada; bila tidak, sebutkan ke owner kartu mana yang perlu dipindah). Kartu **Closed** hanya bila PR merge dan CI hijau, dicek langsung di GitHub.
 6. Status platform cukup ditulis di sini dan di `clau-agent/CLAUDE.md`; dokumen lain me-link ke sini.
 
 ## 7. Pindah Akun Claude
@@ -106,4 +107,4 @@ Semua kerja tersimpan di GitHub, bukan di akun claude.ai. Akun Claude lain tetap
 2. Semua kerja penting sudah di-commit, di-push, dan masuk `main` lewat PR. Yang hanya ada di chat tidak ikut pindah.
 3. Halaman ini sudah mencerminkan status terakhir.
 
-Tidak ikut pindah: riwayat chat/sesi, memory & Projects claude.ai, pengaturan environment Claude Code (network policy, secret, setup script), scheduled task, dan connector (mis. Google Drive). Siapkan ulang di akun baru; secret diambil dari password manager owner, tidak pernah dari repo.
+Tidak ikut pindah: riwayat chat/sesi, memory & Projects claude.ai, pengaturan environment Claude Code (network policy, secret, setup script), scheduled task, dan connector (mis. **ClickUp**, Google Drive; sambungkan ulang di claude.ai/customize/connectors lalu mulai sesi baru). Saat membuat sesi baru, pilih repo dengan nama baru (`clau-core`, `clau-agent`, `clau-market`, `clau-content`) supaya pemantauan PR berjalan. Siapkan ulang di akun baru; secret diambil dari password manager owner, tidak pernah dari repo.

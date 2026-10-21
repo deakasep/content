@@ -1,6 +1,6 @@
 # CLAUDE.md — clau-content (ARSIP)
 
-> Peta repo untuk AI agent. Last updated: 2026-10-13
+> Peta repo untuk AI agent. Last updated: 2026-10-21
 
 > 🔔 **Sesi baru: baca [`docs/status.md`](docs/status.md) dulu** (otoritas, keputusan yang sudah diambil, pekerjaan terbuka).
 
@@ -20,7 +20,7 @@ Arsitektur **5 pilar v2** (AI-CONSTITUTION v3.0.0, sekarang v3.1.0: AI Marketing
 
 | Path | Fungsi |
 |---|---|
-| `tasks/` | Board task (Backlog → In Progress → Review → Done); issue GitHub repo ini terhubung ke board |
+| `tasks/` | Board task Markdown, **dibekukan sebagai riwayat per 2026-10-21**. Board kerja utama: ClickUp Space **Clau AI** (aturan di `tasks/README.md` § Board ClickUp); task baru mulai TASK-064 di ClickUp |
 | `docs/status.md` | **Status & handoff** lintas sesi AI: otoritas, keputusan, status, pekerjaan terbuka |
 | `docs/` | Dokumen pendukung yang dirujuk repo baru lewat URL; `docs/peta-otak.md` = peta semua pondasi otak AI (link ke repo sumber) |
 | `design/` | Spesifikasi UI/UX standalone + design tokens (pengecualian atas perintah owner, 2026-10-06); `design/pillars.md` = 5 pilar di UI |
