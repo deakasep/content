@@ -2,6 +2,21 @@
 
 Arsip task yang sudah lolos acceptance criteria. Jangan dihapus — ini jejak traceability. Tambahkan `- Completed: YYYY-MM-DD` dan `- Commit: <hash>` saat memindahkan task ke sini. Format: [task-template](./templates/task-template.md).
 
+## TASK-049: Backup VPS 2 tiap 6 jam + Backblaze B2 + pemulihan manual (pasang di server)
+
+- ID: TASK-049
+- Status: Done
+- Priority: High
+- Assignee: Dea Karisna + AI
+- Created: 2026-10-15
+- Due: —
+- Description: Kode siap di agents#54 (backup tiap 6 jam, salinan B2 dengan Object Lock, `clau-vps2-restore`, mode server pengganti). Menunggu CI (kuota GitHub Actions habis s.d. awal bulan) lalu merge. Owner: simpan `CLAU_SECRET_KEY` di password manager (bisa sekarang), buat akun B2 (langkah I nomor 1–5).
+- Acceptance Criteria: agents#54 merged dengan CI hijau; langkah E diulang di VPS 2; `clau-vps2-offsite setup` menampilkan `OK Object Lock aktif`; `clau-vps2-check` menunjukkan salinan B2 ≤ 13 jam; `CLAU_SECRET_KEY` tersimpan di password manager.
+- Related: https://github.com/d34faiza-commits/clau-agent/pull/54, [vps-2-setup § 3 H–I, § 5](https://github.com/d34faiza-commits/clau-agent/blob/main/docs/deploy/vps-2-setup.md)
+- Note 2026-10-19: agents#54 merged; backup terenkripsi tiap 6 jam + salinan Backblaze B2 (Object Lock 30 hari) aktif di VPS 2; `sudo clau-vps2-check` = 0 gagal, 0 perlu dicek; passphrase backup, `CLAU_SECRET_KEY`, dan key B2 di password manager owner (lihat docs/status.md § 4).
+- Completed: 2026-10-19
+- Commit: clau-agent `c6999db` (docs status VPS 2), merge [agents#58](https://github.com/d34faiza-commits/clau-agent/pull/58)
+
 ## TASK-048: Tahap 1 PR 3b — fact sheet, konfirmasi fakta, dan UI workflow
 
 - ID: TASK-048

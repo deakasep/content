@@ -16,6 +16,7 @@ Task yang sedang dikerjakan. Batasi **maksimal 3 task** sekaligus supaya fokus d
 - Progress 2026-10-15: rancangan di core#16; arahan owner: model per tingkat kesulitan (Fable 5.1 sulit, Opus 5.5 utama, Haiku 5.5 ringan setelah eval), tidak ada AI → langsung publish, AI Content Agent dulu (TASK-063).
 - Progress 2026-10-16: owner "setuju gas" → **AI-BOUNDARY v1.4.0** (§ Data ke Provider AI). PR 4a (kontrak core API 0.9.0, 3 tabel AI) di core#16; PR 4b (migrasi 0006, endpoint job, worker container terpisah, AI fact-check, batas biaya, provider tiruan, 28 test + smoke compose) di agents#54. Sisa: audit, PR 4c (provider Claude, menunggu akun & biaya owner), PR 4d (UI).
 - Progress 2026-10-16 (lanjutan): audit adversarial 10 temuan, semua diperbaiki (draft AI klien nyata min L2, peminta draft AI = pembuat, DATA FINAL wajib cocok nilai, lease worker, reservasi biaya, tombol mati, penyamaran); 389 test lulus. **PR 4d (UI) selesai** di agents#54: tombol *Buat draft dengan AI* di `/requests/[id]`, halaman owner `/ai-usage`; E2E browser 12 cek lulus. Sisa: PR 4c (provider Claude: akun API, batas biaya, retensi data dari owner), CI ulang setelah kuota Actions reset (±1 Nov), merge core#16 lalu agents#54.
+- Progress 2026-10-19: core#16 dan agents#54 merged; backend v0.9.0 live di VPS 2 (antrean AI + worker, provider tiruan, AI mati). Sisa hanya PR 4c (provider Claude), menunggu akun API, batas biaya, dan keputusan retensi data dari owner.
 
 ## TASK-041: Vertical fokus siap enterprise — villa, restoran/cafe, wedding, travel (lalu non-hospitality)
 

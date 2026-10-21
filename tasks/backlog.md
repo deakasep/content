@@ -14,18 +14,6 @@ Task yang sudah didefinisikan tapi belum dikerjakan. Urut berdasarkan priority. 
 - Acceptance Criteria: Satu paket lengkap untuk klien SIMULASI dihasilkan dari satu permintaan; setiap klaim faktual punya fact_key yang dikonfirmasi (klaim tanpa dasar ditandai dan memblok approval); dua checkpoint owner tercatat di audit log; biaya paket tercatat; tidak ada jalur publish otomatis.
 - Related: TASK-052, TASK-042, [usulan Tahap 2 § 1a](https://github.com/d34faiza-commits/clau-core/blob/main/docs/proposals/tahap-2-ai-drafting.md)
 
-## TASK-049: Backup VPS 2 tiap 6 jam + Backblaze B2 + pemulihan manual (pasang di server)
-
-- ID: TASK-049
-- Status: Backlog
-- Priority: High
-- Assignee: Dea Karisna + AI
-- Created: 2026-10-15
-- Due: —
-- Description: Kode siap di agents#54 (backup tiap 6 jam, salinan B2 dengan Object Lock, `clau-vps2-restore`, mode server pengganti). Menunggu CI (kuota GitHub Actions habis s.d. awal bulan) lalu merge. Owner: simpan `CLAU_SECRET_KEY` di password manager (bisa sekarang), buat akun B2 (langkah I nomor 1–5).
-- Acceptance Criteria: agents#54 merged dengan CI hijau; langkah E diulang di VPS 2; `clau-vps2-offsite setup` menampilkan `OK Object Lock aktif`; `clau-vps2-check` menunjukkan salinan B2 ≤ 13 jam; `CLAU_SECRET_KEY` tersimpan di password manager.
-- Related: https://github.com/d34faiza-commits/clau-agent/pull/54, [vps-2-setup § 3 H–I, § 5](https://github.com/d34faiza-commits/clau-agent/blob/main/docs/deploy/vps-2-setup.md)
-
 ## TASK-050: CI hemat menit (GitHub Free 2.000 menit/bulan)
 
 - ID: TASK-050

@@ -1,5 +1,7 @@
 # Task Management Guide
 
+> **Sejak 2026-10-21 board kerja utama ada di ClickUp** (Space **Clau AI**). Panduan di bawah berlaku untuk board Markdown yang kini dibekukan sebagai riwayat; aturan board ClickUp ada di [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup).
+
 Panduan memakai task management clau-content: board Markdown di repo dan (opsional) GitHub Projects sebagai tampilan visual.
 
 ## 1. Prinsip
