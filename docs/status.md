@@ -74,6 +74,8 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
 | 8a | AI-BOUNDARY 1.6.0 ([core#17](https://github.com/d34faiza-commits/clau-core/pull/17), TASK-064): kapan PR boleh disebut selesai + versi live hanya maju (pola Jerco rule 23 & 20, ditulis ulang). Sisa: owner merge, lalu bot sync membawa core ke agents & marketing | Owner | clau-core `AI-BOUNDARY.md` § Disiplin Push |
 | 8b | TASK-050 CI hemat menit: run CI repo public tercatat 0 menit berbayar (2026-10-22), jadi workflow tidak diubah. Kartu di **review**: owner putuskan tutup. Bila repo kembali private, task dibuka ulang | Owner | Kartu ClickUp TASK-050 |
+| 8c | TASK-054 keamanan sebelum klien login: 2FA wajib content lead, pembersihan sesi harian VPS 2, prosedur rotasi secret. PR [core#19](https://github.com/d34faiza-commits/clau-core/pull/19) (kontrak 0.9.1, merge dulu) lalu [agents#60](https://github.com/d34faiza-commits/clau-agent/pull/60). Setelah merge: ulangi `vps2-setup.sh` sekali di VPS 2 | Owner | `clau-agent/docs/deploy/vps-2-setup.md` § 4a |
+| 8d | TASK-032 level approval otomatis (hospitality: review negatif, terjemahan, harga/promo, orang, iklan, agama/adat): menunggu keputusan owner K1–K6 | Owner → AI | [review-packet-task-032.md](./review-packet-task-032.md) |
 | 9 | Backlog lain | — | ClickUp Space **Clau AI** (riwayat: [tasks/backlog.md](../tasks/backlog.md)) |
 
 ## 5a. Roadmap ke "maksimal" (urutan disepakati owner 2026-10-15)
