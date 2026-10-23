@@ -44,16 +44,18 @@ Di luar rubrik, untuk **bisa menagih**: belum ada paket & harga yang disetujui, 
 
 Rekomendasi AI: setujui semua. Balas "setuju semua", atau sebut nomornya.
 
+**Jawaban owner (DATA FINAL):** Dea Karisna (d34faiza) via sesi Claude Code, 2026-10-23: "lanjutkan TASK-067, jawaban K1–K8: setuju semua gass kak.. buat semua sempurna dengan realita manusia. Juga tambahkan platform facebook untuk jual jasa ai". Dicatat AI sebagai persetujuan K1–K8; kolom jawaban di bawah diisi AI dari jawaban itu. Tambahan dari jawaban yang sama (Facebook, realita lapangan) dikerjakan di [market#68](https://github.com/d34faiza-commits/clau-market/pull/68).
+
 | # | Keputusan | Rekomendasi AI | Jawaban owner |
 |---|---|---|---|
-| K1 | Isi 3 paket, add-on, dan daftar "tidak termasuk" sesuai `commercial/service-catalog.md` § 2–5 | Setuju | — |
-| K2 | Harga **tidak** di repo; angka final di price sheet privat owner. Rekomendasi angka AI ada di kartu ClickUp TASK-067 | Setuju (angka boleh Kakak ubah di kartu) | — |
-| K3 | Kontrak minimum 3 bulan lalu bulanan, bayar di muka, setup fee sekali | Setuju | — |
-| K4 | Publikasi default oleh klien; penjadwalan oleh tim CLAU (manusia, akses partner) sebagai add-on; AI tidak pernah publish | Setuju | — |
-| K5 | Klien pilot pertama: 1 klien, 1 vertical, 1–2 kanal (TASK-055), harga pilot dengan izin case study tertulis | Setuju | — |
-| K6 | Syarat sebelum klien pertama **tanda tangan**: (a) owner menilai 1 pilot dengan rubrik (TASK-028); (b) owner membaca knowledge vertical klien pilot; (c) konsultan hukum cek kontrak + DPA + L1–L6 (TASK-053); (d) badan usaha & pajak penyedia ditetapkan. **Prospek, discovery, dan proposal boleh mulai sekarang** | Setuju | — |
-| K7 | SLA (katalog § 7) dan batas kapasitas (SOP § 5) dipakai sebagai target awal, diukur ulang setelah 2 bulan | Setuju | — |
-| K8 | Positioning: "Konten hospitality yang jujur, legal, dan siap tayang: ditulis dengan AI, diperiksa manusia, disetujui Anda" | Setuju | — |
+| K1 | Isi 3 paket, add-on, dan daftar "tidak termasuk" sesuai `commercial/service-catalog.md` § 2–5 | Setuju | Setuju |
+| K2 | Harga **tidak** di repo; angka final di price sheet privat owner. Rekomendasi angka AI ada di kartu ClickUp TASK-067 | Setuju (angka boleh Kakak ubah di kartu) | Setuju |
+| K3 | Kontrak minimum 3 bulan lalu bulanan, bayar di muka, setup fee sekali | Setuju | Setuju |
+| K4 | Publikasi default oleh klien; penjadwalan oleh tim CLAU (manusia, akses partner) sebagai add-on; AI tidak pernah publish | Setuju | Setuju |
+| K5 | Klien pilot pertama: 1 klien, 1 vertical, 1–2 kanal (TASK-055), harga pilot dengan izin case study tertulis | Setuju | Setuju |
+| K6 | Syarat sebelum klien pertama **tanda tangan**: (a) owner menilai 1 pilot dengan rubrik (TASK-028); (b) owner membaca knowledge vertical klien pilot; (c) konsultan hukum cek kontrak + DPA + L1–L6 (TASK-053); (d) badan usaha & pajak penyedia ditetapkan. **Prospek, discovery, dan proposal boleh mulai sekarang** | Setuju | Setuju |
+| K7 | SLA (katalog § 7) dan batas kapasitas (SOP § 5) dipakai sebagai target awal, diukur ulang setelah 2 bulan | Setuju | Setuju |
+| K8 | Positioning: "Konten hospitality yang jujur, legal, dan siap tayang: ditulis dengan AI, diperiksa manusia, disetujui Anda" | Setuju | Setuju |
 | K9 | Pilar 2–5 ditunda; kartu TASK-035–039, 060 (bagian Admin), 066 tetap Open tanpa dikerjakan sampai owner membuka lagi | Setuju (sesuai arahan owner 2026-10-22) | Setuju (owner, 2026-10-22: "pilar 2-5 skip ini untuk kedepannya") |
 
 ## 5. Setelah disetujui
