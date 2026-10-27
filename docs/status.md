@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 Hospitality Runtime diajukan untuk review; belum merged/aktif).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 merged; otorisasi merge ChatGPT/Codex setara Claude; runtime belum aktif).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -11,14 +11,14 @@
 | Owner CLAU | **Dea Karisna (d34faiza)** |
 | Otoritas perubahan dokumen Approved | Pak Indra atau Dea Karisna (d34faiza) |
 | Repo Jerco (`indra-boop/*`, `d34faiza-commits/jerco-*`) | **Milik Pak Indra — jangan disentuh tanpa persetujuan beliau** |
-| Repo CLAU | AI boleh langsung kerja (feature branch → PR → CI hijau → owner merge). Push langsung ke `main` dilarang (core, marketing, agents; dijaga `main-guard`) |
+| Repo CLAU | AI boleh langsung kerja (feature branch → PR → CI hijau → AI merge dalam scope yang diizinkan). Push langsung ke `main` dilarang (core, marketing, agents; dijaga `main-guard`) |
 | AI tidak boleh | Publish, kirim ke pihak luar, self-approve, mengarang review manusia, commit data client nyata / `.env` / credential |
 
 ## 2. Repo CLAU
 
 | Repo | Peran | Command validasi |
 |---|---|---|
-| `clau-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY 1.5.0 (1.6.0 diusulkan di [core#17](https://github.com/d34faiza-commits/clau-core/pull/17)), router, WORKFLOW v1.0.1, kontrak `shared/` (database & API 0.9.0) | `python scripts/validate_core.py` |
+| `clau-core` | Otak induk: AI-CONSTITUTION **v3.1.0 Approved**, AI-BOUNDARY **1.7.0 Approved**, AGENTS **1.1.0 Approved**, router, WORKFLOW v1.0.1; API/database aktif 0.10.0, runtime contracts H1 v1.0.0 terpisah | `python scripts/validate_core.py` |
 | `clau-market` | Pilar 1 AI Marketing (aktif): rules, skills, knowledge, templates, QA, pilot | `git submodule update --init --recursive && python scripts/validate.py --require-submodules` |
 | `clau-agent` | Platform: registry (pillars + `autonomy_max`), backend FastAPI + PostgreSQL, frontend, deploy VPS 1 | `cd backend && pytest` · `python agents/evals/run_evals.py --check` |
 | `clau-content` | Arsip + markas kerja: board task, paket review, design, halaman ini | `python scripts/validate.py` |
@@ -47,6 +47,8 @@ Submodule: `core/` di agents & marketing, `agents/` di marketing. Alur otomatis:
 | 2026-10-09 | Dependabot tidak membuka update versi mayor otomatis; versi mayor dikerjakan sebagai PR tersendiri setelah diuji | `clau-agent/docs/security.md` § 5 |
 | 2026-10-09 | Review independen 3 pilot SIMULASI (kafe, wedding, travel): v1 belum lulus → **v2 lulus**, "dapat di-upgrade kapan saja" | [review-packet-task-041.md § 1](./review-packet-task-041.md) |
 
+**Keputusan coding 2026-10-27:** Pak Indra mengizinkan ChatGPT/OpenAI Codex otomatis merge seperti Claude untuk scope pekerjaan yang sudah diizinkan. Berlaku setelah seluruh CI wajib hijau pada head terakhir; gunakan expected head SHA dan jangan bypass review/ruleset. Sumber: [core#22](https://github.com/d34faiza-commits/clau-core/pull/22), AI-BOUNDARY 1.7.0 dan AGENTS 1.1.0. Ini bukan approval konten client.
+
 Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat jujur sebagai buatan AI), owner menjawab "setuju"/"ubah". Jangan pernah menulis review seolah-olah dibuat manusia.
 
 ## 4. Status Sekarang
@@ -63,7 +65,7 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 
 ## 4a. Hospitality Runtime — Golden Path Tara (2026-10-27)
 
-**Status: H1 For Review; belum merged dan belum aktif di production.** Arahan sesi
+**Status: implementasi contracts H1 sudah merged; belum aktif di runtime production.** Arahan sesi
 2026-10-27: jalankan Hospitality Agent Runtime Master Blueprint v1.0, mulai Tara,
 Pilar 1 hospitality. [PR core#21](https://github.com/d34faiza-commits/clau-core/pull/21)
 menambahkan contracts v1.0.0, strict JSON Schema, 10 synthetic fixtures, error registry,
@@ -71,14 +73,16 @@ reference checks dan 43 conformance tests. Hasil lokal: validator core PASS, fix
 PASS, 43 tests PASS, diff check PASS. Ini **self-review AI**, bukan independent review
 manusia, security audit runtime, atau real-model evaluation.
 
-Sumber implementasi: [H1 contracts dan migration gates](https://github.com/d34faiza-commits/clau-core/blob/feat/h1-hospitality-runtime-contracts/shared/runtime/README.md).
-CI/mergeability wajib dicek langsung pada commit terakhir PR sebelum owner merge;
+Sumber implementasi: [H1 contracts dan migration gates](https://github.com/d34faiza-commits/clau-core/blob/main/shared/runtime/README.md).
+CI/mergeability wajib dicek langsung pada commit terakhir PR sebelum AI/owner merge;
 status CI pada halaman ini tidak menjadi bukti terbaru. Backend/API tetap 0.10.0,
-fake provider; tidak ada perubahan runtime, database, submodule atau deployment.
+fake provider; H1 belum mengubah runtime, database atau deployment. Pin core di agent
+dan market sudah mencapai `21bebc7` (core#22); CI main agent `7878d62` hijau saat
+pemeriksaan. Ini bukti saat pemeriksaan, bukan jaminan status CI di masa depan.
 
 Urutan berikutnya:
 
-1. Owner review/merge core#21 setelah CI hijau; sync core → agent → market sesuai aturan.
+1. H1 [core#21](https://github.com/d34faiza-commits/clau-core/pull/21) dan handoff [content#74](https://github.com/d34faiza-commits/clau-content/pull/74) sudah merged. Policy [core#22](https://github.com/d34faiza-commits/clau-core/pull/22) juga merged dan tersinkron. Entry point Codex platform: [agent#71](https://github.com/d34faiza-commits/clau-agent/pull/71); cek merge/CI dan sync market sebelum lanjut H2.
 2. H2: bundle Tara hospitality, pinned knowledge/schema/tool contracts, eval matrix.
 3. H3–H4: loader/context assembler, migration non-draft outcomes/memory/evidence,
    deterministic validators dan review UI/approval gates.
@@ -132,11 +136,15 @@ Prinsip skala (owner 2026-10-15): 12 agent = satu aplikasi di VPS 2, bukan satu 
 
 1. Baca halaman ini → `CLAUDE.md` repo yang dikerjakan → `core/AGENTS.md`.
 2. `git fetch`; bila PR branch sebelumnya sudah merge, mulai ulang branch dari `origin/main`.
-3. Kerja di feature branch → validator lulus → commit (`feat:`/`fix:`/`docs:`/`refactor:`/`chore:`/`test:`) → PR → CI hijau. Owner yang merge. Perubahan `core/shared` (kontrak) di-merge dulu, lalu pin `core/` di agents dipindah ke commit merge.
+3. Kerja di feature branch → validator lulus → commit (`feat:`/`fix:`/`docs:`/`refactor:`/`chore:`/`test:`) → PR → CI hijau → AI merge tanpa meminta izin ulang untuk task yang sudah diizinkan (perintah Pak Indra 2026-10-27; core AI-BOUNDARY § Merge oleh AI Coding Agent). Gunakan expected head SHA; jangan bypass ruleset/review. Perubahan `core/shared` (kontrak) di-merge dulu, lalu pin `core/` di agents dipindah ke commit merge.
 4. Label evidence persis: `DATA FINAL`, `ASSUMPTION`, `CLIENT CONFIRMATION`, `FIELD VERIFICATION`, `RISK`, `NEXT ACTION`.
 5. Setelah perubahan status material, perbarui halaman ini dan **kartu ClickUp** yang terkait (lewat konektor ClickUp bila ada; bila tidak, sebutkan ke owner kartu mana yang perlu dipindah). Kartu **Closed** hanya bila PR merge dan CI hijau, dicek langsung di GitHub.
 6. Status platform cukup ditulis di sini dan di `clau-agent/CLAUDE.md`; dokumen lain me-link ke sini.
-7. **Setelah owner merge (otomatis, tanpa menunggu diminta; permintaan owner 2026-10-22):** cek langsung di GitHub bahwa CI `main` hijau di repo yang di-merge dan bot sync submodule (core → agents → market) selesai; bila PR bot konflik atau gagal, jalankan ulang workflow `sync-submodules` atau perbaiki lewat PR baru (AI-BOUNDARY § Kapan PR Boleh Disebut Selesai); pindahkan kartu ClickUp yang kriteria *Selesai bila*-nya terpenuhi ke **Closed** dengan komentar bukti; perbarui halaman ini; lalu lanjut ke kartu berikutnya dengan prioritas tertinggi yang tidak butuh keputusan owner, dan sebutkan kartu yang butuh keputusan owner.
+7. **Setelah merge oleh AI/owner (otomatis, tanpa menunggu diminta; otorisasi 2026-10-27):** cek langsung di GitHub bahwa CI `main` hijau di repo yang di-merge dan bot sync submodule (core → agents → market) selesai; bila PR bot konflik atau gagal, jalankan ulang workflow `sync-submodules` atau perbaiki lewat PR baru (AI-BOUNDARY § Kapan PR Boleh Disebut Selesai); pindahkan kartu ClickUp yang kriteria *Selesai bila*-nya terpenuhi ke **Closed** dengan komentar bukti; perbarui halaman ini; lalu lanjut ke kartu berikutnya dengan prioritas tertinggi yang tidak butuh keputusan owner, dan sebutkan kartu yang butuh keputusan owner.
+
+Saat sesi aktif, agent terus memantau CI sampai dapat merge atau ada blocker nyata.
+Jika sesi terputus/limit, catat PR/head/status pending; jangan mengklaim sudah merged
+atau terus berjalan di background. Sesi berikutnya baca ulang GitHub sebelum melanjutkan.
 
 ## 7. Pindah Akun Claude
 
