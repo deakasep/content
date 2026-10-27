@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-23 (TASK-067 K1–K8 disetujui; Facebook masuk paket Pilar 1).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 Hospitality Runtime diajukan untuk review; belum merged/aktif).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -60,6 +60,34 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 | Dashboard VPS 1 | **Dimatikan owner 2026-10-22** (biaya); dibuat lagi dengan `vps1-setup.sh` satu perintah (`clau-agent/docs/deploy/vps-1-setup.md` § 0). Job CI `release-vps1` tetap memajukan `release/vps1` ke commit `main` yang hijau, jadi server baru langsung mendapat versi terbaru |
 | Keamanan | Header + CSP, Nginx dikeraskan, sandbox systemd, audit dependency + scan secret di CI, Actions dipin SHA, Dependabot. 2026-10-13: audit login/database (22 temuan ditutup) dan audit CI lintas repo (urutan sync core→agents→marketing, pin core wajib sama, token tidak terbaca kode PR, `main-guard` hanya menghitung run GitHub Actions dan semua run harus hijau). Detail: `clau-agent/docs/security.md` |
 | Client nyata | Belum ada. Konten SIMULASI tidak bisa dinaikkan jadi konten client; mulai dari Step 1 CONTENT-WORKFLOW dengan fact sheet nyata |
+
+## 4a. Hospitality Runtime — Golden Path Tara (2026-10-27)
+
+**Status: H1 For Review; belum merged dan belum aktif di production.** Arahan sesi
+2026-10-27: jalankan Hospitality Agent Runtime Master Blueprint v1.0, mulai Tara,
+Pilar 1 hospitality. [PR core#21](https://github.com/d34faiza-commits/clau-core/pull/21)
+menambahkan contracts v1.0.0, strict JSON Schema, 10 synthetic fixtures, error registry,
+reference checks dan 43 conformance tests. Hasil lokal: validator core PASS, fixture
+PASS, 43 tests PASS, diff check PASS. Ini **self-review AI**, bukan independent review
+manusia, security audit runtime, atau real-model evaluation.
+
+Sumber implementasi: [H1 contracts dan migration gates](https://github.com/d34faiza-commits/clau-core/blob/feat/h1-hospitality-runtime-contracts/shared/runtime/README.md).
+CI/mergeability wajib dicek langsung pada commit terakhir PR sebelum owner merge;
+status CI pada halaman ini tidak menjadi bukti terbaru. Backend/API tetap 0.10.0,
+fake provider; tidak ada perubahan runtime, database, submodule atau deployment.
+
+Urutan berikutnya:
+
+1. Owner review/merge core#21 setelah CI hijau; sync core → agent → market sesuai aturan.
+2. H2: bundle Tara hospitality, pinned knowledge/schema/tool contracts, eval matrix.
+3. H3–H4: loader/context assembler, migration non-draft outcomes/memory/evidence,
+   deterministic validators dan review UI/approval gates.
+4. H5–H6: real provider + budget/retention gates, real-output eval dan human rubric.
+5. H7: SIMULASI end-to-end dan pilot client nyata dengan independent review.
+
+H1 tidak membuktikan production readiness. Provider nyata, quality threshold dan pilot
+client belum terpenuhi. Task ID ClickUp baru tidak dikarang; kaitkan pekerjaan H1–H7
+ke board utama saat akses ClickUp tersedia. TASK-052 tetap terbuka (belum complete).
 
 ## 5. Pekerjaan Terbuka (urut prioritas)
 
