@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 merged; otorisasi merge ChatGPT/Codex setara Claude; runtime belum aktif).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 + workflow merge ChatGPT/Codex terverifikasi; sync market selesai; H2 berikutnya).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -77,12 +77,18 @@ Sumber implementasi: [H1 contracts dan migration gates](https://github.com/d34fa
 CI/mergeability wajib dicek langsung pada commit terakhir PR sebelum AI/owner merge;
 status CI pada halaman ini tidak menjadi bukti terbaru. Backend/API tetap 0.10.0,
 fake provider; H1 belum mengubah runtime, database atau deployment. Pin core di agent
-dan market sudah mencapai `21bebc7` (core#22); CI main agent `7878d62` hijau saat
-pemeriksaan. Ini bukti saat pemeriksaan, bukan jaminan status CI di masa depan.
+dan market sama-sama `21bebc726d988b9b1c43232c0d4df8fdc6d43141` (core#22).
+Entry point [agent#71](https://github.com/d34faiza-commits/clau-agent/pull/71) sudah merged
+ke `14f3ae86e397ed9480d9b3adb085093c50245995`; seluruh checks main termasuk Docker,
+main-guard dan release-vps1 success ([CI](https://github.com/d34faiza-commits/clau-agent/actions/runs/40606013351)).
+[Market#79](https://github.com/d34faiza-commits/clau-market/pull/79) sudah merged ke
+`66a465ff57ce97bfa6a569730935b51c51408d7e`, memakai pin agent tersebut; validate,
+cross-validate dan main-guard main success. Handoff policy [content#75](https://github.com/d34faiza-commits/clau-content/pull/75)
+sudah merged dan validate main success. Ini bukti saat pemeriksaan, bukan jaminan status CI di masa depan.
 
 Urutan berikutnya:
 
-1. H1 [core#21](https://github.com/d34faiza-commits/clau-core/pull/21) dan handoff [content#74](https://github.com/d34faiza-commits/clau-content/pull/74) sudah merged. Policy [core#22](https://github.com/d34faiza-commits/clau-core/pull/22) juga merged dan tersinkron. Entry point Codex platform: [agent#71](https://github.com/d34faiza-commits/clau-agent/pull/71); cek merge/CI dan sync market sebelum lanjut H2.
+1. H1 [core#21](https://github.com/d34faiza-commits/clau-core/pull/21) dan handoff [content#74](https://github.com/d34faiza-commits/clau-content/pull/74) sudah merged. Policy [core#22](https://github.com/d34faiza-commits/clau-core/pull/22) juga merged dan tersinkron. Entry point Codex platform agent#71, handoff content#75 dan sync market#79 sudah merged dengan CI main hijau; prasyarat workflow sebelum H2 terpenuhi.
 2. H2: bundle Tara hospitality, pinned knowledge/schema/tool contracts, eval matrix.
 3. H3–H4: loader/context assembler, migration non-draft outcomes/memory/evidence,
    deterministic validators dan review UI/approval gates.
