@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-27 (H1 + workflow merge ChatGPT/Codex terverifikasi; sync market selesai; H2 berikutnya).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-28 (audit Pilar 1: fact validation, reviewer/capacity, H2 bundle; lihat §4b untuk status terbaru).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -57,13 +57,13 @@ Cara review via chat yang disepakati: AI menyusun **pre-review kritis** (dicatat
 |---|---|
 | Pilar 1 AI Marketing | Aktif. 4 vertical fokus punya fact sheet, voice guide, pilot SIMULASI lulus |
 | Pilar 2–5 | Planned, **ditunda owner 2026-10-22** (fokus Pilar 1); blueprint di `clau-core/docs/blueprints/` |
-| Platform (agents) | Backend **v0.10.0** (2026-10-22: 2FA wajib content lead TASK-054; penanda isi konten & level approval otomatis TASK-032, migrasi 0007) (PR 2b merged 2026-10-13, PR 3 & 3b merged 2026-10-14, antrean AI agents#54 + UI PR 4d): PostgreSQL 16 (22 tabel, migrasi 0001–0007, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.8.0. Dites lokal & CI; **live di VPS 2 2026-10-15 s.d. 2026-10-22** (server dimatikan; lihat baris VPS 2). Workflow ([agents#46](https://github.com/d34faiza-commits/clau-agent/pull/46)): request → draft → QA → approval, Rule 08 ditegakkan server + database (migrasi 0004), isolasi klien, 14 temuan audit adversarial diperbaiki. Fact sheet ([agents#48](https://github.com/d34faiza-commits/clau-agent/pull/48)): klien, fact sheet & Konfirmasi Fakta oleh klien (migrasi 0005, 18 tabel), UI `/requests` & `/fact-sheets`, 10 temuan audit adversarial diperbaiki. Antrean AI (migrasi 0006): job, worker terpisah, AI fact-check, batas biaya, provider tiruan. Belum: provider AI nyata (PR 4c) |
+| Platform (agents) | Backend **v0.10.0** (2026-10-22: 2FA wajib content lead TASK-054; penanda isi konten & level approval otomatis TASK-032, migrasi 0007) (PR 2b merged 2026-10-13, PR 3 & 3b merged 2026-10-14, antrean AI agents#54 + UI PR 4d): PostgreSQL 16 (22 tabel, migrasi 0001–0007, Constraint Wajib), login + CSRF + 2FA wajib owner (QR + kode cadangan), `/users` (owner), keluar semua perangkat, backup terenkripsi + uji restore; kontrak `core/shared` 0.10.0. Dites lokal & CI; **live di VPS 2 2026-10-15 s.d. 2026-10-22** (server dimatikan; lihat baris VPS 2). Workflow ([agents#46](https://github.com/d34faiza-commits/clau-agent/pull/46)): request → draft → QA → approval, Rule 08 ditegakkan server + database (migrasi 0004), isolasi klien, 14 temuan audit adversarial diperbaiki. Fact sheet ([agents#48](https://github.com/d34faiza-commits/clau-agent/pull/48)): klien, fact sheet & Konfirmasi Fakta oleh klien (migrasi 0005, 18 tabel), UI `/requests` & `/fact-sheets`, 10 temuan audit adversarial diperbaiki. Antrean AI (migrasi 0006): job, worker terpisah, AI fact-check, batas biaya, provider tiruan. Belum: provider AI nyata (PR 4c) |
 | Backend VPS 2 | **Dimatikan owner 2026-10-22** (biaya); dibuat lagi setelah ada dana (TASK-065). Sebelumnya live tanpa domain lewat HTTPS Tailscale, backend 0.9.0, backup tiap 6 jam + salinan Backblaze B2. **Data:** backup terenkripsi di B2 (isi SIMULASI + akun owner; belum ada klien nyata), terhapus otomatis 60 hari setelah diupload (lifecycle `vps2/`). Kunci pemulihan (`CLAU_BACKUP_PASSPHRASE`, `CLAU_SECRET_KEY`, key B2) di password manager owner. Membuat ulang: `clau-agent/docs/deploy/vps-2-setup.md` § 5 (server pengganti) |
 | Dashboard VPS 1 | **Dimatikan owner 2026-10-22** (biaya); dibuat lagi dengan `vps1-setup.sh` satu perintah (`clau-agent/docs/deploy/vps-1-setup.md` § 0). Job CI `release-vps1` tetap memajukan `release/vps1` ke commit `main` yang hijau, jadi server baru langsung mendapat versi terbaru |
 | Keamanan | Header + CSP, Nginx dikeraskan, sandbox systemd, audit dependency + scan secret di CI, Actions dipin SHA, Dependabot. 2026-10-13: audit login/database (22 temuan ditutup) dan audit CI lintas repo (urutan sync core→agents→marketing, pin core wajib sama, token tidak terbaca kode PR, `main-guard` hanya menghitung run GitHub Actions dan semua run harus hijau). Detail: `clau-agent/docs/security.md` |
 | Client nyata | Belum ada. Konten SIMULASI tidak bisa dinaikkan jadi konten client; mulai dari Step 1 CONTENT-WORKFLOW dengan fact sheet nyata |
 
-## 4a. Hospitality Runtime — Golden Path Tara (2026-10-27)
+## 4a. Hospitality Runtime — Golden Path Tara (baseline 2026-10-27)
 
 **Status: implementasi contracts H1 sudah merged; belum aktif di runtime production.** Arahan sesi
 2026-10-27: jalankan Hospitality Agent Runtime Master Blueprint v1.0, mulai Tara,
@@ -89,7 +89,7 @@ sudah merged dan validate main success. Ini bukti saat pemeriksaan, bukan jamina
 Urutan berikutnya:
 
 1. H1 [core#21](https://github.com/d34faiza-commits/clau-core/pull/21) dan handoff [content#74](https://github.com/d34faiza-commits/clau-content/pull/74) sudah merged. Policy [core#22](https://github.com/d34faiza-commits/clau-core/pull/22) juga merged dan tersinkron. Entry point Codex platform agent#71, handoff content#75 dan sync market#79 sudah merged dengan CI main hijau; prasyarat workflow sebelum H2 terpenuhi.
-2. H2: bundle Tara hospitality, pinned knowledge/schema/tool contracts, eval matrix.
+2. H2 sudah merged lewat market#81 (2026-10-28); pinned bundle, schema/tool contracts dan 60 input evaluasi SIMULASI. Bukan 60 hasil model lulus.
 3. H3–H4: loader/context assembler, migration non-draft outcomes/memory/evidence,
    deterministic validators dan review UI/approval gates.
 4. H5–H6: real provider + budget/retention gates, real-output eval dan human rubric.
@@ -98,6 +98,38 @@ Urutan berikutnya:
 H1 tidak membuktikan production readiness. Provider nyata, quality threshold dan pilot
 client belum terpenuhi. Task ID ClickUp baru tidak dikarang; kaitkan pekerjaan H1–H7
 ke board utama saat akses ClickUp tersedia. TASK-052 tetap terbuka (belum complete).
+
+## 4b. Audit dan implementasi Pilar 1 (2026-10-28)
+
+Perintah Pak Indra: maksimalkan sesuai realita manusia. **`clau-ai` aplikasi lain,
+keluar scope**, bukan komponen runtime hospitality ini. Tidak disentuh.
+
+| Area | Bukti/status |
+|---|---|
+| Fact check | [agent#72](https://github.com/d34faiza-commits/clau-agent/pull/72) merged `6b9c26616d3e4d3ce2058a74b282ce05e5bed5d0`; semua CI main sukses saat diperiksa. Boolean/substrings tidak otomatis membuktikan klaim, parafrasa ditahan, experience/other tidak grounded. Automatic QA Fail/Conditional; output kosong/berlebih ditolak tanpa pemotongan, usage tetap dicatat. |
+| Reviewer & kapasitas | [market#81](https://github.com/d34faiza-commits/clau-market/pull/81) merged `d99d3dad0b5b405c22e0a3cc5fbd7718c8c0db70`. Peminta AI = pembuat, reviewer independen orang lain. Contoh 106 jam ditolak terhadap batas 102; setup/backlog/revisi dihitung, kapasitas per orang. |
+| H2 Tara | market#81: bundle 0.1.0, manifest dan checksum, schema H1, tool contracts, validator config, metadata freshness, 60 input uji. Penyempurnaan [market#83](https://github.com/d34faiza-commits/clau-market/pull/83): candidate **0.1.1**, fakta spa/menu serta aset carousel/consent eksplisit; digest `2e337e4bbd0f5d74e378b67a50fd244231b934aa76cc5fdc04e4639af6b787d1`. 23 tests caption/bundle lulus lokal dan CI PR. Knowledge belum dianggap terverifikasi ulang hanya karena dipaketkan. |
+| Evaluasi staging | [agent#73](https://github.com/d34faiza-commits/clau-agent/pull/73): loader terpin, pemilihan knowledge, adapter structured Claude, explicit budget/rates/retention config, metadata biaya/latency, human review terikat hash output. Merged `bbe5903873bb5692c6e8973019797cfea28e14fa`; seluruh CI PR dan main sukses saat diperiksa. Sync [market#82](https://github.com/d34faiza-commits/clau-market/pull/82) merged `8a1622a6642050a590ae2e61c6c53ca4bcc0e737`, pin agent sama. Prepare 60 review records berhasil, **0 model calls**, hasil manusia tetap kosong. |
+| Syarat komersial | [pilot operations](https://github.com/d34faiza-commits/clau-market/blob/main/commercial/pilot-operations.md): gate kontrak, roster operator/reviewer, scope 1 klien/1 vertical/1–2 kanal, log waktu/revisi/SLA/margin, hold/expansion criteria. Template siap bukan berarti syarat manusia/legal selesai. |
+| H3–H7 production | **Belum selesai**. Worker produksi tetap fake; belum migrasi non-draft outcomes/AgentRun, context brief/Voice Card/assets authoritative, semantic reconciliation, evidence/UI/DB gates atau pilot klien nyata. Tool evaluasi staging tidak menggantikan ini. |
+
+**Review manusia:** TASK-041 mencatat persetujuan owner atas pilot kafe/wedding/travel
+v2 pada 2026-10-09, dengan metode pre-review AI lalu owner membaca/menyetujui. Itu
+bukan bukti TASK-028 pilot 2 v3 sudah dinilai sendiri dengan worksheet. Jangan menulis
+"belum pernah ada review manusia"; jangan pula menganggap semua versi sudah lulus.
+
+**Blocker eksternal yang belum diverifikasi:** calon klien/vertical/kanal dan fact sheet
+nyata; operator + reviewer berbeda; price sheet dan hourly cost privat; hasil TASK-028;
+review legal kontrak/DPA/L1–L6 serta identitas usaha/pajak; konfigurasi API model snapshot,
+rate, budget dan retention decision. Pencarian Drive CLAU/TASK-067 tidak menemukan
+bukti yang menutup gate ini; tidak menyimpulkan dokumen tersebut pasti tidak ada.
+Credential tetap di secret manager server, tidak di chat/repo. Tidak ada pesan ke
+prospek/konsultan, kontrak, approval konten atau publikasi yang dilakukan AI.
+
+Prospek/discovery/proposal boleh berjalan. Managed service manual dapat dimulai setelah
+gate komersial terpenuhi, tanpa menunggu seluruh runtime. Jangan menjual klaim runtime
+autonomous production-ready. Ukur hasil aktual; AI tidak membuat angka margin atau skor
+manusia. TASK-052, TASK-028, TASK-053 dan pilot nyata tidak ditutup secara administratif.
 
 ## 5. Pekerjaan Terbuka (urut prioritas)
 
@@ -111,7 +143,7 @@ ke board utama saat akses ClickUp tersedia. TASK-052 tetap terbuka (belum comple
 | 5a | **Server dimatikan 2026-10-22** (TASK-065): amankan kunci pemulihan, putuskan backup B2 (hilang otomatis 60 hari), hapus mesin di Tailscale dan deploy key di GitHub; hidupkan lagi saat ada dana | Owner | Kartu ClickUp TASK-065 |
 | 6 | VPS 2 selesai: setup A–I, backup 6 jam + B2 aktif (2026-10-19; TASK-049 Done). VPS 1 pengganti satu perintah: `vps1-setup.sh` (agents#57). Sisa: uji coba "VPS 2 hilang total" di VPS sementara (±30 menit, sekali) | Owner + AI | `clau-agent/docs/deploy/vps-2-setup.md` § 5, `vps-1-setup.md` § 0 |
 | 7 | Onboarding client nyata pertama (1 client, 1 vertical, 1 kanal) | Owner + AI (paket onboarding) | `clau-market/templates/client-onboarding.md` |
-| 8 | Aktivasi pilar 2–5 setelah VPS | Owner + AI | `tasks/backlog.md` TASK-035–039 |
+| 8 | Pilar 2–5 tetap ditunda sampai owner membuka scope, bukan otomatis setelah VPS | Owner | `tasks/backlog.md` TASK-035–039 |
 | 8e | ~~Audit `clau-core` untuk 5 pilar~~ **selesai 2026-10-22** (core#19 merged): nama repo pilar usulan diseragamkan (`clau-sales`, `clau-admin`, `clau-insight`, `clau-automation`), blueprint `ad-brief` L3, cabang Pilar 5 di decision tree, § Data Lintas Pilar, AI-BOUNDARY 1.6.1 | — | clau-core `docs/5-pillar-architecture.md` |
 | 8a | ~~AI-BOUNDARY 1.6.0~~ **selesai 2026-10-22**: [core#17](https://github.com/d34faiza-commits/clau-core/pull/17) merged, sudah sampai ke clau-agent (#59) dan clau-market (#62); TASK-064 Closed | — | clau-core `AI-BOUNDARY.md` § Disiplin Push |
 | 8b | ~~TASK-050 CI hemat menit~~ **ditutup owner 2026-10-22**: Actions gratis karena repo public. Bila repo kembali private, buka task baru | — | Kartu ClickUp TASK-050 |

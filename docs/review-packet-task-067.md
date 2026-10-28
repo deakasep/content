@@ -2,6 +2,13 @@
 
 > Untuk owner (Dea Karisna / Pak Indra). Disiapkan 2026-10-22 oleh AI agent (Claude Code) atas arahan owner: "pilar 2–5 skip untuk ke depannya, fokus pilar 1 hospitality, sempurnakan agar siap jual". Bagian "pre-review kritis" ditulis AI dan dicatat apa adanya sebagai buatan AI; kolom jawaban di § 4 hanya diisi dari jawaban owner. Cukup balas **"setuju semua"**, atau sebut nomor yang ingin diubah. Kartu ClickUp: *[MARKETING] TASK-067 Pilar 1 siap jual*. Rekomendasi angka harga **tidak** ditulis di sini (repo public); ada di kartu ClickUp.
 
+> **Klarifikasi 2026-10-28:** bagian 1–3 adalah snapshot sebelum persetujuan K1–K8
+> pada 2026-10-23. Pernyataan "semua pilot masih self-review" terlalu luas: TASK-041
+> sudah mencatat owner menerima pre-review AI dan menyatakan pilot v2 lulus. Yang
+> belum tercatat selesai adalah review mandiri terukur **TASK-028/pilot 2 v3**, beserta
+> gate K6. Paket komersial sudah Approved; jangan membaca snapshot ini sebagai harga/
+> paket belum pernah disetujui. Status terbaru: [status §4b](./status.md#4b-audit-dan-implementasi-pilar-1-2026-10-28).
+
 ## 1. Kesiapan sekarang (dicek 2026-10-22)
 
 Rubrik kesiapan client nyata ([`clau-market/qa/scoring-rubric.md`](https://github.com/d34faiza-commits/clau-market/blob/main/qa/scoring-rubric.md) § Kesiapan Client Nyata) mengambil **nilai terendah**:
