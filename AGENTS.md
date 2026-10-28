@@ -13,8 +13,8 @@ Instruksi untuk AI agent (Claude, Codex, ChatGPT, Grok, dan sejenisnya) yang bek
 ## Coding workflow aktif (2026-10-27)
 
 Untuk pekerjaan repository, ChatGPT/Codex dan Claude wajib membaca [status & handoff](./docs/status.md)
-dan [core AGENTS](https://github.com/d34faiza-commits/clau-core/blob/main/AGENTS.md)
-serta [core AI-BOUNDARY](https://github.com/d34faiza-commits/clau-core/blob/main/AI-BOUNDARY.md).
+dan [core AGENTS](https://github.com/deakasep/core/blob/main/AGENTS.md)
+serta [core AI-BOUNDARY](https://github.com/deakasep/core/blob/main/AI-BOUNDARY.md).
 Perintah Pak Indra: coding PR dalam scope yang diizinkan diselesaikan sampai merge
 setelah CI hijau, tanpa meminta konfirmasi owner ulang. Gunakan expected head SHA,
 penuhi required review/ruleset, lalu cek CI main dan sync downstream.

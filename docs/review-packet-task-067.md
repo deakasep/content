@@ -11,7 +11,7 @@
 
 ## 1. Kesiapan sekarang (dicek 2026-10-22)
 
-Rubrik kesiapan client nyata ([`clau-market/qa/scoring-rubric.md`](https://github.com/d34faiza-commits/clau-market/blob/main/qa/scoring-rubric.md) § Kesiapan Client Nyata) mengambil **nilai terendah**:
+Rubrik kesiapan client nyata ([`clau-market/qa/scoring-rubric.md`](https://github.com/deakasep/market/blob/main/qa/scoring-rubric.md) § Kesiapan Client Nyata) mengambil **nilai terendah**:
 
 | Syarat | Status | Nilai bila belum |
 |---|---|---|
@@ -51,7 +51,7 @@ Di luar rubrik, untuk **bisa menagih**: belum ada paket & harga yang disetujui, 
 
 Rekomendasi AI: setujui semua. Balas "setuju semua", atau sebut nomornya.
 
-**Jawaban owner (DATA FINAL):** Dea Karisna (d34faiza) via sesi Claude Code, 2026-10-23: "lanjutkan TASK-067, jawaban K1–K8: setuju semua gass kak.. buat semua sempurna dengan realita manusia. Juga tambahkan platform facebook untuk jual jasa ai". Dicatat AI sebagai persetujuan K1–K8; kolom jawaban di bawah diisi AI dari jawaban itu. Tambahan dari jawaban yang sama (Facebook, realita lapangan) dikerjakan di [market#68](https://github.com/d34faiza-commits/clau-market/pull/68).
+**Jawaban owner (DATA FINAL):** Dea Karisna (d34faiza) via sesi Claude Code, 2026-10-23: "lanjutkan TASK-067, jawaban K1–K8: setuju semua gass kak.. buat semua sempurna dengan realita manusia. Juga tambahkan platform facebook untuk jual jasa ai". Dicatat AI sebagai persetujuan K1–K8; kolom jawaban di bawah diisi AI dari jawaban itu. Tambahan dari jawaban yang sama (Facebook, realita lapangan) dikerjakan di [market#68](https://github.com/deakasep/market/pull/68).
 
 | # | Keputusan | Rekomendasi AI | Jawaban owner |
 |---|---|---|---|
