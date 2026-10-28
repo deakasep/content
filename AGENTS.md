@@ -1,7 +1,7 @@
 ---
 document_title: "AGENTS.md — Instruksi AI Agent"
 document_owner: "Dea Karisna / AI Marketing"
-version: "0.1.3"
+version: "0.1.4"
 status: "Draft"
 classification: "Internal"
 ---
@@ -9,6 +9,20 @@ classification: "Internal"
 # AGENTS.md
 
 Instruksi untuk AI agent (Claude, Codex, ChatGPT, Grok, dan sejenisnya) yang bekerja di repository ini.
+
+## Coding workflow aktif (2026-10-27)
+
+Untuk pekerjaan repository, ChatGPT/Codex dan Claude wajib membaca [status & handoff](./docs/status.md)
+dan [core AGENTS](https://github.com/d34faiza-commits/clau-core/blob/main/AGENTS.md)
+serta [core AI-BOUNDARY](https://github.com/d34faiza-commits/clau-core/blob/main/AI-BOUNDARY.md).
+Perintah Pak Indra: coding PR dalam scope yang diizinkan diselesaikan sampai merge
+setelah CI hijau, tanpa meminta konfirmasi owner ulang. Gunakan expected head SHA,
+penuhi required review/ruleset, lalu cek CI main dan sync downstream.
+Untuk repo ini check wajib = `validate`. Tidak ada direct push main.
+
+Bagian workflow konten di bawah adalah snapshot sebelum split. Aturan konten aktif
+berada di clau-core/clau-market; otorisasi merge kode tidak memberi approval konten
+client atau izin publish/send. Rules/prompt/skill arsip tetap tidak diedit di sini.
 
 ## Baca Dulu
 
@@ -89,9 +103,7 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 
 ## Kontribusi ke Repo
 
-- Direct push ke `main` = **DIIZINKAN** untuk solo dev (GitHub Free). WAJIB: commit message format (`feat:`, `fix:`, `docs:`, `refactor:`, `chore:`), validator lokal lulus, backup rutin. Kalau tim 2+ orang, pakai branch + PR.
-
-  **Status:** **ASSUMPTION** — sesuai realita solo dev, GitHub Free tier. Akan di-review kalau: tim bertambah, upgrade GitHub Team, atau repo jadi public.
+- Coding/handoff: feature branch → validator lokal → self-review → PR → semua run `validate` di head terbaru sukses → merge dengan expected head SHA → cek main. Otorisasi Pak Indra 2026-10-27 menggantikan izin direct push historis. Commit message tetap `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`, atau `test:`.
 - Jalankan `python scripts/validate.py` sebelum commit.
 - Rule baru ikut format 10 section (lihat [rule 01](./rules/01-CONTENT-INTEGRITY-STANDARD.md)).
 - Skill baru: `skills/<nama>/SKILL.md` (frontmatter hanya `name` + `description`) + `skills/<nama>/agents/openai.yaml`.
@@ -106,3 +118,4 @@ Setiap varian dalam code block terpisah supaya bisa di-copy satu per satu.
 | 0.1.1 | 2026-10-03 | Draft | Sesuaikan enforcement dengan realita solo dev |
 | 0.1.2 | 2026-10-03 | Draft | Seragamkan metadata (owner, classification, format revision history) |
 | 0.1.3 | 2026-10-04 | Draft | Tambah aturan QA oleh agent = self-review (TASK-026) |
+| 0.1.4 | 2026-10-27 | Draft | Entry point coding aktif sesuai perintah Pak Indra: ChatGPT/Codex merge setelah CI hijau, rujuk core; snapshot workflow konten tetap arsip |

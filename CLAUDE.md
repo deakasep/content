@@ -1,6 +1,6 @@
 # CLAUDE.md — clau-content (ARSIP)
 
-> Peta repo untuk AI agent. Last updated: 2026-10-21
+> Peta repo untuk AI agent. Last updated: 2026-10-27
 
 > 🔔 **Sesi baru: baca [`docs/status.md`](docs/status.md) dulu** (otoritas, keputusan yang sudah diambil, pekerjaan terbuka).
 
@@ -21,6 +21,7 @@ Arsitektur **5 pilar v2** (AI-CONSTITUTION v3.0.0, sekarang v3.1.0: AI Marketing
 | Path | Fungsi |
 |---|---|
 | `tasks/` | Board task Markdown, **dibekukan sebagai riwayat per 2026-10-21**. Board kerja utama: ClickUp Space **Clau AI** (aturan di `tasks/README.md` § Board ClickUp); task baru mulai TASK-064 di ClickUp |
+| `AGENTS.md` | Entry point coding lintas AI (otorisasi merge sesuai core); bagian konten lama tetap snapshot |
 | `docs/status.md` | **Status & handoff** lintas sesi AI: otoritas, keputusan, status, pekerjaan terbuka |
 | `docs/` | Dokumen pendukung yang dirujuk repo baru lewat URL; `docs/peta-otak.md` = peta semua pondasi otak AI (link ke repo sumber) |
 | `design/` | Spesifikasi UI/UX standalone + design tokens (pengecualian atas perintah owner, 2026-10-06); `design/pillars.md` = 5 pilar di UI |
@@ -39,3 +40,5 @@ python design/tokens/build_tokens.py          # setelah mengubah design/tokens/t
 
 - Otoritas perubahan: **Pak Indra** atau **Dea Karisna (d34faiza)**.
 - Jangan commit data client nyata, `.env`, atau credential.
+
+- ChatGPT/Codex dan Claude menyelesaikan coding PR yang sudah diizinkan sampai merge setelah CI hijau, sesuai `AGENTS.md` dan core AI-BOUNDARY 1.7.0. Approval konten client tetap manusia.
