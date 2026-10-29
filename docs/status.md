@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-28 (audit Pilar 1: fact validation, reviewer/capacity, H2 bundle; lihat §4b untuk status terbaru).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-29 (**model langganan seperti Sintra.ai**: lihat §4c untuk status terbaru; §4a–4b tetap riwayat Pilar 1).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
 
@@ -43,6 +43,7 @@ Submodule: `core/` di agents & marketing, `agents/` di marketing. Alur otomatis:
 | 2026-10-15 | Pemulihan database selalu **manual** (satu perintah `clau-vps2-restore` yang dijalankan manusia); server yang mati boleh hidup lagi otomatis, isi database tidak pernah diganti otomatis. Backup tiap 6 jam + salinan Backblaze B2 | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2, § 5 |
 | 2026-10-15 | VPS 2 jalan **tanpa domain** dulu: backend + database + frontend login di VPS 2, dibuka hanya lewat HTTPS Tailscale (tim internal). Setelah domain ada, frontend kembali ke VPS 1 (keputusan VPS #1) | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2 |
 | 2026-10-21 | Board kerja CLAU pindah ke **ClickUp** (Space **Clau AI**, terpisah dari Jerco; alur Open → in progress → review → Closed seperti board Rekan AI). Satu list per pilar + Platform + Release & Deploy; judul kartu memuat `TASK-xxx`. Board Markdown `tasks/` dibekukan sebagai riwayat; task baru mulai TASK-064 di ClickUp (arahan Pak Indra lewat telepon dengan owner) | [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup) |
+| 2026-10-29 | **Model langganan seperti Sintra.ai** (AI-CONSTITUTION 4.0.0, AI-BOUNDARY 2.0.0, AGENTS 1.2.0): UMKM semua sektor + hospitality; paket 1/3/6/12 bulan Rp149rb/399rb/749rb/1,39jt, 500 kredit/bulan, top up 250/550/1.500 kredit; **tanpa API key klien** (semua AI lewat sistem CLAU, klien hanya diberi pemberitahuan saat kredit menipis/habis); posting setelah klien klik Setujui. Perintah owner, dengan konfirmasi owner bahwa Pak Indra sudah menyetujui | core#2, core#3 · `clau-market/commercial/pricing.md` |
 | 2026-10-22 | **Fokus Pilar 1 AI Marketing hospitality sampai siap jual; Pilar 2–5 ditunda** (kartu TASK-035–039 & TASK-066 tidak dikerjakan sampai owner membuka lagi). Owner: "pilar 2-5 skip ini untuk kedepannya.. saat ini kita fokus ke pilar 1 hospitalty" | [review-packet-task-067.md](./review-packet-task-067.md) |
 | 2026-10-09 | Dependabot tidak membuka update versi mayor otomatis; versi mayor dikerjakan sebagai PR tersendiri setelah diuji | `clau-agent/docs/security.md` § 5 |
 | 2026-10-09 | Review independen 3 pilot SIMULASI (kafe, wedding, travel): v1 belum lulus → **v2 lulus**, "dapat di-upgrade kapan saja" | [review-packet-task-041.md § 1](./review-packet-task-041.md) |
@@ -130,6 +131,16 @@ Prospek/discovery/proposal boleh berjalan. Managed service manual dapat dimulai 
 gate komersial terpenuhi, tanpa menunggu seluruh runtime. Jangan menjual klaim runtime
 autonomous production-ready. Ukur hasil aktual; AI tidak membuat angka margin atau skor
 manusia. TASK-052, TASK-028, TASK-053 dan pilot nyata tidak ditutup secara administratif.
+
+## 4c. Model langganan & kredit (2026-10-29)
+
+| Area | Status |
+|---|---|
+| Aturan | core#2 merged: AI-CONSTITUTION **4.0.0**, AI-BOUNDARY **2.0.0**, AGENTS **1.2.0**; router + 6 intent baru (image, video, data-analysis, data-annotation, integration, web-dev) berstatus Planned. core#3 merged: kontrak API/database 0.11.0 (langganan, kredit, pembayaran) |
+| Harga | `clau-market/commercial/pricing.md` (market#4 merged): 1 kredit = Rp200, tarif tiap aksi ≥ 3× biaya API (kurs bantalan Rp18.500/USD); paket 500 kredit/bulan; top up 250/550/1.500. Angka biaya provider = **ASSUMPTION** dari harga publik Okt 2026; cek ulang sebelum jual |
+| Platform | agent#3 merged (3 agent baru Nova/Aruna/Dara, Planned) · agent#5 merged: backend 0.11.0, migrasi 0008, `/billing` (paket, kredit bulanan, top up, Midtrans webhook bertanda tangan / mode uji), kredit dipotong saat job AI dibuat dan kembali bila gagal/batal, **pemberitahuan kredit menipis/habis di semua halaman dashboard**. Semua CI PR hijau saat merge |
+| Landing page | web#2, web#3 merged: harga & top up publik, tarif kredit, FAQ (tanpa API key klien), agent Nova/Aruna/Dara dengan desain web yang sama |
+| Belum | Pendaftaran klien mandiri (sekarang akun dibuat owner), posting ke Meta/TikTok lewat OAuth (butuh App Review), akun merchant Midtrans produksi + legalitas/PPN, provider AI nyata (TASK-052), skill untuk 6 intent baru, server (VPS dimatikan) |
 
 ## 5. Pekerjaan Terbuka (urut prioritas)
 
