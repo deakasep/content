@@ -2,7 +2,7 @@
 
 > **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-29 (**model langganan seperti Sintra.ai**: lihat §4c untuk status terbaru; §4a–4b tetap riwayat Pilar 1).
 >
-> Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp** → workspace Jerco Holding Company → Space **Clau AI** → folder **CLAU AI** (board utama sejak 2026-10-21); [tasks/](../tasks/README.md) = riwayat.
+> Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp folder **CLAW AI** (list Platform & Marketing)**, dibuat baru oleh owner 2026-10-29 dan memulai nomor dari TASK-001; aturan di [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup). ID TASK-0xx lama di halaman ini = riwayat board sebelumnya.
 
 ## 1. Siapa & Otoritas
 
@@ -42,7 +42,8 @@ Submodule: `core/` di agents & marketing, `agents/` di marketing. Alur otomatis:
 | 2026-10-16 | Repo di-rename: clau-core, clau-agent, clau-market, clau-content (isi tetap) dan dijadikan **public, hanya untuk dilihat**: LICENSE source-available di keempat repo, AI-BOUNDARY v1.5.0 (semua yang di-commit termasuk riwayat dianggap publik, tanpa IP/host server). Download/clone/screenshot tidak bisa dicegah secara teknis; perlindungannya hukum (owner: "Gass B kak") | `LICENSE`, `clau-core/AI-BOUNDARY.md` |
 | 2026-10-15 | Pemulihan database selalu **manual** (satu perintah `clau-vps2-restore` yang dijalankan manusia); server yang mati boleh hidup lagi otomatis, isi database tidak pernah diganti otomatis. Backup tiap 6 jam + salinan Backblaze B2 | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2, § 5 |
 | 2026-10-15 | VPS 2 jalan **tanpa domain** dulu: backend + database + frontend login di VPS 2, dibuka hanya lewat HTTPS Tailscale (tim internal). Setelah domain ada, frontend kembali ke VPS 1 (keputusan VPS #1) | owner, sesi 2026-10-15; `clau-agent/docs/deploy/vps-2-setup.md` § 2 |
-| 2026-10-21 | Board kerja CLAU pindah ke **ClickUp** (Space **Clau AI**, terpisah dari Jerco; alur Open → in progress → review → Closed seperti board Rekan AI). Satu list per pilar + Platform + Release & Deploy; judul kartu memuat `TASK-xxx`. Board Markdown `tasks/` dibekukan sebagai riwayat; task baru mulai TASK-064 di ClickUp (arahan Pak Indra lewat telepon dengan owner) | [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup) |
+| 2026-10-21 | Board kerja CLAU pindah ke **ClickUp** (board lama, **diganti 2026-10-29**, lihat baris berikut). Judul kartu memuat `TASK-xxx`. Board Markdown `tasks/` dibekukan sebagai riwayat (arahan Pak Indra lewat telepon dengan owner) | [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup) |
+| 2026-10-29 | Board ClickUp **dibuat baru** oleh owner: folder **CLAW AI** (list Platform & Marketing), status to do → in progress → complete, nomor mulai TASK-001. Board ClickUp sebelumnya tidak dipakai lagi | owner, sesi 2026-10-29 · [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup) |
 | 2026-10-29 | **Model langganan seperti Sintra.ai** (AI-CONSTITUTION 4.0.0, AI-BOUNDARY 2.0.0, AGENTS 1.2.0): UMKM semua sektor + hospitality; paket 1/3/6/12 bulan Rp149rb/399rb/749rb/1,39jt, 500 kredit/bulan, top up 250/550/1.500 kredit; **tanpa API key klien** (semua AI lewat sistem CLAU, klien hanya diberi pemberitahuan saat kredit menipis/habis); posting setelah klien klik Setujui. Perintah owner, dengan konfirmasi owner bahwa Pak Indra sudah menyetujui | core#2, core#3 · `clau-market/commercial/pricing.md` |
 | 2026-10-22 | **Fokus Pilar 1 AI Marketing hospitality sampai siap jual; Pilar 2–5 ditunda** (kartu TASK-035–039 & TASK-066 tidak dikerjakan sampai owner membuka lagi). Owner: "pilar 2-5 skip ini untuk kedepannya.. saat ini kita fokus ke pilar 1 hospitalty" | [review-packet-task-067.md](./review-packet-task-067.md) |
 | 2026-10-09 | Dependabot tidak membuka update versi mayor otomatis; versi mayor dikerjakan sebagai PR tersendiri setelah diuji | `clau-agent/docs/security.md` § 5 |
@@ -140,7 +141,7 @@ manusia. TASK-052, TASK-028, TASK-053 dan pilot nyata tidak ditutup secara admin
 | Harga | `clau-market/commercial/pricing.md` (market#4 merged): 1 kredit = Rp200, tarif tiap aksi ≥ 3× biaya API (kurs bantalan Rp18.500/USD); paket 500 kredit/bulan; top up 250/550/1.500. Angka biaya provider = **ASSUMPTION** dari harga publik Okt 2026; cek ulang sebelum jual |
 | Platform | agent#3 merged (3 agent baru Nova/Aruna/Dara, Planned) · agent#5 merged: backend 0.11.0, migrasi 0008, `/billing` (paket, kredit bulanan, top up, Midtrans webhook bertanda tangan / mode uji), kredit dipotong saat job AI dibuat dan kembali bila gagal/batal, **pemberitahuan kredit menipis/habis di semua halaman dashboard**. Semua CI PR hijau saat merge |
 | Landing page | web#2, web#3 merged: harga & top up publik, tarif kredit, FAQ (tanpa API key klien), agent Nova/Aruna/Dara dengan desain web yang sama |
-| Belum | Pendaftaran klien mandiri (sekarang akun dibuat owner), posting ke Meta/TikTok lewat OAuth (butuh App Review), akun merchant Midtrans produksi + legalitas/PPN, provider AI nyata (TASK-052), skill untuk 6 intent baru, server (VPS dimatikan) |
+| Belum (kartu ClickUp CLAW AI → Platform) | TASK-002 domain + 1 VPS (prasyarat) · TASK-003 pendaftaran klien mandiri · TASK-004 provider AI nyata + evaluasi · TASK-005 merchant Midtrans · TASK-006 posting Instagram/Facebook lalu TikTok. Juga: skill untuk 6 intent baru |
 
 ## 5. Pekerjaan Terbuka (urut prioritas)
 
@@ -163,11 +164,11 @@ manusia. TASK-052, TASK-028, TASK-053 dan pilot nyata tidak ditutup secara admin
 | 8h | **Pilar 1 siap jual (TASK-067):** commercial kit (paket, discovery, proposal, FAQ, SOP delivery, kontrak + DPA draft), kalender 2027, perbaikan batas 5 hashtag Instagram, verifikasi sebagian spec platform ([market#67](https://github.com/deakasep/market/pull/67)). **K1–K8 disetujui owner 2026-10-23**; commercial kit Approved v1.0.0 + Facebook + realita lapangan ([market#68](https://github.com/deakasep/market/pull/68)). Syarat sebelum klien pertama tanda tangan: TASK-028 (owner menilai 1 pilot), TASK-053 (cek hukum kontrak + DPA + L1–L6), badan usaha & pajak | Owner → AI | [review-packet-task-067.md](./review-packet-task-067.md) |
 | 8f | *(Ditunda owner 2026-10-22)* **Paket keputusan aktivasi Pilar 2 AI Sales** (TASK-066): tahap 1 = `inquiry-reply`, `guest-message`, `complaint-escalation` (baru), tanpa Level A & tanpa integrasi WhatsApp; menunggu jawaban owner K1–K9. Persiapan boleh jalan sebelum server hidup; dipakai client nyata setelah TASK-052 PR 4c, TASK-065, TASK-053 | Owner → AI | [review-packet-task-066.md](./review-packet-task-066.md) · kartu ClickUp TASK-066 |
 | 8g | Sync submodule 2026-10-22 selesai: [agents#62](https://github.com/deakasep/agent/pull/62) & [market#66](https://github.com/deakasep/market/pull/66) merged, pin `core/` di agents & marketing = core `a07f0c3` (main), CI `main` hijau di ketiga repo. Branch sisa di clau-core untuk dihapus owner: `claude/task-054-2fa-content-lead` (PR #18 ditutup) | Owner (hapus branch) | GitHub |
-| 9 | Backlog lain | — | ClickUp Space **Clau AI** (riwayat: [tasks/backlog.md](../tasks/backlog.md)) |
+| 9 | Backlog lain | — | ClickUp folder **CLAW AI** (riwayat: [tasks/backlog.md](../tasks/backlog.md)) |
 
 ## 5a. Roadmap ke "maksimal" (urutan disepakati owner 2026-10-15)
 
-Board: ClickUp Space **Clau AI** (riwayat: [tasks/](../tasks/README.md)). Urutan kerja; tahap berikutnya dipicu beban/jumlah klien, bukan tanggal.
+Board: ClickUp folder **CLAW AI** (riwayat: [tasks/](../tasks/README.md)). Urutan kerja; tahap berikutnya dipicu beban/jumlah klien, bukan tanggal.
 
 | Tahap | Isi | Task |
 |---|---|---|

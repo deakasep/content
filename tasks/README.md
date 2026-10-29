@@ -1,6 +1,6 @@
 # Task Management
 
-> **Sejak 2026-10-21 board kerja utama CLAU ada di ClickUp** (ClickUp: workspace **Jerco Holding Company** → Space **Clau AI** → folder **CLAU AI**; arahan Pak Indra: board terpisah dari Jerco, alur sama). File di folder ini **dibekukan sebagai riwayat** per 2026-10-21: semua task Backlog & In Progress sudah dicerminkan 1:1 ke kartu ClickUp dengan ID yang sama (`TASK-xxx` di judul kartu). Task baru dibuat di ClickUp saja, melanjutkan nomor dari **TASK-064**. Lihat [Board ClickUp](#board-clickup) di bawah.
+> **Board kerja utama CLAU ada di ClickUp** (ClickUp workspace CLAU → Space **Space** → folder **CLAW AI** (list **Platform**, **Marketing**); dibuat baru oleh owner 2026-10-29, menggantikan board ClickUp sebelumnya). File di folder ini **dibekukan sebagai riwayat** per 2026-10-21. Board baru memulai nomor dari **TASK-001**; ID lama (TASK-001–TASK-067 di file ini dan dokumen lain) tetap riwayat dan tidak dipakai ulang sebagai rujukan kartu baru. Lihat [Board ClickUp](#board-clickup) di bawah.
 
 Board task clau-content berbasis Markdown — adaptasi alur board (Backlog → In Progress → Review → Done) yang biasa dipakai di tools seperti ClickUp, tapi disimpan di repo supaya **trackable lewat git history** dan gratis di GitHub Free.
 
@@ -45,24 +45,24 @@ flowchart LR
 | Review | 0 |
 | Done | 37 |
 
-ID terakhir dipakai di repo: **TASK-063**. ID berikutnya (di ClickUp): **TASK-064**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
+ID terakhir dipakai di repo: **TASK-063** (riwayat). Board ClickUp baru (2026-10-29) memakai penomoran sendiri mulai **TASK-001**; kartu terakhir saat ini **TASK-006**. Per 2026-10-04 semua item Review di-approve owner; perubahan berikutnya hanya atas perintah Pak Indra atau Dea Karisna (d34faiza).
 
 ## Board ClickUp
 
 | Item | Isi |
 |---|---|
-| Lokasi | ClickUp: workspace **Jerco Holding Company** → Space **Clau AI** → folder **CLAU AI** (Space private; di-share ke Pak Indra & Dea Karisna) |
-| List | Platform · Pilar 1 – AI Marketing · Pilar 2 – AI Sales · Pilar 3 – AI Admin · Pilar 4 – AI Business Intelligence · Pilar 5 – AI Automation · Release & Deploy |
-| Status | Open → in progress → review → Closed (sama dengan board Rekan AI milik Jerco) |
+| Lokasi | ClickUp workspace CLAU → Space **Space** → folder **CLAW AI** (list **Platform**, **Marketing**) |
+| List | **Platform** (kode, server, pembayaran, integrasi) · **Marketing** (konten, riset, komersial). List lain dibuat owner bila perlu |
+| Status | to do → in progress → complete |
 | Judul kartu | Awalan area + ID: `[PLATFORM] TASK-047 ...`, `[MARKETING]`, `[SALES]`, `[ADMIN]`, `[BI]`, `[AUTOMATION]` |
-| Deskripsi kartu | **Tujuan / Selesai bila / Link / Label** (tag ClickUp berbayar, jadi label ditulis di deskripsi) |
+| Deskripsi kartu | Kondisi sekarang / Yang disiapkan owner / Yang dikerjakan AI / Selesai bila / Link. Tag dipakai untuk tema (mis. `model-langganan`); kartu yang menunggu kartu lain diberi dependency *waiting on* |
 | Prioritas | Urgent = blocker/insiden · High = minggu ini · Normal = bulan ini · Low = kapan sempat |
 
 Aturan pindah status:
 
 1. Mulai dikerjakan → **in progress**.
-2. PR dibuat, atau menunggu keputusan owner → **review**, tempel link PR di deskripsi/komentar.
-3. **Closed** hanya bila PR sudah merge **dan** CI hijau di `main` (dicek langsung di GitHub, bukan dari ingatan sesi).
+2. PR dibuat, atau menunggu keputusan owner → tetap **in progress**, tempel link PR / pertanyaan owner di komentar kartu.
+3. **complete** hanya bila PR sudah merge **dan** CI hijau di `main` (dicek langsung di GitHub, bukan dari ingatan sesi).
 4. Tidak ada data client, nama tamu, harga kontrak, atau credential di kartu ClickUp (aturan yang sama dengan repo).
 
 Agent AI dengan konektor ClickUp memperbarui kartu saat status berubah; tanpa konektor, AI menyebutkan kartu mana yang perlu dipindah dan owner memindahkannya.
