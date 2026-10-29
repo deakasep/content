@@ -141,7 +141,8 @@ manusia. TASK-052, TASK-028, TASK-053 dan pilot nyata tidak ditutup secara admin
 | Harga | `clau-market/commercial/pricing.md` (market#4 merged): 1 kredit = Rp200, tarif tiap aksi ≥ 3× biaya API (kurs bantalan Rp18.500/USD); paket 500 kredit/bulan; top up 250/550/1.500. Angka biaya provider = **ASSUMPTION** dari harga publik Okt 2026; cek ulang sebelum jual |
 | Platform | agent#3 merged (3 agent baru Nova/Aruna/Dara, Planned) · agent#5 merged: backend 0.11.0, migrasi 0008, `/billing` (paket, kredit bulanan, top up, Midtrans webhook bertanda tangan / mode uji), kredit dipotong saat job AI dibuat dan kembali bila gagal/batal, **pemberitahuan kredit menipis/habis di semua halaman dashboard**. Semua CI PR hijau saat merge |
 | Landing page | web#2, web#3 merged: harga & top up publik, tarif kredit, FAQ (tanpa API key klien), agent Nova/Aruna/Dara dengan desain web yang sama |
-| Belum (kartu ClickUp CLAW AI → Platform) | TASK-002 domain + 1 VPS (prasyarat) · TASK-003 pendaftaran klien mandiri · TASK-004 provider AI nyata + evaluasi · TASK-005 merchant Midtrans · TASK-006 posting Instagram/Facebook lalu TikTok. Juga: skill untuk 6 intent baru |
+| Klien mandiri | TASK-003 selesai (core#4, agent#6): `/auth/signup` → verifikasi email → pilih paket, lupa/reset password; mati sampai `CLAU_SIGNUP_ENABLED=1` + SMTP. TASK-007 (core#5, agent#8): klien `self_serve` (migrasi 0010) mengisi Brain bisnis sendiri, meminta draft AI, dan menyetujui hasil agen tanpa staf (AI-CONSTITUTION §11; fakta tetap wajib dari Brain); langkah awal di beranda dashboard. Website: animasi HP/tablet sama dengan laptop (web#5) |
+| Belum (kartu ClickUp CLAW AI → Platform) | TASK-002 domain + 1 VPS (prasyarat) · TASK-004 provider AI nyata + evaluasi · TASK-005 merchant Midtrans · TASK-006 posting Instagram/Facebook lalu TikTok. Juga: skill untuk 6 intent baru |
 
 ## 5. Pekerjaan Terbuka (urut prioritas)
 
