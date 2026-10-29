@@ -17,36 +17,36 @@ Aturan mengalir satu arah. Level bawah tidak boleh menurunkan kontrol level atas
 
 | Pondasi | File | Isi |
 |---|---|---|
-| Konstitusi | [AI-CONSTITUTION.md](https://github.com/d34faiza-commits/clau-core/blob/main/AI-CONSTITUTION.md) | Aturan induk semua pilar (v3.1.0 Approved: 5 pilar v2, otonomi A/B/C default B, 4 vertical fokus, `main` wajib lewat PR + CI hijau): AI tidak publish, tidak kirim ke pihak luar, tidak self-approve; 6 label evidence |
-| Batas | [AI-BOUNDARY.md](https://github.com/d34faiza-commits/clau-core/blob/main/AI-BOUNDARY.md) | Peran tiap repo, storage zones, data apa yang boleh masuk repo, aturan submodule & push |
-| Instruksi agent | [AGENTS.md](https://github.com/d34faiza-commits/clau-core/blob/main/AGENTS.md) | Cara kerja & format output agent lintas repo |
-| Pipeline | [WORKFLOW.md](https://github.com/d34faiza-commits/clau-core/blob/main/WORKFLOW.md) | 8 langkah dari permintaan sampai monitor |
-| Routing | [orchestrator/router.md](https://github.com/d34faiza-commits/clau-core/blob/main/orchestrator/router.md) | 12 intent → pilar → skill → approval minimum |
-| Keputusan | [orchestrator/decision-tree.md](https://github.com/d34faiza-commits/clau-core/blob/main/orchestrator/decision-tree.md) · [priority-engine.md](https://github.com/d34faiza-commits/clau-core/blob/main/orchestrator/priority-engine.md) | Kapan eskalasi, urutan prioritas |
-| Kontrak data | [shared/](https://github.com/d34faiza-commits/clau-core/tree/main/shared): [database-schema.md](https://github.com/d34faiza-commits/clau-core/blob/main/shared/database-schema.md) · [api-contracts.md](https://github.com/d34faiza-commits/clau-core/blob/main/shared/api-contracts.md) | **Sumber kebenaran** skema database & API (versi backend 0.6.0), alur data lintas pilar, integrasi. Ubah di sini dulu, baru kode |
-| Alur sync antar repo | [docs/getting-started.md § 2](https://github.com/d34faiza-commits/clau-core/blob/main/docs/getting-started.md) | core → agents → marketing lewat PR bot setelah CI hijau |
-| Masa depan | [docs/blueprints/](https://github.com/d34faiza-commits/clau-core/tree/main/docs/blueprints) · [docs/verticals.md](https://github.com/d34faiza-commits/clau-core/blob/main/docs/verticals.md) · [docs/proposals/autonomy-levels.md](https://github.com/d34faiza-commits/clau-core/blob/main/docs/proposals/autonomy-levels.md) | Cetak biru konsep v2 (AI Marketing, Sales, Admin, BI, Automation), jenis usaha (4 vertical fokus Approved, lainnya Planned), jejak usulan otonomi (Usulan 1 berlaku sejak v3.0.0, Usulan 2 Draft). Isi blueprint tetap Draft/ASSUMPTION |
-| 5 pilar | [docs/5-pillar-architecture.md](https://github.com/d34faiza-commits/clau-core/blob/main/docs/5-pillar-architecture.md) · tabel di [README](https://github.com/d34faiza-commits/clau-core/blob/main/README.md#5-pilar-clau-ai) | Nama, status, repo, ketergantungan antar pilar |
+| Konstitusi | [AI-CONSTITUTION.md](https://github.com/deakasep/core/blob/main/AI-CONSTITUTION.md) | Aturan induk semua pilar (v3.1.0 Approved: 5 pilar v2, otonomi A/B/C default B, 4 vertical fokus, `main` wajib lewat PR + CI hijau): AI tidak publish, tidak kirim ke pihak luar, tidak self-approve; 6 label evidence |
+| Batas | [AI-BOUNDARY.md](https://github.com/deakasep/core/blob/main/AI-BOUNDARY.md) | Peran tiap repo, storage zones, data apa yang boleh masuk repo, aturan submodule & push |
+| Instruksi agent | [AGENTS.md](https://github.com/deakasep/core/blob/main/AGENTS.md) | Cara kerja & format output agent lintas repo |
+| Pipeline | [WORKFLOW.md](https://github.com/deakasep/core/blob/main/WORKFLOW.md) | 8 langkah dari permintaan sampai monitor |
+| Routing | [orchestrator/router.md](https://github.com/deakasep/core/blob/main/orchestrator/router.md) | 12 intent → pilar → skill → approval minimum |
+| Keputusan | [orchestrator/decision-tree.md](https://github.com/deakasep/core/blob/main/orchestrator/decision-tree.md) · [priority-engine.md](https://github.com/deakasep/core/blob/main/orchestrator/priority-engine.md) | Kapan eskalasi, urutan prioritas |
+| Kontrak data | [shared/](https://github.com/deakasep/core/tree/main/shared): [database-schema.md](https://github.com/deakasep/core/blob/main/shared/database-schema.md) · [api-contracts.md](https://github.com/deakasep/core/blob/main/shared/api-contracts.md) | **Sumber kebenaran** skema database & API (versi backend 0.6.0), alur data lintas pilar, integrasi. Ubah di sini dulu, baru kode |
+| Alur sync antar repo | [docs/getting-started.md § 2](https://github.com/deakasep/core/blob/main/docs/getting-started.md) | core → agents → marketing lewat PR bot setelah CI hijau |
+| Masa depan | [docs/blueprints/](https://github.com/deakasep/core/tree/main/docs/blueprints) · [docs/verticals.md](https://github.com/deakasep/core/blob/main/docs/verticals.md) · [docs/proposals/autonomy-levels.md](https://github.com/deakasep/core/blob/main/docs/proposals/autonomy-levels.md) | Cetak biru konsep v2 (AI Marketing, Sales, Admin, BI, Automation), jenis usaha (4 vertical fokus Approved, lainnya Planned), jejak usulan otonomi (Usulan 1 berlaku sejak v3.0.0, Usulan 2 Draft). Isi blueprint tetap Draft/ASSUMPTION |
+| 5 pilar | [docs/5-pillar-architecture.md](https://github.com/deakasep/core/blob/main/docs/5-pillar-architecture.md) · tabel di [README](https://github.com/deakasep/core/blob/main/README.md#5-pilar-clau-ai) | Nama, status, repo, ketergantungan antar pilar |
 
 ## 2. Aturan Domain — Repo Pilar
 
 | # | Pilar | Repo | Isi |
 |---|---|---|---|
-| 1 | AI Marketing | [clau-market](https://github.com/d34faiza-commits/clau-market) | [rules 01–09](https://github.com/d34faiza-commits/clau-market/tree/main/rules), [skills](https://github.com/d34faiza-commits/clau-market/tree/main/skills), [prompts](https://github.com/d34faiza-commits/clau-market/tree/main/prompts), [knowledge](https://github.com/d34faiza-commits/clau-market/tree/main/knowledge), [qa](https://github.com/d34faiza-commits/clau-market/tree/main/qa) |
+| 1 | AI Marketing | [clau-market](https://github.com/deakasep/market) | [rules 01–09](https://github.com/deakasep/market/tree/main/rules), [skills](https://github.com/deakasep/market/tree/main/skills), [prompts](https://github.com/deakasep/market/tree/main/prompts), [knowledge](https://github.com/deakasep/market/tree/main/knowledge), [qa](https://github.com/deakasep/market/tree/main/qa) |
 | 2–5 | AI Sales, AI Admin, AI Business Intelligence, AI Automation | Belum ada (Planned) | Rencana: [tasks/backlog.md](../tasks/backlog.md) TASK-035–039, TASK-042 |
 
-Vertical fokus (AI-CONSTITUTION v3.0.0+): **villa, restoran/cafe, wedding, travel** — fact sheet, pilot SIMULASI, dan eval tersedia di clau-market & clau-agent. Salon, retail, rental, kontraktor, jasa profesional = **Planned** (belum untuk client) di [knowledge/segments](https://github.com/d34faiza-commits/clau-market/tree/main/knowledge/segments).
+Vertical fokus (AI-CONSTITUTION v3.0.0+): **villa, restoran/cafe, wedding, travel** — fact sheet, pilot SIMULASI, dan eval tersedia di clau-market & clau-agent. Salon, retail, rental, kontraktor, jasa profesional = **Planned** (belum untuk client) di [knowledge/segments](https://github.com/deakasep/market/tree/main/knowledge/segments).
 
 ## 3. Yang Menjalankan — clau-agent
 
 | Pondasi | File | Isi |
 |---|---|---|
-| Registry | [agents/registry.json](https://github.com/d34faiza-commits/clau-agent/blob/main/agents/registry.json) | 5 pilar + 12 agent (nama, intent, skill, approval, avatar); dites sinkron dengan core |
-| Persona | [agents/personas/](https://github.com/d34faiza-commits/clau-agent/tree/main/agents/personas) | Gaya bahasa, etika, batas & eskalasi per agent |
-| Eval | [agents/evals/](https://github.com/d34faiza-commits/clau-agent/tree/main/agents/evals) | Kasus uji + rubrik "seperti manusia ahli" |
-| API | [backend/README.md](https://github.com/d34faiza-commits/clau-agent/blob/main/backend/README.md) | v0.6.0: `/health`, `/agents`, `/pillars`, `/route`, `/auth/*` (login, 2FA), `/users` (owner); PostgreSQL 16; tanpa endpoint publish |
-| Keamanan & server | [docs/security.md](https://github.com/d34faiza-commits/clau-agent/blob/main/docs/security.md) · [docs/deploy/vps-1-setup.md](https://github.com/d34faiza-commits/clau-agent/blob/main/docs/deploy/vps-1-setup.md) · [docs/post-vps-checklist.md](https://github.com/d34faiza-commits/clau-agent/blob/main/docs/post-vps-checklist.md) | Ancaman & perlindungan, VPS 1 (pratinjau), langkah wajib setelah VPS siap |
-| Submodule & CI | [SUBMODULE.md](https://github.com/d34faiza-commits/clau-agent/blob/main/SUBMODULE.md) | Update pin, workflow otomatis, setup token |
+| Registry | [agents/registry.json](https://github.com/deakasep/agent/blob/main/agents/registry.json) | 5 pilar + 12 agent (nama, intent, skill, approval, avatar); dites sinkron dengan core |
+| Persona | [agents/personas/](https://github.com/deakasep/agent/tree/main/agents/personas) | Gaya bahasa, etika, batas & eskalasi per agent |
+| Eval | [agents/evals/](https://github.com/deakasep/agent/tree/main/agents/evals) | Kasus uji + rubrik "seperti manusia ahli" |
+| API | [backend/README.md](https://github.com/deakasep/agent/blob/main/backend/README.md) | v0.6.0: `/health`, `/agents`, `/pillars`, `/route`, `/auth/*` (login, 2FA), `/users` (owner); PostgreSQL 16; tanpa endpoint publish |
+| Keamanan & server | [docs/security.md](https://github.com/deakasep/agent/blob/main/docs/security.md) · [docs/deploy/vps-1-setup.md](https://github.com/deakasep/agent/blob/main/docs/deploy/vps-1-setup.md) · [docs/post-vps-checklist.md](https://github.com/deakasep/agent/blob/main/docs/post-vps-checklist.md) | Ancaman & perlindungan, VPS 1 (pratinjau), langkah wajib setelah VPS siap |
+| Submodule & CI | [SUBMODULE.md](https://github.com/deakasep/agent/blob/main/SUBMODULE.md) | Update pin, workflow otomatis, setup token |
 
 ## 4. Markas Kerja — Repo Ini
 
