@@ -20,7 +20,7 @@ Arsitektur **5 pilar v2** (AI-CONSTITUTION v3.0.0, sekarang v3.1.0: AI Marketing
 
 | Path | Fungsi |
 |---|---|
-| `tasks/` | Board task Markdown, **dibekukan sebagai riwayat per 2026-10-21**. Board kerja utama: ClickUp Space **Clau AI** (aturan di `tasks/README.md` § Board ClickUp); task baru mulai TASK-064 di ClickUp |
+| `tasks/` | Board task Markdown, **dibekukan sebagai riwayat per 2026-10-21**. Board kerja utama: ClickUp folder **CLAW AI** (aturan di `tasks/README.md` § Board ClickUp); board baru mulai TASK-001 di ClickUp |
 | `AGENTS.md` | Entry point coding lintas AI (otorisasi merge sesuai core); bagian konten lama tetap snapshot |
 | `docs/status.md` | **Status & handoff** lintas sesi AI: otoritas, keputusan, status, pekerjaan terbuka |
 | `docs/` | Dokumen pendukung yang dirujuk repo baru lewat URL; `docs/peta-otak.md` = peta semua pondasi otak AI (link ke repo sumber) |
