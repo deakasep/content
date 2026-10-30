@@ -225,7 +225,7 @@ Disalin dari perintah owner Dea Karisna di chat supaya tidak hilang saat ganti a
 
 Format: `[ ]` belum, `[x]` selesai (tulis PR). Item yang butuh keputusan/aksi owner tidak masuk sini (lihat §5).
 
-- [ ] Web: pratinjau seluruh situs sebagai artifact claude.ai (workflow `Pratinjau` di repo web → unduh artifact Actions → publish). Dimulai 2026-10-30 (web PR #10)
+- [x] Web: pratinjau seluruh situs sebagai artifact claude.ai — web PR #10, #11; workflow `Pratinjau` (jalankan manual: Actions → Pratinjau → Run workflow) menimpa branch `pratinjau-build`; sesi AI: `git clone -b pratinjau-build` lalu publish `index.html` + file lain sebagai artifact (2026-10-30)
 - [ ] Web: ganti foto adegan **Nova** (`image-creator`) setelah owner mengirim hasil ulang (yang sekarang mirip Intan) — tunggu gambar
 - [ ] Web: tambah foto adegan **Teguh** (`sop-writer`) setelah owner mengirim gambar — tunggu gambar
 - [ ] Web: video pendek per agen (gerak lebih halus seperti Sintra) bila owner mengirim video — opsional
