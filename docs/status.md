@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-29 (**model langganan seperti Sintra.ai**: lihat §4c untuk status terbaru; §4a–4b tetap riwayat Pilar 1).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-30 (kredit top up hangus 12 bulan, web: kartu agen hidup dengan foto adegan v2; **preferensi owner & antrian Claude di §8–§9**; §4c status model langganan).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp folder **CLAW AI** (list Platform & Marketing)**, dibuat baru oleh owner 2026-10-29 dan memulai nomor dari TASK-001; aturan di [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup). ID TASK-0xx lama di halaman ini = riwayat board sebelumnya.
 
@@ -201,8 +201,31 @@ atau terus berjalan di background. Sesi berikutnya baca ulang GitHub sebelum mel
 
 Semua kerja tersimpan di GitHub, bukan di akun claude.ai. Akun Claude lain tetap bisa melanjutkan kerja selama:
 
-1. Akun Claude baru disambungkan ke akun GitHub yang sama (`d34faiza-commits`) lewat claude.ai/connect-github. Kalau akun GitHub-nya berbeda, akun itu harus ditambahkan sebagai collaborator di repo CLAU (dan oleh Pak Indra untuk repo Jerco).
+1. Akun Claude baru disambungkan ke akun GitHub yang sama (**`deakasep`**, pemilik repo CLAU & JASA sejak 2026-10-29; `d34faiza-commits` = akun lama berisi repo asli) lewat claude.ai/connect-github. Kalau akun GitHub-nya berbeda, akun itu harus ditambahkan sebagai collaborator di repo CLAU (dan oleh Pak Indra untuk repo Jerco).
 2. Semua kerja penting sudah di-commit, di-push, dan masuk `main` lewat PR. Yang hanya ada di chat tidak ikut pindah.
 3. Halaman ini sudah mencerminkan status terakhir.
 
 Tidak ikut pindah: riwayat chat/sesi, memory & Projects claude.ai, pengaturan environment Claude Code (network policy, secret, setup script), scheduled task, dan connector (mis. **ClickUp**, Google Drive; sambungkan ulang di claude.ai/customize/connectors lalu mulai sesi baru). Saat membuat sesi baru, pilih repo dengan nama baru (`clau-core`, `clau-agent`, `clau-market`, `clau-content`) supaya pemantauan PR berjalan. Siapkan ulang di akun baru; secret diambil dari password manager owner, tidak pernah dari repo.
+
+## 8. Preferensi Owner (berlaku di semua sesi, semua akun Claude)
+
+Disalin dari perintah owner Dea Karisna di chat supaya tidak hilang saat ganti akun (memory claude.ai tidak ikut pindah).
+
+| # | Preferensi | Sejak |
+|---|---|---|
+| 1 | Balas dalam Bahasa Indonesia santai, singkat; owner mengontrol dari HP saat bekerja | 2026-10-30 |
+| 2 | **Semua repo:** setelah push → buka PR → merge otomatis begitu semua check hijau; merah = perbaiki dulu sampai hijau, baru merge | 2026-10-30 |
+| 3 | **Perintah owner di chat = persetujuan.** Tidak ada langkah "menunggu konfirmasi" terpisah (dokumen Approved tetap dicatat siapa yang memerintah) | 2026-10-30 |
+| 4 | Skill/plugin hanya yang **aman, bukan pihak ketiga, dan benar-benar berguna** untuk proyek; dikunci ke commit & dicatat di `.claude/VENDORED.md` tiap repo | 2026-10-30 |
+| 5 | Dua bisnis **tidak dicampur**: CLAU AI (agent, core, market, web, content) meniru alur **Sintra.ai**, ClickUp folder **CLAW AI**; JASA (repo `jasa`) meniru **joinbareng.com**, ClickUp folder **JASA – Patungan Premium** | 2026-10-30 |
+| 6 | Semua pekerjaan & catatan di-backup ke GitHub (halaman ini untuk CLAU, `jasa/STATUS.md` untuk JASA) supaya sesi/akun baru langsung nyambung | 2026-10-30 |
+| 7 | Kalau sesi berhenti karena batas kuota: lanjutkan dari **§9 Antrian Claude** (sesi baru, atau tugas terjadwal "Lanjutkan antrian Claude") — bukan mulai dari nol | 2026-10-30 |
+
+## 9. Antrian Claude (dikerjakan AI tanpa menunggu owner; urut)
+
+Format: `[ ]` belum, `[x]` selesai (tulis PR). Item yang butuh keputusan/aksi owner tidak masuk sini (lihat §5).
+
+- [ ] Web: pratinjau seluruh situs sebagai artifact claude.ai (workflow `Pratinjau` di repo web → unduh artifact Actions → publish). Dimulai 2026-10-30 (web PR #10)
+- [ ] Web: ganti foto adegan **Nova** (`image-creator`) setelah owner mengirim hasil ulang (yang sekarang mirip Intan) — tunggu gambar
+- [ ] Web: tambah foto adegan **Teguh** (`sop-writer`) setelah owner mengirim gambar — tunggu gambar
+- [ ] Web: video pendek per agen (gerak lebih halus seperti Sintra) bila owner mengirim video — opsional
