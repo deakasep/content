@@ -42,3 +42,10 @@ python design/tokens/build_tokens.py          # setelah mengubah design/tokens/t
 - Jangan commit data client nyata, `.env`, atau credential.
 
 - ChatGPT/Codex dan Claude menyelesaikan coding PR yang sudah diizinkan sampai merge setelah CI hijau, sesuai `AGENTS.md` dan core AI-BOUNDARY 1.7.0. Approval konten client tetap manusia.
+
+## Hemat kuota: satu chat per topik (perintah owner, 2026-11-01)
+
+- **Satu chat = satu topik/tugas** (mis. web CLAU, JASA, video agen). Chat panjang membuat setiap balasan membaca ulang seluruh riwayat, jadi kuota cepat habis.
+- **Di akhir setiap tugas** perbarui file status (CLAU: [content `docs/status.md`](https://github.com/deakasep/content/blob/main/docs/status.md); JASA: `jasa/STATUS.md`) supaya chat baru langsung nyambung.
+- **Chat baru** cukup dibuka owner dengan "lanjutkan dari status": AI membaca file status dulu, tidak menanyakan ulang hal yang sudah diputuskan.
+- Bila chat sudah panjang atau topik berganti, AI menyarankan owner membuka chat baru (satu kalimat), **setelah** status diperbarui dan semua kerja di-push.
