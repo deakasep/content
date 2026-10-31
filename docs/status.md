@@ -220,6 +220,7 @@ Disalin dari perintah owner Dea Karisna di chat supaya tidak hilang saat ganti a
 | 5 | Dua bisnis **tidak dicampur**: CLAU AI (agent, core, market, web, content) meniru alur **Sintra.ai**, ClickUp folder **CLAW AI**; JASA (repo `jasa`) meniru **joinbareng.com**, ClickUp folder **JASA – Patungan Premium** | 2026-10-30 |
 | 6 | Semua pekerjaan & catatan di-backup ke GitHub (halaman ini untuk CLAU, `jasa/STATUS.md` untuk JASA) supaya sesi/akun baru langsung nyambung | 2026-10-30 |
 | 7 | Kalau sesi berhenti karena batas kuota: lanjutkan dari **§9 Antrian Claude** (sesi baru, atau tugas terjadwal "Lanjutkan antrian Claude") — bukan mulai dari nol | 2026-10-30 |
+| 8 | **Hemat kuota: satu chat per topik** (web CLAU, JASA, video, dst.). Akhir tugas → perbarui status ini / `jasa/STATUS.md` + push; chat baru dibuka dengan "lanjutkan dari status". Chat panjang/topik ganti → AI sarankan chat baru. Aturan juga ada di `CLAUDE.md` semua repo | 2026-11-01 |
 
 ## 9. Antrian Claude (dikerjakan AI tanpa menunggu owner; urut)
 
@@ -228,6 +229,6 @@ Format: `[ ]` belum, `[x]` selesai (tulis PR). Item yang butuh keputusan/aksi ow
 - [x] Web: pratinjau seluruh situs sebagai artifact claude.ai — web PR #10, #11; workflow `Pratinjau` (jalankan manual: Actions → Pratinjau → Run workflow) menimpa branch `pratinjau-build`; sesi AI: `git clone -b pratinjau-build` lalu publish `index.html` + file lain sebagai artifact (2026-10-30)
 - [x] Web: hero diganti foto **AI coworkers** (Aruna, Nova, Sari, Ayu) + section meja **CLAU AI on the hospitality** (Bayu, Dimas, Sekar), kedip & napas — web PR #12, #13 (2026-10-31)
 - [x] Web: 15 foto adegan agen tegak menghadap kamera terpasang + posisi kedip diukur ulang (web PR #14, 2026-10-31); artifact pratinjau baru "Web CLAU" (link lama terhapus)
-- [ ] Web: ganti foto adegan **Nova** (`image-creator`) setelah owner mengirim hasil ulang (yang sekarang mirip Intan) — tunggu gambar
-- [ ] Web: tambah foto adegan **Teguh** (`sop-writer`) setelah owner mengirim gambar — tunggu gambar
-- [ ] Web: video pendek per agen (gerak lebih halus seperti Sintra) bila owner mengirim video — opsional
+- [x] Web: foto adegan Nova & Teguh versi baru terpasang (web PR #14), avatar bulat + figur full-body diganti gambar tampak depan (web PR #15, #16)
+- [x] Web: **video per agen** (15) di kartu, loop maju-mundur mulus; Showcase "Temukan agent AI" pakai video close-up; section meja "CLAU AI on the hospitality" pakai video baru, di HP & tablet jadi kartu video utuh (web PR #17–#20, 2026-11-01). Detail potongan video: web `docs/avatar-scene-prompts.md`
+- [ ] Web: hero paling atas (4 agen di lobi) masih foto + kelopak tempelan → ganti video bila owner mengirim **video tim ulang** (yang lama: Aruna jadi dua). Prompt: "only these 4 characters, no one else enters the scene, characters stay on the right side" — tunggu video
