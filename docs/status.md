@@ -226,6 +226,8 @@ Disalin dari perintah owner Dea Karisna di chat supaya tidak hilang saat ganti a
 Format: `[ ]` belum, `[x]` selesai (tulis PR). Item yang butuh keputusan/aksi owner tidak masuk sini (lihat §5).
 
 - [x] Web: pratinjau seluruh situs sebagai artifact claude.ai — web PR #10, #11; workflow `Pratinjau` (jalankan manual: Actions → Pratinjau → Run workflow) menimpa branch `pratinjau-build`; sesi AI: `git clone -b pratinjau-build` lalu publish `index.html` + file lain sebagai artifact (2026-10-30)
+- [x] Web: hero diganti foto **AI coworkers** (Aruna, Nova, Sari, Ayu) + section meja **CLAU AI on the hospitality** (Bayu, Dimas, Sekar), kedip & napas — web PR #12, #13 (2026-10-31)
+- [ ] Web: ganti **15 foto adegan agen** dengan versi pose tegak menghadap kamera (prompt v2.1 `clau-agent/agents/avatars/adegan/PROMPT.md`), atur ulang posisi mata — tunggu gambar dari owner
 - [ ] Web: ganti foto adegan **Nova** (`image-creator`) setelah owner mengirim hasil ulang (yang sekarang mirip Intan) — tunggu gambar
 - [ ] Web: tambah foto adegan **Teguh** (`sop-writer`) setelah owner mengirim gambar — tunggu gambar
 - [ ] Web: video pendek per agen (gerak lebih halus seperti Sintra) bila owner mengirim video — opsional
