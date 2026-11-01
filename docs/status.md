@@ -1,6 +1,6 @@
 # Status & Handoff CLAU AI
 
-> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-10-30 (kredit top up hangus 12 bulan, web: kartu agen hidup dengan foto adegan v2; **preferensi owner & antrian Claude di §8–§9**; §4c status model langganan).
+> **Untuk sesi AI baru (Claude atau agent lain): baca halaman ini dulu.** Satu halaman untuk melanjutkan kerja tanpa riwayat chat. Diperbarui setiap ada perubahan status material. Last updated: 2026-11-02 (**benchmark lengkap Sintra.ai + gap vs web/agent: [sintra-benchmark.md](./sintra-benchmark.md)**; preferensi owner & antrian Claude di §8–§9; §4c status model langganan).
 >
 > Peta semua pondasi otak (link ke file sumber): [peta-otak.md](./peta-otak.md). Board task: **ClickUp folder **CLAW AI** (list Platform & Marketing)**, dibuat baru oleh owner 2026-10-29 dan memulai nomor dari TASK-001; aturan di [tasks/README.md § Board ClickUp](../tasks/README.md#board-clickup). ID TASK-0xx lama di halaman ini = riwayat board sebelumnya.
 
@@ -232,3 +232,4 @@ Format: `[ ]` belum, `[x]` selesai (tulis PR). Item yang butuh keputusan/aksi ow
 - [x] Web: foto adegan Nova & Teguh versi baru terpasang (web PR #14), avatar bulat + figur full-body diganti gambar tampak depan (web PR #15, #16)
 - [x] Web: **video per agen** (15) di kartu, loop maju-mundur mulus; Showcase "Temukan agent AI" pakai video close-up; section meja "CLAU AI on the hospitality" pakai video baru, di HP & tablet jadi kartu video utuh (web PR #17–#20, 2026-11-01). Detail potongan video: web `docs/avatar-scene-prompts.md`
 - [ ] Web: hero paling atas (4 agen di lobi) masih foto + kelopak tempelan → ganti video bila owner mengirim **video tim ulang** (yang lama: Aruna jadi dua). Prompt: "only these 4 characters, no one else enters the scene, characters stay on the right side" — tunggu video
+- [x] Catat semua sistem Sintra.ai (12 karyawan, Brain AI, chat, automations, integrasi, kredit, affiliate, legal, marketing) + tabel gap vs web/agent + usulan prioritas: [sintra-benchmark.md](./sintra-benchmark.md) (2026-11-02). Usulan §7 di file itu menunggu owner memilih mana yang dikerjakan
